@@ -1,0 +1,49 @@
+{
+  "ops": {
+    "block_from_drawing": {
+      "title": "Bloc depuis un dessin",
+      "params": {
+        "height": {
+          "label": "Hauteur",
+          "help": "La hauteur du bloc."
+        }
+      },
+      "stage": {
+        "block": "Création du bloc…"
+      }
+    },
+    "fit_to_shape": {
+      "title": "Ajuster à une forme enregistrée",
+      "params": {
+        "shape": {
+          "label": "Forme",
+          "help": "Le dessin enregistré dans lequel le modèle est ajusté."
+        },
+        "margin": {
+          "label": "Marge",
+          "help": "Espace libre entre le modèle et le bord de la forme."
+        }
+      },
+      "stage": {
+        "fit": "Ajustement…"
+      }
+    }
+  },
+  "step": {
+    "op": {
+      "block_from_drawing": "Bloc depuis un dessin",
+      "fit_to_shape": "Ajuster à une forme enregistrée"
+    }
+  },
+  "mesh": {
+    "block_from_drawing": {
+      "empty": "Le dessin n'a pas de surface pour faire un bloc."
+    },
+    "fit_to_shape": {
+      "no_shape": "Choisissez d'abord une forme enregistrée.",
+      "empty_shape": "La forme enregistrée n'a pas de surface.",
+      "flat_model": "Le modèle n'a ni largeur ni profondeur à ajuster.",
+      "too_small": "La marge de {{margin}} mm ne laisse pas de place dans la forme."
+    }
+  }
+}

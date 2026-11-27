@@ -1,0 +1,17 @@
+{
+  "name": "@ateliermesh/core",
+  "version": "0.4.8",
+  "private": true,
+  "type": "module",
+  "description": "Headless engine: manifest check, validation, steps, runner, cache, worker host, measurements, conformance fixtures. No DOM, no React, no three.",
+  "license": "AGPL-3.0-or-later",
+  "exports": {
+    ".": "./src/index.ts",
+    "./testing": "./src/testing/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  }
+}

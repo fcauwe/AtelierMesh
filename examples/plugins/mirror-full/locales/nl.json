@@ -1,0 +1,46 @@
+{
+  "ops": {
+    "mirror": {
+      "title": "Spiegelen",
+      "sections": {
+        "plane": "Vlak"
+      },
+      "params": {
+        "axis": {
+          "label": "As",
+          "help": "Het spiegelvlak staat loodrecht op deze as.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z"
+          }
+        },
+        "mode": {
+          "label": "Modus",
+          "help": "Omklappen spiegelt het model op zijn plaats. Kopie voegt een gespiegelde kopie ernaast toe.",
+          "options": {
+            "flip": "Omklappen",
+            "copy": "Kopie"
+          }
+        },
+        "gap": {
+          "label": "Tussenruimte",
+          "help": "De ruimte tussen het model en zijn kopie."
+        }
+      },
+      "stage": {
+        "mirror": "Spiegelen…"
+      }
+    }
+  },
+  "step": {
+    "op": {
+      "mirror": "Spiegelen"
+    }
+  },
+  "mesh": {
+    "mirror": {
+      "empty": "Dit model heeft geen driehoeken om te spiegelen."
+    }
+  }
+}

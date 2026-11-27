@@ -1,0 +1,273 @@
+<title>AtelierMesh Plugin Framework</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one narrow reading column, each figure carries one claim, short text between. */
+:root {
+  --bg: #f3f5f7; --surface: #ffffff; --ink: #14212b; --muted: #55656f; --line: #b9c4cc;
+  --accent: #0b7a75; --accent-soft: #d6efec; --warn: #b4620a; --warn-soft: #f8e6cf;
+  --display: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+  --body: 'IBM Plex Sans', system-ui, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0f171d; --surface: #17222a; --ink: #e6edf1; --muted: #9aabb5; --line: #3a4a54;
+  --accent: #3fc6bd; --accent-soft: #123a38; --warn: #f0a54d; --warn-soft: #3d2b12; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #0f171d; --surface: #17222a; --ink: #e6edf1; --muted: #9aabb5; --line: #3a4a54;
+  --accent: #3fc6bd; --accent-soft: #123a38; --warn: #f0a54d; --warn-soft: #3d2b12; color-scheme: dark; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.55;
+  padding-block: 40px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+main { max-width: 960px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px; }
+h1, h2 { font-family: var(--display); text-wrap: balance; line-height: 1.12; margin: 0; }
+h1 { font-size: clamp(2rem, 5vw, 3.1rem); font-weight: 700; }
+h2 { font-size: 1.5rem; font-weight: 700; }
+p { margin: 0; max-width: 65ch; }
+.lead { font-size: 1.12rem; color: var(--muted); margin-top: 14px; }
+.eyebrow { font-family: var(--mono); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+section { display: flex; flex-direction: column; gap: 16px; }
+code { font-family: var(--mono); font-size: .88em; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 1px 5px; }
+figure { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.scroll { overflow-x: auto; }
+svg { display: block; width: 100%; min-width: 640px; height: auto; color: var(--ink); }
+figcaption { font-size: .9rem; color: var(--muted); max-width: 75ch; }
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.cols > div { min-width: 0; border-top: 2px solid var(--accent); padding-top: 10px; }
+.cols h3 { font-family: var(--display); font-size: 1.05rem; margin: 0 0 4px; }
+.cols p { font-size: .94rem; color: var(--muted); }
+table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-family: var(--mono); font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.tbl { overflow-x: auto; }
+
+/* svg marks */
+.box { fill: var(--surface); stroke: currentColor; stroke-width: 1.4; }
+.hi { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.6; }
+.wr { fill: var(--warn-soft); stroke: var(--warn); stroke-width: 1.6; }
+.zone { fill: none; stroke: var(--line); stroke-width: 1.4; stroke-dasharray: 6 5; }
+.ln { fill: none; stroke: currentColor; stroke-width: 1.5; }
+.ln-a { fill: none; stroke: var(--accent); stroke-width: 2; }
+.ln-w { fill: none; stroke: var(--warn); stroke-width: 2; stroke-dasharray: 6 4; }
+.t { font-family: var(--body); font-size: 13px; fill: currentColor; }
+.tb { font-family: var(--display); font-size: 14.5px; font-weight: 700; fill: currentColor; }
+.tm { font-family: var(--mono); font-size: 12px; fill: currentColor; }
+.ts { font-family: var(--body); font-size: 12px; fill: var(--muted); }
+.ta { font-family: var(--mono); font-size: 11.5px; fill: var(--accent); }
+.tw { font-family: var(--mono); font-size: 11.5px; fill: var(--warn); }
+.tz { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; fill: var(--muted); }
+.mid { text-anchor: middle; } .end { text-anchor: end; }
+</style>
+
+<main>
+<header>
+  <div class="eyebrow">AtelierMesh · version 0.4.7</div>
+  <h1>How the plugin framework works</h1>
+  <p class="lead">A customer changes a 3D model through a list of steps. Each step is done by a plugin. This page shows what a plugin is, how a step runs, and how a plugin gets into an app.</p>
+  <p class="lead"><a href="https://ateliermesh.app/">Try the standalone app at ateliermesh.app</a>: open a model, add a step, and see the plugins in the plugin manager.</p>
+</header>
+
+<section>
+  <h2>A model goes through a list of steps</h2>
+  <p>The engine (<code>@ateliermesh/core</code>) knows nothing about text, bending or hollowing. It keeps the list of steps, runs them in order, and passes the mesh from one to the next. Every step names a plugin and one operation of that plugin.</p>
+  <figure>
+    <div class="scroll"><svg viewBox="0 0 920 290" role="img" aria-label="A model file enters the engine, passes through three steps that are each carried out by a plugin, and leaves as a 3MF file.">
+      <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker>
+      <marker id="arA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--accent)"/></marker></defs>
+      <rect class="box" x="16" y="95" width="116" height="70" rx="8"/>
+      <text class="tb mid" x="74" y="124">Model</text><text class="ts mid" x="74" y="144">STL or 3MF</text>
+      <line class="ln" x1="132" y1="130" x2="176" y2="130" marker-end="url(#ar)"/>
+
+      <rect class="zone" x="180" y="20" width="560" height="250" rx="12"/>
+      <text class="tz" x="196" y="42">ENGINE · @ateliermesh/core</text>
+
+      <rect class="hi" x="200" y="70" width="140" height="70" rx="8"/>
+      <text class="tb mid" x="270" y="98">1  Text</text><text class="ts mid" x="270" y="118">engrave a name</text>
+      <rect class="hi" x="390" y="70" width="140" height="70" rx="8"/>
+      <text class="tb mid" x="460" y="98">2  Twist</text><text class="ts mid" x="460" y="118">deform the shape</text>
+      <rect class="hi" x="580" y="70" width="140" height="70" rx="8"/>
+      <text class="tb mid" x="650" y="98">3  Hollow</text><text class="ts mid" x="650" y="118">save material</text>
+      <line class="ln-a" x1="340" y1="105" x2="388" y2="105" marker-end="url(#arA)"/><text class="ta mid" x="364" y="96">mesh</text>
+      <line class="ln-a" x1="530" y1="105" x2="578" y2="105" marker-end="url(#arA)"/><text class="ta mid" x="554" y="96">mesh</text>
+
+      <rect class="box" x="200" y="200" width="140" height="48" rx="8"/><text class="tm mid" x="270" y="220">core plugin</text><text class="ts mid" x="270" y="237">built in</text>
+      <rect class="box" x="390" y="200" width="140" height="48" rx="8"/><text class="tm mid" x="460" y="220">deform plugin</text><text class="ts mid" x="460" y="237">built in</text>
+      <rect class="box" x="580" y="200" width="140" height="48" rx="8"/><text class="tm mid" x="650" y="220">hollow plugin</text><text class="ts mid" x="650" y="237">built in</text>
+      <line class="ln" x1="270" y1="200" x2="270" y2="142" marker-end="url(#ar)"/>
+      <line class="ln" x1="460" y1="200" x2="460" y2="142" marker-end="url(#ar)"/>
+      <line class="ln" x1="650" y1="200" x2="650" y2="142" marker-end="url(#ar)"/>
+      <text class="ts" x="278" y="176">does the work</text>
+
+      <line class="ln" x1="740" y1="130" x2="778" y2="130" marker-end="url(#ar)"/>
+      <rect class="box" x="782" y="95" width="122" height="70" rx="8"/>
+      <text class="tb mid" x="843" y="124">Result</text><text class="ts mid" x="843" y="144">3MF + preview</text>
+    </svg></div>
+    <figcaption>The engine owns the order of the steps and the hand-over of the mesh. Each plugin owns one kind of change. Adding a feature means adding a plugin; the engine does not change.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2>What is inside a plugin</h2>
+  <p>A plugin is a small package of three kinds of file. Different parts of the app read different files, so a plugin never has to include any screen of its own.</p>
+  <figure>
+    <div class="scroll"><svg viewBox="0 0 920 300" role="img" aria-label="manifest.json is read by the editor to draw settings, main.js is run by the engine, and the locales files give the editor its texts.">
+      <defs><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--accent)"/></marker></defs>
+      <rect class="zone" x="16" y="16" width="360" height="268" rx="12"/><text class="tz" x="32" y="38">ONE PLUGIN PACKAGE</text>
+
+      <rect class="hi" x="40" y="58" width="312" height="62" rx="8"/>
+      <text class="tm" x="56" y="82">manifest.json</text><text class="ts" x="56" y="102">operations, their settings, what they need</text>
+      <rect class="hi" x="40" y="136" width="312" height="62" rx="8"/>
+      <text class="tm" x="56" y="160">main.js</text><text class="ts" x="56" y="180">the code: run(ctx) per operation</text>
+      <rect class="hi" x="40" y="214" width="312" height="52" rx="8"/>
+      <text class="tm" x="56" y="237">locales/en.json  nl.json  fr.json</text><text class="ts" x="56" y="255">every text a person reads</text>
+
+      <line class="ln-a" x1="352" y1="89" x2="560" y2="60" marker-end="url(#ar2)"/><text class="ta" x="420" y="62">settings</text>
+      <line class="ln-a" x1="352" y1="167" x2="560" y2="167" marker-end="url(#ar2)"/><text class="ta" x="420" y="158">run in a worker</text>
+      <line class="ln-a" x1="352" y1="240" x2="560" y2="262" marker-end="url(#ar2)"/><text class="ta" x="420" y="262">texts</text>
+
+      <rect class="box" x="564" y="30" width="340" height="62" rx="8"/>
+      <text class="tb" x="580" y="56">Editor screens</text><text class="ts" x="580" y="76">draw the settings form from the manifest</text>
+      <rect class="box" x="564" y="136" width="340" height="62" rx="8"/>
+      <text class="tb" x="580" y="162">Engine + worker</text><text class="ts" x="580" y="182">calls run with the mesh and the settings</text>
+      <rect class="box" x="564" y="232" width="340" height="62" rx="8"/>
+      <text class="tb" x="580" y="258">Editor screens again</text><text class="ts" x="580" y="278">labels, hints, errors, progress messages</text>
+    </svg></div>
+    <figcaption>The manifest describes, main.js acts, the locale files speak. The editor builds a form from the manifest, so a new plugin gets a settings screen without any interface code.</figcaption>
+  </figure>
+  <div class="cols">
+    <div><h3>manifest.json</h3><p>Lists the operations, the settings of each one with limits and defaults, and what the plugin needs from the host, for example <code>"uses": ["fonts"]</code>.</p></div>
+    <div><h3>main.js</h3><p>Exports <code>{ run }</code>. It receives the mesh, the settings and a <code>ctx</code> object, and returns a new mesh.</p></div>
+    <div><h3>locales</h3><p>All wording sits here, in English, Dutch and French. Code never contains text that a customer sees.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>How one step runs</h2>
+  <p>Plugin code runs in a web worker, away from the page. It cannot reach the page, the network or the files of the customer. It gets only the mesh, the settings, and the services that its manifest asked for.</p>
+  <figure>
+    <div class="scroll"><svg viewBox="0 0 920 330" role="img" aria-label="The page sends the mesh and settings to the worker. The plugin reports progress, may ask the page for font outlines, and returns the new mesh.">
+      <defs><marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker>
+      <marker id="ar3a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--accent)"/></marker>
+      <marker id="ar3w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--warn)"/></marker></defs>
+      <rect class="zone" x="16" y="16" width="360" height="298" rx="12"/><text class="tz" x="32" y="38">PAGE · trusted host code</text>
+      <rect class="box" x="44" y="60" width="304" height="52" rx="8"/><text class="tb" x="60" y="82">Editor + engine</text><text class="ts" x="60" y="100">holds the step list and the mesh</text>
+      <rect class="box" x="44" y="130" width="304" height="52" rx="8"/><text class="tb" x="60" y="152">Registry</text><text class="ts" x="60" y="170">finds the plugin that owns the step</text>
+      <rect class="box" x="44" y="238" width="304" height="52" rx="8"/><text class="tb" x="60" y="260">Font service</text><text class="ts" x="60" y="278">reads the fonts the host provides</text>
+
+      <rect class="wr" x="544" y="16" width="360" height="298" rx="12"/><text class="tz" x="560" y="38" style="fill:var(--warn)">WORKER · sandbox</text>
+      <rect class="box" x="572" y="100" width="304" height="110" rx="8"/><text class="tb" x="588" y="124">Plugin: main.js</text>
+      <text class="tm" x="588" y="150">run(ctx)</text>
+      <text class="ts" x="588" y="170">ctx.mesh, ctx.params</text>
+      <text class="ts" x="588" y="188">ctx.progress(stage)</text>
+      <text class="ts" x="588" y="204">ctx.fonts.outline(id, text)</text>
+
+      <path class="ln-a" d="M348 86 H460 V118 H570" marker-end="url(#ar3a)"/><text class="ta" x="372" y="76">1 run step</text>
+      <line class="ln" x1="572" y1="150" x2="350" y2="150" marker-end="url(#ar3)"/><text class="tm" x="400" y="142">2 progress</text>
+      <line class="ln-w" x1="572" y1="190" x2="350" y2="252" marker-end="url(#ar3w)"/><text class="tw" x="400" y="204">3 font request</text>
+      <line class="ln-w" x1="350" y1="276" x2="572" y2="206" marker-end="url(#ar3w)"/><text class="tw" x="400" y="290">4 font reply</text>
+      <path class="ln-a" d="M876 210 V302 H350" marker-end="url(#ar3a)"/>
+      <text class="ta end" x="860" y="322">5 result mesh</text>
+    </svg></div>
+    <figcaption>Messages cross the dashed line in both directions. The orange steps happen only for plugins that declared <code>uses: ["fonts"]</code>. Font requests are limited and checked on the page side before they are answered.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2>Three ways a plugin gets into an app</h2>
+  <p>All three end in the same place: the registry. After that, the engine treats every plugin the same way.</p>
+  <figure>
+    <div class="scroll"><svg viewBox="0 0 920 300" role="img" aria-label="Built-in plugins ship in the package, packed .amplugin files (from a file, an address or a catalogue) are verified by the loader and sandboxed, and a compiled-in external plugin is registered by the host as untrusted. All three reach the registry.">
+      <defs><marker id="ar4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
+      <rect class="hi" x="16" y="20" width="250" height="70" rx="8"/><text class="tb" x="32" y="46">Built in</text><text class="ts" x="32" y="66">11 plugins in @ateliermesh/plugins</text><text class="ts" x="32" y="82">reviewed with the engine</text>
+      <rect class="hi" x="16" y="115" width="250" height="70" rx="8"/><text class="tb" x="32" y="141">.amplugin package</text><text class="ts" x="32" y="161">from a file, an address or a catalogue</text><text class="ts" x="32" y="177">needs @ateliermesh/loader</text>
+      <rect class="wr" x="16" y="210" width="250" height="70" rx="8"/><text class="tb" x="32" y="236">Compiled in by the host</text><text class="ts" x="32" y="256">import manifest.json + main.js</text><text class="ts" x="32" y="272">register with untrusted: true</text>
+
+      <line class="ln" x1="266" y1="55" x2="470" y2="140" marker-end="url(#ar4)"/><text class="ts" x="318" y="84">register</text>
+      <line class="ln" x1="266" y1="150" x2="470" y2="150" marker-end="url(#ar4)"/><text class="ts" x="318" y="140">verify, then register</text>
+      <line class="ln" x1="266" y1="245" x2="470" y2="160" marker-end="url(#ar4)"/><text class="ts" x="318" y="226">register</text>
+
+      <rect class="box" x="474" y="100" width="150" height="100" rx="8"/><text class="tb mid" x="549" y="144">Registry</text><text class="ts mid" x="549" y="164">one list of</text><text class="ts mid" x="549" y="180">plugins + ops</text>
+      <line class="ln" x1="624" y1="150" x2="668" y2="150" marker-end="url(#ar4)"/>
+      <rect class="box" x="672" y="100" width="232" height="100" rx="8"/><text class="tb" x="688" y="132">Engine + editor</text><text class="ts" x="688" y="154">list the operations, draw the</text><text class="ts" x="688" y="170">forms, run the steps</text>
+
+    </svg></div>
+    <figcaption>A packed plugin runs in a sandbox. A compiled-in external plugin runs in the host's own worker with no sandbox, so the host must review it and pin its hash. The Atelier web shop uses the third route.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2>Who owns which text</h2>
+  <p>A plugin may only add texts under its own names. This stops two plugins from overwriting each other and keeps host wording under the host's control.</p>
+  <figure>
+    <div class="tbl"><table>
+      <thead><tr><th>Text</th><th>Key in the plugin's locale file</th></tr></thead>
+      <tbody>
+        <tr><td>Name of the step in the list</td><td><code>step.op.&lt;op&gt;</code></td></tr>
+        <tr><td>Labels and hints of the settings</td><td><code>ops.&lt;op&gt;.…</code></td></tr>
+        <tr><td>Progress message while it works</td><td><code>ops.&lt;op&gt;.stage.&lt;stage&gt;</code></td></tr>
+        <tr><td>Error and warning messages</td><td><code>mesh.&lt;prefix&gt;.…</code></td></tr>
+        <tr><td>Generic host wording such as <code>work.*</code>, <code>errors.*</code></td><td>Not allowed. The check tells the author where it belongs.</td></tr>
+      </tbody></table></div>
+    <figcaption><code>amplugin check</code> reports a misplaced key and suggests the right one, for example <code>work.build_blocks</code> becomes <code>ops.blocks.stage.build_blocks</code>.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2>One engine, three kinds of host</h2>
+  <p>The framework is a set of packages. An app picks the layers it needs. A command-line run needs no screens at all.</p>
+  <figure>
+    <div class="scroll"><svg viewBox="0 0 920 330" role="img" aria-label="Three hosts, the standalone app, the Atelier embedded editor and the command-line tool, all rest on the same engine and plugins; the two with screens also use the React and UI packages.">
+      <rect class="box" x="16" y="20" width="280" height="86" rx="8"/><text class="tb" x="32" y="48">Standalone app</text><text class="ts" x="32" y="68">a full editor you put on your</text><text class="ts" x="32" y="84">own web server</text>
+      <rect class="box" x="320" y="20" width="280" height="86" rx="8"/><text class="tb" x="336" y="48">Embedded editor</text><text class="ts" x="336" y="68">inside another web shop, as the</text><text class="ts" x="336" y="84">Atelier does</text>
+      <rect class="box" x="624" y="20" width="280" height="86" rx="8"/><text class="tb" x="640" y="48">Command line</text><text class="ts" x="640" y="68">ateliermesh recipe.amrecipe in out</text><text class="ts" x="640" y="84">no screen, runs a saved recipe</text>
+
+      <rect class="hi" x="16" y="136" width="584" height="64" rx="8"/><text class="tb" x="32" y="162">Screens · @ateliermesh/react and @ateliermesh/ui</text><text class="ts" x="32" y="182">editor page, step list, settings forms, 3D view, upload page</text>
+      <text class="ts" x="624" y="172">(skipped by the command line)</text>
+
+      <rect class="hi" x="16" y="226" width="888" height="84" rx="8"/>
+      <text class="tb" x="32" y="254">Engine · @ateliermesh/core</text><text class="ts" x="32" y="274">steps, registry, worker runner, 3MF read and write</text>
+      <rect class="box" x="560" y="240" width="330" height="56" rx="8"/><text class="tb" x="576" y="264">Plugins</text><text class="ts" x="576" y="282">built in, packed, or compiled in</text>
+    </svg></div>
+    <figcaption>Because the steps are data, the same saved recipe produces the same result in the editor, in the shop and on the command line.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2>Beyond the mesh: drawings and stored items</h2>
+  <p>A step takes one input and gives one output, and the kind of each is declared in the manifest. Most steps take a mesh and return a mesh. Some take or make a flat <b>drawing</b> (an SVG turned into paths), and the engine checks that the kinds fit before anything runs.</p>
+  <div class="cols">
+    <div><h3>Payload kinds</h3><p>Meshes and drawings travel through the same workflow. An operation says <code>payload: { in, out }</code>; a drawing step cannot be put where a mesh is expected, and the editor greys it out with a reason.</p></div>
+    <div><h3>The project store</h3><p>A project keeps named items next to its steps: imported drawings and models, and results that a <b>Store</b> step saves. A setting of type <code>payload</code> picks one by name; a <b>Load</b> step brings one back.</p></div>
+    <div><h3>The original model</h3><p>The model a project started from is always in the store under the reserved name <code>original</code>, read only. A <b>Load</b> step named <code>original</code> goes back to it at any point in the steps.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Catalogues and examples</h2>
+  <p>The standalone app can read more than a built-in list. A <b>catalogue</b> is a small server folder (PHP, no database) that offers plugins, example designs, or both. Everything it offers is checked again by the app.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>What</th><th>How it gets to a person</th></tr></thead>
+    <tbody>
+      <tr><td>Plugins</td><td>Listed in the plugin manager with a checksum. The app downloads the file, checks it against the checksum, the manifest and the signature, shows who made it and what it needs, and asks before it installs it.</td></tr>
+      <tr><td>Example designs</td><td>A gallery on the start page. An example is a project file; opening one gives you your own copy. If it needs a plugin you lack, the app names the catalogue that has it and asks first. An address outside the catalogues is a separate question, with the address shown in full.</td></tr>
+      <tr><td>Sharing</td><td>Anyone can send a design or a plugin to a catalogue. It waits until its admin accepts it. Nothing is listed or served before that, and the sender keeps a private key to follow it or take it back.</td></tr>
+      <tr><td>More than one catalogue</td><td>A person can add the address of another catalogue and say what to use it for. Plugins are looked up in the order of the list; designs of all the catalogues come as one gallery.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>What each person needs to know</h2>
+  <div class="cols">
+    <div><h3>Plugin author</h3><p>Write <code>manifest.json</code>, <code>main.js</code> and the locale files. Run <code>amplugin check</code> and <code>amplugin run</code> on your computer, then pack and sign.</p></div>
+    <div><h3>App developer</h3><p>Pick the packages, register the plugins you trust, and pass in services such as fonts. The editor and the engine do the rest.</p></div>
+    <div><h3>Customer</h3><p>Sees a list of steps with settings and a live 3D view. In a shop they never see that plugins exist. In the standalone app they can also add, switch off and update plugins, and the app asks before it installs one.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>See it working</h2>
+  <p>The standalone app runs in your browser at <a href="https://ateliermesh.app/">ateliermesh.app</a>. Your files stay on your device. The example gallery there shows what the plugins make.</p>
+</section>
+</main>

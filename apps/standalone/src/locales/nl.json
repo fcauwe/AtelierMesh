@@ -1,0 +1,2667 @@
+{
+  "addStep": {
+    "title": "Stap toevoegen",
+    "cat": {
+      "prepare": "Voorbereiden",
+      "shape": "Vorm",
+      "style": "Artistieke stijl",
+      "surface": "Op het oppervlak",
+      "check": "Controles",
+      "recipes": "Recepten",
+      "add": "Een onderdeel toevoegen"
+    },
+    "search": "Stappen zoeken",
+    "noResults": "Geen stap past bij “{{query}}”",
+    "noResultsHint": "Controleer de spelling, of vind meer stappen bij",
+    "results_one": "1 stap",
+    "results_other": "{{count}} stappen",
+    "clear": "Zoekterm wissen",
+    "more": "Meer",
+    "recent": "Recent",
+    "back": "Terug",
+    "close": "Sluiten",
+    "added": "Toegevoegd: {{step}}",
+    "needs": {
+      "drawing": "Heeft een tekening nodig",
+      "mesh": "Heeft een model nodig",
+      "stored": "Nog niets bewaard"
+    },
+    "plugins": "Plug-ins…",
+    "applyRecipeShort": "Recept toepassen",
+    "saveRecipeShort": "Recept opslaan",
+    "pluginsShort": "Plug-ins"
+  },
+  "app": {
+    "by": "door micro-fabriek.be",
+    "github": "AtelierMesh op GitHub (opent in een nieuw tabblad)",
+    "name": "AtelierMesh",
+    "home": "Terug naar de startpagina"
+  },
+  "apply": {
+    "body": "De stap wordt in het model vastgelegd. Hij verdwijnt uit de stappenlijst en kan daarna niet meer aangepast, uitgeschakeld of ongedaan gemaakt worden.",
+    "cancel": "Aanpasbaar houden",
+    "confirm": "Definitief toepassen",
+    "customerNote": "Deze stap is personaliseerbaar. Na het toepassen kunnen klanten hem niet meer aanpassen.",
+    "disabledAfterRollback": "Niet beschikbaar na teruggaan in de geschiedenis",
+    "done": "“{{step}}” maakt nu deel uit van het model.",
+    "title": "“{{step}}” definitief toepassen?",
+    "working": "Bezig met toepassen…"
+  },
+  "atelier": {
+    "column": "Materiaal, precisie, vulling en prijs",
+    "note": "Getoond door het Atelier"
+  },
+  "autosave": {
+    "saved": "Opgeslagen in deze browser om {{time}}",
+    "unsaved": "Nog niet opgeslagen"
+  },
+  "cannot": {
+    "copied": "Link gekopieerd",
+    "memory": {
+      "body": "Dit toestel had niet genoeg geheugen voor het model. Laad de pagina opnieuw en gebruik een eenvoudiger model, of open het op een computer.",
+      "title": "Niet genoeg geheugen voor dit model"
+    },
+    "recovered": "Je opgeslagen versie is opnieuw geopend.",
+    "recoveredNone": "Er was niets opgeslagen in deze browser, dus je begint opnieuw bij het opladen.",
+    "reload": "Pagina opnieuw laden",
+    "webgl": {
+      "action": "Link naar deze pagina kopiëren",
+      "body": "AtelierMesh heeft WebGL nodig, en dat staat hier uit of is niet beschikbaar. Open deze pagina in een recente versie van Chrome, Firefox, Edge of Safari.",
+      "title": "Deze browser kan geen 3D tonen"
+    },
+    "worker": {
+      "body": "De motor is op de achtergrond gestopt. Wat in deze browser is opgeslagen, blijft bewaard. Laad de pagina opnieuw om verder te gaan.",
+      "title": "De 3D-motor is gestopt"
+    }
+  },
+  "check": {
+    "help": "Vraag ons om hulp",
+    "manifold": {
+      "anywayHint": "Je kunt het bewerken, maar het wordt misschien niet geprint zoals je verwacht. Herstel het bestand voor je het print of bestelt.",
+      "body": "Het oppervlak heeft openingen, dus het kan niet zo geprint worden. Herstel het in je 3D-programma of kies een ander bestand.",
+      "touching": "Enkele delen raken elkaar langs een rand, dus het kan zo niet worden geprint. Herstel het in je 3D-programma of kies een ander bestand.",
+      "touchingRepair": "Enkele delen raken elkaar langs een rand, dus het kan zo niet worden geprint. We kunnen dat hier proberen te herstellen, of je herstelt het in je 3D-programma of kiest een ander bestand.",
+      "openAnyway": "Toch openen",
+      "title": "Dit bestand is geen gesloten volume",
+      "bodyRepair": "Het heeft openingen in het oppervlak, dus het kan zo niet geprint worden. We kunnen proberen ze hier te dichten, of je repareert het in je 3D-programma of kiest een ander bestand."
+    },
+    "other": "Kies een ander bestand",
+    "reading": "Bestand lezen…",
+    "simplified": {
+      "body": "Van {{from}} naar {{to}} driehoeken. Controleer de details in de 3D-weergave voor je verdergaat.",
+      "continue": "Openen in de editor",
+      "title": "Het model is vereenvoudigd"
+    },
+    "simplifying": {
+      "body": "Dit duurt enkele seconden. Je kunt stoppen en een ander bestand kiezen.",
+      "title": "Model vereenvoudigen"
+    },
+    "triangles": {
+      "body": "Het heeft {{count}} driehoeken; de browser kan er tot {{max}} bewerken. We kunnen het vereenvoudigen tot {{target}} driehoeken. Heel kleine details worden misschien iets gladder.",
+      "simplify": "Vereenvoudigen tot {{target}} driehoeken",
+      "title": "Dit model is te gedetailleerd voor de browser"
+    },
+    "unreadable": {
+      "body": "Het is misschien beschadigd, of het is geen STL-, 3MF- of .amproj-bestand.",
+      "title": "We kunnen dit bestand niet lezen"
+    },
+    "repair": "Repareer het"
+  },
+  "colours": {
+    "title": "Kleuren",
+    "offBody": "Dit ontwerp wordt in één kleur geprint: de klant kiest één filament voor het hele onderdeel.",
+    "useSeveral": "Meerdere kleuren gebruiken",
+    "useOne": "Eén kleur gebruiken",
+    "keep": "De kleuren houden",
+    "offTitle": "Eén kleur gebruiken?",
+    "offConfirm": "De kleuren die je hebt ingesteld worden verwijderd. Het hele onderdeel wordt één kleur.",
+    "add": "Kleur toevoegen",
+    "newName": "Kleur {{n}}",
+    "uses": "Gebruikt {{count}} van {{max}} kleuren",
+    "usesAny_one": "Gebruikt 1 kleur",
+    "usesAny_other": "Gebruikt {{count}} kleuren",
+    "maxReached": "Het maximum is {{max}} kleuren.",
+    "showMapped": "Toegewezen kleuren tonen",
+    "showMappedHint": "Uit: elk deel in zijn eigen kleur, om ze uit elkaar te houden. Aan: elke kleur van deze lijst.",
+    "slotColour": "Kleur van {{name}}",
+    "slotName": "Naam van kleur {{n}}",
+    "first": "Eerste",
+    "remove": "{{name}} verwijderen",
+    "takeOut": "{{part}} uit {{name}} halen",
+    "whole": "Heel onderdeel",
+    "notInModel": "niet in het model",
+    "noParts": "Nog geen delen.",
+    "addPart": "Een deel toevoegen aan {{name}}",
+    "addPartPlaceholder": "Een deel toevoegen…",
+    "unassigned": "Niet in een kleur",
+    "unassignedHint": "De editor toont deze in hun eigen kleuren. Overal elders — voorbeelden, het scherm van de klant, de afbeeldingen en de bestanden — gebruiken ze de eerste kleur.",
+    "tooMany": "Dit ontwerp heeft {{count}} kleuren; het maximum hier is {{max}}. Verwijder een kleur.",
+    "partTwice": "“{{part}}” zit in meer dan één kleur.",
+    "invalid": "De kleuren van dit ontwerp zijn niet geldig.",
+    "tab": "Kleuren",
+    "about": "Welk deel van het model in welk filament geprint wordt.",
+    "alert": {
+      "tooMany": "Gebruikt {{count}} kleuren; deze printer neemt er {{max}}."
+    },
+    "tabLabel_one": "Kleuren, één kleur",
+    "tabLabel_other": "Kleuren, {{count}} kleuren"
+  },
+  "common": {
+    "dismiss": "Sluiten",
+    "cancel": "Annuleren",
+    "close": "Sluiten",
+    "done": "Klaar"
+  },
+  "configs": {
+    "close": "Sluiten",
+    "date": "Opgeslagen",
+    "delete": "Verwijderen",
+    "deleteConfirm": "“{{name}}” uit deze browser verwijderen?",
+    "deleted": "“{{name}}” verwijderd",
+    "empty": "Nog niets opgeslagen in deze browser.",
+    "name": "Naam",
+    "note": "Deze blijven alleen in deze browser. Download een .amproj-bestand om er een ergens anders te bewaren.",
+    "open": "Openen",
+    "size": "Grootte",
+    "title": "Opgeslagen configuraties"
+  },
+  "designer": {
+    "addStep": "Stap toevoegen",
+    "applyPermanent": "Definitief toepassen",
+    "applyWarning": "Dit kan niet ongedaan worden gemaakt.",
+    "delete": "Verwijderen",
+    "directionRange": "Bereik van de richting",
+    "fields": "Velden die de klant kan aanpassen",
+    "limits": "Grenzen",
+    "moveMax": "Maximaal verschuiven",
+    "openProject": "Project openen",
+    "plugins": "Plug-ins",
+    "saveProject": "Project opslaan",
+    "sizeRange": "Bereik van de grootte",
+    "steps": "Stappen",
+    "switchOff": "Uitschakelen"
+  },
+  "editor": {
+    "addStep": "Stap toevoegen",
+    "applyPermanent": "Definitief toepassen…",
+    "blocked": "Los eerst het probleem op",
+    "closed": "Gesloten volume",
+    "delete": "Verwijderen",
+    "export": "Exporteren",
+    "moveHint": "Klik op het model om de gekozen tekst daarheen te verplaatsen",
+    "next": "Verder: voorbeeld",
+    "notClosed": "Geen gesloten volume",
+    "notClosedAtelier": "Het Atelier kan alleen een gesloten volume prijzen en printen. Herstel het bestand en laad het opnieuw op om verder te gaan.",
+    "notClosedHint": "Het wordt misschien niet geprint zoals je verwacht. Herstel het bestand in je 3D-programma.",
+    "openOther": "Ander bestand openen",
+    "placeHint": "Klik op het model waar de tekst moet komen",
+    "previewCustomer": "Bekijk als klant",
+    "save": "Opslaan",
+    "size": "{{x}} × {{y}} × {{z}} mm",
+    "stepMenu": "Opties voor de stap",
+    "steps": "Stappen",
+    "switchOff": "Uitschakelen",
+    "switchOn": "Inschakelen",
+    "triangles": "{{count}} driehoeken",
+    "panels": "Editorpanelen",
+    "stepsAbout": "Stappen lopen van boven naar onder. Elke stap werkt op het resultaat van de stap erboven.",
+    "stepsAlert": "Een stap heeft een probleem.",
+    "tabAlertNew": "{{panel}}: {{alert}}",
+    "tab": {
+      "steps": "Stappen",
+      "stepsProblem": "1 stap met een probleem"
+    }
+  },
+  "export": {
+    "3mf": "3MF (aanbevolen)",
+    "3mfHint": "Houdt de letters als apart deel, zodat de slicer ze een eigen kleur of extruder kan geven.",
+    "prusa": "3MF voor PrusaSlicer en EasyPrint",
+    "prusaHint": "Elke kleur komt in de slicer aan: de letters houden hun eigen extruder en kleur.",
+    "bambu": "3MF voor Bambu Studio",
+    "bambuHint": "De kleuren zoals Bambu Studio ze leest. Nog niet getest met een echte printer.",
+    "download": "{{format}} downloaden",
+    "preparing": "Bestand klaarmaken…",
+    "stl": "STL",
+    "stlHint": "Eén enkel volume; letters en onderdeel worden in hetzelfde filament geprint.",
+    "title": "Model downloaden"
+  },
+  "field": {
+    "depth": "Hoogte of diepte",
+    "direction": "Richting",
+    "font": "Lettertype",
+    "mode": "Letters",
+    "position": "Positie",
+    "size": "Letterhoogte",
+    "text": "Tekst",
+    "width": "Breedte"
+  },
+  "fix": {
+    "boldFont": "Kies een vetter lettertype",
+    "contact": "Vraag ons om hulp",
+    "engraveDepth": "Graveer {{fit_height}} mm diep",
+    "lessDeep": "Minder diep graveren",
+    "makeBigger": "Maak het {{fit_size}} mm",
+    "makeFit": "Maak het {{fit_size}} mm",
+    "makeRaised": "Maak het verhoogd",
+    "makeSmaller": "Kleiner maken",
+    "moveFlatter": "Verschuiven",
+    "moveToCentre": "Naar het midden",
+    "otherFile": "Kies een ander bestand",
+    "otherFont": "Kies een ander lettertype",
+    "placeAgain": "Tekst opnieuw plaatsen",
+    "reload": "Pagina opnieuw laden",
+    "resetPosition": "Terug naar de oorspronkelijke positie",
+    "shorten": "Tekst aanpassen",
+    "switchOff": "Uitschakelen",
+    "tryAgain": "Opnieuw proberen",
+    "turn": "Tekst draaien",
+    "thickerLines": "Maak de lijnen {{line_width}} mm breed",
+    "fewerCells": "Gebruik {{max}} cellen",
+    "switchOnAgain": "Opnieuw aanzetten",
+    "managePlugins": "Plug-ins beheren…",
+    "coarserDetail": "Gebruik grover detail",
+    "thickerRibs": "Maak de stijlen {{width}} mm breed",
+    "thickerWall": "Maak de wand {{thickness}} mm dik",
+    "thinnerWall": "Maak de wand {{thickness}} mm dik",
+    "fewerHoles": "Maak {{count}} gaten",
+    "smallerHoles": "Maak het grootste gat {{max}} mm",
+    "widerWalls": "Houd {{width}} mm wand over",
+    "shallowerHole": "Maak het {{depth}} mm diep",
+    "openPluginManager": "Plug-inbeheer openen"
+  },
+  "fonts": {
+    "allChars": "Alle tekens beschikbaar",
+    "choose": "Dit lettertype gebruiken",
+    "close": "Sluiten",
+    "missing": "Ontbreekt: {{chars}}",
+    "missingHint": "Ontbrekende tekens zie je in het vakje. Kies een lettertype zonder ontbrekende tekens, of pas die tekens aan.",
+    "more": "Alle lettertypes testen met je tekst",
+    "preview": "Voorbeeld met je tekst",
+    "status": {
+      "missing": "Ontbreekt: {{chars}}",
+      "ok": "Alle tekens beschikbaar"
+    },
+    "title": "Kies een lettertype",
+    "yourText": "Je tekst"
+  },
+  "host": {
+    "badge": "Personaliseerbaar",
+    "personalise": "Personaliseren",
+    "personalised": "Gepersonaliseerd"
+  },
+  "leave": {
+    "body": "Je wijzigingen sinds {{time}} zijn niet opgeslagen. Als je nu weggaat, ben je ze kwijt.",
+    "bodyNever": "Deze configuratie is nog niet opgeslagen. Als je nu weggaat, ben je je wijzigingen kwijt.",
+    "discard": "Weggaan zonder opslaan",
+    "save": "Opslaan en weggaan",
+    "stay": "Blijven",
+    "title": "Weggaan zonder opslaan?"
+  },
+  "limits": {
+    "chars": "Maximaal tekens per regel",
+    "direction": "Bereik van de richting",
+    "from": "van",
+    "hint": "De knoppen van de klant stoppen aan deze grenzen.",
+    "lines": "Maximaal regels",
+    "move": "Maximaal verschuiven",
+    "size": "Bereik van de grootte",
+    "textHint": "Voor de klant stopt het typen aan deze grenzen.",
+    "title": "Grenzen voor de klant",
+    "to": "tot"
+  },
+  "mesh": {
+    "apply": {
+      "after_rollback": "Je bent teruggegaan in de geschiedenis. Stappen na dat punt kunnen niet definitief toegepast worden; doe ze opnieuw of ga verder vanaf hier.",
+      "blocked": "“{{step}}” kan niet definitief toegepast worden zolang hij een probleem heeft. Los eerst het probleem op.",
+      "failed": "We konden “{{step}}” niet definitief toepassen. Er is niets veranderd; de stap is nog aanpasbaar.",
+      "nothing_to_apply": "Er is niets toe te passen: deze stap verandert het model niet.",
+      "step_failed": "We konden “{{step}}” niet definitief toepassen. Er is niets veranderd; de stap is nog aanpasbaar.",
+      "unknown_step": "Deze stap bestaat niet meer. Laad het project opnieuw."
+    },
+    "budget": {
+      "triangles": "Dit model heeft {{count}} driehoeken; de browser kan er tot {{max}} bewerken. Kies een eenvoudiger bestand of vraag ons om hulp.",
+      "vertices": "Dit model heeft {{count}} punten; de browser kan er tot {{max}} bewerken. Kies een eenvoudiger bestand of vraag ons om hulp.",
+      "store_bytes": "Dit project bevat te veel: {{size}} van de toegelaten {{max}}. Verwijder bewaarde items die je niet meer gebruikt.",
+      "store_entries": "Dit project bevat {{entries}} bewaarde items; het maximum is {{max}}. Verwijder bewaarde items die je niet meer gebruikt."
+    },
+    "decimate": {
+      "bad_input": "Dit model kan zo niet vereenvoudigd worden. Kies een ander bestand of vraag ons om hulp.",
+      "groups_unsupported": "Dit bestand beschrijft zijn delen op een inconsistente manier, dus het kan niet vereenvoudigd worden. Exporteer het opnieuw vanuit je 3D-programma of vraag ons om hulp."
+    },
+    "emboss": {
+      "bad_height": "De hoogte of diepte van de letters moet meer dan 0 mm zijn.",
+      "bad_size": "De letterhoogte moet meer dan 0 mm zijn.",
+      "curvature_collapse": "Het oppervlak buigt hier zo sterk dat de letters in elkaar zouden vallen. Schuif de tekst naar een vlakkere plek of maak hem kleiner.",
+      "cut_failed": "We konden de letters op deze plek niet in het model snijden. Probeer opnieuw, schuif de tekst een beetje of vraag ons om hulp.",
+      "empty_shape": "Er is geen vorm om te plaatsen. Kies een vorm of schakel deze stap uit.",
+      "empty_text": "Typ eerst een tekst.",
+      "fold_over": "De tekst zou op dit deel van het oppervlak over zichzelf heen vouwen. Schuif hem of maak hem kleiner.",
+      "font_unreadable": "We kunnen het lettertype {{font}} niet lezen. Kies een ander lettertype; wij zijn op de hoogte gebracht.",
+      "groups_unsupported": "Dit bestand beschrijft zijn delen op een inconsistente manier, dus we weten niet op welk oppervlak de tekst hoort. Exporteer het opnieuw vanuit je 3D-programma of vraag ons om hulp.",
+      "inside_out": "Dit model staat binnenstebuiten: de vlakken wijzen naar binnen. Exporteer het opnieuw vanuit je 3D-programma of kies een ander bestand.",
+      "invalid_result": "Deze instellingen gaven geen geldig resultaat. Maak de laatste wijziging ongedaan, of probeer een iets andere grootte of plek.",
+      "mesh_not_manifold": "Dit bestand is geen gesloten volume, dus het kan niet zo geprint worden. Herstel het of kies een ander bestand.",
+      "missing_glyphs": "Dit lettertype heeft geen teken voor: {{characters}}. Kies een ander lettertype of pas de tekst aan.",
+      "no_font": "Kies een lettertype voor deze tekst.",
+      "no_placement": "De tekst heeft nog geen plek op het model. Klik op het model waar hij moet komen.",
+      "no_placement_svg": "De tekening heeft nog geen plek op het model. Klik op het model waar ze moet komen.",
+      "no_shape": "Kies eerst een tekening.",
+      "no_surface": "Op die plek is geen oppervlak om de tekst op te zetten. Klik rechtstreeks op het onderdeel.",
+      "on_negative_body": "Die plek ligt in een uitsparing van het model, niet op het onderdeel zelf. Klik op de buitenkant van het onderdeel.",
+      "patch_not_disk": "De tekst loopt hier over een gat of rond het onderdeel, dus hij kan niet op één stuk oppervlak liggen. Schuif hem naar een doorlopend vlak.",
+      "stretch": "Het oppervlak is hier gebogen, dus de letters rekken {{pct}} % uit. Het wordt geprint, maar op een vlakkere plek ziet het er beter uit.",
+      "svg_empty_mode": "Deze tekening heeft niets om in deze modus te gebruiken. Wissel tussen Vulling en Lijn, of geef de tekening een vulling of een omtrek.",
+      "svg_too_complex": "Deze vorm heeft te veel punten om te plaatsen. Vereenvoudig de SVG of kies een andere.",
+      "svg_too_large": "Dit SVG-bestand is te groot. Gebruik een kleiner bestand.",
+      "svg_unsafe": "Deze SVG bevat scripts of links die we niet aanvaarden. Sla hem opnieuw op als gewone tekening.",
+      "text_scaled_to_fit": "We hebben de tekst {{mm}} mm gemaakt zodat hij op het onderdeel past.",
+      "text_small": "De letters zijn klein en worden misschien niet mooi geprint.",
+      "text_too_long": "De tekst is te lang voor dit onderdeel. Gebruik maximaal {{max}} tekens of maak de letters kleiner.",
+      "thin_strokes": "Sommige lijnen van dit lettertype zijn te dun om op deze grootte te printen. Maak de tekst groter of kies een vetter lettertype.",
+      "too_much_stretch": "Het oppervlak is hier te sterk gebogen: de letters zouden {{pct}} % uitrekken (maximaal {{max}} %). Schuif de tekst naar een vlakkere plek of maak hem kleiner.",
+      "touches_patch_edge": "De tekst komt tot aan de rand van het vlak waarop hij staat, dus hij kan niet gemaakt worden.",
+      "touches_patch_edge_crease": "De tekst loopt over een scherpe rand van het onderdeel, dus hij kan niet gemaakt worden.",
+      "wall_too_thin": "Zo diep graveren gaat door de wand. Graveer minder diep of maak de letters verhoogd."
+    },
+    "export": {
+      "_any": "We konden het bestand niet maken. Probeer opnieuw of kies het andere formaat."
+    },
+    "expr": {
+      "invalid": "Deze formule kan niet berekend worden. Controleer ze op tikfouten."
+    },
+    "import": {
+      "_any": "We konden dit bestand niet openen. Gebruik een STL-, 3MF- of .amproj-bestand."
+    },
+    "input": {
+      "missing_mesh": "Er is nog geen model. Laad eerst een bestand op.",
+      "missing_payload": "Het bewaarde item “{{name}}” bestaat niet meer. Kies een ander, of importeer het opnieuw.",
+      "wrong_kind": "“{{name}}” is een {{got}}; deze stap heeft een {{expected}} nodig."
+    },
+    "loader": {
+      "_any": "Een deel van AtelierMesh is niet geladen. Laad de pagina opnieuw."
+    },
+    "lowpoly": {
+      "already_smaller": "Dit model heeft {{count}} driehoeken, minder dan de {{target}} die je vroeg, dus het blijft zoals het is.",
+      "bad_input": "Dit model kan zo niet low poly gemaakt worden. Kies een ander bestand of vraag ons om hulp.",
+      "groups_unsupported": "Dit bestand beschrijft zijn delen op een tegenstrijdige manier, dus het kan niet low poly gemaakt worden. Exporteer het opnieuw uit je 3D-programma of vraag ons om hulp.",
+      "target_not_reached": "Het model houdt {{count}} driehoeken in plaats van {{target}}: de scherpe randen en aparte delen hebben ze nodig.",
+      "volume_changed_larger": "Het low-polymodel is ongeveer {{pct}} % groter dan het origineel. Controleer de afmetingen voor je print.",
+      "volume_changed_smaller": "Het low-polymodel is ongeveer {{pct}} % kleiner dan het origineel. Controleer de afmetingen voor je print.",
+      "not_closed": "Dit model is geen gesloten volume ({{open_edges}} open randen, {{bad_edges}} dubbele randen). Voeg eerst Model herstellen toe.",
+      "empty_input": "Dit model heeft geen driehoeken.",
+      "too_many_triangles": "De facetten zouden {{triangles}} driehoeken nodig hebben; de grens is {{limit}}. Gebruik grotere facetten.",
+      "_any": "Facetten kon dit model niet veranderen."
+    },
+    "manifest": {
+      "invalid": "De beschrijving van deze plug-in is onvolledig, dus hij kan niet toegevoegd worden.",
+      "missing_license": "De plug-in zegt niet onder welke licentie hij valt. De maker moet een “license” toevoegen, bijvoorbeeld MIT.",
+      "missing_description": "De plug-in heeft geen beschrijving. De maker moet een of twee zinnen toevoegen die zeggen wat hij doet.",
+      "bad_license": "De licentie van de plug-in is niet bruikbaar: gebruik een SPDX-naam zoals MIT of Apache-2.0, of Proprietary.",
+      "bad_description": "De beschrijving van de plug-in is niet bruikbaar: gewone tekst van 10 tot 300 tekens.",
+      "bad_contact": "De contactgegevens van de plug-in zijn niet bruikbaar: de website moet een https-adres zijn en de e-mail een adres.",
+      "bad_package_url": "Het pakketadres van de plug-in is niet bruikbaar: een https-adres zonder gebruikersnaam of wachtwoord.",
+      "bad_image": "De voorbeeldafbeelding van de plug-in is niet bruikbaar: geef een bestand in het pakket en een korte beschrijving (5 tot 160 tekens).",
+      "bad_uses": "De lijst “uses” van de plug-in is niet bruikbaar: ze mag alleen diensten van de host noemen die deze versie kent (fonts)."
+    },
+    "param": {
+      "_any": "Een instelling heeft een waarde die we niet kunnen gebruiken. Controleer het gemarkeerde veld."
+    },
+    "placement": {
+      "direction_out_of_range": "De hoek moet tussen {{min}}° en {{max}}° liggen. We hebben hem op de grens gehouden.",
+      "limits_changed": "De winkel heeft aangepast wat je kunt wijzigen, dus we hebben je tekst binnen de nieuwe grenzen gezet.",
+      "size_out_of_range": "De grootte moet tussen {{min}} en {{max}} mm liggen. We hebben hem op de grens gehouden.",
+      "too_far": "De tekst mag maximaal {{max}} mm verschuiven van de plek die de winkel koos. We hebben hem op de grens gehouden."
+    },
+    "plugin": {
+      "bad_mesh": "De plug-in “{{plugin}}” gaf een model terug dat geen gesloten volume is. Het resultaat werd niet gebruikt.",
+      "failed": "De plug-in “{{plugin}}” is gestopt met een fout. Schakel hem uit of probeer opnieuw; de stappen ervoor werken nog.",
+      "needs_sandbox": "Deze plug-in moet in een afgeschermde omgeving draaien, en deze browser biedt die niet. Gebruik een recente browser.",
+      "crashed": "De plug-in “{{plugin}}” werkt niet meer en is uitgezet. {{message}}",
+      "disabled": "De plug-in “{{plugin}}” is uitgezet omdat hij niet meer werkte. {{message}}",
+      "off": "De plug-in “{{plugin}}” staat uit.",
+      "customer": "Deze stap kan nu niet getoond worden. Probeer het later opnieuw of neem contact op met de winkel.",
+      "needs_fonts": "De plug-in “{{plugin}}” heeft letteromtrekken van de host nodig en deze app biedt die niet aan. Gebruik een host die ze wel biedt, of verwijder de stap."
+    },
+    "resize": {
+      "zero_size": "Een grootte kan geen 0 zijn. Vul een grootte boven 0 mm in."
+    },
+    "run": {
+      "cancelled": "Gestopt. Het vorige resultaat blijft zichtbaar.",
+      "timeout": "Dit duurde langer dan {{seconds}} seconden, dus we zijn gestopt. Het vorige resultaat blijft zichtbaar. Probeer opnieuw of maak de tekst kleiner."
+    },
+    "segment": {
+      "_any": "De delen van het model konden niet gescheiden blijven. Exporteer als STL of vraag ons om hulp."
+    },
+    "step": {
+      "invalid": "Deze stap heeft instellingen die we niet kunnen gebruiken. Controleer ze of verwijder de stap.",
+      "migration_failed": "Deze stap is bewaard met een oudere versie van “{{name}}” ({{from}}) en kon niet worden bijgewerkt naar {{installed}}. {{message}}",
+      "not_personalisable": "Dit kan hier niet aangepast worden.",
+      "unknown_op": "Dit project gebruikt een soort stap die we niet kennen. Laad de pagina opnieuw om AtelierMesh bij te werken.",
+      "unknown_plugin": "Dit project heeft de plug-in “{{plugin}}” nodig, maar die is niet geïnstalleerd.",
+      "version_newer": "Dit project is gemaakt met een nieuwere versie van AtelierMesh. Laad de pagina opnieuw om bij te werken en open het dan nog eens."
+    },
+    "unknown": "Er ging iets mis ({{code}}). Het vorige resultaat blijft zichtbaar.",
+    "voronoi": {
+      "cells_too_small": "De cellen zijn te klein voor de lijnen ertussen: {{cells}} cellen passen niet in dit gebied. Gebruik minder cellen, dunnere lijnen of een groter gebied.",
+      "does_not_fit": "Het patroon past hier niet op het oppervlak: het raakt een rand of een deel dat te sterk buigt. Maak het gebied kleiner of verplaats het naar een vlakkere plek.",
+      "empty_pattern": "Er blijft niets over van het patroon. Maak het gebied groter, de marge kleiner of de lijnen dunner.",
+      "no_placement": "Het patroon heeft nog geen plek op het model. Klik op het model waar het moet komen.",
+      "too_heavy": "Dit patroon heeft te veel details om te maken ({{cells}} cellen). Gebruik minder cellen, minder afronding of een kleiner gebied.",
+      "too_many_cells": "Dat zijn meer cellen dan we kunnen maken. Gebruik {{max}} cellen of minder.",
+      "bad_cells": "Het aantal cellen moet minstens 2 zijn.",
+      "thin_lines": "De lijnen zijn maar {{width}} mm breed, dunner dan de printer kan leggen ({{min}} mm). Maak de lijnen breder."
+    },
+    "repair": {
+      "bad_input": "Dit model kan zo niet gerepareerd worden. Kies een ander bestand of vraag ons om hulp.",
+      "groups_unsupported": "Dit bestand beschrijft zijn onderdelen op een tegenstrijdige manier, dus we kunnen het niet repareren. Exporteer het opnieuw uit je 3D-programma, of vraag ons om hulp.",
+      "hole_too_big": "Sommige gaten blijven open: ze zijn groter dan {{max}} randen (het grootste heeft er {{largest}}).",
+      "hole_skipped": "Sommige gaten konden niet gedicht worden, omdat hun rand zichzelf kruist of te scheef staat. Ze blijven open.",
+      "still_open": "Het model is nog steeds geen gesloten lichaam. Repareer het in je 3D-programma of kies een ander bestand."
+    },
+    "deform": {
+      "may_fold": "Deze vorm is sterk gebogen rond {{at}} % van de lengte: het oppervlak wordt {{stretch}} keer uitgerekt of samengedrukt tot {{pct}} %. Dunne delen printen mogelijk slecht. Gebruik een kleinere draaiing, versmalling of buiging.",
+      "too_heavy": "De gladde vorm zou {{count}} driehoeken nodig hebben, meer dan de {{max}} die mogen. Gebruik minder fijn detail of een kleinere verandering.",
+      "folds": "De vorm vouwt zichzelf dicht rond {{at}} % van de lengte. Gebruik een kleinere versmalling, buiging of golf.",
+      "bad_range": "Het begin moet lager liggen dan het einde.",
+      "bad_input": "Dit model kan zo niet worden gedraaid, versmald, gebogen of golvend gemaakt.",
+      "bad_axes": "Het model kan niet langs en naar dezelfde as worden gebogen. Kies twee verschillende assen.",
+      "bad_wavelength": "De golflengte moet meer dan 0 mm zijn.",
+      "wave_too_big": "De golf is {{amplitude}} mm hoog, wat veel is voor een model waarvan de kleinste zijde {{side}} mm is. Het oppervlak kan zichzelf snijden. Gebruik een kleinere hoogte."
+    },
+    "parts": {
+      "nothing_chosen": "Kies met welk deel je wilt werken.",
+      "would_remove_everything": "Dan blijft er niets over van het model. Kies een ander deel.",
+      "groups_unsupported": "Dit bestand beschrijft zijn delen op een tegenstrijdige manier, dus delen verwijderen kan niet. Exporteer het opnieuw uit je 3D-programma, of vraag ons om hulp.",
+      "bad_input": "Er is geen model om een deel uit te halen.",
+      "result_open": "Het model is geen gesloten massief meer na het verwijderen van “{{part}}”. Sluit de opening in de stapinstellingen, of repareer het.",
+      "cap_skipped": "Sommige openingen konden niet gesloten worden omdat hun rand zichzelf kruist of te verdraaid is. Ze blijven open."
+    },
+    "part": {
+      "unknown": "Dit model heeft geen deel met de naam “{{name}}”. Kies een deel dat bij deze stap bestaat.",
+      "ambiguous": "“{{name}}” is zowel een lichaam als een gekleurd gebied. Kies welke je bedoelt."
+    },
+    "voronoi_shell": {
+      "bad_input": "De schaal heeft een gesloten massief nodig. Voeg eerst een stap Model repareren toe, of repareer het bestand.",
+      "groups_unsupported": "Dit model heeft meerdere losse delen, en de schaal kan er maar één uithollen. Verwijder eerst de andere delen, of hol ze één voor één uit.",
+      "cells_too_small": "Er is geen ruimte voor {{cells}} openingen met zulke brede stijlen. Gebruik {{max}} openingen of minder, of smallere stijlen.",
+      "too_heavy": "Deze schaal heeft te veel detail om hier te maken. Gebruik grover detail, minder openingen of dikkere stijlen.",
+      "empty_result": "Er blijft niets van het model over. Gebruik een dunnere wand, een kleinere opening of bredere stijlen.",
+      "thin_ribs": "De stijlen zijn maar {{width}} mm breed, dunner dan de printer kan leggen ({{min}} mm). Maak ze breder.",
+      "thin_wall": "De wand is maar {{width}} mm dik, dunner dan de printer kan leggen ({{min}} mm). Maak hem dikker.",
+      "thickness_too_big": "De wand van {{thickness}} mm is dikker dan dit model diep is ({{depth}} mm), dus er komt geen holte. Gebruik een dunnere wand."
+    },
+    "texture": {
+      "may_self_intersect": "De textuur is hier diep voor de kromming van het oppervlak ({{turned}} driehoeken omgeslagen, {{tight}} krappe plaatsen). Ze kan zichzelf kruisen en slecht printen. Gebruik een kleinere diepte of een grotere tegel.",
+      "too_heavy": "Deze textuur heeft {{count}} driehoeken nodig (randen van {{edge}} mm), meer dan de {{max}} toegestaan. Gebruik grover detail, een grotere tegel of textureer maar een deel.",
+      "bad_input": "Dit model kan zo niet getextureerd worden.",
+      "no_image": "Kies een afbeelding voor de textuur.",
+      "image_unsupported": "Deze afbeelding kan niet gelezen worden. Gebruik een PNG, of een JPEG in een browser die hem kan lezen.",
+      "image_too_large": "Deze afbeelding is te groot. Gebruik er een van hoogstens 8192 pixels breed of hoog."
+    },
+    "smooth": {
+      "thin_features": "Het gladmaken verplaatste het oppervlak tot {{move}} mm en veranderde het volume met {{change}} %. Dunne delen kunnen weggesleten zijn. Gebruik een lagere sterkte, minder rondes of een limiet op de grootste verplaatsing.",
+      "bad_input": "Er is niets om glad te maken: het model is leeg."
+    },
+    "recipe": {
+      "not_json": "Dit bestand is geen recept (het is geen leesbare tekst).",
+      "not_a_recipe": "Dit bestand is geen AtelierMesh-recept.",
+      "version_newer": "Dit recept is gemaakt met een nieuwere versie van AtelierMesh. Werk de app bij om het te gebruiken.",
+      "too_large": "Dit receptbestand is te groot.",
+      "field": "Dit recept mist een veld of heeft een fout veld ({{field}}).",
+      "too_many_steps": "Dit recept heeft te veel stappen (maximaal {{max}}).",
+      "steps_invalid": "De stappen in dit recept zijn niet geldig.",
+      "unsafe_key": "Dit recept bevat een naam die niet toegestaan is.",
+      "bad_asset": "Een afbeelding of tekening in dit recept is niet geldig.",
+      "assets_too_large": "De afbeeldingen in dit recept zijn te groot."
+    },
+    "hollow": {
+      "bad_input": "Uithollen werkt alleen op een gesloten model. Voeg eerst een stap Mesh herstellen toe, of herstel het bestand.",
+      "groups_unsupported": "Dit model heeft delen die niet uitgehold kunnen worden: ze moeten het hele model beslaan, geen enkel deel mag wegsnijden, en met een opening kan er maar één deel zijn. Splits of verwijder eerst delen.",
+      "too_heavy": "Dit model is te groot om met deze wand en dit detail uit te hollen. Kies minder detail of een dikkere wand.",
+      "thin_walls": "De wand is maar {{width}} mm dik, dunner dan de printer kan leggen ({{min}} mm). Maak hem dikker.",
+      "thickness_too_big": "De wand van {{thickness}} mm is dikker dan dit model diep is ({{depth}} mm), dus er is geen ruimte voor een holte. Het model blijft zoals het was. Kies een dunnere wand.",
+      "outer_remeshed": "Met een opening wordt de buitenkant opnieuw gemaakt, dus de driehoeken zijn nieuw (de vorm blijft dezelfde). Zonder opening blijft de buitenkant precies zoals hij is."
+    },
+    "printcheck": {
+      "not_closed": "Het oppervlak is geen gesloten vorm: {{open_edges}} open randen, {{shared_edges}} randen gedeeld door drie of meer driehoeken, {{bad_edges}} randen die de verkeerde kant op wijzen. Een slicer kan het weigeren of fout printen. Voeg eerst een stap Mesh herstellen toe.",
+      "islands": "Het model bestaat uit {{shells}} losse stukken; het kleinste is {{smallest}} mm groot. Een stuk dat nergens aan vastzit zweeft en print niet.",
+      "thin_walls": "Wanden dunner dan {{min}} mm over {{percent}} % van het oppervlak (het dunst {{thinnest}} mm). Ze printen mogelijk niet of breken. Maak ze dikker.",
+      "thin_features": "Paaltjes, pennen of punten dunner dan {{min}} mm in alle richtingen (het dunst {{thinnest}} mm). Ze kunnen afbreken of niet printen.",
+      "narrow_gaps": "Spleten smaller dan {{min}} mm (de smalste {{narrowest}} mm) over {{percent}} % van het oppervlak. Ze smelten dicht. Maak ze breder.",
+      "needs_support": "{{percent}} % van het oppervlak ({{area}} mm²) helt meer dan {{angle}}° over en heeft support nodig. Draai het model of accepteer de support.",
+      "long_bridges": "Platte daken tot {{widest}} mm breed, meer dan {{max}} mm. Ze zakken door zonder support.",
+      "tiny_base": "Slechts {{area}} mm² van het model rust plat op het printbed. Het blijft mogelijk niet plakken of valt om. Voeg een platte voet of een brim toe.",
+      "too_tall": "Het model is {{ratio}} keer hoger ({{height}} mm) dan breed ({{width}} mm). Het kan wiebelen of omvallen tijdens het printen.",
+      "too_big_for_bed": "Het model ({{x}} × {{y}} × {{z}} mm) past zoals het ligt niet in het printvolume ({{bed_x}} × {{bed_y}} × {{bed_z}} mm). Probeer het om de verticale as te draaien of kleiner te maken.",
+      "floating_body": "Een deel van het model zweeft boven het printbed zonder iets eronder ({{bodies}} los stuk(ken); het laagste zit {{gap}} mm hoog). De printer zou in de lucht beginnen: dit print niet zoals het is. Verbind het met het model of print het apart.",
+      "island": "Een deel van het model begint in de lucht, {{height}} mm boven het printbed, zonder iets eronder ({{area}} mm² in de eerste laag). Het hangt hogerop aan de rest vast, maar de printer heeft daar niets om op te printen: dit print niet zoals het is. Voeg support toe in je slicer, of draai het model zodat dit deel niet in de lucht begint.",
+      "island_turn": "Een deel van het model begint in de lucht, {{height}} mm boven het printbed, zonder iets eronder ({{area}} mm² in de eerste laag). Het hangt hogerop aan de rest vast, maar de printer heeft daar niets om op te printen: dit print niet zoals het is. Voeg support toe in je slicer, of draai het model zodat de vlakke kant onderaan ligt (de stap “Oriënteren voor het printen” doet dat): zo gedraaid daalt de overhang van {{from_area}} mm² naar {{to_area}} mm².",
+      "overhang": "{{regions}} gebied(en) van samen {{area}} mm² ({{percent}} % van het oppervlak) hellen meer dan {{angle}}° over; het grootste is {{largest}} mm², {{height}} mm boven het printbed. Dit heeft support nodig of een andere oriëntatie. Voeg support toe in je slicer, of draai het model.",
+      "overhang_turn": "{{regions}} gebied(en) van samen {{area}} mm² ({{percent}} % van het oppervlak) hellen meer dan {{angle}}° over; het grootste is {{largest}} mm², {{height}} mm boven het printbed. Dit heeft support nodig of een andere oriëntatie. Draai het model zodat de vlakke kant onderaan ligt (de stap “Oriënteren voor het printen” doet dat): zo gedraaid daalt de overhang van {{from_area}} mm² naar {{to_area}} mm². Of voeg support toe in je slicer.",
+      "bridge": "Een plat dak van {{widest}} mm breed, {{height}} mm boven het printbed, overbrugt meer dan {{max}} mm en zakt door zonder support. Voeg support toe in je slicer, of draai het model.",
+      "bridge_turn": "Een plat dak van {{widest}} mm breed, {{height}} mm boven het printbed, overbrugt meer dan {{max}} mm en zakt door zonder support. Draai het model zodat de vlakke kant onderaan ligt (de stap “Oriënteren voor het printen” doet dat): zo gedraaid daalt de overhang van {{from_area}} mm² naar {{to_area}} mm². Of voeg support toe in je slicer."
+    },
+    "holes": {
+      "no_placement": "Het gat heeft nog geen plaats op het model. Klik op het model waar het komt.",
+      "bad_input": "Een gat kan alleen in een gesloten massief gemaakt worden. Voeg eerst een stap Mesh herstellen toe.",
+      "groups_unsupported": "Dit model heeft meerdere losse lichamen en een gat kan maar in één gemaakt worden. Verwijder eerst de andere delen of maak de gaten één lichaam per keer.",
+      "misses_model": "Het gat raakt het model niet. Verplaats het naar het model.",
+      "breaches": "Dit gat zou door een deel snijden dat niet “{{part}}” is. Geef het een diepte zodat het binnen blijft, of kies een ander deel.",
+      "too_big": "Het gat is groter dan het deel: het zou het hele model wegnemen. Maak het kleiner.",
+      "too_heavy": "Het gat raakt te veel driehoeken om hier te snijden ({{triangles}}). Maak het kleiner of verklein eerst het model.",
+      "not_robust": "Het gat kon op deze exacte plaats niet netjes gesneden worden. Verplaats het een klein beetje (een tiende millimeter is genoeg) of verander de grootte.",
+      "thin_wall": "Onder de bodem van het gat blijft maar {{width}} mm wand over; voor een goede print is minstens {{min}} mm nodig. Maak het gat minder diep."
+    },
+    "fonts": {
+      "unavailable": "Deze app kan geen letteromtrekken maken voor een plug-in.",
+      "bad_options": "De plug-in vroeg letteromtrekken aan met instellingen die niet bruikbaar zijn."
+    },
+    "store": {
+      "_any": "Een opgeslagen item kan niet gebruikt worden. Controleer de naam en de inhoud.",
+      "bad_entry": "“{{name}}” kan niet meer gelezen worden. Vervang het door een nieuw bestand.",
+      "name_taken": "“{{name}}” is al de naam van een geïmporteerd item. Kies een andere naam."
+    }
+  },
+  "ops": {
+    "emboss": {
+      "params": {
+        "svg_mode": {
+          "label": "Gebruik",
+          "help": "Vulling gebruikt de gevulde vlakken van de tekening. Lijn gebruikt enkel de omtrekken, in de breedte uit het bestand.",
+          "options": {
+            "fill": "Vulling",
+            "line": "Lijn"
+          }
+        },
+        "mode": {
+          "options": {
+            "flat": "Vlak (enkel kleur)"
+          }
+        },
+        "walls_segment": {
+          "label": "Onderdeel zijwanden",
+          "help": "De zijwanden van de letters krijgen een eigen onderdeel, zodat ze een andere kleur kunnen hebben. Leeg: de wanden delen het onderdeel van het oppervlak."
+        },
+        "segment": {
+          "label": "Onderdeel oppervlak",
+          "help": "De bovenkant van verheven letters, de bodem van gegraveerde of het gekleurde vlak bij vlak."
+        }
+      },
+      "sections": {
+        "main": "Tekst, grootte en plaats",
+        "text": "Lettertype en opmaak",
+        "shape": "Vorm",
+        "advanced": "Geavanceerd"
+      }
+    },
+    "emboss_svg": {
+      "params": {
+        "shape": {
+          "label": "Tekening",
+          "help": "Een tekening die in het project is bewaard. Importeer een SVG-bestand om er een te maken."
+        },
+        "mode": {
+          "options": {
+            "flat": "Vlak (enkel kleur)"
+          },
+          "label": "Reliëf"
+        },
+        "walls_segment": {
+          "label": "Onderdeel zijwanden",
+          "help": "De zijwanden van de tekening krijgen een eigen onderdeel, zodat ze een andere kleur kunnen hebben. Leeg: de wanden delen het onderdeel van het oppervlak."
+        },
+        "segment": {
+          "label": "Onderdeel oppervlak",
+          "help": "De bovenkant van een verheven tekening, de bodem van een gegraveerde of het gekleurde vlak bij vlak."
+        },
+        "size": {
+          "label": "Grootte",
+          "help": "Hoe hoog de tekening op het model is."
+        }
+      },
+      "sections": {
+        "main": "Tekening, grootte en plaats",
+        "text": "Tekenopties",
+        "shape": "Vorm",
+        "advanced": "Geavanceerd"
+      }
+    },
+    "low_poly": {
+      "title": "Low poly",
+      "sections": {
+        "detail": "Detail",
+        "look": "Uiterlijk",
+        "facets": "Facetten",
+        "shape": "Vorm",
+        "colours": "Kleuren"
+      },
+      "params": {
+        "triangles": {
+          "label": "Driehoeken",
+          "help": "Hoeveel driehoeken het low-polymodel krijgt. Minder driehoeken betekent grotere vlakken."
+        },
+        "sharpness": {
+          "label": "Scherpte",
+          "help": "Randen die scherper zijn dan deze hoek blijven scherpe vouwen. Een lagere hoek houdt meer randen, dus het model ziet er facetten-rijker uit."
+        },
+        "crystallise": {
+          "label": "Kristalliseren",
+          "help": "Trekt hoeken naar de vlakken van het oorspronkelijke oppervlak, zodat vlakken vlakker en hoeken netter worden. 0 zet het uit."
+        },
+        "keep_borders": {
+          "label": "Open randen behouden",
+          "help": "Behoudt de omtrek waar het model open randen heeft. Alleen van belang voor modellen die niet gesloten zijn."
+        },
+        "triangles_mode": {
+          "label": "Hoeveelheid",
+          "help": "Automatisch zoekt hoe weinig driehoeken de vorm nodig heeft. Een vast aantal laat je zelf kiezen.",
+          "options": {
+            "auto": "Automatisch",
+            "fixed": "Vast aantal"
+          }
+        },
+        "detail": {
+          "label": "Detail",
+          "help": "Hoe trouw het resultaat blijft aan het origineel. Laag is gedurfd en artistiek, hoog blijft dicht bij het origineel."
+        },
+        "facet_size": {
+          "label": "Facetgrootte",
+          "help": "Ongeveer hoe lang de randen van de facetten zijn: het oppervlak wordt opnieuw verdeeld in vlakke driehoeken van ongeveer deze grootte, zoals een handgemaakte low-poly mok."
+        },
+        "jitter": {
+          "label": "Spreiding",
+          "help": "Hoe ver elke hoek van een facet willekeurig in of uit mag bewegen. 0 geeft een gelijkmatig low-poly oppervlak."
+        },
+        "shift": {
+          "label": "Zijwaarts",
+          "help": "Hoe ver elke hoek ook zijwaarts mag bewegen, als deel van de facetgrootte."
+        },
+        "seed": {
+          "label": "Startgetal",
+          "help": "Een ander getal geeft andere facetten; hetzelfde getal geeft dezelfde."
+        },
+        "inside": {
+          "label": "Binnenkant",
+          "help": "Voor een vaas of een mok. Volgen: de binnenkant van de wand beweegt mee met de buitenkant, zodat de wand even dik blijft. Glad: de binnenkant blijft zoals hij was. Een massief model heeft geen binnenkant en blijft massief.",
+          "options": {
+            "follow": "Volgen",
+            "smooth": "Glad"
+          }
+        },
+        "wall": {
+          "label": "Kleinste wand",
+          "help": "Een hoek die naar binnen beweegt laat nooit minder dan dit over tot de andere kant van een wand."
+        },
+        "plain_bottom": {
+          "label": "Gladde onderkant",
+          "help": "Houd het laagste deel van het model glad, zoveel mm hoog (0: geen): het wordt verdeeld zoals de rest, maar de hoeken bewegen niet, en het eindigt in een rechte horizontale rand."
+        },
+        "plain_top": {
+          "label": "Gladde bovenkant",
+          "help": "Houd het hoogste deel van het model glad, zoveel mm hoog (0: geen): het wordt verdeeld zoals de rest, maar de hoeken bewegen niet, en het eindigt in een rechte horizontale rand."
+        },
+        "facet_colours": {
+          "label": "Kleuren",
+          "help": "Eén kleur; twee kleuren om en om (naburige facetten verschillen waar het kan); of willekeurige kleuren uit een palet. Elke kleur is een eigen segment, klaar voor een meerkleurenprint. Eén kleur houdt de kleuren die het model al had.",
+          "options": {
+            "one": "Eén",
+            "alternating": "Om en om",
+            "random": "Willekeurig"
+          }
+        },
+        "palette_size": {
+          "label": "Palet",
+          "help": "Uit hoeveel kleuren de willekeurige facetten kiezen."
+        },
+        "colour_1": {
+          "label": "Kleur 1",
+          "help": "De eerste facetkleur (ook de kleur van een model zonder kleuren)."
+        },
+        "colour_2": {
+          "label": "Kleur 2",
+          "help": "De tweede facetkleur."
+        },
+        "colour_3": {
+          "label": "Kleur 3",
+          "help": "De derde facetkleur."
+        },
+        "colour_4": {
+          "label": "Kleur 4",
+          "help": "De vierde facetkleur."
+        },
+        "style": {
+          "label": "Stijl",
+          "help": "Verkleinen: weinig grote facetten die de vorm volgen. Gelijke facetten: een mozaïek van even grote driehoeken met een willekeurige beweging naar binnen en buiten, zoals een handgemaakte low-poly mok.",
+          "options": {
+            "reduce": "Verkleinen",
+            "facets": "Gelijke facetten"
+          }
+        }
+      }
+    },
+    "voronoi": {
+      "title": "Voronoi-patroon",
+      "sections": {
+        "region": "Gebied",
+        "pattern": "Patroon",
+        "shape": "Vorm",
+        "advanced": "Geavanceerd"
+      },
+      "params": {
+        "region": {
+          "label": "Vorm van het gebied",
+          "help": "Het patroon vult een rechthoek of een cirkel rond de plek waar je het plaatst.",
+          "options": {
+            "rectangle": "Rechthoek",
+            "circle": "Cirkel"
+          }
+        },
+        "width": {
+          "label": "Breedte",
+          "help": "Breedte van het gebied."
+        },
+        "height_area": {
+          "label": "Hoogte",
+          "help": "Hoogte van het gebied."
+        },
+        "radius": {
+          "label": "Straal",
+          "help": "Straal van de cirkel."
+        },
+        "margin": {
+          "label": "Marge",
+          "help": "Ruimte tussen het patroon en de rand van het gebied."
+        },
+        "cells": {
+          "label": "Cellen",
+          "help": "Ongeveer hoeveel cellen het patroon heeft. Meer cellen geven kleinere, fijnere cellen."
+        },
+        "seed": {
+          "label": "Patroonnummer",
+          "help": "Elk nummer geeft een ander patroon. Hetzelfde nummer geeft altijd hetzelfde patroon."
+        },
+        "irregularity": {
+          "label": "Onregelmatigheid",
+          "help": "0 geeft gelijke, honingraatachtige cellen. 1 geeft wilde, ongelijke cellen."
+        },
+        "line_width": {
+          "label": "Lijndikte",
+          "help": "Breedte van de lijnen tussen de cellen."
+        },
+        "fill": {
+          "label": "Cellen in plaats van lijnen",
+          "help": "Maakt de cellen zelf de vorm, met een tussenruimte van één lijndikte."
+        },
+        "rounding": {
+          "label": "Afgeronde hoeken",
+          "help": "Rondt de hoeken van de cellen af. 0 houdt ze scherp."
+        },
+        "mode": {
+          "options": {
+            "flat": "Vlak (alleen kleur)"
+          }
+        },
+        "segment": {
+          "label": "Oppervlaktedeel",
+          "help": "De bovenkant van verhoogde lijnen, de bodem van gegraveerde lijnen, of het gekleurde vlak wanneer vlak."
+        },
+        "walls_segment": {
+          "label": "Zijwanddeel",
+          "help": "De zijwanden krijgen een eigen deel, zodat ze een andere kleur kunnen hebben. Leeg: de wanden delen het oppervlaktedeel."
+        }
+      }
+    },
+    "repair_mesh": {
+      "title": "Model repareren",
+      "sections": {
+        "fix": "Reparaties"
+      },
+      "params": {
+        "weld": {
+          "label": "Punten samenvoegen binnen",
+          "help": "Punten die dichter bij elkaar liggen dan dit worden één punt. 0 zet het uit."
+        },
+        "non_manifold": {
+          "label": "Randen met te veel vlakken",
+          "options": {
+            "split": "Afsplitsen",
+            "remove": "Verwijderen",
+            "off": "Laten staan"
+          },
+          "help": "Een rand hoort bij precies twee driehoeken. Komen er meer samen, dan worden de overtollige driehoeken afgesplitst of verwijderd."
+        },
+        "fix_normals": {
+          "label": "Oppervlak naar buiten richten",
+          "help": "Draait driehoeken die verkeerd om staan, zodat het model een massief lichaam is."
+        },
+        "min_island": {
+          "label": "Kleine losse stukjes verwijderen",
+          "help": "Stukken kleiner dan dit deel van het grootste stuk verdwijnen. Stukken van minder dan vier driehoeken verdwijnen altijd. 0 houdt alles."
+        },
+        "max_hole": {
+          "label": "Gaten dichten tot",
+          "help": "Het aantal randen rond het gat. Grotere gaten blijven open. 0 dicht geen gaten."
+        }
+      }
+    },
+    "twist": {
+      "title": "Draaien",
+      "sections": {
+        "shape": "Vorm",
+        "axis": "As",
+        "range": "Bereik",
+        "detail": "Detail"
+      },
+      "params": {
+        "angle": {
+          "label": "Draaiing",
+          "help": "Hoe ver de bovenkant draait ten opzichte van de onderkant. Een negatieve hoek draait de andere kant op."
+        },
+        "easing": {
+          "label": "Verloop",
+          "help": "Gelijkmatig draait overal even snel. Zacht begint en eindigt rustig.",
+          "options": {
+            "linear": "Gelijkmatig",
+            "smooth": "Zacht"
+          }
+        },
+        "axis": {
+          "label": "As",
+          "help": "De richting waarlangs het model wordt gedraaid. Z is omhoog.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (omhoog)"
+          }
+        },
+        "center": {
+          "label": "Middelpunt",
+          "options": {
+            "bbox_center": "Midden van het model",
+            "origin": "Oorsprong",
+            "point": "Een punt"
+          }
+        },
+        "center_point": {
+          "label": "Middelpunt"
+        },
+        "from": {
+          "label": "Begin",
+          "help": "Waar de draaiing begint, als deel van de hoogte. Eronder blijft het model zoals het is."
+        },
+        "to": {
+          "label": "Einde",
+          "help": "Waar de draaiing eindigt. Erboven wordt het model als geheel gedraaid."
+        },
+        "detail": {
+          "label": "Gladheid",
+          "help": "Hoe fijn het oppervlak wordt verdeeld om de draaiing te volgen. Fijner is gladder maar zwaarder.",
+          "options": {
+            "auto": "Automatisch",
+            "fine": "Fijn",
+            "coarse": "Grof"
+          }
+        },
+        "max_triangles": {
+          "label": "Grootste resultaat",
+          "help": "De stap stopt als het resultaat meer driehoeken zou hebben dan dit."
+        }
+      }
+    },
+    "taper": {
+      "title": "Taps toelopen",
+      "sections": {
+        "shape": "Vorm",
+        "axis": "As",
+        "range": "Bereik",
+        "detail": "Detail"
+      },
+      "params": {
+        "scale_end": {
+          "label": "Grootte aan het einde",
+          "help": "De grootte van de bovenkant ten opzichte van de onderkant. 0,5 maakt hem half zo breed."
+        },
+        "uniform": {
+          "label": "Richting",
+          "help": "Welke zijden kleiner worden. De eerste en de tweede van de twee richtingen die niet de as zijn.",
+          "options": {
+            "both": "Beide",
+            "x": "Alleen de eerste",
+            "y": "Alleen de tweede"
+          }
+        },
+        "easing": {
+          "label": "Verloop",
+          "help": "Gelijkmatig verandert de grootte overal even snel. Zacht begint en eindigt rustig.",
+          "options": {
+            "linear": "Gelijkmatig",
+            "smooth": "Zacht"
+          }
+        },
+        "axis": {
+          "label": "As",
+          "help": "De richting waarlangs het model taps toeloopt. Z is omhoog.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (omhoog)"
+          }
+        },
+        "center": {
+          "label": "Middelpunt",
+          "options": {
+            "bbox_center": "Midden van het model",
+            "origin": "Oorsprong",
+            "point": "Een punt"
+          }
+        },
+        "center_point": {
+          "label": "Middelpunt"
+        },
+        "from": {
+          "label": "Begin",
+          "help": "Waar het taps toelopen begint, als deel van de hoogte."
+        },
+        "to": {
+          "label": "Einde",
+          "help": "Waar het taps toelopen eindigt. Erboven houdt het model zijn eindgrootte."
+        },
+        "detail": {
+          "label": "Gladheid",
+          "help": "Hoe fijn het oppervlak wordt verdeeld om het taps toelopen te volgen. Fijner is gladder maar zwaarder.",
+          "options": {
+            "auto": "Automatisch",
+            "fine": "Fijn",
+            "coarse": "Grof"
+          }
+        },
+        "max_triangles": {
+          "label": "Grootste resultaat",
+          "help": "De stap stopt als het resultaat meer driehoeken zou hebben dan dit."
+        }
+      }
+    },
+    "delete_part": {
+      "title": "Deel verwijderen",
+      "sections": {
+        "part": "Deel",
+        "advanced": "Geavanceerd"
+      },
+      "params": {
+        "part": {
+          "label": "Deel",
+          "help": "Kies een lichaam of een gekleurd gebied van het oppervlak."
+        },
+        "close_hole": {
+          "label": "De opening",
+          "options": {
+            "fill": "Sluiten",
+            "none": "Open laten"
+          },
+          "help": "Een gebied van het oppervlak verwijderen laat een opening achter. Sluit ze met een deksel, of laat ze voor een latere stap."
+        },
+        "remove_unused": {
+          "label": "Ongebruikte punten verwijderen",
+          "help": "Punten die geen enkele driehoek nog gebruikt, worden weggelaten."
+        }
+      }
+    },
+    "keep_part": {
+      "title": "Alleen deel houden",
+      "sections": {
+        "part": "Deel",
+        "advanced": "Geavanceerd"
+      },
+      "params": {
+        "part": {
+          "label": "Deel",
+          "help": "Kies een lichaam of een gekleurd gebied van het oppervlak."
+        },
+        "close_hole": {
+          "label": "De opening",
+          "options": {
+            "fill": "Sluiten",
+            "none": "Open laten"
+          },
+          "help": "Een gebied van het oppervlak verwijderen laat een opening achter. Sluit ze met een deksel, of laat ze voor een latere stap."
+        },
+        "remove_unused": {
+          "label": "Ongebruikte punten verwijderen",
+          "help": "Punten die geen enkele driehoek nog gebruikt, worden weggelaten."
+        }
+      }
+    },
+    "voronoi_shell": {
+      "title": "Voronoi-schaal",
+      "sections": {
+        "shell": "Schaal",
+        "pattern": "Patroon",
+        "opening": "Opening",
+        "detail": "Detail"
+      },
+      "params": {
+        "beam_rounding": {
+          "label": "Rondheid van de balkjes",
+          "help": "Hoe rond de balkjes zijn: 0 houdt de randen vierkant, 1 maakt ze rond."
+        },
+        "thickness": {
+          "label": "Wanddikte",
+          "help": "Hoe diep de wand is, gemeten van de buitenkant van het model naar binnen."
+        },
+        "rib_width": {
+          "label": "Breedte van de stijlen",
+          "help": "De breedte van de stijlen tussen de openingen."
+        },
+        "smooth": {
+          "label": "Afgeronde knooppunten",
+          "help": "Rondt de knooppunten tussen de stijlen af. 0 houdt ze scherp."
+        },
+        "cells": {
+          "label": "Openingen",
+          "help": "Ongeveer hoeveel openingen de schaal heeft. Meer openingen zijn kleiner."
+        },
+        "seed": {
+          "label": "Patroonnummer",
+          "help": "Elk nummer geeft een ander patroon. Hetzelfde nummer geeft altijd hetzelfde patroon."
+        },
+        "irregularity": {
+          "label": "Onregelmatigheid",
+          "help": "0 geeft gelijkmatige, honingraatachtige openingen. 1 geeft wilde, ongelijke openingen."
+        },
+        "opening": {
+          "label": "Opening",
+          "help": "Een ronde opening langs de verticale (Z-)as door de bovenkant en/of de onderkant.",
+          "options": {
+            "none": "Geen",
+            "bottom": "Onder",
+            "top": "Boven",
+            "both": "Beide"
+          }
+        },
+        "opening_diameter": {
+          "label": "Diameter van de opening"
+        },
+        "detail": {
+          "label": "Detail",
+          "help": "Automatisch gebruikt een raster van een derde van de dunste stijl of wand. Grof is sneller, fijn is gladder.",
+          "options": {
+            "auto": "Automatisch",
+            "fine": "Fijn",
+            "extra_fine": "Extra fijn",
+            "coarse": "Grof"
+          }
+        },
+        "max_triangles": {
+          "label": "Maximum aantal driehoeken",
+          "help": "Heeft de schaal meer driehoeken, dan worden het er minder."
+        }
+      }
+    },
+    "texture": {
+      "title": "Oppervlaktetextuur",
+      "sections": {
+        "texture": "Textuur",
+        "pattern": "Patroon",
+        "mapping": "Aanbrengen",
+        "region": "Gebied",
+        "detail": "Detail"
+      },
+      "params": {
+        "pattern": {
+          "label": "Patroon",
+          "help": "De vorm van de textuur.",
+          "options": {
+            "knurl": "Ruitjes (kartel)",
+            "ridges": "Ribbels",
+            "waves": "Golven",
+            "dots": "Stippen",
+            "hex_dots": "Stippen, zeshoekig",
+            "hexagons": "Zeshoeken",
+            "bricks": "Bakstenen",
+            "weave": "Weefsel",
+            "grid": "Rasterlijnen",
+            "noise": "Ruis",
+            "leather": "Leer",
+            "wood": "Houtnerf",
+            "stipple": "Spikkels",
+            "image": "Afbeelding"
+          }
+        },
+        "amplitude": {
+          "label": "Diepte",
+          "help": "Hoever het oppervlak beweegt. Een negatief getal snijdt erin."
+        },
+        "scale": {
+          "label": "Tegelgrootte",
+          "help": "De grootte van één herhaling van het patroon."
+        },
+        "image": {
+          "label": "Afbeelding",
+          "help": "Een PNG of JPEG. Licht is hoog, donker is laag."
+        },
+        "tiling": {
+          "label": "Plaatsing",
+          "options": {
+            "tile": "Herhalen",
+            "fit": "Eén keer"
+          }
+        },
+        "invert": {
+          "label": "Omkeren",
+          "help": "Hoog en laag verwisselen."
+        },
+        "seed": {
+          "label": "Startwaarde",
+          "help": "Een ander getal geeft een ander willekeurig patroon."
+        },
+        "roughness": {
+          "label": "Ruwheid",
+          "help": "Hoeveel het fijne detail zichtbaar is."
+        },
+        "octaves": {
+          "label": "Lagen",
+          "help": "Uit hoeveel lagen detail de ruis bestaat."
+        },
+        "fill": {
+          "label": "Bedekking",
+          "help": "Hoeveel van elke cel het verhoogde deel inneemt."
+        },
+        "offset": {
+          "label": "Nulniveau",
+          "help": "0 verhoogt vanaf het oppervlak, 1 snijdt erin, 0,5 doet beide."
+        },
+        "mapping": {
+          "label": "Omwikkelen",
+          "help": "Hoe het patroon op het model wordt gelegd.",
+          "options": {
+            "triplanar": "Drievlaks",
+            "planar": "Vlak",
+            "cylindrical": "Cilinder",
+            "spherical": "Bol",
+            "box": "Doos"
+          }
+        },
+        "axis": {
+          "label": "As",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (omhoog)"
+          }
+        },
+        "blend": {
+          "label": "Scherpte van de naden",
+          "help": "Hoe scherp de zijden van het omwikkelen elkaar ontmoeten. Hoger is scherper."
+        },
+        "rotation": {
+          "label": "Draaien"
+        },
+        "offset_u": {
+          "label": "Zijwaarts verschuiven"
+        },
+        "offset_v": {
+          "label": "Omhoog verschuiven"
+        },
+        "region": {
+          "label": "Alleen op",
+          "help": "Alleen dit deel krijgt textuur. Leeg: het hele model."
+        },
+        "skip_bottom": {
+          "label": "Onderkant glad laten",
+          "help": "Vlakken die naar beneden kijken (binnen 20 graden van vlak) krijgen geen textuur, zodat het model plat op het bed ligt."
+        },
+        "edge_falloff": {
+          "label": "Vervagen bij randen",
+          "help": "De textuur vervaagt in een rechte helling zover van een scherpe rand en van de rand van het deel, zodat randen scherp blijven. 0 laat het patroon tot aan de rand lopen."
+        },
+        "segment": {
+          "label": "Kleurdeel",
+          "help": "Geef de getextureerde driehoeken dit kleurdeel, voor meerkleurig printen."
+        },
+        "detail": {
+          "label": "Detail",
+          "help": "Hoe fijn het oppervlak wordt opgedeeld om het patroon te volgen. Fijner is scherper maar zwaarder.",
+          "options": {
+            "auto": "Automatisch",
+            "fine": "Fijn",
+            "coarse": "Grof"
+          }
+        },
+        "smooth_normals": {
+          "label": "Gladde richtingen",
+          "help": "Het oppervlak verschuift langs afgevlakte richtingen, zodat scherpe randen niet scheuren."
+        },
+        "max_triangles": {
+          "label": "Grootste resultaat",
+          "help": "De stap stopt als het resultaat meer driehoeken zou hebben."
+        }
+      }
+    },
+    "smooth": {
+      "title": "Oppervlak gladmaken",
+      "sections": {
+        "shape": "Gladmaken",
+        "part": "Slechts een deel",
+        "advanced": "Geavanceerd"
+      },
+      "params": {
+        "strength": {
+          "label": "Sterkte",
+          "help": "Hoeveel elke ronde gladmaakt. 0 verandert niets."
+        },
+        "iterations": {
+          "label": "Rondes",
+          "help": "Hoeveel rondes. Meer rondes maken bredere bulten glad."
+        },
+        "keep_edges": {
+          "label": "Randen behouden scherper dan",
+          "help": "Randen waar het oppervlak meer draait dan deze hoek blijven scherp (ze worden alleen langs hun lengte gladgemaakt). 180 maakt alles glad."
+        },
+        "part": {
+          "label": "Deel",
+          "help": "Maak alleen dit deel glad. Laat leeg om het hele model glad te maken."
+        },
+        "falloff": {
+          "label": "Overgang",
+          "help": "Hoe ver van de rand van het deel het gladmaken geleidelijk begint."
+        },
+        "keep_volume": {
+          "label": "Formaat behouden",
+          "help": "Aan: het model krimpt niet (Taubin-gladmaken). Uit: gewoon gladmaken, dat het model bij elke ronde een beetje laat krimpen."
+        },
+        "keep_borders": {
+          "label": "Open randen behouden",
+          "help": "Houd de rand van een open model op zijn plaats."
+        },
+        "max_move": {
+          "label": "Grootste verplaatsing",
+          "help": "Hoeveel een punt zich maximaal mag verplaatsen. 0 betekent geen limiet."
+        }
+      }
+    },
+    "hollow": {
+      "title": "Uithollen",
+      "sections": {
+        "wall": "Wand",
+        "opening": "Opening",
+        "detail": "Detail"
+      },
+      "params": {
+        "thickness": {
+          "label": "Wanddikte",
+          "help": "Hoe dik de wand is, gemeten vanaf de buitenkant naar binnen."
+        },
+        "smooth": {
+          "label": "Binnenkant gladmaken",
+          "help": "Hoeveel de binnenkant wordt gladgemaakt. 0 laat wat het raster geeft."
+        },
+        "opening": {
+          "label": "Opening",
+          "help": "Een ronde opening langs de verticale (Z-)as door de boven- en/of onderkant, om te laten leeglopen, te ontluchten of iets in te passen. Met een opening wordt de buitenkant opnieuw gemaakt.",
+          "options": {
+            "none": "Geen",
+            "bottom": "Onder",
+            "top": "Boven",
+            "both": "Beide"
+          }
+        },
+        "opening_diameter": {
+          "label": "Diameter van de opening"
+        },
+        "detail": {
+          "label": "Detail",
+          "help": "Automatisch gebruikt een raster van een derde van de wand. Grof is sneller, fijn is gladder.",
+          "options": {
+            "auto": "Automatisch",
+            "fine": "Fijn",
+            "coarse": "Grof"
+          }
+        },
+        "max_triangles": {
+          "label": "Maximum aantal driehoeken",
+          "help": "Heeft het resultaat meer driehoeken, dan wordt het verminderd (alleen met een opening; anders wordt de buitenkant nooit verminderd)."
+        },
+        "cavity_segment": {
+          "label": "Deel voor de binnenkant",
+          "help": "De naam van het deel voor het binnenoppervlak. Leeg geeft het geen eigen deel."
+        }
+      }
+    },
+    "bend": {
+      "title": "Buigen",
+      "sections": {
+        "shape": "Buiging",
+        "axis": "Richting",
+        "range": "Bereik",
+        "detail": "Detail"
+      },
+      "params": {
+        "angle": {
+          "label": "Buiging",
+          "help": "Hoever het model over het bereik wordt gebogen. Een negatieve hoek buigt het de andere kant op."
+        },
+        "axis": {
+          "label": "Langs",
+          "help": "De richting waarin het model lang is: de buiging loopt erlangs. Z is boven.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (boven)"
+          }
+        },
+        "bend_axis": {
+          "label": "Buigt naar",
+          "help": "De richting waarnaar het model buigt. Dit moet een andere as zijn dan de vorige.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (boven)"
+          }
+        },
+        "center": {
+          "label": "Middelpunt",
+          "options": {
+            "bbox_center": "Midden van het model",
+            "origin": "Oorsprong",
+            "point": "Een punt"
+          }
+        },
+        "center_point": {
+          "label": "Middelpunt"
+        },
+        "from": {
+          "label": "Begin",
+          "help": "Waar de buiging begint, als deel van de lengte. Eronder blijft het model zoals het is."
+        },
+        "to": {
+          "label": "Einde",
+          "help": "Waar de buiging eindigt. Daarna loopt het model recht door."
+        },
+        "detail": {
+          "label": "Gladheid",
+          "help": "Hoe fijn het oppervlak wordt ingesneden om de buiging te volgen. Fijner is gladder maar zwaarder.",
+          "options": {
+            "auto": "Automatisch",
+            "fine": "Fijn",
+            "extra_fine": "Extra fijn",
+            "coarse": "Grof"
+          }
+        },
+        "max_triangles": {
+          "label": "Grootste resultaat",
+          "help": "De stap stopt als het resultaat meer driehoeken zou hebben dan dit."
+        }
+      }
+    },
+    "wave": {
+      "title": "Golf",
+      "sections": {
+        "shape": "Golf",
+        "axis": "Richting",
+        "range": "Bereik",
+        "detail": "Detail"
+      },
+      "params": {
+        "amplitude": {
+          "label": "Hoogte",
+          "help": "Hoever het oppervlak op en neer beweegt."
+        },
+        "wavelength": {
+          "label": "Golflengte",
+          "help": "De afstand van de ene top tot de volgende."
+        },
+        "phase": {
+          "label": "Begin van de golf",
+          "help": "Waar in de golf het bereik begint."
+        },
+        "axis": {
+          "label": "Loopt langs",
+          "help": "De richting waarin de golf loopt.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (boven)"
+          }
+        },
+        "direction": {
+          "label": "Beweegt",
+          "help": "De richting waarin het oppervlak beweegt. \"Langs het oppervlak\" volgt de vorm.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (boven)",
+            "normal": "Langs het oppervlak"
+          }
+        },
+        "falloff": {
+          "label": "Uitdoven aan de uiteinden",
+          "help": "De lengte waarover de golf aan de uiteinden van het bereik in- en uitdooft. 0 begint op volle hoogte."
+        },
+        "from": {
+          "label": "Begin",
+          "help": "Waar over de lengte de golf begint, als deel van de lengte."
+        },
+        "to": {
+          "label": "Einde",
+          "help": "Waar de golf eindigt."
+        },
+        "detail": {
+          "label": "Gladheid",
+          "help": "Hoe fijn het oppervlak wordt ingesneden om de golf te volgen. Fijner is gladder maar zwaarder.",
+          "options": {
+            "auto": "Automatisch",
+            "fine": "Fijn",
+            "extra_fine": "Extra fijn",
+            "coarse": "Grof"
+          }
+        },
+        "max_triangles": {
+          "label": "Grootste resultaat",
+          "help": "De stap stopt als het resultaat meer driehoeken zou hebben dan dit."
+        }
+      }
+    },
+    "ripple": {
+      "title": "Rimpeling",
+      "sections": {
+        "shape": "Rimpeling",
+        "axis": "Middelpunt",
+        "detail": "Detail"
+      },
+      "params": {
+        "amplitude": {
+          "label": "Hoogte",
+          "help": "Hoever het oppervlak op en neer beweegt."
+        },
+        "wavelength": {
+          "label": "Afstand tussen ringen",
+          "help": "De afstand van de ene ring tot de volgende."
+        },
+        "decay": {
+          "label": "Uitdoven",
+          "help": "Hoe snel de ringen uitdoven vanaf het midden. 0 houdt ze overal gelijk."
+        },
+        "radius": {
+          "label": "Bereik",
+          "help": "De ringen stoppen op deze afstand van het midden. 0 betekent geen grens."
+        },
+        "phase": {
+          "label": "Begin van de golf",
+          "help": "Waar in de golf het midden begint. 90 begint met een gladde top in het midden; 0 begint met een punt."
+        },
+        "axis": {
+          "label": "Beweegt langs",
+          "help": "De richting waarin het oppervlak beweegt. De ringen liggen in de twee andere richtingen.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (boven)"
+          }
+        },
+        "center": {
+          "label": "Middelpunt",
+          "options": {
+            "bbox_center": "Midden van het model",
+            "origin": "Oorsprong",
+            "point": "Een punt"
+          }
+        },
+        "center_point": {
+          "label": "Middelpunt"
+        },
+        "detail": {
+          "label": "Gladheid",
+          "help": "Hoe fijn het oppervlak wordt ingesneden om de ringen te volgen. Fijner is gladder maar zwaarder.",
+          "options": {
+            "auto": "Automatisch",
+            "fine": "Fijn",
+            "extra_fine": "Extra fijn",
+            "coarse": "Grof"
+          }
+        },
+        "max_triangles": {
+          "label": "Grootste resultaat",
+          "help": "De stap stopt als het resultaat meer driehoeken zou hebben dan dit."
+        }
+      }
+    },
+    "printability": {
+      "title": "Printbaarheidscontrole",
+      "sections": {
+        "printer": "Printer",
+        "limits": "Grenzen"
+      },
+      "params": {
+        "process": {
+          "label": "Soort printer",
+          "help": "Bepaalt de dunste wand, het kleinste detail en de smalste spleet die goed printen.",
+          "options": {
+            "fdm": "FDM (filament)",
+            "resin": "Hars"
+          }
+        },
+        "nozzle": {
+          "label": "Spuitmond",
+          "help": "De breedte van de lijn die de spuitmond legt."
+        },
+        "layer_height": {
+          "label": "Laagdikte",
+          "help": "Details dunner dan vier lagen komen er niet uit."
+        },
+        "bed": {
+          "label": "Printvolume",
+          "help": "Het printvolume. Gebruik 0 op een as om die weg te laten."
+        },
+        "min_wall": {
+          "label": "Dunste wand",
+          "help": "De dunste wand die print. 0 kiest op basis van de printer (twee keer de spuitmond; 0,6 mm voor hars)."
+        },
+        "min_feature": {
+          "label": "Dunste paaltje of pen",
+          "help": "Het dunste paaltje, de dunste pen of punt. 0 kiest op basis van de printer."
+        },
+        "min_gap": {
+          "label": "Smalste spleet",
+          "help": "De smalste spleet die open blijft. 0 kiest op basis van de printer."
+        },
+        "overhang_angle": {
+          "label": "Overhangshoek",
+          "help": "Vlakken die verder overhellen dan dit hebben support nodig."
+        },
+        "bridge_length": {
+          "label": "Langste brug",
+          "help": "Het langste platte dak dat zonder support print."
+        },
+        "min_overhang_area": {
+          "label": "Kleinste overhang met support",
+          "help": "Een hellende overhang kleiner dan dit telt niet mee in het advies om support toe te voegen."
+        }
+      }
+    },
+    "cut_hole": {
+      "params": {
+        "placement": {
+          "label": "Plaats",
+          "help": "Klik op het model waar het gat komt."
+        },
+        "shape": {
+          "label": "Vorm",
+          "help": "De vorm van het gat.",
+          "options": {
+            "round": "Rond",
+            "slot": "Sleuf",
+            "square": "Vierkant"
+          }
+        },
+        "diameter": {
+          "label": "Grootte",
+          "help": "Rond: de doorsnede. Sleuf en vierkant: de breedte."
+        },
+        "length": {
+          "label": "Lengte",
+          "help": "Hoe lang de sleuf of het vierkant is."
+        },
+        "depth": {
+          "label": "Diepte",
+          "help": "Hoe diep het gat gaat vanaf de plaats die je koos. 0 snijdt helemaal door."
+        },
+        "countersink": {
+          "label": "Schroefkop",
+          "help": "Een bredere opening bovenaan, voor een schroefkop: een kegel (verzonken) of een cilinder (inwerking).",
+          "options": {
+            "none": "Geen",
+            "countersink": "Verzonken",
+            "counterbore": "Cilindrisch"
+          }
+        },
+        "countersink_diameter": {
+          "label": "Breedte van de opening",
+          "help": "De breedte van de bredere opening aan het oppervlak."
+        },
+        "countersink_depth": {
+          "label": "Diepte van het bredere deel",
+          "help": "Hoe diep het bredere deel gaat. Een verzonken gat is 90 graden en neemt de diepte die het nodig heeft."
+        },
+        "corner_radius": {
+          "label": "Afgeronde hoeken",
+          "help": "Hoe rond de hoeken van het vierkant zijn."
+        },
+        "rotation": {
+          "label": "Draaien",
+          "help": "Draait de sleuf of het vierkant om zijn as, bovenop de richting van de plaats."
+        },
+        "axis": {
+          "label": "Richting van het gat",
+          "help": "Welke kant het gat op gaat. Oppervlak: recht het oppervlak in op de plaats. X, Y of Z: langs die as, het model in.",
+          "options": {
+            "normal": "Oppervlak",
+            "x": "X",
+            "y": "Y",
+            "z": "Z"
+          }
+        },
+        "min_wall": {
+          "label": "Dunste wand",
+          "help": "De dunste wand die onder de bodem van een blind gat mag blijven. Een dunnere geeft een waarschuwing."
+        },
+        "part": {
+          "label": "Deel om door te snijden",
+          "help": "Snijd alleen door dit deel van het oppervlak. Leeg: het hele model."
+        }
+      },
+      "sections": {
+        "hole": "Gat",
+        "edge": "Schroefkop",
+        "more": "Meer"
+      }
+    },
+    "resize": {
+      "params": {
+        "mode": {
+          "options": {
+            "percent": "Procent",
+            "target_size": "Doelmaat",
+            "per_axis": "Per richting"
+          }
+        },
+        "keep_proportions": {
+          "label": "Verhoudingen behouden",
+          "help": "Aan: de andere richtingen schalen mee. Uit: alleen de gekozen richting verandert (uitrekken)."
+        },
+        "percent_x": {
+          "label": "Grootte langs X",
+          "help": "Hoe groot het model langs X is, in procent."
+        },
+        "percent_y": {
+          "label": "Grootte langs Y",
+          "help": "Hoe groot het model langs Y is, in procent."
+        },
+        "percent_z": {
+          "label": "Grootte langs Z",
+          "help": "Hoe groot het model langs Z is, in procent."
+        }
+      }
+    },
+    "decimate": {
+      "title": "Driehoeken verminderen",
+      "params": {
+        "mode": {
+          "label": "Methode",
+          "help": "Verwijder alle driehoeken die de vorm niet meer veranderen dan de kwaliteit toelaat, of verminder tot een aantal driehoeken dat je kiest.",
+          "options": {
+            "quality": "Zo klein mogelijk",
+            "target": "Doelaantal"
+          }
+        },
+        "tolerance": {
+          "label": "Kwaliteit",
+          "help": "Hoever het oppervlak mag verschuiven. Een kleiner getal houdt meer driehoeken en meer detail."
+        },
+        "target_triangles": {
+          "label": "Doelaantal driehoeken",
+          "help": "Het aantal driehoeken waartoe verminderd wordt."
+        },
+        "max_error": {
+          "label": "Grootste verschuiving",
+          "help": "0 betekent geen limiet op hoever het oppervlak mag verschuiven."
+        }
+      }
+    },
+    "store": {
+      "params": {
+        "name": {
+          "label": "Bewaren als",
+          "help": "Bewaart het resultaat van de stappen hierboven onder deze naam. Latere stappen kunnen het ophalen."
+        }
+      }
+    },
+    "load": {
+      "params": {
+        "name": {
+          "label": "Bewaard item",
+          "help": "Haalt een bewaard model of een bewaarde tekening terug, om er met de volgende stappen op verder te werken."
+        }
+      }
+    }
+  },
+  "order": {
+    "again": "Opnieuw na stap {{n}}",
+    "analyseLast": "{{step}} controleert alleen het model; het verandert niets. Het kijkt naar het model zoals het op dit punt is, dus het werkt het best als laatste stap.",
+    "blockedNote": "De stappen eronder wachten tot dit opgelost is. Ze houden hun vorige resultaat.",
+    "decimateAfterText": "Deze stap komt na de tekst, dus hij maakt de letters gladder: de randen blijven, maar fijne details gaan verloren. Hij werkt het best boven de tekststappen.",
+    "drag": "Sleep om de volgorde te wijzigen",
+    "file": "Je bestand",
+    "fileMeta": "{{name}} · {{w}} mm breed",
+    "hint": "Stappen lopen van boven naar onder. Elke stap werkt verder op het resultaat van de stap erboven.",
+    "hintBadge": "Tip over de volgorde",
+    "keepExact": "Letterhoogtes exact houden",
+    "keepExactHint": "Zet Grootte bovenaan. De tekst blijft op dezelfde plek van het onderdeel.",
+    "moveAboveText": "Boven de tekst zetten",
+    "moveDown": "Naar beneden",
+    "moveToEnd": "Naar het einde",
+    "moveUp": "Naar boven",
+    "moved": "“{{step}}” is nu stap {{n}}. De stappen eronder worden opnieuw uitgevoerd.",
+    "orientLast": "Automatisch oriënteren draait alleen het model. Houd het als laatste stap, zodat de stappen ervoor op het model werken zoals je het ziet.",
+    "partDropped": "Het onderdeel “{{part}}” is door een eerdere stap gemaakt, maar een stap ertussen verwijdert het.",
+    "partMissing": "Geen bestand of eerdere stap maakt het onderdeel “{{part}}”.",
+    "progress": "Stap {{n}} van {{total}}",
+    "result": "Resultaat",
+    "rotateAfterText": "Deze stap komt na de tekst, dus hij draait de letters mee met het model. Hij werkt het best boven de tekststappen.",
+    "scaledBelow": "Stap {{n}} (Grootte) komt hierna en schaalt deze letters mee: ze worden {{size}} mm hoog.",
+    "scalesAbove": "Deze stap komt na {{count}} tekststappen, dus hij schaalt hun letters mee: “{{text}}” wordt {{size}} mm hoog in plaats van {{orig}} mm.",
+    "step": "Stap {{n}}",
+    "waitsFor": "Wacht op stap {{n}}",
+    "repairFirst": "Repareren werkt het best als eerste stap, zodat elke andere stap met een gaaf model begint.",
+    "moveToStart": "Zet vooraan",
+    "deformAfterText": "Deze stap buigt het oppervlak waarop de tekst staat, dus de letters veranderen mee van vorm. Het werkt het best boven de tekststappen.",
+    "reduceBeforeDeform": "Driehoeken verminderen vóór een draaiing of verjonging geeft de vormstap een ruwer oppervlak om te volgen. Het werkt het best eronder.",
+    "moveBelowDeform": "Onder de vormstap zetten",
+    "partsFirst": "Een deel verwijderen of houden werkt het best vooraan, zodat de andere stappen alleen werken met wat overblijft.",
+    "textureBeforeText": "Een textuur bedekt het oppervlak waarop de tekst staat, dus de letters worden mee opgeruwd. Dit werkt het best boven de tekststappen.",
+    "reduceAfterTexture": "Driehoeken verminderen na een textuur vervaagt die. Dit werkt het best boven de textuurstap.",
+    "moveAboveTexture": "Boven de textuur zetten",
+    "smoothAfterText": "Gladmaken na de tekst of een patroon rondt hun randen af. Het werkt het best erboven.",
+    "smoothBeforeSurface": "Gladmaken egaliseert wat de stappen eronder maken (een schaal, een textuur, een draai). Het werkt het best eronder.",
+    "moveBelowShaping": "Eronder zetten",
+    "hollowLast": "Uithollen werkt op de buitenkant die de stappen erboven maakten. Tekst, een structuur of een patroon dat erna komt, raakt de wand. Het werkt het best onder die stappen.",
+    "moveBelowThese": "Onder die stappen zetten",
+    "hollowBeforeShell": "Een Voronoi-schaal boven deze stap wordt gemaakt van het hele volume, niet van het uitgeholde deel. Zet deze stap erboven.",
+    "moveAboveShell": "Boven de schaal zetten",
+    "cheeseLast": "De gaten worden in het oppervlak gesneden dat de stappen erboven maakten. Tekst, een structuur, een patroon of een draaiing na deze stap zou door de gaten worden doorsneden of ze vervormen. Zet hem onder die stappen.",
+    "cheeseBeforeSmooth": "Een stap Oppervlak gladmaken boven deze kan de randen van de gaten niet afronden. Zet deze stap erboven.",
+    "moveAboveSmooth": "Boven het gladmaken zetten",
+    "holesLast": "Het gat wordt door het oppervlak gesneden dat de stappen erboven maakten. Tekst, een structuur, een patroon, gaten of een draaiing na deze stap zouden tegen het gat aan lopen of het vervormen. Zet deze stap eronder.",
+    "holesBeforeSmooth": "Een stap Oppervlak gladmaken boven deze zou de rand van het gat niet afronden. Zet deze stap erboven.",
+    "customerTyped": "Klanten zien en kiezen de hoogte van vóór deze schaling: ze zien {{orig}} mm voor letters die {{size}} mm hoog geprint worden."
+  },
+  "overlay": {
+    "backToEditor": "Terug naar de editor",
+    "close": "Sluiten zonder wijzigingen",
+    "done": "Klaar",
+    "dragHint": "Sleep de tekst op het model, of gebruik de pijlen.",
+    "calculating": "Berekenen…",
+    "finishing": "Afronden…",
+    "nothingOpen": "Er is nog niets personaliseerbaar. Vink minstens één veld aan als “Personaliseerbaar”.",
+    "previewBanner": "Bekijk als klant: dit is precies wat de klant kan aanpassen, binnen jouw grenzen.",
+    "reset": "Herstellen",
+    "resetDone": "Terug naar het ontwerp van de winkel",
+    "steps": "Wat je kunt aanpassen",
+    "title": "Personaliseren"
+  },
+  "page": {
+    "loading": "Model openen…"
+  },
+  "personalise": {
+    "badge": "Personaliseerbaar",
+    "hint": "Vink de velden aan die personaliseerbaar zijn. Een stap met minstens één aangevinkt veld is een personaliseerbare stap.",
+    "offBody": "Dit haalt de personalisatie weg van {{count}} stappen. Hun huidige waarden blijven zoals ze zijn.",
+    "offCancel": "Aan laten",
+    "offConfirm": "Uitschakelen",
+    "offTitle": "Gepersonaliseerd ontwerp uitschakelen?",
+    "switch": "Gepersonaliseerd ontwerp",
+    "switchHint": "Hiermee maak je velden personaliseerbaar, binnen grenzen die jij instelt.",
+    "tick": "Personaliseerbaar",
+    "tickField": "{{field}} is personaliseerbaar"
+  },
+  "place": {
+    "hint": "Klik op het model waar de tekst moet komen",
+    "hintTouch": "Tik op het model waar de tekst moet komen",
+    "move": "Klik op het model om de tekst daarheen te verplaatsen"
+  },
+  "plugins": {
+    "add": "Plug-in toevoegen",
+    "addButton": "Plug-in toevoegen",
+    "builtIn": "Ingebouwd",
+    "builtInHint": "Ingebouwde stappen kun je uitschakelen, niet verwijderen.",
+    "close": "Sluiten",
+    "empty": "Nog geen plug-ins. Plug-ins voegen stappen toe zoals tekst, grootte of automatisch oriënteren.",
+    "failedNote": "Gestopt met een fout bij de laatste uitvoering",
+    "inUse": "Gebruikt door {{count}} stappen",
+    "off": "Uit",
+    "on": "Aan",
+    "remove": "Verwijderen",
+    "removeBlocked": "Verwijder eerst de stappen die hem gebruiken.",
+    "title": "Plug-ins",
+    "version": "Versie {{version}}",
+    "crashed": "Uitgezet omdat hij niet meer werkte: {{message}}",
+    "switchedOff": "Uitgezet",
+    "switchOn": "Aanzetten",
+    "switchOff": "Uitzetten",
+    "loadFailed": "De plug-in “{{name}}” kon niet starten en is niet toegevoegd: {{message}}",
+    "build": {
+      "entryTitle": "Zin om een eigen plug-in te maken?",
+      "entryHint": "Een korte handleiding, een voorbeeld en een prompt voor je AI-agent.",
+      "open": "Maak je eigen plug-in",
+      "title": "Maak je eigen plug-in",
+      "back": "‹ Terug naar plug-ins",
+      "backToList": "Terug naar plug-ins",
+      "intro": "Een plug-in is een klein programma dat een model verandert: het kan een patroon op het oppervlak zetten, een vorm buigen of draaien, hem uithollen of controleren op printproblemen. Iedereen kan er een schrijven, en hij werkt in AtelierMesh als de ingebouwde stappen.",
+      "needTitle": "Wat je nodig hebt",
+      "need1": "Een teksteditor, of een codeeragent die de code voor je schrijft.",
+      "need2": "Node.js (npm is niet nodig; Python 3 kan ook inpakken), om de plug-in te testen en in te pakken.",
+      "need3": "Een idee van wat de plug-in moet doen, in gewone woorden.",
+      "stepsTitle": "Vijf stappen",
+      "step1": "Beschrijf in een of twee zinnen wat hij doet.",
+      "step2": "Begin met het voorbeeld uit de kit: kopieer de map.",
+      "step3": "Schrijf het manifest (naam, instellingen en grenzen) en de runfunctie (de code die het model verandert).",
+      "step4": "Test hem: het voorbeeld toont hoe je een resultaat controleert en dat een model nooit stuk gaat.",
+      "step5": "Pak hem in tot één bestand en laad hem hier met “Kies een plug-inbestand”.",
+      "safeTitle": "Is het veilig?",
+      "safe": "Een plug-in uit een bestand draait in een afgeschermde omgeving: hij krijgt alleen het model waaraan hij werkt en heeft geen netwerk. Een niet-ondertekende plug-in vraagt eerst je toestemming. Je kunt de sleutel van een ondertekenaar die je kent vertrouwen onder “Vertrouwde ondertekenaars”.",
+      "guide": "Open de volledige handleiding",
+      "newTab": "(opent in een nieuw tabblad)",
+      "copy": "Kopieer een prompt voor je AI-agent",
+      "example": "Download het ingepakte voorbeeld (.amplugin)",
+      "copied": "Gekopieerd. Plak het in je codeeragent en vul de delen tussen {{dubbele accolades}} in.",
+      "manual": "Je browser wilde het niet kopiëren. Selecteer de tekst hieronder en kopieer ze zelf.",
+      "promptLabel": "De prompt",
+      "kit": "Download de plug-in-kit (zip)",
+      "kitHint": "De kit bevat alles om op je eigen computer een plug-in te bouwen: de handleiding, de broncode van het voorbeeld, de pakketten en het inpaktool. Je hoeft niets van npm te installeren behalve de gewone hulpmiddelen.",
+      "exampleHint": "Het ingepakte voorbeeld is alleen om de lader uit te proberen: kies het met “Kies een plug-inbestand”.",
+      "variant": "Welke prompt",
+      "withNpm": "Met npm",
+      "withoutNpm": "Zonder npm",
+      "noNpmHint": "Geen npm? Kies “Zonder npm”: de prompt vraagt dan gewoon JavaScript en gebruikt hulpmiddelen die alleen Node, alleen Python 3 of enkel een tekstverwerker nodig hebben."
+    },
+    "file": "Kies een plug-inbestand",
+    "keys": "Vertrouwde ondertekenaars",
+    "signed": "Ondertekend door {{signer}}",
+    "unsigned": "Niet ondertekend",
+    "unsignedShort": "niet ondertekend",
+    "licenseTitle": "Licentie",
+    "contactWeb": "Website",
+    "opensNewTab": "(opent in een nieuw tabblad)",
+    "stored": "Bewaard in deze browser ({{size}}, toegevoegd {{date}})",
+    "updatesFrom": "Updates van {{host}}",
+    "notStarted": "Bewaard in deze browser maar uitgeschakeld, omdat een controle mislukte: {{reason}}",
+    "notStoredHere": "Deze browser bewaart geen plug-ins (een privévenster?). Ze werken tot je de pagina sluit; daarna voeg je ze opnieuw toe.",
+    "removeTitle": "Deze plug-in verwijderen?",
+    "removeBody": "„{{name}}” wordt uit deze browser verwijderd en het bewaarde bestand wordt gewist. Je kunt het bestand later opnieuw toevoegen.",
+    "removeCancel": "Bewaren",
+    "removeConfirm": "Verwijderen",
+    "checkUpdate": "Controleer op update",
+    "checking": "Bezig met controleren…",
+    "copyLink": "Link kopiëren",
+    "copied": "Link gekopieerd",
+    "download": "Downloaden",
+    "approve": {
+      "title": "Deze plug-in toevoegen?",
+      "replaceTitle": "Deze plug-in vervangen?",
+      "updateTitle": "Deze plug-in updaten?",
+      "versions": "{{from}} → {{to}}",
+      "sameVersion": "Dit is hetzelfde versienummer, maar het bestand verschilt van het geïnstalleerde.",
+      "unsigned": "Niet ondertekend: niemand staat in voor dit bestand.",
+      "sameSigner": "Ondertekend met dezelfde sleutel als de geïnstalleerde versie.",
+      "lostSignature": "Opgelet: de geïnstalleerde versie is ondertekend, deze nieuwe niet.",
+      "otherSigner": "Opgelet: deze nieuwe versie is ondertekend met een andere sleutel dan de geïnstalleerde.",
+      "needs": "Heeft nodig: {{list}}",
+      "needsNothing": "Heeft niets nodig buiten het aanpassen van het model.",
+      "from": "Van: {{origin}}",
+      "cancel": "Annuleren",
+      "add": "Toevoegen",
+      "replace": "Vervangen",
+      "update": "Updaten"
+    },
+    "loaded": "{{name}} {{version}} toegevoegd ({{how}}).",
+    "clashBuiltIn": "„{{name}}” heeft dezelfde id als een ingebouwde plug-in, die niet vervangen kan worden.",
+    "alreadyInstalled": "{{name}} {{version}} is al geïnstalleerd: dit is hetzelfde bestand.",
+    "cannotLoad": "De plug-in kon niet worden toegevoegd: {{message}}",
+    "cannotFetch": "De plug-in kon niet worden gedownload: {{message}}",
+    "differentPlugin": "Dit pakket is een andere plug-in („{{name}}”) en is dus niet geïnstalleerd.",
+    "upToDate": "{{name}} {{version}} is up-to-date.",
+    "updated": "{{name}} geúpdatet van {{from}} naar {{to}}.",
+    "updateFailed": "De update is niet geïnstalleerd en de huidige versie blijft: {{message}}",
+    "corsError": "De server van de plug-in laat deze pagina het bestand niet downloaden, of er is geen verbinding. Download het bestand zelf en kies het dan: {{url}}",
+    "timeoutError": "De server antwoordde niet op tijd: {{url}}",
+    "tooBigToStore": "Het werkt voor deze sessie maar wordt niet bewaard: een bewaarde plug-in mag hoogstens {{max}} MB zijn.",
+    "tooManyToStore": "Het werkt voor deze sessie maar wordt niet bewaard: deze browser bewaart hoogstens {{max}} plug-ins. Verwijder er eerst een.",
+    "viewLabel": "Plug-ins tonen als",
+    "viewList": "Lijst",
+    "viewGallery": "Galerij",
+    "details": "Details",
+    "detailsHide": "Details verbergen",
+    "imageType": "De voorbeeldafbeelding van de plug-in is geen PNG-, JPEG- of WebP-bestand.",
+    "imageTooBig": "De voorbeeldafbeelding van de plug-in is te groot: maximaal 300 KB.",
+    "imageDimensions": "De voorbeeldafbeelding van de plug-in heeft een niet toegestane afmeting: minstens 200 px breed, hoogstens 1600 × 1200 px.",
+    "imageMissing": "De plug-in noemt een voorbeeldafbeelding (“{{path}}”) die niet in het pakket zit.",
+    "catalog": {
+      "title": "Plug-incatalogus",
+      "search": "Zoeken in de catalogus",
+      "placeholder": "Naam, beschrijving of licentie",
+      "checking": "De catalogus wordt gecontroleerd…",
+      "unavailable": "De catalogus is hier niet beschikbaar.",
+      "retry": "Opnieuw proberen",
+      "from": "{{count}} plug-ins van {{host}}",
+      "count": "{{count}} plug-ins",
+      "matches": "{{count}} gevonden",
+      "none": "Geen plug-in komt overeen met je zoekopdracht.",
+      "more": "De eerste {{count}} worden getoond. Typ om de lijst te verfijnen.",
+      "install": "Installeren",
+      "installed": "Geïnstalleerd {{version}}",
+      "updateTo": "Bijwerken naar {{version}}",
+      "updateAvailable": "Update beschikbaar: {{version}}",
+      "fetching": "Downloaden…",
+      "mismatch": "Het bestand uit de catalogus is niet {{id}} {{version}}, dus het is niet geïnstalleerd.",
+      "hashMismatch": "Het gedownloade bestand is niet het bestand dat de catalogus beschreef (de controlesom verschilt), dus het is niet geïnstalleerd.",
+      "installFailed": "De plug-in kon niet uit de catalogus worden gehaald: {{message}}",
+      "downloads_one": "1 download",
+      "downloads_other": "{{count}} downloads",
+      "replaces": "Vervangt {{ids}}"
+    },
+    "back": "Terug naar de plug-ins",
+    "replacedBy": "“{{name}}” in de catalogus vervangt hem.",
+    "reload": {
+      "wrongFile": "Het bestand van dat adres is niet de plug-in {{id}}, dus het is niet geïnstalleerd.",
+      "title": "Plug-ins ontbreken",
+      "body": "Dit project gebruikt plug-ins die hier niet geïnstalleerd zijn. Eerst wordt de catalogus geprobeerd. Een ingebouwde plug-in, of een plug-in uit een bestand, kan niet opgehaald worden.",
+      "saved": "Bewaard adres: {{host}}",
+      "noAddress": "Geen bewaard adres: alleen de catalogus kan hem leveren",
+      "skip": "Niet nu",
+      "load": "Laden",
+      "outsideTitle": "Laden van een extern adres?",
+      "outsideBody": "{{id}} staat niet in de catalogus. Het project zegt dat hij van {{host}} kwam, een site die geen deel is van deze app. Daar laden? Er wordt niets geïnstalleerd zonder jouw goedkeuring.",
+      "outsideLoad": "Laden van {{host}}",
+      "done": "Geladen: {{list}}.",
+      "notLoaded": "Niet geladen: {{list}}."
+    },
+    "missingTitleOne": "Dit voorbeeld heeft een plug-in nodig",
+    "missingTitle": "Dit voorbeeld heeft {{count}} plug-ins nodig",
+    "missingText": "“{{name}}” gebruikt plug-ins die je nog niet hebt.",
+    "fromCatalogue": "Uit de catalogus van {{catalog}}",
+    "fromOutside": "Van een ander adres: {{host}}",
+    "askedSeparately": "Hierover vragen we het je apart.",
+    "installOpen": "Installeren en openen",
+    "openWithout": "Toch openen",
+    "openWithoutHint": "Stappen die een ontbrekende plug-in nodig hebben, stoppen met een melding tot de plug-in er is.",
+    "outsideTitle": "Een plug-in van een extern adres installeren?",
+    "outsideText": "{{plugin}} staat niet in de catalogus van {{catalog}}, dus niemand van {{catalog}} heeft hem gecontroleerd. Plug-ins voeren code uit in je browser.",
+    "outsideTrust": "Installeer hem alleen als je dit adres kent en vertrouwt.",
+    "outsideNo": "Niet installeren",
+    "outsideYes": "Installeren van dit adres",
+    "outsideAfterNo": "Zo niet, dan stoppen de stappen die {{plugin}} nodig hebben met een melding. {{other}} wordt hoe dan ook uit de catalogus geïnstalleerd.",
+    "notInCatalogue": "Niet in de catalogus",
+    "share": "Delen met de catalogus",
+    "shareAsk": "“{{name}}” naar de catalogus sturen? Een beheerder controleert het voor het verschijnt. Daarna kan iedereen het installeren.",
+    "shareSent": "Verstuurd: “{{name}}” verschijnt nadat een beheerder het gecontroleerd heeft.",
+    "shareExists": "Deze versie van “{{name}}” staat al in de catalogus.",
+    "shareRefused": "De catalogus weigerde het pakket: {{reason}}"
+  },
+  "pos": {
+    "angle": "Hoek in graden",
+    "angleRange": "Tussen {{min}}° en {{max}}°",
+    "direction": "Richting",
+    "down": "Omlaag",
+    "gesture": "Sleep met één vinger om te verschuiven. Twee vingers: draaien en zoomen.",
+    "left": "Naar links",
+    "move": "Tekst verschuiven",
+    "moved": "{{mm}} mm verschoven van de oorspronkelijke plek",
+    "reset": "Terug naar de oorspronkelijke positie",
+    "right": "Naar rechts",
+    "up": "Omhoog"
+  },
+  "project": {
+    "leave": "Weggaan",
+    "leaveBody": "Je wijzigingen sinds de laatste keer opslaan gaan verloren.",
+    "leaveTitle": "Weggaan zonder op te slaan?",
+    "notAProject": "Dit bestand is geen AtelierMesh-project.",
+    "open": "Project openen",
+    "save": "Project opslaan",
+    "saveAs": "Kopie opslaan",
+    "saved": "Project opgeslagen",
+    "stay": "Blijven",
+    "unsaved": "Niet-opgeslagen wijzigingen"
+  },
+  "redo": "Opnieuw",
+  "result": {
+    "closed": "Gesloten volume",
+    "save": "Opslaan in offerte",
+    "saved": "Opgeslagen in je offerte",
+    "size": "{{x}} × {{y}} × {{z}} mm"
+  },
+  "sample": {
+    "keyring": "Sleutelhanger",
+    "nameTag": "Naamplaatje",
+    "plantLabel": "Plantenlabel",
+    "nametag": "Naamplaatje",
+    "voronoi": "Voronoi-tegel",
+    "twist": "Gedraaide zuil",
+    "vase": "Taps toelopende vaas",
+    "plate": "Plaat 60 x 30 x 4",
+    "cylinder": "Cilinder r15 h40",
+    "twistname": "Gedraaide naam",
+    "voronoishell": "Voronoi-schaal",
+    "texblock": "Blok met textuur",
+    "hollowjar": "Holle pot",
+    "bend": "Gebogen balk",
+    "keyringtag": "Naamplaatje met sleutelringgat",
+    "standingbar": "Staande balk"
+  },
+  "save": {
+    "browser": "Opslaan in deze browser",
+    "browserHint": "Wordt vanaf nu na elke wijziging automatisch opgeslagen.",
+    "file": "Download .amproj-bestand",
+    "fileHint": "Eén bestand met het model en alle stappen, om te bewaren of te delen.",
+    "name": "Naam",
+    "title": "Configuratie opslaan"
+  },
+  "settings": {
+    "about": "Over",
+    "addedPlugin": "toegevoegd",
+    "catalogAddress": "Adres van de plug-incatalogus",
+    "catalogAddressHint": "Waar het plug-inbeheer naar plug-ins en updates zoekt. Laat leeg om de catalogus van deze site te gebruiken. Gebruik een https-adres of een pad op deze site.",
+    "close": "Sluiten",
+    "installedPlugins": "Geïnstalleerde plugins",
+    "off": "Uit",
+    "on": "Aan",
+    "open": "Instellingen",
+    "plugins": "Plug-ins",
+    "showPersonalised": "Toon de optie Gepersonaliseerd ontwerp",
+    "showPersonalisedHint": "Voegt een schakelaar “Gepersonaliseerd ontwerp” toe aan de editor, voor ontwerpen die een klant kan personaliseren. Standaard uit.",
+    "title": "Instellingen",
+    "version": "versie",
+    "licence": "Licentie",
+    "maxColours": "Maximum aantal kleuren",
+    "maxColoursHint": "Hoeveel filamenten één ontwerp mag gebruiken. Een printer met minder slots heeft een lager getal nodig.",
+    "general": "Algemeen"
+  },
+  "sheet": {
+    "handle": "Paneel omlaag trekken"
+  },
+  "size": {
+    "depth": "Diepte",
+    "height": "Letterhoogte",
+    "range": "Tussen {{min}} en {{max}} mm"
+  },
+  "start": {
+    "body": "Laad een 3D-bestand op (STL of 3MF) of begin met een van onze voorbeelden.",
+    "drop": "Sleep je bestand hierheen, of klik om te bladeren",
+    "sample": "Kies een voorbeeld",
+    "title": "Open een model om te beginnen",
+    "upload": "Bestand opladen"
+  },
+  "step": {
+    "op": {
+      "auto_orient": "Automatisch oriënteren",
+      "decimate": "Driehoeken verminderen",
+      "low_poly": "Low poly",
+      "overhang": "Overhang controleren",
+      "resize": "Grootte",
+      "rotate": "Draaien",
+      "svg": "SVG",
+      "text": "Tekst",
+      "voronoi": "Voronoi-patroon",
+      "repair_mesh": "Model repareren",
+      "twist": "Draaien",
+      "taper": "Taps toelopen",
+      "delete_part": "Deel verwijderen",
+      "keep_part": "Alleen deel houden",
+      "voronoi_shell": "Voronoi-schaal",
+      "texture": "Oppervlaktetextuur",
+      "smooth": "Oppervlak gladmaken",
+      "orient": "Oriënteren voor het printen",
+      "hollow": "Uithollen",
+      "bend": "Buigen",
+      "wave": "Golf",
+      "ripple": "Rimpeling",
+      "printability": "Printbaarheidscontrole",
+      "cut_hole": "Gat maken",
+      "store": "Bewaren",
+      "load": "Ophalen"
+    },
+    "status": {
+      "blocked": "Wacht op een eerdere stap",
+      "error": "Heeft een probleem",
+      "off": "Uitgeschakeld",
+      "ok": "Bijgewerkt",
+      "stale": "Wacht",
+      "warning": "Heeft een waarschuwing",
+      "working": "Bezig",
+      "cancelled": "Gestopt"
+    },
+    "summary": {
+      "decimate": "Tot {{pct}} % van de driehoeken",
+      "orient": "Platte kant onder",
+      "resize": "{{w}} mm breed"
+    },
+    "name": "Naam",
+    "rename": "Stap hernoemen",
+    "unsupported": "Deze stap heeft een instelling die deze app nog niet kan tonen: {{types}}."
+  },
+  "store": {
+    "tab": "Bewaard",
+    "tabMissing": "{{count}} ontbreekt",
+    "title": "Bewaard in dit project",
+    "import": "Importeren…",
+    "kind": {
+      "drawing": "Tekening",
+      "model": "Model"
+    },
+    "size": {
+      "drawing_one": "1 pad, {{points}} punten",
+      "model": "{{triangles}} driehoeken",
+      "drawing_other": "{{paths}} paden, {{points}} punten"
+    },
+    "origin": {
+      "imported": "Geïmporteerd",
+      "step": "Gemaakt door stap {{n}}",
+      "original": "Het model waarmee dit project begon"
+    },
+    "usedBy": "Gebruikt door {{steps}}",
+    "notUsed": "Niet gebruikt",
+    "stepN": "stap {{n}}",
+    "missing": "Ontbreekt",
+    "neededBy": "Nodig voor {{steps}}",
+    "edit": "Bewerken",
+    "replace": "Vervangen…",
+    "delete": "Verwijderen",
+    "goToStep": "Naar stap {{n}}",
+    "producedNote": "Wordt telkens opnieuw gemaakt als de stappen lopen: je kunt het bekijken, niet bewerken.",
+    "budget": "{{count}} van {{max}} items · {{size}} van {{maxSize}}",
+    "empty": "Nog niets bewaard. Importeer een SVG om ze in een stap te gebruiken.",
+    "deleteTitle": "“{{name}}” verwijderen?",
+    "deleteUsed_one": "{{steps}} gebruikt deze tekening. Daarna stopt die stap met “Het bewaarde item bestaat niet meer” tot je een andere tekening kiest.",
+    "deleteUnused": "Geen enkele stap gebruikt het.",
+    "deleteAnyway": "Toch verwijderen",
+    "cancel": "Annuleren",
+    "limits": "Grenzen voor de tekening van de klant",
+    "limitShapes": "Maximaal vormen",
+    "limitPoints": "Maximaal punten",
+    "limitsHint": "Een tekening van de klant moet binnen deze grenzen blijven.",
+    "personalisable": "Personaliseerbaar",
+    "personalisableHint": "De klant kan deze tekening vervangen door een eigen tekening.",
+    "field": {
+      "drawing": "Tekening"
+    },
+    "pick": {
+      "drawing": "Kies een tekening",
+      "empty": "Kies eerst een tekening",
+      "none": "Nog geen tekeningen bewaard.",
+      "label": "Bewaarde tekeningen",
+      "emptyAny": "Kies eerst een bewaard item"
+    },
+    "chooseDrawing": "Kies een tekening",
+    "importTitle": "SVG importeren",
+    "keepAs": "Bewaren als",
+    "nameHint": "Kleine letters, cijfers en _, tot 40 tekens. Stappen gebruiken deze naam.",
+    "use": "Gebruik",
+    "mode": {
+      "fill": "Vlakken",
+      "line": "Lijnen",
+      "fillHint": "De gevulde vlakken van de tekening.",
+      "lineHint": "De lijnen, op hun eigen dikte."
+    },
+    "openPaths": "{{count}} open paden kunnen niet gevuld worden en vallen weg.",
+    "keep": "Tekening bewaren",
+    "chooseOther": "Ander bestand kiezen",
+    "err": {
+      "tooBig": "Dit bestand is {{size}}. De grootste SVG die we aannemen is 2 MB.",
+      "tooBigFix": "Ingesloten afbeeldingen maken het meestal groot. Bewaar het zonder, en probeer opnieuw.",
+      "unsafe": "Deze SVG bevat scripts of verwijzingen naar andere bestanden, en die nemen we niet aan.",
+      "unsafeFix": "Bewaar het opnieuw als gewone SVG (in Inkscape: Opslaan als › Gewone SVG).",
+      "tooComplex": "Deze tekening heeft {{count}} vormen; we nemen er maximaal {{max}}.",
+      "tooComplexFix": "Voeg vormen samen of vereenvoudig ze in je tekenprogramma, en probeer opnieuw.",
+      "onlyStrokes": "Deze SVG heeft alleen lijnen: kies Lijnen.",
+      "onlyFills": "Deze SVG heeft alleen vlakken: kies Vlakken.",
+      "nameTaken": "“{{name}}” bestaat al in dit project.",
+      "nameInvalid": "Gebruik alleen kleine letters, cijfers en _, tot 40 tekens.",
+      "empty": "Er zit geen bruikbare tekening in dit bestand.",
+      "generic": "Dit bestand kan niet worden geïmporteerd."
+    },
+    "useLine": "Lijnen gebruiken",
+    "useFill": "Vlakken gebruiken",
+    "useName": "“{{name}}” gebruiken",
+    "replaceIt": "Het oude vervangen",
+    "cust": {
+      "change": "Tekening wijzigen",
+      "shop": "De tekening van de winkel",
+      "yours": "Je tekening",
+      "limits": "Een SVG-bestand, maximaal {{shapes}} vormen en {{points}} punten.",
+      "back": "Toch de tekening van de winkel",
+      "err": {
+        "complex": "Je tekening heeft {{count}} vormen; dit ontwerp neemt er maximaal {{max}}. Probeer een eenvoudigere tekening. De tekening van de winkel blijft staan.",
+        "wrongFile": "“{{file}}” is geen SVG-tekening. Kies een bestand dat eindigt op .svg."
+      },
+      "size": "Grootte",
+      "turn": "Draaien",
+      "shapes_one": "1 vorm",
+      "shapes_other": "{{count}} vormen"
+    },
+    "storeAs": "Bewaren als",
+    "storeHint": "Bewaart het resultaat van stap {{from}}–{{to}} onder deze naam. Latere stappen kunnen het ophalen.",
+    "storeSummary": "als {{name}}",
+    "loadWhat": "Bewaard item",
+    "loadHint": "Haalt een bewaard model of een bewaarde tekening terug, om er met de volgende stappen op verder te werken.",
+    "problem": {
+      "noItem": "Kies eerst een tekening.",
+      "missing": "Het bewaarde item “{{name}}” bestaat niet meer. Kies een ander, of importeer het opnieuw.",
+      "wrongKind": "“{{name}}” is een model; deze stap heeft een tekening nodig.",
+      "budget": "Dit project bevat te veel: {{size}} van de toegelaten {{max}}. Verwijder bewaarde items die je niet meer gebruikt.",
+      "damaged": "“{{name}}” kan niet meer gelezen worden. Vervang het door een nieuw bestand.",
+      "nameImported": "“{{name}}” is al de naam van een geïmporteerd item. Kies een andere naam."
+    },
+    "editTitle": "Tekening bewerken",
+    "editSave": "Tekening opslaan",
+    "unsavedTitle": "Weggaan zonder de tekening op te slaan?",
+    "unsavedBody": "Je wijzigingen aan “{{name}}” gaan verloren als je nu weggaat.",
+    "unsavedKeep": "Verder bewerken",
+    "unsavedDiscard": "Wijzigingen weggooien",
+    "editSaved": "Tekening opgeslagen. Stap {{from}} tot {{to}} lopen opnieuw.",
+    "stepTitle": "Stap {{n}}",
+    "deleteUsed_other": "{{steps}} gebruiken deze tekening. Daarna stoppen die stappen met “Het bewaarde item bestaat niet meer” tot je een andere tekening kiest.",
+    "sizeMm": "{{w}} × {{h}} mm",
+    "ignored": "{{count}} elementen zijn weggelaten: {{elements}}",
+    "replaceTitle": "“{{name}}” vervangen",
+    "replaceNote": "De stappen die het gebruiken, volgen de nieuwe tekening.",
+    "openStored": "Het tabblad Bewaard openen",
+    "about": "Tekeningen en modellen die dit project bewaart. Stappen gebruiken ze via hun naam.",
+    "alert_one": "Een stap heeft een item nodig dat ontbreekt.",
+    "alert_other": "Stappen hebben {{count}} items nodig die ontbreken.",
+    "tabLabel_zero": "Bewaard, nog niets",
+    "tabLabel_one": "Bewaard, 1 item",
+    "tabLabel_other": "Bewaard, {{count}} items",
+    "tabMissing_one": "1 ontbreekt",
+    "tabMissing_other": "{{count}} ontbreken",
+    "originalNote": "Het originele model. Het kan niet gewijzigd of verwijderd worden. Een Laden-stap met deze naam haalt het terug op die plek in de stappen."
+  },
+  "tab": {
+    "position": "Positie",
+    "size": "Grootte",
+    "text": "Tekst"
+  },
+  "text": {
+    "align": "Uitlijnen",
+    "alignCenter": "Centreren",
+    "alignLeft": "Links uitlijnen",
+    "alignRight": "Rechts uitlijnen",
+    "engraved": "Gegraveerd",
+    "font": "Lettertype",
+    "letters": "Letters",
+    "limit": "Tot {{lines}} regels · {{chars}} tekens per regel",
+    "raised": "Verhoogd",
+    "wording": "Tekst"
+  },
+  "undo": "Ongedaan maken",
+  "units": {
+    "back": "Kies een ander bestand",
+    "confirmed": "Gelezen als inch. Het model is nu:",
+    "continue": "Verder",
+    "flag": "Dit lijkt in inch te zijn: lezen als inch?",
+    "inch": "Inch",
+    "label": "Eenheid van het bestand",
+    "lead": "STL-bestanden zeggen niet welke eenheid ze gebruiken. We lezen dit bestand als:",
+    "mm": "Millimeter",
+    "readAsInch": "Lezen als inch",
+    "size": "{{x}} × {{y}} × {{z}} mm",
+    "title": "Controleer de grootte",
+    "undoInch": "Toch als millimeter lezen"
+  },
+  "upload": {
+    "browse": "Kies een bestand",
+    "drop": "Sleep je bestand hierheen, of klik om te bladeren",
+    "formatsA": "STL, 3MF of .amproj · tot 50 MB",
+    "formatsB": "STL of 3MF · tot 50 MB",
+    "leadA": "Begin met een STL- of 3MF-bestand, een opgeslagen configuratie of een van onze voorbeelden.",
+    "leadB": "Laad het STL- of 3MF-bestand op dat je als gepersonaliseerd ontwerp wilt aanbieden.",
+    "open": "Openen",
+    "recent": "Recent opgeladen",
+    "samples": "Voorbeelden",
+    "saved": "Opgeslagen in deze browser",
+    "savedAll": "Alle opgeslagen configuraties",
+    "savedEmpty": "Nog niets opgeslagen. Configuraties die je opslaat, blijven in deze browser.",
+    "title": "Laad je 3D-model op",
+    "privacy": "Alles draait in je browser. Je bestanden worden nooit naar een server gestuurd, tenzij je uitdrukkelijk een voorbeeld deelt."
+  },
+  "view": {
+    "3d": "3D",
+    "final": "Eindresultaat",
+    "front": "Voorkant",
+    "label": "Weergave",
+    "side": "Zijkant",
+    "top": "Bovenkant",
+    "upTo": "Tot deze stap",
+    "upToNote": "Je ziet het model na stap {{n}} van {{total}}",
+    "zoomIn": "Inzoomen",
+    "zoomOut": "Uitzoomen",
+    "rulerGroup": "Meten",
+    "ruler": "Liniaal",
+    "rulerHint": "Een liniaal in mm op de plaat, langs X en Y, vanaf de linkervoorhoek van het model"
+  },
+  "work": {
+    "auto_orient": "Beste ligging zoeken…",
+    "collapse": "Model vereenvoudigen…",
+    "crystallise": "De vlakken scherper maken…",
+    "cut": "Letters uitsnijden…",
+    "lastGood": "Het vorige resultaat blijft zichtbaar.",
+    "other": "Bezig…",
+    "overhang": "Overhangen controleren…",
+    "resize": "Model van grootte veranderen…",
+    "rotate": "Model draaien…",
+    "sr": {
+      "busy": "Bezig",
+      "done": "Klaar"
+    },
+    "stop": "Stoppen",
+    "text": "Letters vormen…",
+    "unfold": "Tekst op het oppervlak leggen…",
+    "upToDate": "Bijgewerkt",
+    "pattern": "Het patroon tekenen…",
+    "step": "Stap {{n}} van {{total}}",
+    "weld": "Punten samenvoegen…",
+    "manifold": "Het oppervlak ontwarren…",
+    "islands": "Losse stukjes verwijderen…",
+    "holes": "Gaten dichten…",
+    "deform": "Het model vormen…",
+    "parts": "Het deel verwijderen…",
+    "field": "De wand opmeten…",
+    "surface": "Het oppervlak opbouwen…",
+    "subdivide": "Het oppervlak opdelen…",
+    "displace": "De textuur aanbrengen…",
+    "smooth": "Het oppervlak wordt gladgemaakt…",
+    "cavity": "De binnenkant maken…",
+    "place": "De gaten plaatsen…",
+    "printcheck": "Printbaarheid controleren…",
+    "hole_cut": "Het gat snijden…",
+    "hole_wall": "De wand sluiten…"
+  },
+  "theme": {
+    "toggle": "Wissel tussen licht en donker"
+  },
+  "form": {
+    "main": "Belangrijk",
+    "more": "Meer",
+    "settings": "Instellingen"
+  },
+  "panel": {
+    "decrease": "Verlagen",
+    "increase": "Verhogen",
+    "notPicture": "Dat bestand is geen PNG-, JPEG- of WebP-afbeelding.",
+    "notSvg": "Dat bestand is geen SVG-tekening.",
+    "choose": "Kies…",
+    "place": "Op het model plaatsen",
+    "place_again": "Op het model verplaatsen",
+    "placed": "Geplaatst",
+    "not_placed": "Niet geplaatst",
+    "clear": "Wissen"
+  },
+  "loading": {
+    "read": "Het bestand lezen…",
+    "unpack": "Het bestand uitpakken…",
+    "parse": "Het model lezen…",
+    "check": "Het model controleren…",
+    "prepare": "De weergave voorbereiden…",
+    "simplify": "Het model vereenvoudigen…",
+    "bytes": "{{done}} van {{total}} MB"
+  },
+  "welcome": {
+    "title": "Welkom bij AtelierMesh",
+    "lead": "Zet een naam, een patroon of een structuur op een 3D-model, rechtstreeks in je browser.",
+    "open": "Begin met je eigen STL- of 3MF-bestand, of open een van de voorbeelden.",
+    "steps": "Voeg stappen toe: tekst, structuren, patronen, draaiingen en meer. Elke stap werkt op het resultaat van de stap erboven en je ziet het meteen.",
+    "private": "Alles draait in je browser. Je bestanden verlaten je toestel nooit.",
+    "save": "Bewaar je werk in deze browser of als bestand, en exporteer een 3MF of STL om te printen.",
+    "start": "Aan de slag",
+    "newsOnlyTitle": "Wat is er nieuw in AtelierMesh",
+    "newTitle": "Nieuw in deze versie",
+    "gotIt": "Begrepen",
+    "news": {
+      "v0_3_0": {
+        "svg": "SVG op het oppervlak: zet je eigen SVG-logo of -tekening op een model. Het wordt met je project bewaard en behoudt zijn echte grootte.",
+        "menu": "Een beter menu Stap toevoegen: zoeken, stappen per plug-in gegroepeerd, je recente stappen en op een telefoon een blad onderaan.",
+        "store": "De stappen Bewaren en Ophalen (onder Meer) bewaren het resultaat van sommige stappen onder een naam en halen het later terug."
+      }
+    },
+    "newIn": "Nieuw in {{version}}"
+  },
+  "recipe": {
+    "saveTitle": "De stappen bewaren als recept",
+    "saveLead": "Een recept bewaart de {{count}} stappen die je nu hebt, in deze volgorde, zonder het model. Voeg het later toe aan een ander model.",
+    "name": "Naam",
+    "untitled": "Mijn recept",
+    "download": "Bestand downloaden",
+    "saveBrowser": "Bewaren in deze browser",
+    "applyTitle": "Een recept toepassen",
+    "applyLead": "De stappen van een recept worden na je stappen toegevoegd, in hun eigen volgorde.",
+    "noneSaved": "Nog niets bewaard. Gebruik “Bewaren als recept…” in het menu Stap toevoegen.",
+    "openFile": "Receptbestand openen…",
+    "use": "Gebruiken",
+    "stepCount": "{{count}} stappen",
+    "missingPlugins": "Dit recept gebruikt plug-ins die hier niet geïnstalleerd zijn: {{plugins}}. Die stappen worden weggelaten.",
+    "back": "Terug",
+    "addTheRest": "De andere stappen toevoegen",
+    "cancel": "Annuleren",
+    "badFile": "Dit bestand is geen bruikbaar recept.",
+    "gone": "Dit recept werd niet gevonden.",
+    "nothing": "Geen enkele stap van dit recept kan hier draaien.",
+    "saved": "Recept bewaard in deze browser.",
+    "downloaded": "Recept gedownload.",
+    "deleteAsk": "Het recept \"{{name}}\" uit deze browser verwijderen?",
+    "applyMenu": "Een recept toepassen…",
+    "saveMenu": "Bewaren als recept…"
+  },
+  "printcheck": {
+    "title": "Printbaarheidscontrole",
+    "verdict": {
+      "good": "Goed te printen",
+      "fix_recommended": "Aanpassen aangeraden",
+      "not_printable": "Zo niet printbaar"
+    },
+    "score": "Score {{score}} van 100",
+    "show": "Toon in 3D",
+    "hide": "Verberg in 3D",
+    "showLast": "Zet deze stap als laatste om de plaatsen in 3D te zien.",
+    "passed": "{{count}} controles in orde",
+    "note": "Gecontroleerd op {{samples}} punten van het oppervlak, voor {{process}} met een wandgrens van {{wall}} mm.",
+    "severity": {
+      "ok": "In orde",
+      "info": "Opmerking",
+      "warning": "Waarschuwing",
+      "error": "Probleem"
+    },
+    "ok": {
+      "not_closed": "Een gesloten vorm.",
+      "islands": "Eén stuk.",
+      "thin_walls": "De wanden zijn dik genoeg.",
+      "thin_features": "Geen te dunne paaltjes of pennen.",
+      "narrow_gaps": "De spleten zijn breed genoeg.",
+      "needs_support": "Geen overhang boven {{angle}}°.",
+      "long_bridges": "Geen lange bruggen.",
+      "tiny_base": "Een platte voet van {{area}} mm² op het bed.",
+      "too_tall": "Hoogte {{height}} mm bij een breedte van {{width}} mm.",
+      "too_big_for_bed": "Het past in het printvolume.",
+      "floating_body": "Geen enkel deel zweeft boven het printbed.",
+      "island": "Niets begint in de lucht.",
+      "overhang": "Geen overhang die support nodig heeft.",
+      "bridge": "Geen te lange brug.",
+      "needles": "Geen naaldvormige driehoeken.",
+      "detail": "{{count}} driehoeken."
+    },
+    "info": {
+      "islands": "{{shells}} losse stukken (het kleinste {{smallest}} mm). Dat is goed als ze allemaal op het bed rusten.",
+      "thin_walls": "Een paar plaatsen zijn dunner dan {{min}} mm (het dunst {{thinnest}} mm).",
+      "thin_features": "Een paar dunne paaltjes of pennen (het dunst {{thinnest}} mm).",
+      "narrow_gaps": "Een paar smalle spleten (de smalste {{narrowest}} mm).",
+      "needs_support": "Een beetje overhang ({{area}} mm², {{percent}} % van het oppervlak).",
+      "needles": "{{count}} naaldvormige driehoeken (hoeken onder 5°). Meestal onschuldig.",
+      "detail": "{{count}} driehoeken."
+    },
+    "reportLabel": "Rapport van de printbaarheidscontrole"
+  },
+  "pictures": {
+    "none": "Geen",
+    "upload": "Uploaden…",
+    "search": "Zoeken",
+    "all": "Alle",
+    "category": "Groep",
+    "noMatch": "Geen afbeelding gevonden.",
+    "mine": "Mijn afbeeldingen"
+  },
+  "texture": {
+    "noise": "Ruis",
+    "stripes": "Strepen",
+    "diagonal": "Diagonale lijnen",
+    "waves": "Golven",
+    "dots": "Stippen",
+    "bricks": "Bakstenen",
+    "grid": "Raster",
+    "weave": "Vlechtwerk",
+    "wood": "Houtnerf",
+    "hexagons": "Zeshoeken",
+    "group": {
+      "Organic": "Organisch",
+      "Lines": "Lijnen",
+      "Shapes": "Vormen"
+    }
+  },
+  "catalogues": {
+    "title": "Catalogi",
+    "intro": "Waar AtelierMesh voorbeelden en plug-ins vindt. Eén adres kan beide aanbieden.",
+    "default": "Standaard",
+    "designs": "Voorbeelden",
+    "pluginsOffer": "Plug-ins",
+    "notOffered": "Niet aangeboden",
+    "add": "Catalogus toevoegen",
+    "name": "Naam",
+    "namePh": "Hoe je hem herkent",
+    "address": "Adres",
+    "addressHint": "Begint met https://. We bekijken wat het aanbiedt voor we het toevoegen.",
+    "check": "Adres controleren",
+    "unknownTitle": "Wat is deze catalogus?",
+    "unknownOffers": "Dit adres biedt:",
+    "countDesigns": "voorbeelden",
+    "countPlugins": "plug-ins",
+    "unknownText": "{{catalog}} controleert niet wat deze catalogus aanbiedt. De voorbeelden kunnen plug-ins meebrengen, en plug-ins voeren code uit in je browser.",
+    "unknownAsk": "Je krijgt nog altijd de vraag voor er een plug-in van wordt geïnstalleerd.",
+    "useFor": "Gebruiken voor",
+    "addYes": "Catalogus toevoegen",
+    "removeC": "{{name}} verwijderen",
+    "lastCheck": "Net bereikt",
+    "remove": "Verwijderen",
+    "problem": {
+      "address": "Dat is geen bruikbaar adres. Begin het met https://.",
+      "network": "Dat adres is niet bereikbaar.",
+      "format": "Dat adres is geen catalogus.",
+      "duplicate": "Die catalogus staat al in de lijst."
+    }
+  },
+  "gallery": {
+    "title": "Voorbeelden",
+    "intro": "Gemaakt door mensen die AtelierMesh gebruiken. Open er een en pas het aan.",
+    "sortBy": "Sorteren",
+    "sortPopular": "Populair",
+    "sortNew": "Nieuw",
+    "search": "Voorbeelden zoeken",
+    "searchClear": "Zoekterm wissen",
+    "plugin": "Plug-in",
+    "pluginAll": "Alle plug-ins",
+    "pluginYours": "Geïnstalleerd",
+    "pluginOthers": "In de catalogus",
+    "filter": "Filter",
+    "sortFilter": "Sorteren en filteren",
+    "showResults": "Toon {{count}} voorbeelden",
+    "by": "door {{name}}",
+    "opened": "{{count}} keer geopend",
+    "needs": "heeft {{plugin}} nodig",
+    "sample": "AtelierMesh",
+    "openChange": "Openen en aanpassen",
+    "share": "Delen",
+    "moreActions": "Meer voor {{name}}",
+    "copyLink": "Link kopiëren",
+    "report": "Melden…",
+    "moreWith": "Meer gemaakt met {{plugin}}",
+    "shown": "{{shown}} van {{count}} voorbeelden",
+    "showMore": "Toon er {{count}} meer",
+    "loading": "Voorbeelden laden…",
+    "loaded": "{{count}} voorbeelden meer",
+    "endTitle": "Dat zijn alle {{count}} voorbeelden",
+    "endText": "Iets gemaakt waar je blij mee bent? Deel het via Opslaan in de editor, dan inspireert het de volgende.",
+    "endTop": "Terug naar boven",
+    "loadError": "Kon geen voorbeelden meer laden.",
+    "tryAgain": "Opnieuw proberen",
+    "noMatch": "Geen voorbeeld past bij “{{query}}”",
+    "noMatchPlugin": "met {{plugin}}",
+    "noMatchHint": "De zoekfunctie kijkt naar namen en beschrijvingen. Probeer een ander woord, of zoek overal.",
+    "searchAll": "Zoek in alle plug-ins",
+    "offline": "De voorbeeldcatalogus is nu niet bereikbaar. Dit zijn de voorbeelden die in AtelierMesh zitten.",
+    "removed": "Dit voorbeeld is verwijderd, door de maker of na een controle. Hier zijn andere die je kunt openen.",
+    "removedTitle": "Voorbeeld verwijderd",
+    "linkCopied": "Link gekopieerd",
+    "openFailed": "Dat voorbeeld kon niet geopend worden. Misschien is het verwijderd."
+  },
+  "report": {
+    "title": "Dit voorbeeld melden",
+    "why": "Wat is er mis mee?",
+    "broken": "Het opent niet, of het model is kapot",
+    "notModel": "Het is geen model (spam, reclame, een test)",
+    "copied": "Het is het werk van iemand anders",
+    "offensive": "Het is beledigend of ongepast",
+    "danger": "Het kan gevaarlijk zijn om te printen of te gebruiken",
+    "private": "We vragen niet wie je bent. Een beheerder bekijkt elke melding.",
+    "send": "Melding versturen",
+    "thanks": "Bedankt om het te melden",
+    "thanksText": "Een beheerder bekijkt het. Als het tegen de regels ingaat, verdwijnt het uit de voorbeelden."
+  },
+  "open": {
+    "title": "{{name}} openen",
+    "download": "Downloaden",
+    "steps": "De stappen uitvoeren",
+    "copy": "Je krijgt je eigen kopie. Wijzigingen blijven bij jou.",
+    "cancel": "Annuleren",
+    "shared": "Gedeeld voorbeeld",
+    "opening": "Openen…"
+  },
+  "share": {
+    "copied": "Link gekopieerd",
+    "sheetTitle": "{{name}} delen",
+    "asExample": "Delen als voorbeeld",
+    "asExampleHint": "Iedereen kan het openen vanaf de startpagina en een eigen kopie aanpassen.",
+    "title": "Delen als voorbeeld",
+    "picture": "Afbeelding",
+    "pictureHint": "Elk voorbeeld wordt met dezelfde camera en achtergrond in beeld gebracht, zodat de galerij rustig blijft. Kies de kant die het best toont.",
+    "angle": {
+      "3d": "3D",
+      "front": "Voorkant",
+      "top": "Boven"
+    },
+    "name": "Naam",
+    "line": "Eén zin erover",
+    "optional": "optioneel",
+    "linePh": "Wat is het, wat kunnen mensen aanpassen?",
+    "author": "Je naam",
+    "authorHint": "Getoond als “door …”. Laat leeg om zonder naam te delen.",
+    "inside": "Wat mensen krijgen",
+    "insideModel": "Je model: {{file}} ({{size}})",
+    "insideSteps": "Je {{count}} stappen, met hun instellingen",
+    "insideStored": "De bewaarde tekening {{names}}",
+    "insideAfter": "Ze openen een eigen kopie. Je ontwerp hier blijft zoals het is. Verder wordt niets uit deze browser verstuurd.",
+    "consent": "Ik heb dit gemaakt of mag het delen. Iedereen mag het openen, aanpassen en delen, zolang de maker vermeld wordt.",
+    "licence": "CC BY 4.0",
+    "check": "Een beheerder controleert elk voorbeeld voor het verschijnt.",
+    "send": "Voorbeeld delen",
+    "thanks": "Bedankt: het verschijnt na een korte controle",
+    "waiting": "Wacht op controle",
+    "live": "Gedeeld",
+    "keyNote": "Deze browser bewaart een geheime sleutel, zodat je het voorbeeld later kunt verwijderen, alleen vanuit deze browser. Als je de browsergegevens wist, is de sleutel weg.",
+    "whereLater": "Je vindt het op de startpagina, bij “Door jou gedeeld”.",
+    "remove": "Mijn voorbeeld verwijderen",
+    "removeTitle": "“{{name}}” uit de voorbeelden verwijderen?",
+    "removeText": "Het verdwijnt uit de galerij en links ernaar tonen “verwijderd”. Wie het al opende, houdt zijn kopie. Je bewaarde ontwerp blijft hier.",
+    "removeKeep": "Behouden",
+    "removeYes": "Voorbeeld verwijderen",
+    "mine": "Door jou gedeeld",
+    "notAccepted": "Niet aanvaard",
+    "gone": "Verwijderd",
+    "error": {
+      "rate": "Je hebt net meerdere voorbeelden gestuurd. Probeer het straks opnieuw.",
+      "too_large": "Dit ontwerp is te groot om te delen.",
+      "picture": "De afbeelding kon niet gemaakt worden of werd niet aanvaard.",
+      "project": "Het ontwerpbestand werd niet aanvaard.",
+      "name": "Geef het voorbeeld een naam.",
+      "network": "De catalogus is niet bereikbaar.",
+      "other": "Versturen is niet gelukt. Probeer het later opnieuw."
+    }
+  },
+  "warning": {
+    "show": "Toon op het model",
+    "hide": "Verberg op het model"
+  }
+}

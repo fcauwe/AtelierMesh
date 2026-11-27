@@ -1,0 +1,46 @@
+{
+  "ops": {
+    "mirror": {
+      "title": "Mirror",
+      "sections": {
+        "plane": "Plane"
+      },
+      "params": {
+        "axis": {
+          "label": "Axis",
+          "help": "The mirror plane is perpendicular to this axis.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z"
+          }
+        },
+        "mode": {
+          "label": "Mode",
+          "help": "Flip mirrors the model where it stands. Copy adds a mirrored copy next to it.",
+          "options": {
+            "flip": "Flip",
+            "copy": "Copy"
+          }
+        },
+        "gap": {
+          "label": "Gap",
+          "help": "The space between the model and its copy."
+        }
+      },
+      "stage": {
+        "mirror": "Mirroring…"
+      }
+    }
+  },
+  "step": {
+    "op": {
+      "mirror": "Mirror"
+    }
+  },
+  "mesh": {
+    "mirror": {
+      "empty": "This model has no triangles to mirror."
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "manifest_version": 1,
+  "id": "example.mirror",
+  "name": "Mirror (example plugin)",
+  "version": "1.0.0",
+  "author": "AtelierMesh examples",
+  "license": "MIT",
+  "description": "Mirrors a model along an axis, in place or as a copy beside it. A small example plugin.",
+  "operations": [
+    {
+      "id": "mirror",
+      "title": "Mirror",
+      "kind": "modifier",
+      "personalisable": "never",
+      "params": [
+        { "name": "axis", "type": "enum", "default": "x", "options": ["x", "y", "z"], "help": "The mirror plane is perpendicular to this axis and passes through the middle of the part." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "ateliermesh",
+  "private": true,
+  "type": "module",
+  "description": "A generic way for web apps that generate or edit 3D files to share plugins: a workflow engine, built-in plugins, shared screens, a standalone app and an optional catalogue server.",
+  "license": "AGPL-3.0-or-later",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "eslint packages apps examples",
+    "check": "npm run typecheck && npm run lint && npm run test",
+    "build:standalone": "node apps/standalone/build.mjs",
+    "pack": "node scripts/pack.mjs",
+    "check:packages": "node scripts/check-packages.mjs",
+    "licenses": "node scripts/licenses.mjs",
+    "coverage": "npm run test:coverage -w @ateliermesh/core -w @ateliermesh/plugins",
+    "build:cli": "node scripts/build-cli-ateliermesh.mjs",
+    "build:wasm": "node scripts/build-wasm.mjs",
+    "kit:plugin": "node scripts/make-plugin-kit.mjs",
+    "check:kit": "node scripts/check-kit.mjs",
+    "deploy:standalone": "node scripts/make-standalone-zip.mjs"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@types/node": "^24.0.0",
+    "@vitest/coverage-v8": "^2.1.9",
+    "ajv": "^8.17.1",
+    "esbuild": "^0.25.0",
+    "eslint": "^9.15.0",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.20.0",
+    "vitest": "^2.1.9"
+  }
+}

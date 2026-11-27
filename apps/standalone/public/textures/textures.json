@@ -1,0 +1,62 @@
+[
+ {
+  "id": "texture:noise",
+  "name": "Noise",
+  "category": "Organic",
+  "file": "textures/noise.png"
+ },
+ {
+  "id": "texture:stripes",
+  "name": "Stripes",
+  "category": "Lines",
+  "file": "textures/stripes.png"
+ },
+ {
+  "id": "texture:diagonal",
+  "name": "Diagonal lines",
+  "category": "Lines",
+  "file": "textures/diagonal.png"
+ },
+ {
+  "id": "texture:waves",
+  "name": "Waves",
+  "category": "Lines",
+  "file": "textures/waves.png"
+ },
+ {
+  "id": "texture:dots",
+  "name": "Dots",
+  "category": "Shapes",
+  "file": "textures/dots.png"
+ },
+ {
+  "id": "texture:bricks",
+  "name": "Bricks",
+  "category": "Shapes",
+  "file": "textures/bricks.png"
+ },
+ {
+  "id": "texture:grid",
+  "name": "Grid",
+  "category": "Shapes",
+  "file": "textures/grid.png"
+ },
+ {
+  "id": "texture:weave",
+  "name": "Weave",
+  "category": "Shapes",
+  "file": "textures/weave.png"
+ },
+ {
+  "id": "texture:wood",
+  "name": "Wood grain",
+  "category": "Organic",
+  "file": "textures/wood.png"
+ },
+ {
+  "id": "texture:hexagons",
+  "name": "Hexagons",
+  "category": "Shapes",
+  "file": "textures/hexagons.png"
+ }
+]

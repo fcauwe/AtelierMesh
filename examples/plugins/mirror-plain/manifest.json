@@ -1,0 +1,67 @@
+{
+  "manifest_version": 1,
+  "id": "com.example.mirror_plain",
+  "name": "Mirror (plain JavaScript)",
+  "version": "1.0.0",
+  "author": "Example Ltd",
+  "license": "MIT",
+  "description": "Mirrors a model along an axis, in plain JavaScript with no build. The no-npm example.",
+  "contact": {"name": "Example Ltd", "url": "https://example.org/plugins"},
+  "operations": [
+    {
+      "id": "mirror",
+      "title": "Mirror",
+      "kind": "modifier",
+      "category": "shape",
+      "personalisable": "never",
+      "stages": [
+        "mirror"
+      ],
+      "outputs": {
+        "mesh": true,
+        "report": true,
+        "closed": true
+      },
+      "sections": [
+        {
+          "id": "plane",
+          "title": "Plane"
+        }
+      ],
+      "params": [
+        {
+          "name": "axis",
+          "type": "enum",
+          "default": "x",
+          "options": [
+            "x",
+            "y",
+            "z"
+          ],
+          "section": "plane"
+        },
+        {
+          "name": "mode",
+          "type": "enum",
+          "default": "flip",
+          "options": [
+            "flip",
+            "copy"
+          ],
+          "section": "plane"
+        },
+        {
+          "name": "gap",
+          "type": "float",
+          "default": 2,
+          "min": 0,
+          "max": 200,
+          "step": 0.5,
+          "unit": "mm",
+          "visible_if": "mode == 'copy'",
+          "section": "plane"
+        }
+      ]
+    }
+  ]
+}

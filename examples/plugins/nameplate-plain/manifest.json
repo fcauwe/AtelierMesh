@@ -1,0 +1,30 @@
+{
+  "manifest_version": 1,
+  "id": "com.example.nameplate_plain",
+  "name": "Name plate (plain JavaScript)",
+  "version": "1.0.0",
+  "author": "Example Ltd",
+  "license": "MIT",
+  "description": "Makes a flat plate sized to a text, and reports the letters as SVG for a laser. The example of asking the host for letter outlines.",
+  "contact": {"name": "Example Ltd", "url": "https://example.org/plugins"},
+  "uses": ["fonts"],
+  "operations": [
+    {
+      "id": "nameplate",
+      "title": "Name plate",
+      "kind": "generator",
+      "category": "shape",
+      "personalisable": "never",
+      "stages": ["letters", "plate"],
+      "outputs": {"mesh": true, "report": true, "closed": true, "drops": ["segments", "groups"]},
+      "sections": [{"id": "text", "title": "Text"}, {"id": "plate", "title": "Plate"}],
+      "params": [
+        {"name": "text", "type": "string", "default": "Anna", "max_length": 40, "section": "text"},
+        {"name": "font", "type": "asset", "default": "font:Roboto", "accept": ["font"], "library": "fonts", "widget": "font", "preview": "text", "section": "text"},
+        {"name": "size", "type": "float", "default": 12, "min": 3, "max": 80, "step": 0.5, "unit": "mm", "section": "text"},
+        {"name": "margin", "type": "float", "default": 4, "min": 1, "max": 30, "step": 0.5, "unit": "mm", "section": "plate"},
+        {"name": "thickness", "type": "float", "default": 3, "min": 0.6, "max": 20, "step": 0.2, "unit": "mm", "section": "plate"}
+      ]
+    }
+  ]
+}

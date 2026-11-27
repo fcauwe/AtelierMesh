@@ -1,0 +1,26 @@
+{
+  "name": "@ateliermesh/plugins",
+  "version": "0.4.8",
+  "private": true,
+  "type": "module",
+  "description": "First-party plugins (org.ateliermesh.core): resize and rotate now, more later. Compiled in; each operation has a manifest, run code and conformance fixtures.",
+  "license": "AGPL-3.0-or-later",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@ateliermesh/core": "*",
+    "cdt2d": "^1.0.0",
+    "clipper-lib": "^6.4.2",
+    "fontkit": "^2.0.4",
+    "svgpath": "^2.6.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "COVERAGE=1 vitest run --coverage"
+  },
+  "devDependencies": {
+    "wawoff2": "^2.0.1"
+  }
+}

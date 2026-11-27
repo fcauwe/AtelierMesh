@@ -1,0 +1,14 @@
+{
+  "name": "mirror-plugin",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The complete example of docs/plugin-guide.md: a Mirror plugin with tests and texts. Copy this folder out of the repository and follow the guide.",
+  "scripts": { "typecheck": "tsc --noEmit", "test": "vitest run", "pack": "node tools/amplugin.mjs pack . --out dist/com.example.mirror-1.0.0.amplugin" },
+  "devDependencies": {
+    "@ateliermesh/core": "file:../tarballs/ateliermesh-core-0.4.8.tgz",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}

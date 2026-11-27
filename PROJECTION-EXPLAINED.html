@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Text that follows the surface</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1d1d1b; --muted:#66665f; --card:#ffffff; --line:#d6d5cc;
+  --surf:#44505f; --solid:#e9e8e0; --accent:#0b7a75; --warn:#c2410c; --blue:#2563eb;
+  --blue-soft:rgba(37,99,235,.30); --amber-soft:rgba(245,158,11,.38); --mesh:#b3b2a7; --faint:#cfcec4;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#151513; --fg:#ecebe3; --muted:#a4a399; --card:#1e1e1b; --line:#3a3a34; --surf:#aab4c2;
+    --solid:#262622; --accent:#2dd4bf; --warn:#fb923c; --blue:#7db0ff; --blue-soft:rgba(125,176,255,.34);
+    --amber-soft:rgba(245,158,11,.42); --mesh:#55554d; --faint:#3f3f39; }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:900px;margin:0 auto;padding:24px 16px 72px}
+h1{font-size:1.6rem;line-height:1.25;margin:.2em 0 .4em}
+h2{font-size:1.2rem;margin:2.2em 0 .4em}
+p,li{margin:.4em 0}
+ul,ol{padding-left:1.3em}
+.lede{color:var(--muted);font-size:1.02rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin:12px 0}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:12px}
+figure{margin:0}
+figcaption{font-size:.9rem;color:var(--muted);margin-top:6px}
+svg{width:100%;height:auto;display:block}
+.controls{display:flex;flex-wrap:wrap;gap:18px;margin:6px 0 2px}
+.controls label{font-size:.9rem;color:var(--muted);display:flex;flex-direction:column;gap:2px;min-width:220px;flex:1}
+input[type=range]{width:100%}
+.ptitle{font-weight:600;margin:10px 0 2px}
+.readout{font-size:.95rem;margin:4px 0 8px}
+.bad{color:var(--warn);font-weight:600}
+.good{color:var(--accent);font-weight:600}
+table{border-collapse:collapse;width:100%;font-size:.93rem}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{background:var(--card)}
+.note{font-size:.9rem;color:var(--muted);border-top:1px solid var(--line);margin-top:28px;padding-top:12px}
+/* svg classes */
+.faint{fill:none;stroke:var(--faint);stroke-width:1.5}
+.patch{fill:none;stroke:var(--accent);stroke-width:5;stroke-linecap:round}
+.body{fill:var(--solid)}
+.surfline{fill:none;stroke:var(--surf);stroke-width:2.5}
+.slab{stroke:var(--fg);stroke-width:.6}
+.box{fill:var(--card);stroke:var(--accent);stroke-width:1.4}
+.t{fill:var(--fg);font:12px system-ui,sans-serif}
+.tm{fill:var(--muted);font:11px system-ui,sans-serif}
+.tb{fill:var(--fg);font:600 12px system-ui,sans-serif}
+.tmL{fill:var(--muted);font:14px system-ui,sans-serif}
+.tbL{fill:var(--fg);font:600 15px system-ui,sans-serif}
+.dotA{fill:var(--warn)}
+.arrow{stroke:var(--accent);stroke-width:2;fill:none}
+.arrowW{stroke:var(--warn);stroke-width:2;fill:none}
+.mk{fill:var(--accent)}
+.mkW{fill:var(--warn)}
+.ray{stroke:var(--muted);stroke-width:1;stroke-dasharray:3 3;fill:none}
+.tick{stroke:var(--fg);stroke-width:1.2}
+.ruler{stroke:var(--accent);stroke-width:1.4;fill:none}
+.meshline{stroke:var(--mesh);stroke-width:1;fill:none}
+.outline{fill:none;stroke:var(--accent);stroke-width:2.6;stroke-linejoin:round}
+.cut{fill:var(--amber-soft)}
+.inside{fill:var(--blue-soft)}
+.xdot{fill:var(--warn)}
+.sect{stroke:var(--accent);stroke-width:1.6;stroke-dasharray:6 4;fill:none}
+.prof{fill:none;stroke:var(--surf);stroke-width:3;stroke-linejoin:round}
+.hollow{fill:var(--card);stroke:var(--surf);stroke-width:2}
+.solidd{fill:var(--accent)}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="mk" d="M0,0L10,5L0,10z"/></marker>
+    <marker id="ahW" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="mkW" d="M0,0L10,5L0,10z"/></marker>
+  </defs>
+</svg>
+<main>
+<h1>How the text follows the surface and becomes part of the mesh</h1>
+<p class="lede">The letters are not projected straight down from the anchor, and they are not added as a separate piece. The surface around the anchor is unfolded flat, the text is placed on that flat map, and the letters are mapped back onto the surface, where they become part of the same mesh.</p>
+<noscript><p class="bad">The drawings on this page need JavaScript.</p></noscript>
+
+<h2>1. The idea in three steps</h2>
+<div class="card">
+  <div class="grid3" id="fig1"></div>
+  <p class="readout">Think of peeling a label off a bottle: the label keeps its size and shape on the flat table, and goes back on the bottle without stretching. The same works for a cone, a plate, or any gently curved shape.</p>
+</div>
+
+<h2>2. Why not project straight along the anchor?</h2>
+<p>A side view of a hill-shaped surface. The anchor is at the middle of the word. Move the sliders to see what each way of mapping does to the letters.</p>
+<div class="card">
+  <div class="controls">
+    <label>Hill height <span id="vH"></span><input id="sH" type="range" min="0" max="100" value="60"></label>
+    <label>Where the text sits on the hill <span id="vS"></span><input id="sS" type="range" min="-140" max="140" value="70"></label>
+  </div>
+  <p class="ptitle">Straight along the anchor's direction (what we do <u>not</u> want)</p>
+  <svg id="planar" viewBox="0 0 700 290" role="img" aria-label="Side view of text projected straight along the anchor direction onto a hill. Letters on the slopes are stretched."></svg>
+  <p class="readout" id="rPlanar"></p>
+  <p class="ptitle">Following the surface (what we want)</p>
+  <svg id="follow" viewBox="0 60 700 230" role="img" aria-label="Side view of text laid out along the surface of a hill. Every letter keeps its width and tilts with the surface."></svg>
+  <p class="readout" id="rFollow"></p>
+  <figcaption>Side view: only the width along the text is shown. The thick pieces on the surface are the letters, drawn with their raised height. The orange arrow is the anchor's direction; the teal arrows are the surface's own direction under each letter.</figcaption>
+</div>
+
+<h2>3. Making it one mesh</h2>
+<p>Once the letters are on the surface, they have to become part of it. This is the top view of the unfolded mesh; the same steps apply to any surface because the mesh is already flat on the map.</p>
+<div class="grid2" id="fig3"></div>
+<div class="card">
+  <ol>
+    <li><b>Unfold</b> a patch of the mesh around the anchor into a flat map, keeping distances along the surface as true as possible.</li>
+    <li><b>Place</b> the merged letter outlines on the map: start point and starting direction come from the anchor.</li>
+    <li><b>Cut</b> the mesh triangles along the outlines. Each cut is a straight line inside one flat triangle, so the surface itself does not change. The outline becomes ordinary mesh edges.</li>
+    <li><b>Classify</b> every piece: inside a letter or outside.</li>
+    <li><b>Lift</b> the inside by the height along the surface's own direction at each point. For engraving, push it down instead. Each outline point gets two copies, one that stays and one that moves, and wall triangles join them.</li>
+    <li><b>Check</b> that the result is one closed surface, that nothing intersects, and report the worst stretch of the letters.</li>
+  </ol>
+</div>
+
+<h2>4. What the anchor does, and what it does not</h2>
+<div class="grid2">
+  <div class="card"><b>The anchor decides</b>
+    <ul><li>where the text starts (its centre or corner, set by <code>align</code>)</li>
+        <li>which way the text starts to read (the <code>direction</code> angle)</li></ul></div>
+  <div class="card"><b>The anchor does not decide</b>
+    <ul><li>the direction of the mapping</li>
+        <li>the direction of the lift</li>
+        <li>how a letter tilts: that comes from the surface under that letter</li></ul></div>
+</div>
+
+<h2>5. What changed from the earlier plan</h2>
+<div class="card">
+<table>
+  <tr><th></th><th>Earlier plan</th><th>Now</th></tr>
+  <tr><td>Result</td><td>Mesh plus a separate text shell</td><td>One mesh, one closed surface</td></tr>
+  <tr><td>Mapping</td><td>Straight along the anchor's direction</td><td>Unfold the surface, place the text, map back</td></tr>
+  <tr><td>Lift direction</td><td>Surface direction at each ray hit</td><td>Surface direction at each point (same idea, but now part of the surface)</td></tr>
+  <tr><td>Engraving</td><td>Not possible without a boolean</td><td>Same steps with the lift reversed</td></tr>
+  <tr><td>Overlap with the surface</td><td>Hidden depth under the surface</td><td>None</td></tr>
+</table>
+</div>
+
+<h2>6. Limits</h2>
+<ul>
+  <li><b>Distortion on doubly curved shapes.</b> A cylinder, cone or plate unfolds with no distortion. A sphere or a saddle cannot be flattened without some stretching. For small text it is small, and the report gives the worst stretch so the plugin can warn or refuse.</li>
+  <li><b>Corners.</b> Crossing a single fold is fine, like bending a label. A corner where three faces meet cannot be flattened, so text over it is refused or warned about.</li>
+  <li><b>Engraving depth.</b> It has to stay shallower than the wall behind it. The plugin checks this by looking inward from each point.</li>
+  <li><b>Patch quality.</b> The area around the anchor must be an ordinary connected surface without holes or broken triangles; otherwise the plugin says so and does nothing.</li>
+  <li><b>Coarse meshes.</b> The cuts are exact, but the letter tops copy the mesh's own facets, so a very coarse mesh gives faceted letters, like the object itself.</li>
+  <li><b>Measured in the M0 spikes</b> (see <code>spikes/RESULTS.md</code>): the unfolding is ARAP started from a flat projection, with a limit of about 10 to 15 thousand triangles in the patch.</li>
+</ul>
+<p class="note">This is a design explanation. The method was built and tested in the M0 spikes; the drawings here stay simplified: the mesh in section 3 is a made-up flat example, and section 2 uses a hill-shaped curve.</p>
+</main>
+
+<script>
+(function(){
+const f1=n=>n.toFixed(1), P2=(x,y)=>f1(x)+','+f1(y);
+
+/* ---------- Figure 1: unfold, place, wrap back ---------- */
+(function(){
+  const r=66, cx=120, cy=140, hh=9, w=22, pitch=27, n=4, L=['A','n','n','a'];
+  const total=(n-1)*pitch+w, a1=-0.85, a2=0.85;
+  const pol=(rad,rr)=>[cx+rr*Math.sin(rad), cy-rr*Math.cos(rad)];
+  const arc=`M${P2(...pol(a1,r))} A${r},${r} 0 0 1 ${P2(...pol(a2,r))}`;
+  const stripL=r*(a2-a1);
+  let A=`<figure><svg viewBox="0 0 240 220" role="img" aria-label="Patch of surface around the anchor">
+    <circle class="faint" cx="${cx}" cy="${cy}" r="${r}"/>
+    <path class="patch" d="${arc}"/>
+    <circle class="dotA" cx="${cx}" cy="${cy-r}" r="5"/>
+    <line class="arrowW" x1="${cx}" y1="${cy-r-6}" x2="${cx}" y2="${cy-r-36}" marker-end="url(#ahW)"/>
+    <text class="tm" x="${cx+10}" y="${cy-r-22}">anchor</text>
+    <text class="tm" x="${cx}" y="${cy+4}" text-anchor="middle">cylinder, end view</text>
+  </svg><figcaption><b>1.</b> The patch of surface around the anchor (teal).</figcaption></figure>`;
+  const sx0=cx-stripL/2, sy=135;
+  let boxes='';
+  for(let i=0;i<n;i++){
+    const x=cx-total/2+i*pitch;
+    boxes+=`<rect class="box" x="${f1(x)}" y="${sy-26}" width="${w}" height="20" rx="3"/><text class="t" x="${f1(x+w/2)}" y="${sy-12}" text-anchor="middle">${L[i]}</text>`;
+  }
+  let B=`<figure><svg viewBox="0 0 240 220" role="img" aria-label="The patch unfolded flat with the text placed on it">
+    <line class="patch" x1="${f1(sx0)}" y1="${sy}" x2="${f1(sx0+stripL)}" y2="${sy}"/>
+    ${boxes}
+    <circle class="dotA" cx="${cx}" cy="${sy}" r="5"/>
+    <line class="arrow" x1="${cx-40}" y1="${sy+30}" x2="${cx+40}" y2="${sy+30}" marker-end="url(#ah)"/>
+    <text class="tm" x="${cx}" y="${sy+46}" text-anchor="middle">text direction</text>
+    <text class="tm" x="${cx}" y="${sy+62}" text-anchor="middle">same length as the arc</text>
+  </svg><figcaption><b>2.</b> Unfold it flat and place the text on the flat map.</figcaption></figure>`;
+  const phi0=-(total/2)/r;
+  let slabs='';
+  for(let i=0;i<n;i++){
+    const pa=phi0+(i*pitch)/r, pb=pa+w/r, pm=(pa+pb)/2;
+    const p1=pol(pa,r), p2=pol(pb,r), p3=pol(pb,r+hh), p4=pol(pa,r+hh), tx=pol(pm,r+hh+9);
+    slabs+=`<path class="slab" fill="var(--accent)" d="M${P2(...p1)} A${r},${r} 0 0 1 ${P2(...p2)} L${P2(...p3)} A${r+hh},${r+hh} 0 0 0 ${P2(...p4)} Z"/>`+
+           `<text class="t" transform="translate(${P2(...tx)}) rotate(${f1(pm*180/Math.PI)})" text-anchor="middle">${L[i]}</text>`;
+  }
+  let C=`<figure><svg viewBox="0 0 240 220" role="img" aria-label="The letters mapped back onto the surface and raised">
+    <circle class="faint" cx="${cx}" cy="${cy}" r="${r}"/>
+    <path class="patch" d="${arc}" style="opacity:.35"/>
+    ${slabs}
+    <circle class="dotA" cx="${cx}" cy="${cy-r}" r="4"/>
+    <text class="tm" x="${cx}" y="${cy+4}" text-anchor="middle">each letter tilts with</text>
+    <text class="tm" x="${cx}" y="${cy+18}" text-anchor="middle">the surface under it</text>
+  </svg><figcaption><b>3.</b> Map the letters back and raise them along the surface's own direction.</figcaption></figure>`;
+  document.getElementById('fig1').innerHTML=A+B+C;
+})();
+
+/* ---------- Figure 2: planar vs surface-following ---------- */
+(function(){
+  const W=700,BY=240,SIG=75,X0=350,P=40,LW=32,N=7,TH=10,D=80,word='ATELIER';
+  const sH=document.getElementById('sH'), sS=document.getElementById('sS');
+  const slope=(x,H)=>H*Math.exp(-((x-X0)**2)/(2*SIG*SIG))*(x-X0)/(SIG*SIG);
+  const yv=(x,H)=>BY-H*Math.exp(-((x-X0)**2)/(2*SIG*SIG));
+  function model(H){const pts=[],s=[0];for(let x=0;x<=W;x++)pts.push([x,yv(x,H)]);
+    for(let i=1;i<=W;i++)s.push(s[i-1]+Math.hypot(1,pts[i][1]-pts[i-1][1]));return{H,pts,s};}
+  const clampX=x=>Math.max(0,Math.min(W,x));
+  const at=(M,x)=>{x=clampX(x);const i=Math.min(W-1,Math.floor(x)),f=x-i;return[M.pts[i][0]+(M.pts[i+1][0]-M.pts[i][0])*f,M.pts[i][1]+(M.pts[i+1][1]-M.pts[i][1])*f];};
+  const nrm=(M,x)=>{const m=slope(clampX(x),M.H),l=Math.hypot(m,1);return[m/l,-1/l];};
+  const tan=(M,x)=>{const m=slope(clampX(x),M.H),l=Math.hypot(1,m);return[1/l,m/l];};
+  const sAt=(M,x)=>{x=clampX(x);const i=Math.min(W-1,Math.floor(x)),f=x-i;return M.s[i]+(M.s[i+1]-M.s[i])*f;};
+  function xOfS(M,sv){ if(sv<=0)return sv; if(sv>=M.s[W])return W+(sv-M.s[W]);
+    let lo=0,hi=W; for(let k=0;k<40;k++){const mid=(lo+hi)/2; if(sAt(M,mid)<sv)lo=mid;else hi=mid;} return (lo+hi)/2; }
+  function bodyPath(M){let d='M0,290';for(let x=0;x<=W;x+=4)d+=`L${P2(...M.pts[x])}`;return d+'L700,290Z';}
+  function linePath(M){let d='';for(let x=0;x<=W;x+=4)d+=(x?'L':'M')+P2(...M.pts[x]);return d;}
+  function slabPath(M,xa,xb){const n=Math.max(2,Math.ceil(Math.abs(xb-xa)/3)),bot=[],top=[];
+    for(let k=0;k<=n;k++){const x=xa+(xb-xa)*k/n,p=at(M,x),nm=nrm(M,x);bot.push(p);top.push([p[0]+nm[0]*TH,p[1]+nm[1]*TH]);}
+    return 'M'+bot.map(p=>P2(...p)).join('L')+'L'+top.reverse().map(p=>P2(...p)).join('L')+'Z';}
+  const colour=st=>`hsl(${Math.round(172-Math.min(1,Math.max(0,(st-1)/0.7))*150)},62%,46%)`;
+  function glyph(M,xm,ch){const p=at(M,xm),nm=nrm(M,xm),tg=tan(M,xm),ang=Math.atan2(tg[1],tg[0])*180/Math.PI;
+    return `<text class="t" transform="translate(${P2(p[0]+nm[0]*(TH+9),p[1]+nm[1]*(TH+9))}) rotate(${f1(ang)})" text-anchor="middle">${ch}</text>`;}
+
+  function render(){
+    const H=+sH.value, shift=+sS.value, xA=X0+shift, M=model(H);
+    document.getElementById('vH').textContent='('+H+')';
+    document.getElementById('vS').textContent='('+(shift>0?'+':'')+shift+')';
+    const A=at(M,xA), T=tan(M,xA), Nn=nrm(M,xA), ang=Math.atan2(T[1],T[0])*180/Math.PI;
+    const span=(N-1)*P+LW, half=span/2;
+
+    /* planar: ruler on the tangent at the anchor, rays along the anchor's normal */
+    const tt=M.pts.map(p=>(p[0]-A[0])*T[0]+(p[1]-A[1])*T[1]);
+    const xOfT=tv=>{ if(tv<=tt[0])return 0; if(tv>=tt[W])return W; let lo=0,hi=W;
+      for(let k=0;k<40;k++){const mid=(lo+hi)/2,i=Math.min(W-1,Math.floor(mid)),f=mid-i,tm=tt[i]+(tt[i+1]-tt[i])*f; if(tm<tv)lo=mid;else hi=mid;} return (lo+hi)/2; };
+    let g='', rays='', ruler='', stMin=9, stMax=0;
+    const R0=[A[0]+Nn[0]*D, A[1]+Nn[1]*D];
+    ruler+=`<g transform="translate(${P2(...R0)}) rotate(${f1(ang)})"><line class="ruler" x1="${-half-10}" y1="0" x2="${half+10}" y2="0"/>`;
+    for(let i=0;i<N;i++){
+      const t0=-half+i*P, t1=t0+LW, xa=xOfT(t0), xb=xOfT(t1), st=(sAt(M,xb)-sAt(M,xa))/LW;
+      stMin=Math.min(stMin,st); stMax=Math.max(stMax,st);
+      ruler+=`<rect class="box" x="${f1(t0)}" y="-17" width="${LW}" height="17" rx="2"/><text class="t" x="${f1(t0+LW/2)}" y="-4" text-anchor="middle">${word[i]}</text>`;
+      for(const [tv,xx] of [[t0,xa],[t1,xb]]){const q=at(M,xx),top=[A[0]+Nn[0]*D+T[0]*tv, A[1]+Nn[1]*D+T[1]*tv];
+        rays+=`<line class="ray" x1="${f1(top[0])}" y1="${f1(top[1])}" x2="${f1(q[0])}" y2="${f1(q[1])}"/>`;}
+      g+=`<path class="slab" fill="${colour(st)}" d="${slabPath(M,xa,xb)}"/>`;
+    }
+    ruler+='</g>';
+    const arrowTip=[A[0]+Nn[0]*58,A[1]+Nn[1]*58];
+    const svgP=`<path class="body" d="${bodyPath(M)}"/><path class="surfline" d="${linePath(M)}"/>${rays}${ruler}${g}`+
+      `<line class="arrowW" x1="${f1(A[0])}" y1="${f1(A[1])}" x2="${f1(arrowTip[0])}" y2="${f1(arrowTip[1])}" marker-end="url(#ahW)"/><circle class="dotA" cx="${f1(A[0])}" cy="${f1(A[1])}" r="5"/>`+
+      `<text class="tm" x="10" y="18">orange arrow: the anchor's direction, used for every dashed ray</text>`;
+    document.getElementById('planar').innerHTML=svgP;
+    const rp=document.getElementById('rPlanar');
+    const lo=Math.round(stMin*100), hi=Math.round(stMax*100);
+    rp.innerHTML=(hi>=108)?`On the surface the letters end up between <span class="bad">${lo}% and ${hi}%</span> of their designed width. The ones far from the anchor are stretched along the slope.`:
+      `On the surface the letters stay close to their designed width (${lo}% to ${hi}%), because the surface is nearly flat here.`;
+
+    /* following: equal length along the surface, tilt with the surface */
+    let g2='', ticks='', arrows='';
+    const sA=sAt(M,xA);
+    for(let i=0;i<N;i++){
+      const s0=sA-half+i*P, xa=xOfS(M,s0), xb=xOfS(M,s0+LW), xm=xOfS(M,s0+LW/2);
+      g2+=`<path class="slab" fill="${colour(1)}" d="${slabPath(M,xa,xb)}"/>`+glyph(M,xm,word[i]);
+      const ln=(c,x1,y1,x2,y2,extra='')=>`<line class="${c}" x1="${f1(x1)}" y1="${f1(y1)}" x2="${f1(x2)}" y2="${f1(y2)}" ${extra}/>`;
+      for(const xx of [xa,xb]){const q=at(M,xx),nm=nrm(M,xx);ticks+=ln('tick',q[0]-nm[0]*5,q[1]-nm[1]*5,q[0]+nm[0]*5,q[1]+nm[1]*5);}
+      const q=at(M,xm),nm=nrm(M,xm);
+      arrows+=ln('arrow',q[0]+nm[0]*(TH+22),q[1]+nm[1]*(TH+22),q[0]+nm[0]*(TH+38),q[1]+nm[1]*(TH+38),'marker-end="url(#ah)"');
+    }
+    document.getElementById('follow').innerHTML=`<path class="body" d="${bodyPath(M)}"/><path class="surfline" d="${linePath(M)}"/>${g2}${ticks}${arrows}`+
+      `<circle class="dotA" cx="${f1(A[0])}" cy="${f1(A[1])}" r="5"/>`+
+      `<text class="tm" x="10" y="78">teal arrows: the surface's own direction under each letter</text>`;
+    document.getElementById('rFollow').innerHTML=`Every letter keeps <span class="good">100%</span> of its designed width, and each one tilts with the surface under it.`;
+  }
+  sH.addEventListener('input',render); sS.addEventListener('input',render); render();
+})();
+
+/* ---------- Figure 3: cutting the mesh along the outline ---------- */
+(function(){
+  const s=34, cols=9, rows=8, ox=180, oy=75, sc=48;
+  const jit=(i,j,k)=>{const v=Math.sin(i*127.1+j*311.7+k*74.7)*43758.5453;return v-Math.floor(v)-0.5;};
+  const V=[]; for(let j=0;j<=rows;j++)for(let i=0;i<=cols;i++){
+    let x=20+(i+0.5*j)*s, y=20+j*s*0.866;
+    if(i>0&&i<cols&&j>0&&j<rows){x+=jit(i,j,1)*0.28*s;y+=jit(i,j,2)*0.28*s;}
+    V.push([x,y]);}
+  const vi=(i,j)=>j*(cols+1)+i, Tr=[];
+  for(let j=0;j<rows;j++)for(let i=0;i<cols;i++){Tr.push([vi(i,j),vi(i+1,j),vi(i,j+1)]);Tr.push([vi(i+1,j),vi(i+1,j+1),vi(i,j+1)]);}
+  const poly=[[0,0],[3,0],[3,3],[2,3],[2,1],[1,1],[1,3],[0,3]].map(p=>[ox+p[0]*sc,oy+p[1]*sc]);
+  const inPoly=(p)=>{let c=false;for(let i=0,j=poly.length-1;i<poly.length;j=i++){const a=poly[i],b=poly[j];
+    if((a[1]>p[1])!==(b[1]>p[1])&&p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0])c=!c;}return c;};
+  function segInt(p,q,r,t){const d1x=q[0]-p[0],d1y=q[1]-p[1],d2x=t[0]-r[0],d2y=t[1]-r[1],den=d1x*d2y-d1y*d2x;
+    if(Math.abs(den)<1e-9)return null;const a=((r[0]-p[0])*d2y-(r[1]-p[1])*d2x)/den,b=((r[0]-p[0])*d1y-(r[1]-p[1])*d1x)/den;
+    if(a<0||a>1||b<0||b>1)return null;return[p[0]+a*d1x,p[1]+a*d1y];}
+  const edges=new Map(); Tr.forEach(t=>[[t[0],t[1]],[t[1],t[2]],[t[2],t[0]]].forEach(([a,b])=>{const k=a<b?a+'-'+b:b+'-'+a;if(!edges.has(k))edges.set(k,[a,b]);}));
+  const cross=[]; const cutEdge=new Set();
+  edges.forEach(([a,b],k)=>{for(let i=0;i<poly.length;i++){const q=segInt(V[a],V[b],poly[i],poly[(i+1)%poly.length]);if(q){cross.push(q);cutEdge.add(k);}}});
+  const ek=(a,b)=>a<b?a+'-'+b:b+'-'+a;
+  const cls=Tr.map(t=>{const cutT=[[t[0],t[1]],[t[1],t[2]],[t[2],t[0]]].some(([a,b])=>cutEdge.has(ek(a,b)));
+    if(cutT)return'cut';const c=[(V[t[0]][0]+V[t[1]][0]+V[t[2]][0])/3,(V[t[0]][1]+V[t[1]][1]+V[t[2]][1])/3];return inPoly(c)?'in':'out';});
+  const trPath=t=>`M${P2(...V[t[0]])}L${P2(...V[t[1]])}L${P2(...V[t[2]])}Z`;
+  const polyPath='M'+poly.map(p=>P2(...p)).join('L')+'Z';
+  const meshLines=Tr.map(t=>`<path class="meshline" d="${trPath(t)}"/>`).join('');
+  const yl=oy+2*sc, xs=ox-50, xe=ox+3*sc+50;
+  const sectLine=`<line class="sect" x1="${xs}" y1="${yl}" x2="${xe}" y2="${yl}"/><text class="tm" x="${xs+2}" y="${yl-6}">section</text>`;
+  const wrap=(inner,cap,label,vb='0 0 490 285')=>`<figure class="card"><svg viewBox="${vb}" role="img" aria-label="${label}">${inner}</svg><figcaption>${cap}</figcaption></figure>`;
+  const nCut=cls.filter(c=>c==='cut').length;
+  const a=wrap(meshLines+`<path class="outline" d="${polyPath}"/>`,'<b>①</b> The letter outline (here an “n”) placed on the unfolded mesh.','Letter outline on a triangle mesh');
+  const b=wrap(Tr.map((t,i)=>cls[i]==='cut'?`<path class="cut" d="${trPath(t)}"/>`:'').join('')+meshLines+`<path class="outline" d="${polyPath}"/>`+
+    cross.map(q=>`<circle class="xdot" cx="${f1(q[0])}" cy="${f1(q[1])}" r="3.6"/>`).join(''),
+    `<b>②</b> Orange dots: where the outline crosses mesh edges (${cross.length}). The ${nCut} triangles it touches (amber) get cut.`,'Crossing points and the triangles to cut');
+  const c=wrap(`<defs><clipPath id="clipN"><path d="${polyPath}"/></clipPath></defs>`+
+    `<g clip-path="url(#clipN)">`+Tr.map(t=>`<path class="inside" d="${trPath(t)}"/>`).join('')+`</g>`+meshLines+`<path class="outline" d="${polyPath}"/>`+
+    cross.map(q=>`<circle class="xdot" cx="${f1(q[0])}" cy="${f1(q[1])}" r="3"/>`).join('')+sectLine,
+    '<b>③</b> Cut along the outline: the outline becomes mesh edges. Everything inside (blue) will be lifted.','Mesh cut along the outline; inside part marked');
+  /* section */
+  const xsAll=[]; for(let i=0;i<poly.length;i++){const p=poly[i],q=poly[(i+1)%poly.length];
+    if((p[1]-yl)*(q[1]-yl)<0)xsAll.push(p[0]+(yl-p[1])/(q[1]-p[1])*(q[0]-p[0]));}
+  xsAll.sort((u,v)=>u-v); const gy=205, h=42;
+  let d=`M${xs},${gy}`, dots='';
+  for(let i=0;i<xsAll.length;i+=2){const u=xsAll[i],v=xsAll[i+1];
+    d+=`L${f1(u)},${gy}L${f1(u)},${gy-h}L${f1(v)},${gy-h}L${f1(v)},${gy}`;
+    for(const xx of [u,v])dots+=`<circle class="hollow" cx="${f1(xx)}" cy="${gy}" r="4.2"/><circle class="solidd" cx="${f1(xx)}" cy="${gy-h}" r="4.2"/>`;}
+  d+=`L${xe},${gy}`;
+  const mid=(xsAll[1]+xsAll[2])/2;
+  const dd=wrap(`<path class="body" d="M${xs},${gy}L${xe},${gy}L${xe},255L${xs},255Z"/><path class="prof" d="${d}"/>${dots}`+
+    `<line class="ray" x1="${f1(xsAll[0]-14)}" y1="${gy}" x2="${f1(xsAll[0]-14)}" y2="${gy-h}"/><text class="tmL" x="${f1(xsAll[0]-20)}" y="${gy-h/2+5}" text-anchor="end">height</text>`+
+    `<text class="tbL" x="${f1(mid)}" y="${gy-h-14}" text-anchor="middle">inside the letters: lifted</text>`+
+    `<text class="tmL" x="${xs+6}" y="${gy+24}">outside: stays where it was</text>`+
+    `<text class="tmL" x="${xe-6}" y="${gy+46}" text-anchor="end">○ stays  ● lifted copy of the same point</text>`,
+    '<b>④</b> Side view along the dashed line: one continuous surface, with a wall at each outline point.','Section through the lifted letter strokes','0 120 490 150');
+  document.getElementById('fig3').innerHTML=a+b+c+dd;
+})();
+})();
+</script>
+</body>
+</html>

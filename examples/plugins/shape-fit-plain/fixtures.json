@@ -1,0 +1,37 @@
+[
+  {
+    "name": "a block as big as a 20 x 10 drawing",
+    "operation": "block_from_drawing",
+    "params": { "height": 5 },
+    "input": { "kind": "drawing", "paths": [{ "closed": true, "points": [[0, 0], [20, 0], [20, 10], [0, 10]] }] },
+    "expect": { "triangles": 12, "volume": { "value": 1000, "tol": 1e-6 }, "size": { "value": [20, 10, 5], "tol": 1e-9 }, "watertight": true }
+  },
+  {
+    "name": "a 10 mm cube fitted to a stored 40 x 20 drawing is twice as big",
+    "operation": "fit_to_shape",
+    "params": { "shape": "outline", "margin": 0 },
+    "input": { "generator": "box", "params": { "width": 10, "depth": 10, "height": 10 } },
+    "store": { "outline": { "kind": "drawing", "paths": [{ "closed": true, "points": [[0, 0], [40, 0], [40, 20], [0, 20]] }] } },
+    "expect": {
+      "volume": { "value": 8000, "tol": 1e-6 },
+      "size": { "value": [20, 20, 20], "tol": 1e-9 },
+      "watertight": true,
+      "step_reports": [{ "step": 0, "key": "scale", "expect": { "value": 2, "tol": 1e-9 } }]
+    }
+  },
+  {
+    "name": "a margin leaves room around the model",
+    "operation": "fit_to_shape",
+    "params": { "shape": "outline", "margin": 5 },
+    "input": { "generator": "box", "params": { "width": 10, "depth": 10, "height": 10 } },
+    "store": { "outline": { "kind": "drawing", "paths": [{ "closed": true, "points": [[0, 0], [40, 0], [40, 30], [0, 30]] }] } },
+    "expect": { "size": { "value": [20, 20, 20], "tol": 1e-9 }, "step_reports": [{ "step": 0, "key": "scale", "expect": { "value": 2, "tol": 1e-9 } }] }
+  },
+  {
+    "name": "no stored shape chosen is a clear error",
+    "operation": "fit_to_shape",
+    "params": { "shape": null },
+    "input": { "generator": "box" },
+    "expect": { "ok": false, "error_code": "fit_to_shape.no_shape" }
+  }
+]

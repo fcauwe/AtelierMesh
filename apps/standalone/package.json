@@ -1,0 +1,30 @@
+{
+  "name": "@ateliermesh/standalone",
+  "version": "0.4.8",
+  "private": true,
+  "type": "module",
+  "description": "The standalone app (journey A): open an STL, 3MF or saved configuration, edit it with the shared React screens, export or save it. No backend.",
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {
+    "@ateliermesh/core": "*",
+    "@ateliermesh/loader": "*",
+    "@ateliermesh/plugins": "*",
+    "@ateliermesh/ui": "*",
+    "three": "0.186.1",
+    "@ateliermesh/react": "*",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "node build.mjs",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "axe-core": "^4.10.2",
+    "playwright-core": "^1.63.0",
+    "wawoff2": "^2.0.1",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0"
+  }
+}

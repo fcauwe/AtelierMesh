@@ -1,0 +1,41 @@
+{
+ "schema_version": 1,
+ "steps": [
+  {
+   "enabled": true,
+   "params": {
+    "text": "Anna",
+    "font": "lato",
+    "size": 9,
+    "height": 0.6,
+    "mode": "engraved",
+    "placement": {
+     "anchor": {
+      "point": [
+       0,
+       0,
+       4
+      ],
+      "normal": [
+       0,
+       0,
+       1
+      ]
+     },
+     "direction": 0
+    }
+   },
+   "personalisable": true,
+   "personalisable_params": [
+    "text",
+    "size"
+   ],
+   "id": "text",
+   "plugin": {
+    "id": "org.ateliermesh.core",
+    "version": "0.2.0"
+   },
+   "op": "emboss"
+  }
+ ]
+}

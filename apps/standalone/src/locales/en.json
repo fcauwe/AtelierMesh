@@ -1,0 +1,2667 @@
+{
+  "addStep": {
+    "title": "Add a step",
+    "cat": {
+      "prepare": "Prepare",
+      "shape": "Shape",
+      "style": "Art style",
+      "surface": "On the surface",
+      "check": "Checks",
+      "recipes": "Recipes",
+      "add": "Add a part"
+    },
+    "search": "Search steps",
+    "noResults": "No step matches “{{query}}”",
+    "noResultsHint": "Check the spelling, or find more steps in",
+    "results_one": "1 step",
+    "results_other": "{{count}} steps",
+    "clear": "Clear the search",
+    "more": "More",
+    "recent": "Recent",
+    "back": "Back",
+    "close": "Close",
+    "added": "Added: {{step}}",
+    "needs": {
+      "drawing": "Needs a drawing",
+      "mesh": "Needs a model",
+      "stored": "Nothing stored yet"
+    },
+    "plugins": "Plugins…",
+    "applyRecipeShort": "Apply recipe",
+    "saveRecipeShort": "Save recipe",
+    "pluginsShort": "Plugins"
+  },
+  "app": {
+    "by": "by micro-fabriek.be",
+    "github": "AtelierMesh on GitHub (opens in a new tab)",
+    "name": "AtelierMesh",
+    "home": "Back to the start page"
+  },
+  "apply": {
+    "body": "The step is baked into the model. It disappears from the step list and can't be edited, switched off or undone afterwards.",
+    "cancel": "Keep it editable",
+    "confirm": "Apply permanently",
+    "customerNote": "This step is personalisable. After applying, customers can no longer change it.",
+    "disabledAfterRollback": "Not available after going back in the history",
+    "done": "“{{step}}” is now part of the model.",
+    "title": "Apply “{{step}}” permanently?",
+    "working": "Applying…"
+  },
+  "atelier": {
+    "column": "Material, precision, infill and price",
+    "note": "Shown by the Atelier"
+  },
+  "autosave": {
+    "saved": "Saved in this browser at {{time}}",
+    "unsaved": "Not saved yet"
+  },
+  "cannot": {
+    "copied": "Link copied",
+    "memory": {
+      "body": "This device ran out of memory while working on the model. Reload the page and use a simpler model, or open it on a computer.",
+      "title": "Not enough memory for this model"
+    },
+    "recovered": "Reopened your saved version.",
+    "recoveredNone": "Nothing was saved in this browser, so you start again from the upload.",
+    "reload": "Reload the page",
+    "webgl": {
+      "action": "Copy the link to this page",
+      "body": "AtelierMesh needs WebGL, which is switched off or not available here. Open this page in a recent Chrome, Firefox, Edge or Safari.",
+      "title": "This browser can't show 3D"
+    },
+    "worker": {
+      "body": "The engine stopped in the background. What was saved in this browser is kept. Reload the page to start again.",
+      "title": "The 3D engine stopped"
+    }
+  },
+  "check": {
+    "help": "Ask us to help",
+    "manifold": {
+      "anywayHint": "You can edit it, but it may not print as you expect. Repair the file before you print or order it.",
+      "body": "It has openings in its surface, so it can't be printed as it is. Repair it in your 3D program, or choose another file.",
+      "touching": "Some parts of it touch along an edge, so it can't be printed as it is. Repair it in your 3D program, or choose another file.",
+      "touchingRepair": "Some parts of it touch along an edge, so it can't be printed as it is. We can try to fix that here, or you can repair it in your 3D program or choose another file.",
+      "openAnyway": "Open it anyway",
+      "title": "This file is not a closed solid",
+      "bodyRepair": "It has openings in its surface, so it can't be printed as it is. We can try to close them here, or you can repair it in your 3D program or choose another file."
+    },
+    "other": "Choose another file",
+    "reading": "Reading the file…",
+    "simplified": {
+      "body": "From {{from}} to {{to}} triangles. Check the details in the 3D view before you continue.",
+      "continue": "Open in the editor",
+      "title": "The model is simplified"
+    },
+    "simplifying": {
+      "body": "This takes a few seconds. You can stop and choose another file.",
+      "title": "Simplifying the model"
+    },
+    "triangles": {
+      "body": "It has {{count}} triangles; the browser can edit up to {{max}}. We can simplify it to {{target}} triangles. Very small details may become a little smoother.",
+      "simplify": "Simplify to {{target}} triangles",
+      "title": "This model is too detailed for the browser"
+    },
+    "unreadable": {
+      "body": "It may be damaged, or it isn't an STL, 3MF or .amproj file.",
+      "title": "We can't read this file"
+    },
+    "repair": "Repair it"
+  },
+  "colours": {
+    "title": "Colours",
+    "offBody": "This design is printed in one colour: the customer chooses one filament for the whole part.",
+    "useSeveral": "Use several colours",
+    "useOne": "Use one colour",
+    "keep": "Keep the colours",
+    "offTitle": "Use one colour?",
+    "offConfirm": "The colours you set up are removed. The whole part will be one colour.",
+    "add": "Add a colour",
+    "newName": "Colour {{n}}",
+    "uses": "Uses {{count}} of {{max}} colours",
+    "usesAny_one": "Uses 1 colour",
+    "usesAny_other": "Uses {{count}} colours",
+    "maxReached": "The most colours is {{max}}.",
+    "showMapped": "Show mapped colours",
+    "showMappedHint": "Off: each part in its own colour, to tell them apart. On: each colour of this list.",
+    "slotColour": "Colour of {{name}}",
+    "slotName": "Name of colour {{n}}",
+    "first": "First",
+    "remove": "Remove {{name}}",
+    "takeOut": "Take {{part}} out of {{name}}",
+    "whole": "Whole part",
+    "notInModel": "not in the model",
+    "noParts": "No parts yet.",
+    "addPart": "Add a part to {{name}}",
+    "addPartPlaceholder": "Add a part…",
+    "unassigned": "Not in a colour",
+    "unassignedHint": "The editor shows these in their own colours. Everywhere else — previews, the customer’s screen, the pictures and the files — they use the first colour.",
+    "tooMany": "This design has {{count}} colours; the most here is {{max}}. Remove a colour.",
+    "partTwice": "“{{part}}” is in more than one colour.",
+    "invalid": "The colours of this design are not valid.",
+    "tab": "Colours",
+    "about": "Which part of the model prints in which filament.",
+    "alert": {
+      "tooMany": "Uses {{count}} colours; this printer takes {{max}}."
+    },
+    "tabLabel_one": "Colours, one colour",
+    "tabLabel_other": "Colours, {{count}} colours"
+  },
+  "common": {
+    "dismiss": "Dismiss",
+    "cancel": "Cancel",
+    "close": "Close",
+    "done": "Done"
+  },
+  "configs": {
+    "close": "Close",
+    "date": "Saved",
+    "delete": "Delete",
+    "deleteConfirm": "Delete “{{name}}” from this browser?",
+    "deleted": "“{{name}}” deleted",
+    "empty": "Nothing saved in this browser yet.",
+    "name": "Name",
+    "note": "These stay in this browser only. Download an .amproj file to keep one somewhere else.",
+    "open": "Open",
+    "size": "Size",
+    "title": "Saved configurations"
+  },
+  "designer": {
+    "addStep": "Add a step",
+    "applyPermanent": "Apply permanently",
+    "applyWarning": "This cannot be undone.",
+    "delete": "Delete",
+    "directionRange": "Direction range",
+    "fields": "Fields the customer can change",
+    "limits": "Limits",
+    "moveMax": "Move at most",
+    "openProject": "Open project",
+    "plugins": "Plugins",
+    "saveProject": "Save project",
+    "sizeRange": "Size range",
+    "steps": "Steps",
+    "switchOff": "Switch off"
+  },
+  "editor": {
+    "addStep": "Add a step",
+    "applyPermanent": "Apply permanently…",
+    "blocked": "Solve the problem first",
+    "closed": "Closed solid",
+    "delete": "Delete",
+    "export": "Export",
+    "moveHint": "Click on the model to move the selected text there",
+    "next": "Next: preview",
+    "notClosed": "Not a closed solid",
+    "notClosedAtelier": "The Atelier can only price and print a closed solid. Repair the file and upload it again to continue.",
+    "notClosedHint": "It may not print as you expect. Repair the file in your 3D program.",
+    "openOther": "Open another file",
+    "placeHint": "Click on the model where the text goes",
+    "previewCustomer": "Preview as customer",
+    "save": "Save",
+    "size": "{{x}} × {{y}} × {{z}} mm",
+    "stepMenu": "Step options",
+    "steps": "Steps",
+    "switchOff": "Switch off",
+    "switchOn": "Switch on",
+    "triangles": "{{count}} triangles",
+    "panels": "Editor panels",
+    "stepsAbout": "Steps run from top to bottom. Each step works on the result of the step above it.",
+    "stepsAlert": "A step has a problem.",
+    "tabAlertNew": "{{panel}}: {{alert}}",
+    "tab": {
+      "steps": "Steps",
+      "stepsProblem": "1 step with a problem"
+    }
+  },
+  "export": {
+    "3mf": "3MF (recommended)",
+    "3mfHint": "Keeps the letters as a separate part, so the slicer can give them their own colour or extruder.",
+    "prusa": "3MF for PrusaSlicer and EasyPrint",
+    "prusaHint": "Every colour reaches the slicer: the letters keep their own extruder and colour.",
+    "bambu": "3MF for Bambu Studio",
+    "bambuHint": "The colours as Bambu Studio reads them. Not yet tested with a real printer.",
+    "download": "Download {{format}}",
+    "preparing": "Preparing the file…",
+    "stl": "STL",
+    "stlHint": "One single solid; letters and part print in the same filament.",
+    "title": "Download the model"
+  },
+  "field": {
+    "depth": "Height or depth",
+    "direction": "Direction",
+    "font": "Font",
+    "mode": "Letters",
+    "position": "Position",
+    "size": "Letter height",
+    "text": "Text",
+    "width": "Width"
+  },
+  "fix": {
+    "boldFont": "Choose a bolder font",
+    "contact": "Ask us to help",
+    "engraveDepth": "Engrave {{fit_height}} mm deep",
+    "lessDeep": "Engrave less deep",
+    "makeBigger": "Make it {{fit_size}} mm",
+    "makeFit": "Make it {{fit_size}} mm",
+    "makeRaised": "Make it raised",
+    "makeSmaller": "Make it smaller",
+    "moveFlatter": "Move it",
+    "moveToCentre": "Move to the middle",
+    "otherFile": "Choose another file",
+    "otherFont": "Choose another font",
+    "placeAgain": "Place the text again",
+    "reload": "Reload the page",
+    "resetPosition": "Back to the shop's position",
+    "shorten": "Edit the text",
+    "switchOff": "Switch it off",
+    "tryAgain": "Try again",
+    "turn": "Turn the text",
+    "thickerLines": "Make the lines {{line_width}} mm wide",
+    "fewerCells": "Use {{max}} cells",
+    "switchOnAgain": "Switch on again",
+    "managePlugins": "Manage plugins…",
+    "coarserDetail": "Use coarser detail",
+    "thickerRibs": "Make the struts {{width}} mm wide",
+    "thickerWall": "Make the wall {{thickness}} mm thick",
+    "thinnerWall": "Make the wall {{thickness}} mm thick",
+    "fewerHoles": "Make {{count}} holes",
+    "smallerHoles": "Make the largest hole {{max}} mm",
+    "widerWalls": "Keep {{width}} mm of wall",
+    "shallowerHole": "Make it {{depth}} mm deep",
+    "openPluginManager": "Open plugin manager"
+  },
+  "fonts": {
+    "allChars": "All characters available",
+    "choose": "Use this font",
+    "close": "Close",
+    "missing": "Missing: {{chars}}",
+    "missingHint": "Missing characters are shown in the box. Pick a font without missing characters, or change those characters.",
+    "more": "Check all fonts against your text",
+    "preview": "Preview with your text",
+    "status": {
+      "missing": "Missing: {{chars}}",
+      "ok": "All characters available"
+    },
+    "title": "Choose a font",
+    "yourText": "Your text"
+  },
+  "host": {
+    "badge": "Personalisable",
+    "personalise": "Personalise",
+    "personalised": "Personalised"
+  },
+  "leave": {
+    "body": "Your changes since {{time}} are not saved. If you leave now, they are lost.",
+    "bodyNever": "This configuration isn't saved yet. If you leave now, your changes are lost.",
+    "discard": "Leave without saving",
+    "save": "Save and leave",
+    "stay": "Stay",
+    "title": "Leave without saving?"
+  },
+  "limits": {
+    "chars": "Characters per line at most",
+    "direction": "Direction range",
+    "from": "from",
+    "hint": "The customer's controls stop at these limits.",
+    "lines": "Lines at most",
+    "move": "Move at most",
+    "size": "Size range",
+    "textHint": "Typing stops at these limits for the customer.",
+    "title": "Limits for the customer",
+    "to": "to"
+  },
+  "mesh": {
+    "apply": {
+      "after_rollback": "You went back in the history. Steps after that point can't be applied permanently; redo them or continue from here.",
+      "blocked": "“{{step}}” can't be applied permanently while it has a problem. Solve the problem first.",
+      "failed": "We couldn't apply “{{step}}” permanently. Nothing has changed; the step is still editable.",
+      "nothing_to_apply": "There's nothing to apply: this step doesn't change the model.",
+      "step_failed": "We couldn't apply “{{step}}” permanently. Nothing has changed; the step is still editable.",
+      "unknown_step": "This step no longer exists. Reload the project."
+    },
+    "budget": {
+      "triangles": "This model has {{count}} triangles; the browser can edit up to {{max}}. Choose a simpler file or ask us to help.",
+      "vertices": "This model has {{count}} points; the browser can edit up to {{max}}. Choose a simpler file or ask us to help.",
+      "store_bytes": "This project holds too much: {{size}} of the {{max}} allowed. Delete stored items you no longer use.",
+      "store_entries": "This project holds {{entries}} stored items; the most is {{max}}. Delete stored items you no longer use."
+    },
+    "decimate": {
+      "bad_input": "This model can't be simplified as it is. Choose another file or ask us to help.",
+      "groups_unsupported": "This file describes its parts in an inconsistent way, so it can't be simplified. Export it again from your 3D program, or ask us to help."
+    },
+    "emboss": {
+      "bad_height": "The height or depth of the letters must be more than 0 mm.",
+      "bad_size": "The letter height must be more than 0 mm.",
+      "curvature_collapse": "The surface bends so sharply here that the letters would fold into each other. Move the text to a flatter spot or make it smaller.",
+      "cut_failed": "We couldn't cut the letters into the model at this spot. Try again, move the text a little, or ask us to help.",
+      "empty_shape": "There's no shape to place. Choose a shape or switch this step off.",
+      "empty_text": "Type some text first.",
+      "fold_over": "The text would fold over itself on this part of the surface. Move it or make it smaller.",
+      "font_unreadable": "We can't read the font {{font}}. Choose another font; we've been told about it.",
+      "groups_unsupported": "This file describes its parts in an inconsistent way, so we can't tell which surface the text belongs to. Export it again from your 3D program, or ask us to help.",
+      "inside_out": "This model is inside out: its surfaces face inwards. Export it again from your 3D program or choose another file.",
+      "invalid_result": "These settings didn't give a valid result. Undo the last change, or try a slightly different size or spot.",
+      "mesh_not_manifold": "This file is not a closed solid, so it can't be printed as it is. Repair it or choose another file.",
+      "missing_glyphs": "This font has no letter for: {{characters}}. Choose another font or change the text.",
+      "no_font": "Choose a font for this text.",
+      "no_placement": "The text has no place on the model yet. Click on the model where it goes.",
+      "no_placement_svg": "The drawing has no place on the model yet. Click on the model where it goes.",
+      "no_shape": "Choose a drawing first.",
+      "no_surface": "There's no surface to put the text on at that spot. Click directly on the part.",
+      "on_negative_body": "That spot is inside a cut-out of the model, not on the part itself. Click on the outside of the part.",
+      "patch_not_disk": "The text crosses a hole or goes around the part here, so it can't lie flat on one piece of surface. Move it to an unbroken area.",
+      "stretch": "The surface is curved here, so the letters stretch by {{pct}} %. It will print, but a flatter spot looks better.",
+      "svg_empty_mode": "This drawing has nothing to use in this mode. Switch between Fill and Line, or give the drawing a fill or an outline.",
+      "svg_too_complex": "This shape has too many points to place. Simplify the SVG or choose another one.",
+      "svg_too_large": "This SVG file is too large. Use a smaller file.",
+      "svg_unsafe": "This SVG contains scripts or links we don't accept. Save it again as a plain drawing.",
+      "text_scaled_to_fit": "We made the text {{mm}} mm so it fits on the part.",
+      "text_small": "The letters are small and may not print cleanly.",
+      "text_too_long": "The text is too long for this part. Use at most {{max}} characters or make the letters smaller.",
+      "thin_strokes": "Some strokes of this font are too thin to print at this size. Make the text bigger or choose a bolder font.",
+      "too_much_stretch": "The surface is too curved here: the letters would stretch {{pct}} % (at most {{max}} %). Move the text to a flatter spot or make it smaller.",
+      "touches_patch_edge": "The text reaches the edge of the surface it sits on, so it can't be made.",
+      "touches_patch_edge_crease": "The text runs over a sharp edge of the part, so it can't be made.",
+      "wall_too_thin": "Engraving this deep would cut through the wall. Engrave less deep or make the letters raised."
+    },
+    "export": {
+      "_any": "We couldn't make the file. Try again, or choose the other format."
+    },
+    "expr": {
+      "invalid": "This formula can't be calculated. Check it for typing mistakes."
+    },
+    "import": {
+      "_any": "We couldn't open this file. Use an STL, 3MF or .amproj file."
+    },
+    "input": {
+      "missing_mesh": "There's no model yet. Upload a file first.",
+      "missing_payload": "The stored item “{{name}}” no longer exists. Choose another one, or import it again.",
+      "wrong_kind": "“{{name}}” is a {{got}}; this step needs a {{expected}}."
+    },
+    "loader": {
+      "_any": "Part of AtelierMesh didn't load. Reload the page."
+    },
+    "lowpoly": {
+      "already_smaller": "This model has {{count}} triangles, fewer than the {{target}} you asked for, so it stays as it is.",
+      "bad_input": "This model can't be turned into low poly as it is. Choose another file or ask us to help.",
+      "groups_unsupported": "This file describes its parts in an inconsistent way, so it can't be turned into low poly. Export it again from your 3D program, or ask us to help.",
+      "target_not_reached": "The model keeps {{count}} triangles instead of {{target}}: its sharp edges and separate parts need them.",
+      "volume_changed_larger": "The low-poly model is about {{pct}} % larger than the original. Check the size before you print.",
+      "volume_changed_smaller": "The low-poly model is about {{pct}} % smaller than the original. Check the size before you print.",
+      "not_closed": "This model is not a closed solid ({{open_edges}} open edges, {{bad_edges}} doubled edges). Add a Repair mesh step first.",
+      "empty_input": "This model has no triangles.",
+      "too_many_triangles": "The facets would need {{triangles}} triangles; the limit is {{limit}}. Use larger facets.",
+      "_any": "Facets could not change this model."
+    },
+    "manifest": {
+      "invalid": "This plugin's description is incomplete, so it can't be added.",
+      "missing_license": "The plugin does not say which licence it is under. Its maker must add a “license”, for example MIT.",
+      "missing_description": "The plugin has no description. Its maker must add one or two sentences that say what it does.",
+      "bad_license": "The plugin’s licence is not usable: use an SPDX name such as MIT or Apache-2.0, or Proprietary.",
+      "bad_description": "The plugin’s description is not usable: it must be plain text of 10 to 300 characters.",
+      "bad_contact": "The plugin’s contact details are not usable: the website must be an https address and the email an address.",
+      "bad_package_url": "The plugin’s package address is not usable: it must be an https address without a user name or password.",
+      "bad_image": "The plugin’s example picture is not usable: give a file inside the package and a short description (5 to 160 characters).",
+      "bad_uses": "The plugin’s “uses” list is not usable: it may name only the host services this version knows (fonts)."
+    },
+    "param": {
+      "_any": "A setting has a value we can't use. Check the highlighted field."
+    },
+    "placement": {
+      "direction_out_of_range": "The angle must be between {{min}}° and {{max}}°. We kept it at the limit.",
+      "limits_changed": "The shop changed what you can adjust, so we moved your text back within the new limits.",
+      "size_out_of_range": "The size must be between {{min}} and {{max}} mm. We kept it at the limit.",
+      "too_far": "The text can move at most {{max}} mm from where the shop put it. We kept it at the limit."
+    },
+    "plugin": {
+      "bad_mesh": "The plugin “{{plugin}}” returned a model that isn't a closed solid. Its result was not used.",
+      "failed": "The plugin “{{plugin}}” stopped with an error. Switch it off or try again; the steps before it still work.",
+      "needs_sandbox": "This plugin has to run in a protected area, and this browser can't provide one. Use a recent browser.",
+      "crashed": "The plugin “{{plugin}}” stopped working and was switched off. {{message}}",
+      "disabled": "The plugin “{{plugin}}” is switched off because it stopped working. {{message}}",
+      "off": "The plugin “{{plugin}}” is switched off.",
+      "customer": "This step can’t be shown right now. Try again later, or contact the shop.",
+      "needs_fonts": "The plugin “{{plugin}}” needs letter outlines from the host, and this app does not offer them. Use a host that does, or remove the step."
+    },
+    "resize": {
+      "zero_size": "A size can't be 0. Enter a size above 0 mm."
+    },
+    "run": {
+      "cancelled": "Stopped. The last result is still shown.",
+      "timeout": "This took longer than {{seconds}} seconds, so we stopped. The last result is still shown. Try again, or make the text smaller."
+    },
+    "segment": {
+      "_any": "The parts of the model couldn't be kept apart. Export as STL, or ask us to help."
+    },
+    "step": {
+      "invalid": "This step has settings we can't use. Check them, or remove the step.",
+      "migration_failed": "This step was saved with an older version of “{{name}}” ({{from}}) and could not be brought up to date to {{installed}}. {{message}}",
+      "not_personalisable": "This can't be changed here.",
+      "unknown_op": "This project uses a kind of step we don't know. Reload the page to update AtelierMesh.",
+      "unknown_plugin": "This project needs the plugin “{{plugin}}”, which isn't installed.",
+      "version_newer": "This project was made with a newer version of AtelierMesh. Reload the page to update, then open it again."
+    },
+    "unknown": "Something went wrong ({{code}}). The last result is still shown.",
+    "voronoi": {
+      "cells_too_small": "The cells are too small for the lines between them: {{cells}} cells don't fit this area. Use fewer cells, thinner lines or a bigger area.",
+      "does_not_fit": "The pattern doesn't fit on the surface here: it reaches an edge or a part that curves too much. Make the area smaller or move it to a flatter spot.",
+      "empty_pattern": "There's nothing left of the pattern. Make the area bigger, the margin smaller or the lines thinner.",
+      "no_placement": "The pattern has no place on the model yet. Click on the model where it goes.",
+      "too_heavy": "This pattern has too many details to make ({{cells}} cells). Use fewer cells, less rounding or a smaller area.",
+      "too_many_cells": "That's more cells than we can make. Use {{max}} cells or fewer.",
+      "bad_cells": "The number of cells must be at least 2.",
+      "thin_lines": "The lines are only {{width}} mm wide, which is thinner than the printer can lay down ({{min}} mm). Make the lines wider."
+    },
+    "repair": {
+      "bad_input": "This model can't be repaired as it is. Choose another file or ask us to help.",
+      "groups_unsupported": "This file describes its parts in an inconsistent way, so it can't be repaired. Export it again from your 3D program, or ask us to help.",
+      "hole_too_big": "Some holes stay open: they are bigger than {{max}} edges (the largest has {{largest}}).",
+      "hole_skipped": "Some holes could not be closed because their edge crosses itself or is too twisted. They stay open.",
+      "still_open": "The model is still not a closed solid. Repair it in your 3D program or choose another file."
+    },
+    "deform": {
+      "may_fold": "This shape is bent hard around {{at}} % of the length: the surface is stretched {{stretch}} times or squeezed to {{pct}} %. Thin parts may print badly. Use a smaller twist, taper or bend.",
+      "too_heavy": "The smooth shape would need {{count}} triangles, more than the {{max}} allowed. Use coarser detail or a smaller change.",
+      "folds": "The shape folds into itself around {{at}} % of the length. Use a smaller taper, bend or wave.",
+      "bad_range": "The start must be below the end.",
+      "bad_input": "This model cannot be twisted, tapered, bent or waved as it is.",
+      "bad_axes": "The model cannot be bent along and towards the same axis. Choose two different axes.",
+      "bad_wavelength": "The wavelength must be more than 0 mm.",
+      "wave_too_big": "The wave is {{amplitude}} mm high, which is large for a model whose smallest side is {{side}} mm. The surface may cross itself. Use a smaller height."
+    },
+    "parts": {
+      "nothing_chosen": "Choose which part to work on.",
+      "would_remove_everything": "That would leave nothing of the model. Choose another part.",
+      "groups_unsupported": "This file describes its parts in an inconsistent way, so parts cannot be removed. Export it again from your 3D program, or ask us to help.",
+      "bad_input": "There is no model to take a part from.",
+      "result_open": "The model is no longer a closed solid after removing “{{part}}”. Close the opening in the step settings, or repair it.",
+      "cap_skipped": "Some openings could not be closed because their edge crosses itself or is too twisted. They stay open."
+    },
+    "part": {
+      "unknown": "This model has no part called “{{name}}”. Choose one that exists at this step.",
+      "ambiguous": "“{{name}}” is both a body and a coloured region. Choose which one you mean."
+    },
+    "voronoi_shell": {
+      "bad_input": "The shell needs a closed solid. Add a Repair mesh step first, or repair the file.",
+      "groups_unsupported": "This model has several separate bodies, and the shell can only hollow one. Delete the other parts first, or hollow them one at a time.",
+      "cells_too_small": "There is no room for {{cells}} openings with struts this wide. Use {{max}} openings or fewer, or thinner struts.",
+      "too_heavy": "This shell has too much detail to make here. Use coarser detail, fewer openings or thicker struts.",
+      "empty_result": "Nothing is left of the model. Use a thinner wall, a smaller opening or wider struts.",
+      "thin_ribs": "The struts are only {{width}} mm wide, which is thinner than the printer can lay down ({{min}} mm). Make them wider.",
+      "thin_wall": "The wall is only {{width}} mm thick, which is thinner than the printer can lay down ({{min}} mm). Make it thicker.",
+      "thickness_too_big": "The wall of {{thickness}} mm is thicker than this model is deep ({{depth}} mm), so there is no hollow inside. Use a thinner wall."
+    },
+    "texture": {
+      "may_self_intersect": "The texture is deep for the curve of the surface here ({{turned}} triangles turned over, {{tight}} tight places). It may cross itself and print badly. Use a smaller depth or a larger tile.",
+      "too_heavy": "This texture would need {{count}} triangles (edges of {{edge}} mm), more than the {{max}} allowed. Use coarser detail, a larger tile or only texture a part.",
+      "bad_input": "This model cannot be textured as it is.",
+      "no_image": "Choose a picture for the texture.",
+      "image_unsupported": "This picture cannot be read. Use a PNG, or a JPEG in a browser that can decode it.",
+      "image_too_large": "This picture is too large. Use one of at most 8192 pixels on a side."
+    },
+    "smooth": {
+      "thin_features": "Smoothing moved the surface by up to {{move}} mm and changed the volume by {{change}} %. Thin parts may have worn away. Use a lower strength, fewer rounds or a limit on the largest move.",
+      "bad_input": "There is nothing to smooth: the model is empty."
+    },
+    "recipe": {
+      "not_json": "This file is not a recipe (it is not readable text).",
+      "not_a_recipe": "This file is not an AtelierMesh recipe.",
+      "version_newer": "This recipe was made with a newer version of AtelierMesh. Update the app to use it.",
+      "too_large": "This recipe file is too large.",
+      "field": "This recipe has a missing or wrong field ({{field}}).",
+      "too_many_steps": "This recipe has too many steps (at most {{max}}).",
+      "steps_invalid": "The steps in this recipe are not valid.",
+      "unsafe_key": "This recipe contains a name that is not allowed.",
+      "bad_asset": "An image or drawing in this recipe is not valid.",
+      "assets_too_large": "The images in this recipe are too large."
+    },
+    "hollow": {
+      "bad_input": "Hollowing needs a closed solid. Add a Repair mesh step first, or repair the file.",
+      "groups_unsupported": "This model has bodies that cannot be hollowed: they must cover the whole model, none may cut away, and with an opening there can be only one body. Split or delete parts first.",
+      "too_heavy": "This model is too big to hollow with this wall at this detail. Use coarser detail or a thicker wall.",
+      "thin_walls": "The wall is only {{width}} mm thick, which is thinner than the printer can lay down ({{min}} mm). Make it thicker.",
+      "thickness_too_big": "The wall of {{thickness}} mm is thicker than this model is deep ({{depth}} mm), so there is no room for a hollow. The model is left as it was. Use a thinner wall.",
+      "outer_remeshed": "With an opening the outside is made again from the model, so its triangles are new (the shape is the same). Without an opening the outside stays exactly as it is."
+    },
+    "printcheck": {
+      "not_closed": "The surface is not a closed solid: {{open_edges}} open edges, {{shared_edges}} edges shared by three or more triangles, {{bad_edges}} edges facing the wrong way. A slicer may refuse it or print it wrongly. Add a Repair mesh step first.",
+      "islands": "The model has {{shells}} separate pieces; the smallest is {{smallest}} mm across. A piece that is not attached floats and does not print.",
+      "thin_walls": "Walls thinner than {{min}} mm over {{percent}} % of the surface (thinnest {{thinnest}} mm). They may not print or may break. Make them thicker.",
+      "thin_features": "Posts, pins or spikes thinner than {{min}} mm in every direction (thinnest {{thinnest}} mm). They may break off or not print.",
+      "narrow_gaps": "Gaps narrower than {{min}} mm (narrowest {{narrowest}} mm) over {{percent}} % of the surface. They will fuse shut. Make them wider.",
+      "needs_support": "{{percent}} % of the surface ({{area}} mm²) leans over more than {{angle}}° and needs support. Turn the model or accept the support.",
+      "long_bridges": "Flat roofs up to {{widest}} mm wide, more than {{max}} mm. They sag without support.",
+      "tiny_base": "Only {{area}} mm² of the model rests flat on the bed. It may not stick or may tip over. Add a flat base or a brim.",
+      "too_tall": "The model is {{ratio}} times taller ({{height}} mm) than it is wide ({{width}} mm). It may wobble or tip over while it prints.",
+      "too_big_for_bed": "The model ({{x}} × {{y}} × {{z}} mm) does not fit the build volume ({{bed_x}} × {{bed_y}} × {{bed_z}} mm) as it lies. Try turning it about the vertical axis or making it smaller.",
+      "floating_body": "Part of the model floats above the plate with nothing under it ({{bodies}} separate piece(s); the lowest is {{gap}} mm up). The printer would start in mid-air: this will not print as it is. Connect it to the model or print it separately.",
+      "island": "A part of the model starts in mid-air, {{height}} mm above the plate, with nothing under it ({{area}} mm² in its first layer). It is joined to the rest higher up, but the printer has nothing to print on when it gets there: this will not print as it is. Add supports in your slicer, or turn the model so this part does not start in mid-air.",
+      "island_turn": "A part of the model starts in mid-air, {{height}} mm above the plate, with nothing under it ({{area}} mm² in its first layer). It is joined to the rest higher up, but the printer has nothing to print on when it gets there: this will not print as it is. Add supports in your slicer, or turn the model so the flat side is down (the “Orient for printing” step does it): flat that way, the overhang drops from {{from_area}} mm² to {{to_area}} mm².",
+      "overhang": "{{regions}} area(s) of {{area}} mm² in all ({{percent}} % of the surface) lean over more than {{angle}}°; the largest is {{largest}} mm², {{height}} mm above the plate. This will need supports or a different orientation. Add supports in your slicer, or turn the model.",
+      "overhang_turn": "{{regions}} area(s) of {{area}} mm² in all ({{percent}} % of the surface) lean over more than {{angle}}°; the largest is {{largest}} mm², {{height}} mm above the plate. This will need supports or a different orientation. Turn the model so the flat side is down (the “Orient for printing” step does it): flat that way, the overhang drops from {{from_area}} mm² to {{to_area}} mm². Or add supports in your slicer.",
+      "bridge": "A flat roof {{widest}} mm wide, {{height}} mm above the plate, spans more than {{max}} mm and will sag without support. Add supports in your slicer, or turn the model.",
+      "bridge_turn": "A flat roof {{widest}} mm wide, {{height}} mm above the plate, spans more than {{max}} mm and will sag without support. Turn the model so the flat side is down (the “Orient for printing” step does it): flat that way, the overhang drops from {{from_area}} mm² to {{to_area}} mm². Or add supports in your slicer."
+    },
+    "holes": {
+      "no_placement": "The hole has no place on the model yet. Click on the model where it goes.",
+      "bad_input": "A hole can only be cut in a closed solid. Add a Repair mesh step first.",
+      "groups_unsupported": "This model has several separate bodies, and a hole can only be cut in one. Delete the other parts first, or cut the holes one body at a time.",
+      "misses_model": "The hole does not touch the model. Move it onto the model.",
+      "breaches": "This hole would cut through a part that is not “{{part}}”. Give it a depth so it stops inside, or choose another part.",
+      "too_big": "The hole is bigger than the part: it would take the whole model away. Make it smaller.",
+      "too_heavy": "The hole touches too many triangles to cut here ({{triangles}}). Make it smaller, or reduce the model first.",
+      "not_robust": "The hole could not be cut cleanly at this exact place. Move it a little (a tenth of a millimetre is enough) or change its size.",
+      "thin_wall": "Only {{width}} mm of wall is left under the bottom of the hole; at least {{min}} mm is needed to print it well. Make the hole less deep."
+    },
+    "fonts": {
+      "unavailable": "This app cannot make letter outlines for a plugin.",
+      "bad_options": "The plugin asked for letter outlines with settings that are not usable."
+    },
+    "store": {
+      "_any": "A stored item can't be used. Check its name and content.",
+      "bad_entry": "“{{name}}” can’t be read any more. Replace it with a new file.",
+      "name_taken": "“{{name}}” is already the name of an imported item. Choose another name."
+    }
+  },
+  "ops": {
+    "emboss": {
+      "params": {
+        "svg_mode": {
+          "label": "Use",
+          "help": "Fill uses the filled areas of the drawing. Line uses only its outlines, at the width they have in the file.",
+          "options": {
+            "fill": "Fill",
+            "line": "Line"
+          }
+        },
+        "mode": {
+          "options": {
+            "flat": "Flat (colour only)"
+          }
+        },
+        "walls_segment": {
+          "label": "Side walls part",
+          "help": "The side walls of the letters get their own part, so they can have another colour. Empty: the walls share the surface part."
+        },
+        "segment": {
+          "label": "Surface part",
+          "help": "The top of raised letters, the floor of engraved ones, or the coloured area when flat."
+        }
+      },
+      "sections": {
+        "main": "Text, size and place",
+        "text": "Font and layout",
+        "shape": "Shape",
+        "advanced": "Advanced"
+      }
+    },
+    "emboss_svg": {
+      "params": {
+        "shape": {
+          "label": "Drawing",
+          "help": "A drawing kept in the project. Import an SVG file to make one."
+        },
+        "mode": {
+          "options": {
+            "flat": "Flat (colour only)"
+          },
+          "label": "Relief"
+        },
+        "walls_segment": {
+          "label": "Side walls part",
+          "help": "The side walls of the drawing get their own part, so they can have another colour. Empty: the walls share the surface part."
+        },
+        "segment": {
+          "label": "Surface part",
+          "help": "The top of a raised drawing, the floor of an engraved one, or the coloured area when flat."
+        },
+        "size": {
+          "label": "Size",
+          "help": "How tall the drawing is on the model."
+        }
+      },
+      "sections": {
+        "main": "Drawing, size and place",
+        "text": "Drawing options",
+        "shape": "Shape",
+        "advanced": "Advanced"
+      }
+    },
+    "low_poly": {
+      "title": "Low poly",
+      "sections": {
+        "detail": "Detail",
+        "look": "Look",
+        "facets": "Facets",
+        "shape": "Shape",
+        "colours": "Colours"
+      },
+      "params": {
+        "triangles": {
+          "label": "Triangles",
+          "help": "How many triangles the low-poly model gets. Fewer triangles means bigger facets."
+        },
+        "sharpness": {
+          "label": "Sharpness",
+          "help": "Edges sharper than this angle stay crisp creases. A lower angle keeps more edges, so the model looks more faceted."
+        },
+        "crystallise": {
+          "label": "Crystallise",
+          "help": "Pulls corners towards the planes of the original surface, so facets get flatter and corners cleaner. 0 switches it off."
+        },
+        "keep_borders": {
+          "label": "Keep open borders",
+          "help": "Keeps the outline where the model has open edges. Only matters for models that are not closed."
+        },
+        "triangles_mode": {
+          "label": "Amount",
+          "help": "Automatic finds how few triangles the shape needs. A fixed number lets you choose.",
+          "options": {
+            "auto": "Automatic",
+            "fixed": "Fixed number"
+          }
+        },
+        "detail": {
+          "label": "Detail",
+          "help": "How faithful the result stays to the original. Low is bold and artistic, high stays close to the original."
+        },
+        "facet_size": {
+          "label": "Facet size",
+          "help": "About how long the edges of the facets are: the surface is remeshed into flat triangles of about this size, like a hand-made low-poly mug."
+        },
+        "jitter": {
+          "label": "Jitter",
+          "help": "How far each corner of a facet may move in or out, at random. 0 gives an even low-poly surface."
+        },
+        "shift": {
+          "label": "Sideways",
+          "help": "How far each corner may also move sideways, as a share of the facet size."
+        },
+        "seed": {
+          "label": "Seed",
+          "help": "Another number gives other facets; the same number gives the same ones."
+        },
+        "inside": {
+          "label": "Inside",
+          "help": "For a vase or a mug. Follow: the inside of the wall moves with the outside, so the wall keeps its thickness. Smooth: the inside stays as it was. A solid model has no inside and stays solid.",
+          "options": {
+            "follow": "Follow",
+            "smooth": "Smooth"
+          }
+        },
+        "wall": {
+          "label": "Least wall",
+          "help": "A corner that moves in never leaves less than this to the other side of a wall."
+        },
+        "plain_bottom": {
+          "label": "Plain bottom",
+          "help": "Keep the lowest part of the model plain, this many mm high (0: none): it is remeshed like the rest, but its corners do not move, and it ends in a straight horizontal edge."
+        },
+        "plain_top": {
+          "label": "Plain top",
+          "help": "Keep the highest part of the model plain, this many mm high (0: none): it is remeshed like the rest, but its corners do not move, and it ends in a straight horizontal edge."
+        },
+        "facet_colours": {
+          "label": "Colours",
+          "help": "One colour; two alternating colours (neighbouring facets differ where they can); or random colours from a palette. Each colour is its own segment, ready for a multicolour print. One colour keeps the colours the model already had.",
+          "options": {
+            "one": "One",
+            "alternating": "Alternating",
+            "random": "Random"
+          }
+        },
+        "palette_size": {
+          "label": "Palette",
+          "help": "How many colours the random facets choose from."
+        },
+        "colour_1": {
+          "label": "Colour 1",
+          "help": "The first facet colour (also the colour of a model without colours)."
+        },
+        "colour_2": {
+          "label": "Colour 2",
+          "help": "The second facet colour."
+        },
+        "colour_3": {
+          "label": "Colour 3",
+          "help": "The third facet colour."
+        },
+        "colour_4": {
+          "label": "Colour 4",
+          "help": "The fourth facet colour."
+        },
+        "style": {
+          "label": "Style",
+          "help": "Reduce: few large facets that follow the shape. Even facets: a mosaic of equal-sized triangles with a random in-and-out jitter, like a hand-made low-poly mug.",
+          "options": {
+            "reduce": "Reduce",
+            "facets": "Even facets"
+          }
+        }
+      }
+    },
+    "voronoi": {
+      "title": "Voronoi pattern",
+      "sections": {
+        "region": "Area",
+        "pattern": "Pattern",
+        "shape": "Shape",
+        "advanced": "Advanced"
+      },
+      "params": {
+        "region": {
+          "label": "Area shape",
+          "help": "The pattern fills a rectangle or a circle around the spot you place it on.",
+          "options": {
+            "rectangle": "Rectangle",
+            "circle": "Circle"
+          }
+        },
+        "width": {
+          "label": "Width",
+          "help": "Width of the area."
+        },
+        "height_area": {
+          "label": "Height",
+          "help": "Height of the area."
+        },
+        "radius": {
+          "label": "Radius",
+          "help": "Radius of the circle."
+        },
+        "margin": {
+          "label": "Margin",
+          "help": "Space between the pattern and the edge of the area."
+        },
+        "cells": {
+          "label": "Cells",
+          "help": "About how many cells the pattern has. More cells make smaller, finer cells."
+        },
+        "seed": {
+          "label": "Pattern number",
+          "help": "Each number gives another pattern. The same number always gives the same pattern."
+        },
+        "irregularity": {
+          "label": "Irregularity",
+          "help": "0 gives even, honeycomb-like cells. 1 gives wild, uneven cells."
+        },
+        "line_width": {
+          "label": "Line width",
+          "help": "Width of the lines between the cells."
+        },
+        "fill": {
+          "label": "Cells instead of lines",
+          "help": "Makes the cells themselves the shape, with a gap of one line width between them."
+        },
+        "rounding": {
+          "label": "Rounded corners",
+          "help": "Rounds the corners of the cells. 0 keeps them sharp."
+        },
+        "mode": {
+          "options": {
+            "flat": "Flat (colour only)"
+          }
+        },
+        "segment": {
+          "label": "Surface part",
+          "help": "The top of raised lines, the floor of engraved ones, or the coloured area when flat."
+        },
+        "walls_segment": {
+          "label": "Side walls part",
+          "help": "The side walls get their own part, so they can have another colour. Empty: the walls share the surface part."
+        }
+      }
+    },
+    "repair_mesh": {
+      "title": "Repair mesh",
+      "sections": {
+        "fix": "Repairs"
+      },
+      "params": {
+        "weld": {
+          "label": "Join points closer than",
+          "help": "Points closer together than this become one point. 0 switches it off."
+        },
+        "non_manifold": {
+          "label": "Edges with too many faces",
+          "options": {
+            "split": "Split them off",
+            "remove": "Remove them",
+            "off": "Leave them"
+          },
+          "help": "An edge belongs to exactly two triangles. Where more meet, the extra triangles are split off or removed."
+        },
+        "fix_normals": {
+          "label": "Face the surface outwards",
+          "help": "Turns triangles that face the wrong way round, so the model is a solid."
+        },
+        "min_island": {
+          "label": "Remove small loose pieces",
+          "help": "Pieces smaller than this share of the largest piece go. Pieces of fewer than four triangles always go. 0 keeps everything."
+        },
+        "max_hole": {
+          "label": "Close holes up to",
+          "help": "The number of edges around the hole. Bigger holes stay open. 0 closes none."
+        }
+      }
+    },
+    "twist": {
+      "title": "Twist",
+      "sections": {
+        "shape": "Shape",
+        "axis": "Axis",
+        "range": "Range",
+        "detail": "Detail"
+      },
+      "params": {
+        "angle": {
+          "label": "Twist",
+          "help": "How far the top turns compared with the bottom. A negative angle turns the other way."
+        },
+        "easing": {
+          "label": "Progression",
+          "help": "Linear turns evenly. Smooth starts and ends gently.",
+          "options": {
+            "linear": "Even",
+            "smooth": "Smooth"
+          }
+        },
+        "axis": {
+          "label": "Axis",
+          "help": "The direction the model is twisted along. Z is up.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (up)"
+          }
+        },
+        "center": {
+          "label": "Centre",
+          "options": {
+            "bbox_center": "Middle of the model",
+            "origin": "Origin",
+            "point": "A point"
+          }
+        },
+        "center_point": {
+          "label": "Centre point"
+        },
+        "from": {
+          "label": "Start",
+          "help": "Where the twist starts, as a share of the height. Below it the model stays as it is."
+        },
+        "to": {
+          "label": "End",
+          "help": "Where the twist ends. Above it the model is turned as a whole."
+        },
+        "detail": {
+          "label": "Smoothness",
+          "help": "How finely the surface is cut to follow the twist. Finer is smoother but heavier.",
+          "options": {
+            "auto": "Automatic",
+            "fine": "Fine",
+            "coarse": "Coarse"
+          }
+        },
+        "max_triangles": {
+          "label": "Largest result",
+          "help": "The step stops if the result would have more triangles than this."
+        }
+      }
+    },
+    "taper": {
+      "title": "Taper",
+      "sections": {
+        "shape": "Shape",
+        "axis": "Axis",
+        "range": "Range",
+        "detail": "Detail"
+      },
+      "params": {
+        "scale_end": {
+          "label": "Size at the end",
+          "help": "The size of the top compared with the bottom. 0.5 makes it half as wide."
+        },
+        "uniform": {
+          "label": "Direction",
+          "help": "Which sides get smaller. The first and second of the two directions that are not the axis.",
+          "options": {
+            "both": "Both",
+            "x": "First only",
+            "y": "Second only"
+          }
+        },
+        "easing": {
+          "label": "Progression",
+          "help": "Linear changes the size evenly. Smooth starts and ends gently.",
+          "options": {
+            "linear": "Even",
+            "smooth": "Smooth"
+          }
+        },
+        "axis": {
+          "label": "Axis",
+          "help": "The direction the model is tapered along. Z is up.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (up)"
+          }
+        },
+        "center": {
+          "label": "Centre",
+          "options": {
+            "bbox_center": "Middle of the model",
+            "origin": "Origin",
+            "point": "A point"
+          }
+        },
+        "center_point": {
+          "label": "Centre point"
+        },
+        "from": {
+          "label": "Start",
+          "help": "Where the taper starts, as a share of the height."
+        },
+        "to": {
+          "label": "End",
+          "help": "Where the taper ends. Above it the model keeps its end size."
+        },
+        "detail": {
+          "label": "Smoothness",
+          "help": "How finely the surface is cut to follow the taper. Finer is smoother but heavier.",
+          "options": {
+            "auto": "Automatic",
+            "fine": "Fine",
+            "coarse": "Coarse"
+          }
+        },
+        "max_triangles": {
+          "label": "Largest result",
+          "help": "The step stops if the result would have more triangles than this."
+        }
+      }
+    },
+    "delete_part": {
+      "title": "Delete part",
+      "sections": {
+        "part": "Part",
+        "advanced": "Advanced"
+      },
+      "params": {
+        "part": {
+          "label": "Part",
+          "help": "Choose a body or a coloured region of the surface."
+        },
+        "close_hole": {
+          "label": "The opening",
+          "options": {
+            "fill": "Close it",
+            "none": "Leave it open"
+          },
+          "help": "Removing a region of the surface leaves an opening. Close it with a cap, or leave it for a later step."
+        },
+        "remove_unused": {
+          "label": "Remove unused points",
+          "help": "Points that no triangle uses any more are dropped."
+        }
+      }
+    },
+    "keep_part": {
+      "title": "Keep only part",
+      "sections": {
+        "part": "Part",
+        "advanced": "Advanced"
+      },
+      "params": {
+        "part": {
+          "label": "Part",
+          "help": "Choose a body or a coloured region of the surface."
+        },
+        "close_hole": {
+          "label": "The opening",
+          "options": {
+            "fill": "Close it",
+            "none": "Leave it open"
+          },
+          "help": "Removing a region of the surface leaves an opening. Close it with a cap, or leave it for a later step."
+        },
+        "remove_unused": {
+          "label": "Remove unused points",
+          "help": "Points that no triangle uses any more are dropped."
+        }
+      }
+    },
+    "voronoi_shell": {
+      "title": "Voronoi shell",
+      "sections": {
+        "shell": "Shell",
+        "pattern": "Pattern",
+        "opening": "Opening",
+        "detail": "Detail"
+      },
+      "params": {
+        "beam_rounding": {
+          "label": "Roundness of the struts",
+          "help": "How round the struts are: 0 keeps square edges, 1 makes them round."
+        },
+        "thickness": {
+          "label": "Wall thickness",
+          "help": "How deep the wall is, measured inward from the outside of the model."
+        },
+        "rib_width": {
+          "label": "Strut width",
+          "help": "The width of the struts between the openings."
+        },
+        "smooth": {
+          "label": "Rounded joints",
+          "help": "Rounds the joints between the struts. 0 keeps them sharp."
+        },
+        "cells": {
+          "label": "Openings",
+          "help": "About how many openings the shell has. More openings are smaller."
+        },
+        "seed": {
+          "label": "Pattern number",
+          "help": "Each number gives another pattern. The same number always gives the same pattern."
+        },
+        "irregularity": {
+          "label": "Irregularity",
+          "help": "0 gives even, honeycomb-like openings. 1 gives wild, uneven ones."
+        },
+        "opening": {
+          "label": "Opening",
+          "help": "A round opening along the vertical (Z) axis through the top and/or the bottom.",
+          "options": {
+            "none": "None",
+            "bottom": "Bottom",
+            "top": "Top",
+            "both": "Both"
+          }
+        },
+        "opening_diameter": {
+          "label": "Opening diameter"
+        },
+        "detail": {
+          "label": "Detail",
+          "help": "Automatic uses a grid a third of the thinnest strut or wall. Coarse is faster, fine is smoother.",
+          "options": {
+            "auto": "Automatic",
+            "fine": "Fine",
+            "extra_fine": "Extra fine",
+            "coarse": "Coarse"
+          }
+        },
+        "max_triangles": {
+          "label": "Triangle limit",
+          "help": "If the shell has more triangles than this, it is reduced."
+        }
+      }
+    },
+    "texture": {
+      "title": "Surface texture",
+      "sections": {
+        "texture": "Texture",
+        "pattern": "Pattern",
+        "mapping": "Mapping",
+        "region": "Region",
+        "detail": "Detail"
+      },
+      "params": {
+        "pattern": {
+          "label": "Pattern",
+          "help": "The shape of the texture.",
+          "options": {
+            "knurl": "Knurl (diamonds)",
+            "ridges": "Ridges",
+            "waves": "Waves",
+            "dots": "Dots",
+            "hex_dots": "Dots, hexagonal",
+            "hexagons": "Hexagons",
+            "bricks": "Bricks",
+            "weave": "Weave",
+            "grid": "Grid lines",
+            "noise": "Noise",
+            "leather": "Leather",
+            "wood": "Wood grain",
+            "stipple": "Stipple",
+            "image": "Picture"
+          }
+        },
+        "amplitude": {
+          "label": "Depth",
+          "help": "How far the surface moves. A negative number cuts into it."
+        },
+        "scale": {
+          "label": "Tile size",
+          "help": "The size of one repeat of the pattern."
+        },
+        "image": {
+          "label": "Picture",
+          "help": "A PNG or JPEG. Light is high, dark is low."
+        },
+        "tiling": {
+          "label": "Placing",
+          "options": {
+            "tile": "Repeat",
+            "fit": "Once"
+          }
+        },
+        "invert": {
+          "label": "Invert",
+          "help": "Swap high and low."
+        },
+        "seed": {
+          "label": "Seed",
+          "help": "Another number gives another random pattern."
+        },
+        "roughness": {
+          "label": "Roughness",
+          "help": "How much the fine detail shows."
+        },
+        "octaves": {
+          "label": "Layers",
+          "help": "How many layers of detail the noise has."
+        },
+        "fill": {
+          "label": "Coverage",
+          "help": "How much of each cell the raised part takes."
+        },
+        "offset": {
+          "label": "Zero level",
+          "help": "0 raises from the surface, 1 cuts into it, 0.5 does both."
+        },
+        "mapping": {
+          "label": "Wrapping",
+          "help": "How the pattern is laid on the model.",
+          "options": {
+            "triplanar": "Triplanar",
+            "planar": "Flat",
+            "cylindrical": "Cylinder",
+            "spherical": "Sphere",
+            "box": "Box"
+          }
+        },
+        "axis": {
+          "label": "Axis",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (up)"
+          }
+        },
+        "blend": {
+          "label": "Sharpness of the joins",
+          "help": "How sharply the sides of the wrapping meet. Higher is sharper."
+        },
+        "rotation": {
+          "label": "Turn"
+        },
+        "offset_u": {
+          "label": "Move sideways"
+        },
+        "offset_v": {
+          "label": "Move up"
+        },
+        "region": {
+          "label": "Only on",
+          "help": "Texture only this part. Empty: the whole model."
+        },
+        "skip_bottom": {
+          "label": "Leave the bottom smooth",
+          "help": "Faces that look down (within 20 degrees of flat) get no texture, so the model sits flat on the bed."
+        },
+        "edge_falloff": {
+          "label": "Fade near edges",
+          "help": "The texture fades out in a straight ramp this far from a sharp edge and from the border of the part, so edges stay crisp. 0 runs the pattern right up to the edge."
+        },
+        "segment": {
+          "label": "Colour part",
+          "help": "Give the textured triangles this colour part, for multicolour printing."
+        },
+        "detail": {
+          "label": "Detail",
+          "help": "How finely the surface is cut to follow the pattern. Finer is sharper but heavier.",
+          "options": {
+            "auto": "Automatic",
+            "fine": "Fine",
+            "coarse": "Coarse"
+          }
+        },
+        "smooth_normals": {
+          "label": "Smooth directions",
+          "help": "Move the surface along smoothed directions, so sharp edges do not tear."
+        },
+        "max_triangles": {
+          "label": "Largest result",
+          "help": "The step stops if the result would have more triangles than this."
+        }
+      }
+    },
+    "smooth": {
+      "title": "Smooth surface",
+      "sections": {
+        "shape": "Smoothing",
+        "part": "Only a part",
+        "advanced": "Advanced"
+      },
+      "params": {
+        "strength": {
+          "label": "Strength",
+          "help": "How much each round smooths. 0 changes nothing."
+        },
+        "iterations": {
+          "label": "Rounds",
+          "help": "How many rounds. More rounds smooth wider bumps."
+        },
+        "keep_edges": {
+          "label": "Keep edges sharper than",
+          "help": "Edges where the surface turns by more than this angle stay crisp (they are smoothed along their length only). 180 smooths everything."
+        },
+        "part": {
+          "label": "Part",
+          "help": "Smooth only this part. Leave it empty to smooth the whole model."
+        },
+        "falloff": {
+          "label": "Fade-in",
+          "help": "How far from the edge of the part the smoothing fades in."
+        },
+        "keep_volume": {
+          "label": "Keep the size",
+          "help": "On: the model does not shrink (Taubin smoothing). Off: plain smoothing, which shrinks the model a little with every round."
+        },
+        "keep_borders": {
+          "label": "Keep open borders",
+          "help": "Keep the border of an open mesh where it is."
+        },
+        "max_move": {
+          "label": "Largest move",
+          "help": "The most a point may move. 0 means no limit."
+        }
+      }
+    },
+    "hollow": {
+      "title": "Hollow",
+      "sections": {
+        "wall": "Wall",
+        "opening": "Opening",
+        "detail": "Detail"
+      },
+      "params": {
+        "thickness": {
+          "label": "Wall thickness",
+          "help": "How deep the wall is, measured inward from the outside of the model."
+        },
+        "smooth": {
+          "label": "Smooth inside",
+          "help": "How much the inside is smoothed. 0 keeps what the grid gives."
+        },
+        "opening": {
+          "label": "Opening",
+          "help": "A round opening along the vertical (Z) axis through the top and/or the bottom, to drain, vent or fit something in. With an opening the outside of the model is made again.",
+          "options": {
+            "none": "None",
+            "bottom": "Bottom",
+            "top": "Top",
+            "both": "Both"
+          }
+        },
+        "opening_diameter": {
+          "label": "Opening diameter"
+        },
+        "detail": {
+          "label": "Detail",
+          "help": "Automatic uses a grid a third of the wall. Coarse is faster, fine is smoother.",
+          "options": {
+            "auto": "Automatic",
+            "fine": "Fine",
+            "coarse": "Coarse"
+          }
+        },
+        "max_triangles": {
+          "label": "Triangle limit",
+          "help": "If the result has more triangles than this, it is reduced (only with an opening; otherwise the outside is never reduced)."
+        },
+        "cavity_segment": {
+          "label": "Inside part",
+          "help": "The name of the part given to the inside surface. Empty gives it no part of its own."
+        }
+      }
+    },
+    "bend": {
+      "title": "Bend",
+      "sections": {
+        "shape": "Bend",
+        "axis": "Direction",
+        "range": "Range",
+        "detail": "Detail"
+      },
+      "params": {
+        "angle": {
+          "label": "Bend",
+          "help": "How far the model is bent over the range. A negative angle bends it the other way."
+        },
+        "axis": {
+          "label": "Along",
+          "help": "The direction the model is long in: the bend runs along it. Z is up.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (up)"
+          }
+        },
+        "bend_axis": {
+          "label": "Folds towards",
+          "help": "The direction the model folds towards. It must be a different axis from the one above.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (up)"
+          }
+        },
+        "center": {
+          "label": "Centre",
+          "options": {
+            "bbox_center": "Middle of the model",
+            "origin": "Origin",
+            "point": "A point"
+          }
+        },
+        "center_point": {
+          "label": "Centre point"
+        },
+        "from": {
+          "label": "Start",
+          "help": "Where the bend starts, as a share of the length. Below it the model stays as it is."
+        },
+        "to": {
+          "label": "End",
+          "help": "Where the bend ends. Beyond it the model is carried on straight."
+        },
+        "detail": {
+          "label": "Smoothness",
+          "help": "How finely the surface is cut to follow the bend. Finer is smoother but heavier.",
+          "options": {
+            "auto": "Automatic",
+            "fine": "Fine",
+            "extra_fine": "Extra fine",
+            "coarse": "Coarse"
+          }
+        },
+        "max_triangles": {
+          "label": "Largest result",
+          "help": "The step stops if the result would have more triangles than this."
+        }
+      }
+    },
+    "wave": {
+      "title": "Wave",
+      "sections": {
+        "shape": "Wave",
+        "axis": "Direction",
+        "range": "Range",
+        "detail": "Detail"
+      },
+      "params": {
+        "amplitude": {
+          "label": "Height",
+          "help": "How far the surface moves up and down."
+        },
+        "wavelength": {
+          "label": "Wavelength",
+          "help": "The distance from one crest to the next."
+        },
+        "phase": {
+          "label": "Start of the wave",
+          "help": "Where in the wave the range starts."
+        },
+        "axis": {
+          "label": "Travels along",
+          "help": "The direction the wave travels along.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (up)"
+          }
+        },
+        "direction": {
+          "label": "Moves",
+          "help": "The direction the surface moves in. \"Along the surface\" follows the shape.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (up)",
+            "normal": "Along the surface"
+          }
+        },
+        "falloff": {
+          "label": "Fade at the ends",
+          "help": "The length over which the wave fades in and out at the ends of the range. 0 starts at full height."
+        },
+        "from": {
+          "label": "Start",
+          "help": "Where along the length the wave starts, as a share of the length."
+        },
+        "to": {
+          "label": "End",
+          "help": "Where the wave ends."
+        },
+        "detail": {
+          "label": "Smoothness",
+          "help": "How finely the surface is cut to follow the wave. Finer is smoother but heavier.",
+          "options": {
+            "auto": "Automatic",
+            "fine": "Fine",
+            "extra_fine": "Extra fine",
+            "coarse": "Coarse"
+          }
+        },
+        "max_triangles": {
+          "label": "Largest result",
+          "help": "The step stops if the result would have more triangles than this."
+        }
+      }
+    },
+    "ripple": {
+      "title": "Ripple",
+      "sections": {
+        "shape": "Ripple",
+        "axis": "Centre",
+        "detail": "Detail"
+      },
+      "params": {
+        "amplitude": {
+          "label": "Height",
+          "help": "How far the surface moves up and down."
+        },
+        "wavelength": {
+          "label": "Ring distance",
+          "help": "The distance from one ring to the next."
+        },
+        "decay": {
+          "label": "Fade away",
+          "help": "How fast the rings fade away from the centre. 0 keeps them the same everywhere."
+        },
+        "radius": {
+          "label": "Reach",
+          "help": "The rings stop at this distance from the centre. 0 means no limit."
+        },
+        "phase": {
+          "label": "Start of the wave",
+          "help": "Where in the wave the centre starts. 90 starts with a smooth crest in the middle; 0 starts with a point."
+        },
+        "axis": {
+          "label": "Moves along",
+          "help": "The direction the surface moves in. The rings lie in the other two directions.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (up)"
+          }
+        },
+        "center": {
+          "label": "Centre",
+          "options": {
+            "bbox_center": "Middle of the model",
+            "origin": "Origin",
+            "point": "A point"
+          }
+        },
+        "center_point": {
+          "label": "Centre point"
+        },
+        "detail": {
+          "label": "Smoothness",
+          "help": "How finely the surface is cut to follow the rings. Finer is smoother but heavier.",
+          "options": {
+            "auto": "Automatic",
+            "fine": "Fine",
+            "extra_fine": "Extra fine",
+            "coarse": "Coarse"
+          }
+        },
+        "max_triangles": {
+          "label": "Largest result",
+          "help": "The step stops if the result would have more triangles than this."
+        }
+      }
+    },
+    "printability": {
+      "title": "Printability check",
+      "sections": {
+        "printer": "Printer",
+        "limits": "Limits"
+      },
+      "params": {
+        "process": {
+          "label": "Printer type",
+          "help": "The kind of printer: it sets the smallest wall, detail and gap that print well.",
+          "options": {
+            "fdm": "FDM (filament)",
+            "resin": "Resin"
+          }
+        },
+        "nozzle": {
+          "label": "Nozzle",
+          "help": "The width of the line the nozzle lays down."
+        },
+        "layer_height": {
+          "label": "Layer height",
+          "help": "Details thinner than four layers do not come out."
+        },
+        "bed": {
+          "label": "Build volume",
+          "help": "The build volume. Use 0 on an axis to leave it out."
+        },
+        "min_wall": {
+          "label": "Thinnest wall",
+          "help": "The thinnest wall that prints. 0 chooses it from the printer (twice the nozzle; 0.6 mm for resin)."
+        },
+        "min_feature": {
+          "label": "Thinnest post or pin",
+          "help": "The thinnest post, pin or spike. 0 chooses it from the printer."
+        },
+        "min_gap": {
+          "label": "Narrowest gap",
+          "help": "The narrowest gap that stays open. 0 chooses it from the printer."
+        },
+        "overhang_angle": {
+          "label": "Overhang angle",
+          "help": "Faces that lean over more than this need support."
+        },
+        "bridge_length": {
+          "label": "Longest bridge",
+          "help": "The longest flat roof that prints without support."
+        },
+        "min_overhang_area": {
+          "label": "Smallest overhang to support",
+          "help": "A sloped overhang smaller than this is left out of the advice to add support."
+        }
+      }
+    },
+    "cut_hole": {
+      "params": {
+        "placement": {
+          "label": "Place",
+          "help": "Click on the model where the hole goes."
+        },
+        "shape": {
+          "label": "Shape",
+          "help": "The shape of the hole.",
+          "options": {
+            "round": "Round",
+            "slot": "Slot",
+            "square": "Square"
+          }
+        },
+        "diameter": {
+          "label": "Size",
+          "help": "Round: the diameter. Slot and square: the width."
+        },
+        "length": {
+          "label": "Length",
+          "help": "How long the slot or the square is."
+        },
+        "depth": {
+          "label": "Depth",
+          "help": "How deep the hole goes from the place you chose. 0 cuts all the way through."
+        },
+        "countersink": {
+          "label": "Screw head",
+          "help": "A wider opening at the top, for a screw head: a cone (countersink) or a cylinder (counterbore).",
+          "options": {
+            "none": "None",
+            "countersink": "Countersink",
+            "counterbore": "Counterbore"
+          }
+        },
+        "countersink_diameter": {
+          "label": "Opening width",
+          "help": "The width of the wider opening at the surface."
+        },
+        "countersink_depth": {
+          "label": "Depth of the wider part",
+          "help": "How deep the wider part goes. A countersink is 90 degrees and takes the depth it needs."
+        },
+        "corner_radius": {
+          "label": "Rounded corners",
+          "help": "How round the corners of the square are."
+        },
+        "rotation": {
+          "label": "Turn",
+          "help": "Turns the slot or the square about its axis, on top of the direction of the place."
+        },
+        "axis": {
+          "label": "Direction of the hole",
+          "help": "Which way the hole goes. Surface: straight into the surface at the place. X, Y or Z: along that axis, into the model.",
+          "options": {
+            "normal": "Surface",
+            "x": "X",
+            "y": "Y",
+            "z": "Z"
+          }
+        },
+        "min_wall": {
+          "label": "Thinnest wall",
+          "help": "The thinnest wall that may stay under the bottom of a blind hole. A thinner one gives a warning."
+        },
+        "part": {
+          "label": "Part to cut",
+          "help": "Cut only through this part of the surface. Empty: the whole model."
+        }
+      },
+      "sections": {
+        "hole": "Hole",
+        "edge": "Screw head",
+        "more": "More"
+      }
+    },
+    "resize": {
+      "params": {
+        "mode": {
+          "options": {
+            "percent": "Percent",
+            "target_size": "Target size",
+            "per_axis": "Per direction"
+          }
+        },
+        "keep_proportions": {
+          "label": "Keep proportions",
+          "help": "On: the other directions follow. Off: only the chosen direction changes (a stretch)."
+        },
+        "percent_x": {
+          "label": "Size along X",
+          "help": "How large the model is along X, in percent."
+        },
+        "percent_y": {
+          "label": "Size along Y",
+          "help": "How large the model is along Y, in percent."
+        },
+        "percent_z": {
+          "label": "Size along Z",
+          "help": "How large the model is along Z, in percent."
+        }
+      }
+    },
+    "decimate": {
+      "title": "Reduce triangles",
+      "params": {
+        "mode": {
+          "label": "Method",
+          "help": "Either remove every triangle that does not change the shape by more than the quality asks, or reduce to a number of triangles you choose.",
+          "options": {
+            "quality": "As small as possible",
+            "target": "Target number"
+          }
+        },
+        "tolerance": {
+          "label": "Quality",
+          "help": "How far the surface may move. A smaller number keeps more triangles and more detail."
+        },
+        "target_triangles": {
+          "label": "Target triangles",
+          "help": "The number of triangles to reduce to."
+        },
+        "max_error": {
+          "label": "Largest move",
+          "help": "0 means no limit on how far the surface may move."
+        }
+      }
+    },
+    "store": {
+      "params": {
+        "name": {
+          "label": "Store as",
+          "help": "Keeps the result of the steps above under this name. Later steps can load it."
+        }
+      }
+    },
+    "load": {
+      "params": {
+        "name": {
+          "label": "Stored item",
+          "help": "Brings back a stored model or drawing as the one the next steps work on."
+        }
+      }
+    }
+  },
+  "order": {
+    "again": "Runs again after step {{n}}",
+    "analyseLast": "{{step}} only checks the model; it changes nothing. It looks at the model as it is at this point, so it works best as the last step.",
+    "blockedNote": "The steps below it wait until this is solved. They keep their previous result.",
+    "decimateAfterText": "This step comes after the text, so it smooths the letters: their borders are kept, but fine detail is lost. It works best above the text steps.",
+    "drag": "Drag to change the order",
+    "file": "Your file",
+    "fileMeta": "{{name}} · {{w}} mm wide",
+    "hint": "Steps run from top to bottom. Each step works on the result of the step above it.",
+    "hintBadge": "Tip about the order",
+    "keepExact": "Keep letter heights exact",
+    "keepExactHint": "Moves Size to the top. The text stays on the same spot of the part.",
+    "moveAboveText": "Move above the text",
+    "moveDown": "Move down",
+    "moveToEnd": "Move to the end",
+    "moveUp": "Move up",
+    "moved": "“{{step}}” is now step {{n}}. The steps below it run again.",
+    "orientLast": "Auto-orient only turns the model. Keep it last, so the steps before it work on the model as you see it.",
+    "partDropped": "The part “{{part}}” was made by an earlier step, but a step in between removes it.",
+    "partMissing": "No file or earlier step makes the part “{{part}}”.",
+    "progress": "Step {{n}} of {{total}}",
+    "result": "Result",
+    "rotateAfterText": "This step comes after the text, so it turns the letters with the model. It works best above the text steps.",
+    "scaledBelow": "Step {{n}} (Size) runs after this one and scales these letters: they end up {{size}} mm high.",
+    "scalesAbove": "This step comes after {{count}} text steps, so it scales their letters too: “{{text}}” ends up {{size}} mm high instead of {{orig}} mm.",
+    "step": "Step {{n}}",
+    "waitsFor": "Waits for step {{n}}",
+    "repairFirst": "Repairing works best as the first step, so every other step starts from a sound model.",
+    "moveToStart": "Move to the start",
+    "deformAfterText": "This step bends the surface the text sits on, so the letters change shape with it. It works best above the text steps.",
+    "reduceBeforeDeform": "Reducing triangles before a twist or taper gives the deform step a rougher surface to follow. It works best below it.",
+    "moveBelowDeform": "Move below the deform step",
+    "partsFirst": "Deleting or keeping a part works best near the start, so the other steps only work on what stays.",
+    "textureBeforeText": "A texture covers the surface the text sits on, so the letters would be roughened with it. It works best above the text steps.",
+    "reduceAfterTexture": "Reducing triangles after a texture smooths it away. It works best above the texture step.",
+    "moveAboveTexture": "Move above the texture",
+    "smoothAfterText": "Smoothing after the text or a pattern rounds their edges. It works best above them.",
+    "smoothBeforeSurface": "Smoothing evens out what the steps below it make (a shell, a texture, a twist). It works best below them.",
+    "moveBelowShaping": "Move below them",
+    "hollowLast": "Hollowing works on the outside the steps above it made. Text, a texture or a pattern added after it would touch the wall. It works best below them.",
+    "moveBelowThese": "Move below them",
+    "hollowBeforeShell": "A Voronoi shell above this step is made from the whole solid, not from the hollow part. Put this step above it.",
+    "moveAboveShell": "Move above the shell",
+    "cheeseLast": "The holes are cut into the surface the steps above it made. Text, a texture, a pattern or a twist added after this step would be cut by the holes or bend them. Move it below those steps.",
+    "cheeseBeforeSmooth": "A Smooth surface step above this one cannot round the rims of the holes. Put this step above it.",
+    "moveAboveSmooth": "Move above the smoothing",
+    "holesLast": "The hole is cut through the surface the steps above it made. Text, a texture, a pattern, holes or a twist added after this step would run into the hole or distort it. Move it below those steps.",
+    "holesBeforeSmooth": "A Smooth surface step above this one would not round the rim of the hole. Put this step above it.",
+    "customerTyped": "Customers see and are limited in the height before this scaling, so they would see {{orig}} mm for letters that print {{size}} mm high."
+  },
+  "overlay": {
+    "backToEditor": "Back to the editor",
+    "close": "Close without changes",
+    "done": "Done",
+    "dragHint": "Drag the text on the model, or use the arrows.",
+    "calculating": "Calculating…",
+    "finishing": "Finishing…",
+    "nothingOpen": "Nothing is personalisable yet. Tick at least one field as “Personalisable”.",
+    "previewBanner": "Preview as customer: this is exactly what the customer can change, inside your limits.",
+    "reset": "Reset",
+    "resetDone": "Back to the shop's design",
+    "steps": "What you can change",
+    "title": "Personalise"
+  },
+  "page": {
+    "loading": "Opening the model…"
+  },
+  "personalise": {
+    "badge": "Personalisable",
+    "hint": "Tick the fields that are personalisable. A step with at least one ticked field is a personalisable step.",
+    "offBody": "This removes personalisation from {{count}} steps. Their current values stay as they are.",
+    "offCancel": "Keep it on",
+    "offConfirm": "Switch off",
+    "offTitle": "Switch off Personalised design?",
+    "switch": "Personalised design",
+    "switchHint": "Lets you mark fields as personalisable, within limits you set.",
+    "tick": "Personalisable",
+    "tickField": "{{field}} is personalisable"
+  },
+  "place": {
+    "hint": "Click on the model where the text goes",
+    "hintTouch": "Tap on the model where the text goes",
+    "move": "Click on the model to move the text there"
+  },
+  "plugins": {
+    "add": "Add a plugin",
+    "addButton": "Add plugin",
+    "builtIn": "Built in",
+    "builtInHint": "Built-in steps can be switched off, not removed.",
+    "close": "Close",
+    "empty": "No plugins yet. Plugins add steps such as text, resize or auto-orient.",
+    "failedNote": "Stopped with an error in the last run",
+    "inUse": "Used by {{count}} steps",
+    "off": "Off",
+    "on": "On",
+    "remove": "Remove",
+    "removeBlocked": "Remove the steps that use it first.",
+    "title": "Plugins",
+    "version": "Version {{version}}",
+    "crashed": "Switched off because it stopped working: {{message}}",
+    "switchedOff": "Switched off",
+    "switchOn": "Switch on",
+    "switchOff": "Switch off",
+    "loadFailed": "The plugin “{{name}}” could not start and was not added: {{message}}",
+    "build": {
+      "entryTitle": "Want to make your own plugin?",
+      "entryHint": "A short guide, an example and a prompt for your AI agent.",
+      "open": "Build your own plugin",
+      "title": "Build your own plugin",
+      "back": "‹ Back to plugins",
+      "backToList": "Back to plugins",
+      "intro": "A plugin is a small program that changes a model: it can put a pattern on the surface, bend or twist a shape, hollow it out or check it for printing problems. Anyone can write one, and it works in AtelierMesh like the built-in steps.",
+      "needTitle": "What you need",
+      "need1": "A text editor, or a coding agent that writes the code for you.",
+      "need2": "Node.js (no npm needed; Python 3 can pack too), to test and pack the plugin.",
+      "need3": "An idea of what the plugin should do, in plain words.",
+      "stepsTitle": "Five steps",
+      "step1": "Describe what it does in a sentence or two.",
+      "step2": "Start from the example plugin in the kit: copy its folder.",
+      "step3": "Write the manifest (its name, settings and limits) and the run function (the code that changes the model).",
+      "step4": "Test it: the example shows how to check a result and that a model is never broken.",
+      "step5": "Pack it into one file and load it here with “Choose a plugin file”.",
+      "safeTitle": "Is it safe?",
+      "safe": "A plugin from a file runs in a sandbox: it only gets the model it works on, and it has no network. A plugin that is not signed asks for your approval first. You can trust the key of a signer you know under “Trusted signers”.",
+      "guide": "Open the full guide",
+      "newTab": "(opens in a new tab)",
+      "copy": "Copy a prompt for your AI agent",
+      "example": "Download the packed example (.amplugin)",
+      "copied": "Copied. Paste it into your coding agent and fill in the parts in {{double braces}}.",
+      "manual": "Your browser would not copy it. Select the text below and copy it yourself.",
+      "promptLabel": "The prompt",
+      "kit": "Download the plugin kit (zip)",
+      "kitHint": "The kit has everything to build a plugin on your own computer: the guide, the source of the example, the packages and the packing tool. Nothing needs to be installed from npm except the usual tools.",
+      "exampleHint": "The packed example is only for trying the loader: choose it with “Choose a plugin file”.",
+      "variant": "Which prompt",
+      "withNpm": "With npm",
+      "withoutNpm": "Without npm",
+      "noNpmHint": "No npm? Pick “Without npm”: the prompt then asks for plain JavaScript and uses tools that need only Node, only Python 3, or nothing but a text editor."
+    },
+    "file": "Choose a plugin file",
+    "keys": "Trusted signers",
+    "signed": "Signed by {{signer}}",
+    "unsigned": "Not signed",
+    "unsignedShort": "not signed",
+    "licenseTitle": "Licence",
+    "contactWeb": "Website",
+    "opensNewTab": "(opens in a new tab)",
+    "stored": "Stored in this browser ({{size}}, added {{date}})",
+    "updatesFrom": "Updates from {{host}}",
+    "notStarted": "Kept in this browser but switched off, because it failed a check: {{reason}}",
+    "notStoredHere": "This browser does not keep plugins (a private window?). They work until you close the page, then you add them again.",
+    "removeTitle": "Remove this plugin?",
+    "removeBody": "“{{name}}” will be removed from this browser, and its stored file deleted. You can add the file again later.",
+    "removeCancel": "Keep it",
+    "removeConfirm": "Remove",
+    "checkUpdate": "Check for update",
+    "checking": "Checking…",
+    "copyLink": "Copy link",
+    "copied": "Link copied",
+    "download": "Download",
+    "approve": {
+      "title": "Add this plugin?",
+      "replaceTitle": "Replace this plugin?",
+      "updateTitle": "Update this plugin?",
+      "versions": "{{from}} → {{to}}",
+      "sameVersion": "This is the same version number, but the file is different from the one installed.",
+      "unsigned": "Not signed: nobody vouches for this file.",
+      "sameSigner": "Signed by the same key as the installed version.",
+      "lostSignature": "Warning: the installed version is signed, this new one is not.",
+      "otherSigner": "Warning: this new version is signed by a different key than the installed one.",
+      "needs": "Needs: {{list}}",
+      "needsNothing": "Needs nothing beyond changing the model.",
+      "from": "From: {{origin}}",
+      "cancel": "Cancel",
+      "add": "Add",
+      "replace": "Replace",
+      "update": "Update"
+    },
+    "loaded": "Added {{name}} {{version}} ({{how}}).",
+    "clashBuiltIn": "“{{name}}” has the same id as a built-in plugin, which cannot be replaced.",
+    "alreadyInstalled": "{{name}} {{version}} is already installed: this is the same file.",
+    "cannotLoad": "Could not add the plugin: {{message}}",
+    "cannotFetch": "Could not download the plugin: {{message}}",
+    "differentPlugin": "This package is a different plugin (“{{name}}”), so it was not installed.",
+    "upToDate": "{{name}} {{version}} is up to date.",
+    "updated": "Updated {{name}} from {{from}} to {{to}}.",
+    "updateFailed": "The update was not installed and the current version stays: {{message}}",
+    "corsError": "The server of the plugin does not allow this page to download it, or there is no connection. Download the file yourself and choose it instead: {{url}}",
+    "timeoutError": "The server did not answer in time: {{url}}",
+    "tooBigToStore": "It works for this session but is not kept: a stored plugin can be at most {{max}} MB.",
+    "tooManyToStore": "It works for this session but is not kept: this browser keeps at most {{max}} plugins. Remove one first.",
+    "viewLabel": "Show plugins as",
+    "viewList": "List",
+    "viewGallery": "Gallery",
+    "details": "Details",
+    "detailsHide": "Hide details",
+    "imageType": "The plugin’s example picture is not a PNG, JPEG or WebP file.",
+    "imageTooBig": "The plugin’s example picture is too big: it may be at most 300 KB.",
+    "imageDimensions": "The plugin’s example picture has a size that is not allowed: at least 200 px wide, at most 1600 × 1200 px.",
+    "imageMissing": "The plugin names an example picture (“{{path}}”) that is not in the package.",
+    "catalog": {
+      "title": "Plugin catalog",
+      "search": "Search in the catalog",
+      "placeholder": "Name, description or licence",
+      "checking": "Checking the catalog…",
+      "unavailable": "The catalog is not available here.",
+      "retry": "Try again",
+      "from": "{{count}} plugins from {{host}}",
+      "count": "{{count}} plugins",
+      "matches": "{{count}} match",
+      "none": "No plugin matches your search.",
+      "more": "Showing the first {{count}}. Type to narrow the list.",
+      "install": "Install",
+      "installed": "Installed {{version}}",
+      "updateTo": "Update to {{version}}",
+      "updateAvailable": "Update available: {{version}}",
+      "fetching": "Downloading…",
+      "mismatch": "The file from the catalog is not {{id}} {{version}}, so it was not installed.",
+      "hashMismatch": "The downloaded file is not the one the catalog described (its checksum differs), so it was not installed.",
+      "installFailed": "Could not get the plugin from the catalog: {{message}}",
+      "downloads_one": "1 download",
+      "downloads_other": "{{count}} downloads",
+      "replaces": "Replaces {{ids}}"
+    },
+    "back": "Back to the plugins",
+    "replacedBy": "“{{name}}” in the catalog replaces it.",
+    "reload": {
+      "wrongFile": "The file from that address is not the plugin {{id}}, so it was not installed.",
+      "title": "Plugins missing",
+      "body": "This project uses plugins that are not installed here. The catalog is tried first. A plugin that was built in, or loaded from a file, cannot be fetched.",
+      "saved": "Saved address: {{host}}",
+      "noAddress": "No saved address: only the catalog can supply it",
+      "skip": "Not now",
+      "load": "Load them",
+      "outsideTitle": "Load from an outside address?",
+      "outsideBody": "{{id}} is not in the catalog. The project says it came from {{host}}, a site that is not part of this app. Load it from there? Nothing is installed without your approval.",
+      "outsideLoad": "Load from {{host}}",
+      "done": "Loaded: {{list}}.",
+      "notLoaded": "Not loaded: {{list}}."
+    },
+    "missingTitleOne": "This example needs a plugin",
+    "missingTitle": "This example needs {{count}} plugins",
+    "missingText": "“{{name}}” uses plugins you don’t have yet.",
+    "fromCatalogue": "From the {{catalog}} catalogue",
+    "fromOutside": "From another address: {{host}}",
+    "askedSeparately": "We’ll ask you separately about this one.",
+    "installOpen": "Install and open",
+    "openWithout": "Open anyway",
+    "openWithoutHint": "Steps that need a missing plugin stop with a message until the plugin is installed.",
+    "outsideTitle": "Install a plugin from an outside address?",
+    "outsideText": "{{plugin}} isn’t in the {{catalog}} catalogue, so nobody at {{catalog}} has checked it. Plugins run code in your browser.",
+    "outsideTrust": "Only install it if you know this address and trust it.",
+    "outsideNo": "Don’t install",
+    "outsideYes": "Install from this address",
+    "outsideAfterNo": "If you don’t, the steps that need {{plugin}} stop with a message. {{other}} is installed from the catalogue either way.",
+    "notInCatalogue": "Not in the catalogue",
+    "share": "Share with the catalogue",
+    "shareAsk": "Send “{{name}}” to the catalogue? An admin checks it before it is listed. Everyone can then install it.",
+    "shareSent": "Sent: “{{name}}” is listed after an admin has checked it.",
+    "shareExists": "This version of “{{name}}” is in the catalogue already.",
+    "shareRefused": "The catalogue refused the package: {{reason}}"
+  },
+  "pos": {
+    "angle": "Angle in degrees",
+    "angleRange": "Between {{min}}° and {{max}}°",
+    "direction": "Direction",
+    "down": "Move down",
+    "gesture": "Drag with one finger to move. Two fingers: turn and zoom.",
+    "left": "Move left",
+    "move": "Move the text",
+    "moved": "Moved {{mm}} mm from the shop's spot",
+    "reset": "Back to the shop's position",
+    "right": "Move right",
+    "up": "Move up"
+  },
+  "project": {
+    "leave": "Leave",
+    "leaveBody": "Your changes since the last save will be lost.",
+    "leaveTitle": "Leave without saving?",
+    "notAProject": "This file isn't an AtelierMesh project.",
+    "open": "Open project",
+    "save": "Save project",
+    "saveAs": "Save a copy",
+    "saved": "Project saved",
+    "stay": "Stay",
+    "unsaved": "Unsaved changes"
+  },
+  "redo": "Redo",
+  "result": {
+    "closed": "Closed solid",
+    "save": "Save to quote",
+    "saved": "Saved to your quote",
+    "size": "{{x}} × {{y}} × {{z}} mm"
+  },
+  "sample": {
+    "keyring": "Key ring",
+    "nameTag": "Name tag",
+    "plantLabel": "Plant label",
+    "nametag": "Name tag",
+    "voronoi": "Voronoi tile",
+    "twist": "Twisted pillar",
+    "vase": "Tapered vase",
+    "plate": "Plate 60 x 30 x 4",
+    "cylinder": "Cylinder r15 h40",
+    "twistname": "Twisted name",
+    "voronoishell": "Voronoi shell",
+    "texblock": "Textured block",
+    "hollowjar": "Hollow jar",
+    "bend": "Bent bar",
+    "keyringtag": "Name tag with keyring hole",
+    "standingbar": "Standing bar"
+  },
+  "save": {
+    "browser": "Save in this browser",
+    "browserHint": "Saves automatically after each change from now on.",
+    "file": "Download .amproj file",
+    "fileHint": "One file with the model and all steps, to keep or share.",
+    "name": "Name",
+    "title": "Save configuration"
+  },
+  "settings": {
+    "about": "About",
+    "addedPlugin": "added",
+    "catalogAddress": "Plugin catalog address",
+    "catalogAddressHint": "Where the plugin manager looks for plugins and updates. Leave it empty to use this site’s own catalog. Use an https address or a path on this site.",
+    "close": "Close",
+    "installedPlugins": "Installed plugins",
+    "off": "Off",
+    "on": "On",
+    "open": "Settings",
+    "plugins": "Plugins",
+    "showPersonalised": "Show the Personalised design option",
+    "showPersonalisedHint": "Adds a “Personalised design” switch to the editor, for designs a customer can personalise. Off by default.",
+    "title": "Settings",
+    "version": "version",
+    "licence": "Licence",
+    "maxColours": "Most colours",
+    "maxColoursHint": "How many filaments one design may use. A printer with fewer slots needs a lower number.",
+    "general": "General"
+  },
+  "sheet": {
+    "handle": "Pull the panel down"
+  },
+  "size": {
+    "depth": "Depth",
+    "height": "Letter height",
+    "range": "Between {{min}} and {{max}} mm"
+  },
+  "start": {
+    "body": "Upload a 3D file (STL or 3MF) or start from one of our samples.",
+    "drop": "Drag & drop your file here, or click to browse",
+    "sample": "Choose a sample",
+    "title": "Open a model to start",
+    "upload": "Upload a file"
+  },
+  "step": {
+    "op": {
+      "auto_orient": "Auto-orient",
+      "decimate": "Reduce triangles",
+      "low_poly": "Low poly",
+      "overhang": "Overhang check",
+      "resize": "Size",
+      "rotate": "Rotate",
+      "svg": "SVG",
+      "text": "Text",
+      "voronoi": "Voronoi pattern",
+      "repair_mesh": "Repair mesh",
+      "twist": "Twist",
+      "taper": "Taper",
+      "delete_part": "Delete part",
+      "keep_part": "Keep only part",
+      "voronoi_shell": "Voronoi shell",
+      "texture": "Surface texture",
+      "smooth": "Smooth surface",
+      "orient": "Orient for printing",
+      "hollow": "Hollow",
+      "bend": "Bend",
+      "wave": "Wave",
+      "ripple": "Ripple",
+      "printability": "Printability check",
+      "cut_hole": "Cut hole",
+      "store": "Store",
+      "load": "Load"
+    },
+    "status": {
+      "blocked": "Waiting for an earlier step",
+      "error": "Has a problem",
+      "off": "Switched off",
+      "ok": "Up to date",
+      "stale": "Waiting",
+      "warning": "Has a warning",
+      "working": "Working",
+      "cancelled": "Stopped"
+    },
+    "summary": {
+      "decimate": "To {{pct}} % of the triangles",
+      "orient": "Flat side down",
+      "resize": "{{w}} mm wide"
+    },
+    "name": "Name",
+    "rename": "Rename this step",
+    "unsupported": "This step has a setting this app cannot show yet: {{types}}."
+  },
+  "store": {
+    "tab": "Stored",
+    "tabMissing": "{{count}} missing",
+    "title": "Stored in this project",
+    "import": "Import…",
+    "kind": {
+      "drawing": "Drawing",
+      "model": "Model"
+    },
+    "size": {
+      "drawing_one": "1 path, {{points}} points",
+      "model": "{{triangles}} triangles",
+      "drawing_other": "{{paths}} paths, {{points}} points"
+    },
+    "origin": {
+      "imported": "Imported",
+      "step": "Made by step {{n}}",
+      "original": "The model this project started from"
+    },
+    "usedBy": "Used by {{steps}}",
+    "notUsed": "Not used",
+    "stepN": "step {{n}}",
+    "missing": "Missing",
+    "neededBy": "Needed by {{steps}}",
+    "edit": "Edit",
+    "replace": "Replace…",
+    "delete": "Delete",
+    "goToStep": "Go to step {{n}}",
+    "producedNote": "Rebuilt every time the steps run, so it can be looked at but not edited.",
+    "budget": "{{count}} of {{max}} items · {{size}} of {{maxSize}}",
+    "empty": "Nothing stored yet. Import an SVG to use it in a step.",
+    "deleteTitle": "Delete “{{name}}”?",
+    "deleteUsed_one": "{{steps}} uses this drawing. After deleting it, that step stops with “The stored item no longer exists” until you choose another drawing.",
+    "deleteUnused": "No step uses it.",
+    "deleteAnyway": "Delete anyway",
+    "cancel": "Cancel",
+    "limits": "Limits for the customer’s drawing",
+    "limitShapes": "Shapes at most",
+    "limitPoints": "Points at most",
+    "limitsHint": "A drawing the customer brings must stay within these.",
+    "personalisable": "Personalisable",
+    "personalisableHint": "The customer can replace this drawing with their own.",
+    "field": {
+      "drawing": "Drawing"
+    },
+    "pick": {
+      "drawing": "Choose a drawing",
+      "empty": "Choose a drawing first",
+      "none": "No drawings stored yet.",
+      "label": "Stored drawings",
+      "emptyAny": "Choose a stored item first"
+    },
+    "chooseDrawing": "Choose a drawing",
+    "importTitle": "Import SVG",
+    "keepAs": "Keep it as",
+    "nameHint": "Lowercase letters, digits and _, up to 40 characters. Steps use this name.",
+    "use": "Use",
+    "mode": {
+      "fill": "Fill",
+      "line": "Line",
+      "fillHint": "The filled areas of the drawing.",
+      "lineHint": "The strokes, at their own width."
+    },
+    "openPaths": "{{count}} open paths can’t be filled and are left out.",
+    "keep": "Keep drawing",
+    "chooseOther": "Choose another file",
+    "err": {
+      "tooBig": "This file is {{size}}. The largest SVG we take is 2 MB.",
+      "tooBigFix": "Embedded pictures usually make it big. Save it without them, then try again.",
+      "unsafe": "This SVG contains scripts or links to other files, which we don’t accept.",
+      "unsafeFix": "Save it again as a plain SVG (in Inkscape: Save as › Plain SVG).",
+      "tooComplex": "This drawing has {{count}} shapes; the most we take is {{max}}.",
+      "tooComplexFix": "Combine or simplify shapes in your drawing program, then try again.",
+      "onlyStrokes": "This SVG has only strokes: choose Line.",
+      "onlyFills": "This SVG has only filled areas: choose Fill.",
+      "nameTaken": "“{{name}}” is already in this project.",
+      "nameInvalid": "Use only lowercase letters, digits and _, up to 40 characters.",
+      "empty": "There is no drawing in this file that we can use.",
+      "generic": "This file can’t be imported."
+    },
+    "useLine": "Use Line",
+    "useFill": "Use Fill",
+    "useName": "Use “{{name}}”",
+    "replaceIt": "Replace the old one",
+    "cust": {
+      "change": "Change drawing",
+      "shop": "The shop’s drawing",
+      "yours": "Your drawing",
+      "limits": "An SVG file, at most {{shapes}} shapes and {{points}} points.",
+      "back": "Use the shop’s drawing again",
+      "err": {
+        "complex": "Your drawing has {{count}} shapes; this design takes at most {{max}}. Try a simpler drawing. The shop’s drawing is still used.",
+        "wrongFile": "“{{file}}” isn’t an SVG drawing. Choose a file that ends in .svg."
+      },
+      "size": "Size",
+      "turn": "Turn",
+      "shapes_one": "1 shape",
+      "shapes_other": "{{count}} shapes"
+    },
+    "storeAs": "Store as",
+    "storeHint": "Keeps the result of steps {{from}}–{{to}} under this name. Later steps can load it.",
+    "storeSummary": "as {{name}}",
+    "loadWhat": "Stored item",
+    "loadHint": "Brings back a stored model or drawing as the one the next steps work on.",
+    "problem": {
+      "noItem": "Choose a drawing first.",
+      "missing": "The stored item “{{name}}” no longer exists. Choose another one, or import it again.",
+      "wrongKind": "“{{name}}” is a model; this step needs a drawing.",
+      "budget": "This project holds too much: {{size}} of the {{max}} allowed. Delete stored items you no longer use.",
+      "damaged": "“{{name}}” can’t be read any more. Replace it with a new file.",
+      "nameImported": "“{{name}}” is already the name of an imported item. Choose another name."
+    },
+    "editTitle": "Edit drawing",
+    "editSave": "Save drawing",
+    "unsavedTitle": "Leave without saving the drawing?",
+    "unsavedBody": "Your changes to “{{name}}” are lost if you leave now.",
+    "unsavedKeep": "Keep editing",
+    "unsavedDiscard": "Discard changes",
+    "editSaved": "Drawing saved. Steps {{from}} to {{to}} run again.",
+    "stepTitle": "Step {{n}}",
+    "deleteUsed_other": "{{steps}} use this drawing. After deleting it, those steps stop with “The stored item no longer exists” until you choose another drawing.",
+    "sizeMm": "{{w}} × {{h}} mm",
+    "ignored": "{{count}} elements were left out: {{elements}}",
+    "replaceTitle": "Replace “{{name}}”",
+    "replaceNote": "The steps that use it follow the new drawing.",
+    "openStored": "Open the Stored tab",
+    "about": "Drawings and models this project keeps. Steps use them by name.",
+    "alert_one": "A step needs an item that is missing.",
+    "alert_other": "Steps need {{count}} items that are missing.",
+    "tabLabel_zero": "Stored, nothing yet",
+    "tabLabel_one": "Stored, 1 item",
+    "tabLabel_other": "Stored, {{count}} items",
+    "tabMissing_one": "1 missing",
+    "tabMissing_other": "{{count}} missing",
+    "originalNote": "The original model. It cannot be changed or deleted. A Load step with this name brings it back at that point in the steps."
+  },
+  "tab": {
+    "position": "Position",
+    "size": "Size",
+    "text": "Text"
+  },
+  "text": {
+    "align": "Align",
+    "alignCenter": "Centre",
+    "alignLeft": "Align left",
+    "alignRight": "Align right",
+    "engraved": "Engraved",
+    "font": "Font",
+    "letters": "Letters",
+    "limit": "Up to {{lines}} lines · {{chars}} characters a line",
+    "raised": "Raised",
+    "wording": "Wording"
+  },
+  "undo": "Undo",
+  "units": {
+    "back": "Choose another file",
+    "confirmed": "Read as inches. The model is now:",
+    "continue": "Continue",
+    "flag": "This looks like inches: read as inches?",
+    "inch": "Inches",
+    "label": "Unit of the file",
+    "lead": "STL files don't say which unit they use. We read this one as:",
+    "mm": "Millimetres",
+    "readAsInch": "Read as inches",
+    "size": "{{x}} × {{y}} × {{z}} mm",
+    "title": "Check the size",
+    "undoInch": "Read as millimetres again"
+  },
+  "upload": {
+    "browse": "Choose a file",
+    "drop": "Drag & drop your file here, or click to browse",
+    "formatsA": "STL, 3MF or .amproj · up to 50 MB",
+    "formatsB": "STL or 3MF · up to 50 MB",
+    "leadA": "Start from an STL or 3MF file, a saved configuration, or one of our samples.",
+    "leadB": "Upload the STL or 3MF file you want to offer as a personalised design.",
+    "open": "Open",
+    "recent": "Recent uploads",
+    "samples": "Samples",
+    "saved": "Saved in this browser",
+    "savedAll": "All saved configurations",
+    "savedEmpty": "Nothing saved yet. Configurations you save stay in this browser.",
+    "title": "Upload your 3D model",
+    "privacy": "Everything runs in your browser. Your files are never sent to a server, unless you explicitly share an example."
+  },
+  "view": {
+    "3d": "3D",
+    "final": "Final result",
+    "front": "Front",
+    "label": "View",
+    "side": "Side",
+    "top": "Top",
+    "upTo": "Up to this step",
+    "upToNote": "Showing the model after step {{n}} of {{total}}",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "rulerGroup": "Measure",
+    "ruler": "Ruler",
+    "rulerHint": "A ruler in mm on the plate, along X and Y, from the front left corner of the model"
+  },
+  "work": {
+    "auto_orient": "Finding the best way up…",
+    "collapse": "Simplifying the model…",
+    "crystallise": "Sharpening the facets…",
+    "cut": "Cutting the letters…",
+    "lastGood": "The previous result is still shown.",
+    "other": "Working…",
+    "overhang": "Checking overhangs…",
+    "resize": "Resizing the model…",
+    "rotate": "Turning the model…",
+    "sr": {
+      "busy": "Working",
+      "done": "Done"
+    },
+    "stop": "Stop",
+    "text": "Shaping the letters…",
+    "unfold": "Fitting the text to the surface…",
+    "upToDate": "Up to date",
+    "pattern": "Drawing the pattern…",
+    "step": "Step {{n}} of {{total}}",
+    "weld": "Joining points…",
+    "manifold": "Untangling the surface…",
+    "islands": "Removing loose pieces…",
+    "holes": "Closing holes…",
+    "deform": "Shaping the model…",
+    "parts": "Removing the part…",
+    "field": "Measuring the wall…",
+    "surface": "Building the surface…",
+    "subdivide": "Cutting the surface…",
+    "displace": "Adding the texture…",
+    "smooth": "Smoothing the surface…",
+    "cavity": "Making the inside…",
+    "place": "Placing the holes…",
+    "printcheck": "Checking printability…",
+    "hole_cut": "Cutting the hole…",
+    "hole_wall": "Closing the wall…"
+  },
+  "theme": {
+    "toggle": "Switch between light and dark"
+  },
+  "form": {
+    "main": "Main",
+    "more": "More",
+    "settings": "Settings"
+  },
+  "panel": {
+    "decrease": "Decrease",
+    "increase": "Increase",
+    "notPicture": "That file is not a PNG, JPEG or WebP picture.",
+    "notSvg": "That file is not an SVG drawing.",
+    "choose": "Choose…",
+    "place": "Place on the model",
+    "place_again": "Move on the model",
+    "placed": "Placed",
+    "not_placed": "Not placed",
+    "clear": "Clear"
+  },
+  "loading": {
+    "read": "Reading the file…",
+    "unpack": "Unpacking the file…",
+    "parse": "Reading the model…",
+    "check": "Checking the model…",
+    "prepare": "Preparing the view…",
+    "simplify": "Simplifying the model…",
+    "bytes": "{{done}} of {{total}} MB"
+  },
+  "welcome": {
+    "title": "Welcome to AtelierMesh",
+    "lead": "Put a name, a pattern or a texture on a 3D model, right in your browser.",
+    "open": "Start from your own STL or 3MF file, or open one of the samples.",
+    "steps": "Add steps: text, textures, patterns, twists and more. Each step works on the result of the one above it, and you see it live.",
+    "private": "Everything runs in your browser. Your files never leave your device.",
+    "save": "Save your work in this browser or as a file, and export a 3MF or STL for printing.",
+    "start": "Get started",
+    "newsOnlyTitle": "What's new in AtelierMesh",
+    "newTitle": "New in this version",
+    "gotIt": "Got it",
+    "news": {
+      "v0_3_0": {
+        "svg": "SVG on the surface: put your own SVG logo or drawing on a model. It is saved with your project, and keeps its real size.",
+        "menu": "A better Add a step menu: search, steps grouped by plugin, your recent steps, and a bottom sheet on a phone.",
+        "store": "Store and Load steps (under More) keep the result of some steps under a name and bring it back later."
+      }
+    },
+    "newIn": "New in {{version}}"
+  },
+  "recipe": {
+    "saveTitle": "Save the steps as a recipe",
+    "saveLead": "A recipe keeps the {{count}} steps you have now, in this order, without the model. Add it to another model later.",
+    "name": "Name",
+    "untitled": "My recipe",
+    "download": "Download file",
+    "saveBrowser": "Save in this browser",
+    "applyTitle": "Apply a recipe",
+    "applyLead": "The steps of a recipe are added after your steps, in their own order.",
+    "noneSaved": "Nothing saved yet. Use “Save as a recipe…” in the Add a step menu.",
+    "openFile": "Open a recipe file…",
+    "use": "Use",
+    "stepCount": "{{count}} steps",
+    "missingPlugins": "This recipe uses plugins that are not installed here: {{plugins}}. Those steps are left out.",
+    "back": "Back",
+    "addTheRest": "Add the other steps",
+    "cancel": "Cancel",
+    "badFile": "This file is not a usable recipe.",
+    "gone": "This recipe could not be found.",
+    "nothing": "None of the steps of this recipe can run here.",
+    "saved": "Recipe saved in this browser.",
+    "downloaded": "Recipe downloaded.",
+    "deleteAsk": "Delete the recipe \"{{name}}\" from this browser?",
+    "applyMenu": "Apply a recipe…",
+    "saveMenu": "Save as a recipe…"
+  },
+  "printcheck": {
+    "title": "Printability check",
+    "verdict": {
+      "good": "Good to print",
+      "fix_recommended": "Fix recommended",
+      "not_printable": "Not printable as it is"
+    },
+    "score": "Score {{score}} of 100",
+    "show": "Show in 3D",
+    "hide": "Hide in 3D",
+    "showLast": "Put this step last to see the places in 3D.",
+    "passed": "{{count}} checks passed",
+    "note": "Checked on {{samples}} points of the surface, for {{process}} with a {{wall}} mm wall limit.",
+    "severity": {
+      "ok": "Fine",
+      "info": "Note",
+      "warning": "Warning",
+      "error": "Problem"
+    },
+    "ok": {
+      "not_closed": "A closed solid.",
+      "islands": "One piece.",
+      "thin_walls": "Walls are thick enough.",
+      "thin_features": "No posts or pins that are too thin.",
+      "narrow_gaps": "Gaps are wide enough.",
+      "needs_support": "No overhang over {{angle}}°.",
+      "long_bridges": "No long bridges.",
+      "tiny_base": "A flat base of {{area}} mm² on the bed.",
+      "too_tall": "Height {{height}} mm for a width of {{width}} mm.",
+      "too_big_for_bed": "It fits the build volume.",
+      "floating_body": "No part floats above the plate.",
+      "island": "Nothing starts in mid-air.",
+      "overhang": "No overhang that needs support.",
+      "bridge": "No bridge that is too long.",
+      "needles": "No needle-like triangles.",
+      "detail": "{{count}} triangles."
+    },
+    "info": {
+      "islands": "{{shells}} separate pieces (the smallest {{smallest}} mm). That is fine if they all rest on the bed.",
+      "thin_walls": "A few places are thinner than {{min}} mm (thinnest {{thinnest}} mm).",
+      "thin_features": "A few thin posts or pins (thinnest {{thinnest}} mm).",
+      "narrow_gaps": "A few narrow gaps (narrowest {{narrowest}} mm).",
+      "needs_support": "A little overhang ({{area}} mm², {{percent}} % of the surface).",
+      "needles": "{{count}} needle-like triangles (angles under 5°). Usually harmless.",
+      "detail": "{{count}} triangles."
+    },
+    "reportLabel": "Print check report"
+  },
+  "pictures": {
+    "none": "None",
+    "upload": "Upload…",
+    "search": "Search",
+    "all": "All",
+    "category": "Group",
+    "noMatch": "No picture matches.",
+    "mine": "My pictures"
+  },
+  "texture": {
+    "noise": "Noise",
+    "stripes": "Stripes",
+    "diagonal": "Diagonal lines",
+    "waves": "Waves",
+    "dots": "Dots",
+    "bricks": "Bricks",
+    "grid": "Grid",
+    "weave": "Weave",
+    "wood": "Wood grain",
+    "hexagons": "Hexagons",
+    "group": {
+      "Organic": "Organic",
+      "Lines": "Lines",
+      "Shapes": "Shapes"
+    }
+  },
+  "catalogues": {
+    "title": "Catalogues",
+    "intro": "Where AtelierMesh finds examples and plugins. One address can offer both.",
+    "default": "Default",
+    "designs": "Examples",
+    "pluginsOffer": "Plugins",
+    "notOffered": "Not offered here",
+    "add": "Add a catalogue",
+    "name": "Name",
+    "namePh": "How you’ll recognise it",
+    "address": "Address",
+    "addressHint": "Starts with https://. We look at what it offers before adding it.",
+    "check": "Check address",
+    "unknownTitle": "What is this catalogue?",
+    "unknownOffers": "This address offers:",
+    "countDesigns": "examples",
+    "countPlugins": "plugins",
+    "unknownText": "{{catalog}} doesn’t check what this catalogue offers. Its examples can carry plugins, and plugins run code in your browser.",
+    "unknownAsk": "You’ll still be asked before any plugin from it is installed.",
+    "useFor": "Use it for",
+    "addYes": "Add catalogue",
+    "removeC": "Remove {{name}}",
+    "lastCheck": "Reached just now",
+    "remove": "Remove",
+    "problem": {
+      "address": "That is not a usable address. Start it with https://.",
+      "network": "Could not reach that address.",
+      "format": "That address is not a catalogue.",
+      "duplicate": "That catalogue is in the list already."
+    }
+  },
+  "gallery": {
+    "title": "Examples",
+    "intro": "Made by people who use AtelierMesh. Open one and change it.",
+    "sortBy": "Sort",
+    "sortPopular": "Popular",
+    "sortNew": "New",
+    "search": "Search examples",
+    "searchClear": "Clear the search",
+    "plugin": "Plugin",
+    "pluginAll": "All plugins",
+    "pluginYours": "Installed",
+    "pluginOthers": "In the catalogue",
+    "filter": "Filter",
+    "sortFilter": "Sort and filter",
+    "showResults": "Show {{count}} examples",
+    "by": "by {{name}}",
+    "opened": "{{count}} opened",
+    "needs": "needs {{plugin}}",
+    "sample": "AtelierMesh",
+    "openChange": "Open and change",
+    "share": "Share",
+    "moreActions": "More for {{name}}",
+    "copyLink": "Copy link",
+    "report": "Report…",
+    "moreWith": "More made with {{plugin}}",
+    "shown": "{{shown}} of {{count}} examples",
+    "showMore": "Show {{count}} more",
+    "loading": "Loading examples…",
+    "loaded": "{{count}} more examples",
+    "endTitle": "That’s all {{count}} examples",
+    "endText": "Made something you like? Share it from the Save dialog in the editor, and it can inspire the next person.",
+    "endTop": "Back to the top",
+    "loadError": "Couldn’t load more examples.",
+    "tryAgain": "Try again",
+    "noMatch": "No example matches “{{query}}”",
+    "noMatchPlugin": "with {{plugin}}",
+    "noMatchHint": "The search looks at names and descriptions. Try another word, or search everything.",
+    "searchAll": "Search all plugins",
+    "offline": "The example catalogue can’t be reached right now. These are the examples built into AtelierMesh.",
+    "removed": "This example was removed, by its maker or after a check. Here are others you can open.",
+    "removedTitle": "Example removed",
+    "linkCopied": "Link copied",
+    "openFailed": "That example could not be opened. It may have been removed."
+  },
+  "report": {
+    "title": "Report this example",
+    "why": "What’s wrong with it?",
+    "broken": "It doesn’t open, or the model is broken",
+    "notModel": "It isn’t a model (spam, an advert, a test)",
+    "copied": "It’s someone else’s work",
+    "offensive": "It’s offensive or inappropriate",
+    "danger": "It could be dangerous to print or use",
+    "private": "We don’t ask who you are. An admin looks at every report.",
+    "send": "Send report",
+    "thanks": "Thanks for telling us",
+    "thanksText": "An admin will look at it. If it breaks the rules, it’s removed from the examples."
+  },
+  "open": {
+    "title": "Opening {{name}}",
+    "download": "Downloading",
+    "steps": "Running the steps",
+    "copy": "You get your own copy. Changes stay with you.",
+    "cancel": "Cancel",
+    "shared": "Shared example",
+    "opening": "Opening…"
+  },
+  "share": {
+    "copied": "Link copied",
+    "sheetTitle": "Share {{name}}",
+    "asExample": "Share as an example",
+    "asExampleHint": "Anyone can open it from the start page and change their own copy.",
+    "title": "Share as an example",
+    "picture": "Picture",
+    "pictureHint": "Every example is pictured with the same camera and background, so the gallery stays calm. Choose the side that shows it best.",
+    "angle": {
+      "3d": "3D",
+      "front": "Front",
+      "top": "Top"
+    },
+    "name": "Name",
+    "line": "One line about it",
+    "optional": "optional",
+    "linePh": "What is it, what can people change?",
+    "author": "Your name",
+    "authorHint": "Shown as “by …”. Leave it empty to share without a name.",
+    "inside": "What people get",
+    "insideModel": "Your model: {{file}} ({{size}})",
+    "insideSteps": "Your {{count}} steps, with their settings",
+    "insideStored": "The stored drawing {{names}}",
+    "insideAfter": "They open their own copy. Your design here stays as it is. Nothing else from this browser is sent.",
+    "consent": "I made this, or I may share it. Anyone may open, change and share it, as long as they name the maker.",
+    "licence": "CC BY 4.0",
+    "check": "An admin checks every example before it shows up.",
+    "send": "Share example",
+    "thanks": "Thanks: it shows up after a quick check",
+    "waiting": "Waiting for a check",
+    "live": "Shared",
+    "keyNote": "This browser keeps a private key, so you can remove the example later, from this browser only. Clearing the browser’s data removes the key.",
+    "whereLater": "You’ll find it on the start page, under “Shared by you”.",
+    "remove": "Remove my example",
+    "removeTitle": "Remove “{{name}}” from the examples?",
+    "removeText": "It disappears from the gallery, and links to it show “removed”. People who already opened it keep their copy. Your saved design stays here.",
+    "removeKeep": "Keep it",
+    "removeYes": "Remove example",
+    "mine": "Shared by you",
+    "notAccepted": "Not accepted",
+    "gone": "Removed",
+    "error": {
+      "rate": "You have sent several examples just now. Try again in a while.",
+      "too_large": "This design is too large to share.",
+      "picture": "The picture could not be made or was not accepted.",
+      "project": "The design file was not accepted.",
+      "name": "Give the example a name.",
+      "network": "The catalogue could not be reached.",
+      "other": "Sending did not work. Try again later."
+    }
+  },
+  "warning": {
+    "show": "Show on the model",
+    "hide": "Hide on the model"
+  }
+}

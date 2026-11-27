@@ -1,0 +1,113 @@
+/* Default look of the personalise overlay. Everything reads CSS variables, so a host maps them to its own tokens.
+   --am-bg, --am-fg, --am-muted, --am-line, --am-accent (primary button), --am-accent-fg, --am-info (selection), --am-warn, --am-bad */
+.am-overlay { position: fixed; inset: 0; z-index: 50; display: flex; flex-direction: column; background: var(--am-bg, var(--bg-surface, #fff)); color: var(--am-fg, var(--fg-default, #111)); font: 14px/1.4 system-ui, sans-serif; }
+.am-overlay-bar { display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-bottom: 1px solid var(--am-line, var(--border-default, #ddd)); }
+/* the buttons keep their full width; a long title shrinks and is cut with an ellipsis (the dialog's aria-label carries the full title) */
+.am-overlay-bar > div { flex: 0 1 auto; min-width: 0; }
+.am-overlay-bar strong, .am-overlay-bar .am-sub { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.am-overlay-bar button { flex: none; white-space: nowrap; }
+.am-overlay-bar button, .am-fields button, .am-empty button { min-height: 44px; min-width: 44px; padding: 6px 14px; border: 1px solid var(--am-line, var(--border-default, #bbb)); border-radius: 8px; background: transparent; color: inherit; cursor: pointer; }
+.am-overlay button:focus-visible, .am-overlay input:focus-visible, .am-overlay textarea:focus-visible { outline: 3px solid var(--am-info, var(--status-info, #6366f1)); outline-offset: 2px; }
+.am-overlay button:disabled { opacity: .45; cursor: not-allowed; }
+.am-primary { background: var(--am-accent, var(--brand-action, #c2410c)) !important; color: var(--am-accent-fg, var(--on-brand, #fff)) !important; border-color: var(--am-accent, var(--brand-action, #c2410c)) !important; }
+.am-icon { font-size: 22px; line-height: 1; }
+.am-spacer { flex: 1; }
+.am-sub, .am-help, .am-quiet { font-size: 12px; opacity: .75; }
+.am-band { padding: 8px 16px; background: color-mix(in srgb, var(--am-info, var(--status-info, #6366f1)) 12%, transparent); font-size: 13px; }
+.am-overlay-body { flex: 1; min-height: 0; display: grid; grid-template-columns: 220px 1fr 340px; }
+.am-steps, .am-fields { padding: 12px 16px; overflow: auto; }
+.am-steps { border-right: 1px solid var(--am-line, var(--border-default, #ddd)); }
+.am-steps ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.am-steps button { width: 100%; text-align: left; }
+.am-steps button[aria-current="true"] { border-color: var(--am-accent, var(--brand-action, #c2410c)); background: color-mix(in srgb, var(--am-accent, var(--brand-action, #c2410c)) 8%, transparent); }
+.am-fields { border-left: 1px solid var(--am-line, var(--border-default, #ddd)); }
+.am-view { position: relative; min-width: 0; }
+.am-canvas { position: absolute; inset: 0; }
+.am-busy { position: absolute; right: 12px; top: 12px; padding: 4px 10px; border-radius: 999px; background: var(--am-bg, var(--bg-surface, #fff)); border: 1px solid var(--am-line, var(--border-default, #ddd)); font-size: 12px; }
+.am-field { display: grid; gap: 6px; margin: 12px 0; }
+.am-field label, .am-label { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; opacity: .75; }
+.am-field input[type="text"], .am-field input[type="number"], .am-field textarea { padding: 8px; border: 1px solid var(--am-line, var(--border-default, #bbb)); border-radius: 8px; background: transparent; color: inherit; font: inherit; }
+.am-field textarea { min-height: 72px; }
+.am-row, .am-seg, .am-nudge { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.am-fonts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.am-fonts button { display: grid; text-align: left; }
+.am-fonts button[aria-pressed="true"], .am-seg button[aria-pressed="true"] { border-color: var(--am-accent, var(--brand-action, #c2410c)); box-shadow: inset 0 -3px 0 var(--am-accent, var(--brand-action, #c2410c)); }
+.am-fontname { font: 11px system-ui, sans-serif; opacity: .7; }
+.am-problem { margin: 12px 0; padding: 10px 12px; border-radius: 8px; border: 1px solid; }
+.am-problem p { margin: 0 0 6px; }
+.am-error { background: color-mix(in srgb, var(--am-bad, var(--status-error-fg, #b91c1c)) 10%, transparent); border-color: var(--am-bad, var(--status-error-fg, #b91c1c)); color: var(--am-bad, var(--status-error-fg, #b91c1c)); }
+.am-warning { background: color-mix(in srgb, var(--am-warn, var(--status-warn-fg, #a66200)) 12%, transparent); border-color: var(--am-warn, var(--status-warn-fg, #a66200)); }
+.am-info { background: color-mix(in srgb, var(--am-info, var(--status-info, #6366f1)) 10%, transparent); border-color: var(--am-info, var(--status-info, #6366f1)); }
+.am-empty { padding: 32px; text-align: center; }
+.am-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+@media (max-width: 768px) {
+  .am-overlay-body { grid-template-columns: 1fr; grid-template-rows: auto 42vh 1fr; overflow: auto; }
+  .am-steps { border-right: 0; border-bottom: 1px solid var(--am-line, var(--border-default, #ddd)); }
+  .am-steps ul { display: flex; overflow-x: auto; }
+  .am-steps h2 { display: none; }
+  .am-fields { border-left: 0; }
+  /* one open step: the chip row would only repeat the heading of the form */
+  .am-overlay-body.am-one { grid-template-rows: 42vh 1fr; }
+  .am-overlay-body.am-one .am-steps { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .am-overlay * { transition: none !important; animation: none !important; } }
+
+.am-swatch { width: 44px; height: 44px; padding: 0; border-radius: 50%; border: 2px solid var(--am-line, var(--border-default, #bbb)); }
+.am-swatch[aria-pressed="true"] { border-color: var(--am-accent, var(--brand-action, #c2410c)); box-shadow: 0 0 0 2px var(--am-bg, var(--bg-surface, #fff)), 0 0 0 4px var(--am-accent, var(--brand-action, #c2410c)); }
+.am-group-box { border: 1px solid var(--am-line, var(--border-default, #ddd)); border-radius: 8px; margin: 8px 0; padding: 8px 12px; }
+.am-group-box legend { font-size: 12px; opacity: .75; padding: 0 4px; }
+/* The waiting behaviour: loader, stage row, thin bar, Stop, the dimmed last result. Everything is still when the user asks for reduced motion. */
+.am-loader-f { animation: am-pass 1.8s cubic-bezier(.4, 0, .2, 1) infinite; }
+@keyframes am-pass { 0%, 100% { opacity: 1; } 20% { opacity: .35; } 45% { opacity: 1; } }
+.am-working { display: flex; align-items: center; gap: 12px; flex: 1 1 100%; order: 3; min-width: 0; font-size: 13px; color: var(--fg-muted, #6b7280); }
+.am-working .am-loader { flex: none; }
+.am-working-label { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--fg-default, #1f2937); font-weight: 600; }
+.am-bar { flex: 1 1 80px; max-width: 360px; height: 4px; border-radius: 9999px; background: var(--border-default, #e5e7eb); overflow: hidden; }
+.am-bar-fill { display: block; height: 100%; background: var(--brand-500, #f97316); transition: width 150ms cubic-bezier(.4, 0, .2, 1); }
+.am-bar-indeterminate { width: 30%; animation: am-slide 1.4s cubic-bezier(.4, 0, .2, 1) infinite; transition: none; }
+@keyframes am-slide { 0% { margin-left: -30%; } 100% { margin-left: 100%; } }
+.am-editor .am-stop, .am-overlay .am-stop { min-height: 44px; min-width: 44px; border: 0; background: transparent; color: var(--brand-action, #c2410c); font-weight: 700; padding: 0 8px; cursor: pointer; }
+.am-editor .am-stop:hover:not(:disabled), .am-overlay .am-stop:hover:not(:disabled) { background: transparent; text-decoration: underline; }
+/* the last good result stays, dimmed, until the new one arrives */
+.am-editor-view[data-working="true"] canvas, .am-view[data-working="true"] canvas { opacity: .55; transition: opacity 150ms ease; }
+.am-editor-view canvas, .am-view canvas { transition: opacity 150ms ease; }
+/* the dot of the step that is running pulses */
+.am-dot.am-st-working { animation: am-pulse 1.2s ease-in-out infinite; }
+@keyframes am-pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.35); opacity: .6; } }
+/* in the customer overlay the row is a pill at the bottom of the view */
+.am-overlay .am-working { position: absolute; left: 12px; right: 12px; bottom: 12px; flex: none; background: var(--bg-surface, #fff); border: 1px solid var(--border-default, #e5e7eb); border-radius: 9999px; padding: 4px 8px 4px 14px; box-shadow: var(--shadow-md, 0 4px 6px rgba(0,0,0,.1)); }
+/* the loader in the middle of the view while the model is being made; the stage row and bar stay where they were */
+.am-center-loader { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 6; pointer-events: none; padding: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; aspect-ratio: 1; box-sizing: border-box; background: color-mix(in srgb, var(--bg-surface, #fff) 80%, transparent); box-shadow: var(--shadow-md, 0 4px 6px rgba(0,0,0,.1)); }
+.am-center-loader .am-loader { display: block; width: 64px; height: 64px; }
+@media (max-width: 768px) { .am-phonebody .am-center-loader { top: 28%; } }
+@media (max-width: 768px) { .am-working-label { white-space: normal; } .am-bar { flex-basis: 48px; } }
+@media (prefers-reduced-motion: reduce) {
+  .am-loader-f, .am-bar-indeterminate, .am-dot.am-st-working { animation: none; }
+  .am-bar-fill, .am-editor-view canvas, .am-view canvas { transition: none; }
+}
+.am-dot.am-st-cancelled { background: transparent; border: 2px dashed var(--brand-500, #f97316); }
+
+/* opening a file: the loader page and the row inside the dialogs */
+.am-loadview { position: fixed; inset: 56px 0 0 0; z-index: 40; display: flex; align-items: center; justify-content: center; padding: 16px; background: var(--bg-page, #f3f4f6); }
+.am-loadbox { width: min(560px, 100%); display: grid; gap: 12px; text-align: left; }
+.am-loadbox h2 { margin: 0; font-size: 20px; color: var(--fg-strong, #111827); }
+.am-loadrow { flex: 1 1 auto; order: 0; flex-wrap: wrap; }
+.am-loadview .am-loadrow .am-loader { width: 40px; height: 40px; }
+.am-loadrow .am-bar { flex: 1 1 140px; max-width: none; }
+.am-loaddetail { font-size: 12px; color: var(--fg-muted, #6b7280); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.am-loadrow .am-stop, .am-dialog .am-loadrow .am-stop { min-height: 44px; min-width: 44px; border: 0; background: transparent; color: var(--brand-action, #c2410c); font-weight: 700; cursor: pointer; }
+.am-simplified-img { display: block; max-width: 100%; height: auto; margin: 8px 0; }
+
+/* picture picker (asset settings with widget gallery) */
+.am-pictures { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 8px; }
+.am-pictures button { display: grid; grid-template-rows: auto auto; gap: 4px; padding: 6px; text-align: center; min-height: 44px; align-content: start; }
+.am-pictures button[aria-pressed="true"] { border-color: var(--am-accent, var(--brand-action, #c2410c)); box-shadow: inset 0 -3px 0 var(--am-accent, var(--brand-action, #c2410c)); }
+.am-pictures img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--r-sm, 4px); background: var(--bg-surface-2, #f3f4f6); }
+.am-pic-name { font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.am-pic-upload > span:first-child, .am-pic-none > span:first-child { display: grid; place-items: center; aspect-ratio: 1; font-size: 24px; }
+.am-picfilter { margin-bottom: 8px; gap: 8px; }
+.am-picfilter input, .am-picfilter select { min-height: 44px; flex: 1; min-width: 0; }
+/* the cards of a choice (pictures): the chosen one has an accent border, a tint and a tick, so it does not rely on colour alone */
+.am-cards button { position: relative; }
+.am-cards button[aria-pressed="true"] { border: 2px solid var(--am-accent, var(--brand-action, #c2410c)); background: color-mix(in srgb, var(--am-accent, var(--brand-action, #c2410c)) 10%, transparent); }
+.am-card-check { position: absolute; top: 6px; right: 6px; display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 999px; background: var(--am-accent, var(--brand-action, #c2410c)); color: var(--am-accent-fg, var(--on-brand, #fff)); }

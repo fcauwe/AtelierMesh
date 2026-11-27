@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="256" height="256" role="img" aria-label="AtelierMesh">
+<title>AtelierMesh</title>
+<style>
+/* AtelierMesh intro, 3.0 s, plays once. Line style of the first intro.
+   1 the A of Atelier in thin orange lines, 2 the M as a letter, 3 every triangle of the mesh,
+   4 the STL triangles grow over the lines, the orange one lands last, all lines fade together. */
+.w{fill:none;stroke-width:.6;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw .5s cubic-bezier(.4,0,.2,1) forwards, fade .4s 2650ms cubic-bezier(.4,0,.2,1) forwards}
+.s{animation:draw .5s cubic-bezier(.4,0,.2,1) forwards, fade .6s cubic-bezier(.4,0,.2,1) forwards}
+.a{stroke:#f97316}
+.g{stroke:#a3a3a3}
+.f{opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(.6);animation:facet .32s cubic-bezier(.4,0,.2,1) forwards}
+.o{opacity:0;transform-box:fill-box;transform-origin:center;transform:translateY(-8px);animation:land .38s cubic-bezier(.4,0,.2,1) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fade{to{opacity:0}}
+@keyframes facet{to{opacity:1;transform:none}}
+@keyframes land{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.w{display:none}.f,.o{animation:none;opacity:1;transform:none}}
+</style>
+<g><path class="w s a" pathLength="1" style="animation-delay:0ms,350ms" d="M6 56 L32 20 L58 56"/>
+<path class="w s a" pathLength="1" style="animation-delay:45ms,395ms" d="M19 38 L45 38"/>
+<path class="w s g" pathLength="1" style="animation-delay:450ms,800ms" d="M6 56 L6 10 L32 20 L58 10 L58 56"/>
+<path class="w g" pathLength="1" style="animation-delay:1150ms" d="M6 10 L6 56 L19 38 Z"/>
+<path class="w g" pathLength="1" style="animation-delay:1195ms" d="M6 10 L19 38 L32 20 Z"/>
+<path class="w g" pathLength="1" style="animation-delay:1240ms" d="M6 56 L19 38 L32 56 Z"/>
+<path class="w g" pathLength="1" style="animation-delay:1285ms" d="M19 38 L32 20 L45 38 Z"/>
+<path class="w g" pathLength="1" style="animation-delay:1330ms" d="M19 38 L45 38 L32 56 Z"/>
+<path class="w g" pathLength="1" style="animation-delay:1375ms" d="M32 20 L58 10 L45 38 Z"/>
+<path class="w g" pathLength="1" style="animation-delay:1420ms" d="M45 38 L58 10 L58 56 Z"/>
+<path class="w g" pathLength="1" style="animation-delay:1465ms" d="M45 38 L58 56 L32 56 Z"/></g>
+<g><path class="f" style="animation-delay:1570ms" fill="#a3a3a3" d="M7.95 11.82 L19.19 36.03 L30.43 20.47 Z"/>
+<path class="f" style="animation-delay:1660ms" fill="#525252" d="M33.57 20.47 L56.05 11.82 L44.81 36.03 Z"/>
+<path class="f" style="animation-delay:1750ms" fill="#737373" d="M7 14.53 L7 52.91 L17.85 37.89 Z"/>
+<path class="f" style="animation-delay:1840ms" fill="#1a1a1a" d="M46.15 37.89 L57 14.53 L57 52.91 Z"/>
+<path class="f" style="animation-delay:1930ms" fill="#737373" d="M20.96 37 L32 21.71 L43.04 37 Z"/>
+<path class="f" style="animation-delay:2020ms" fill="#525252" d="M7.96 55 L19 39.71 L30.04 55 Z"/>
+<path class="f" style="animation-delay:2110ms" fill="#525252" d="M45 39.71 L56.04 55 L33.96 55 Z"/>
+<path class="o" style="animation-delay:2370ms" fill="#f97316" d="M20.96 39 L43.04 39 L32 54.29 Z"/></g>
+</svg>

@@ -1,0 +1,24 @@
+{
+ "plugin": "org.ateliermesh.lowpoly",
+ "version": "0.2.0",
+ "op": "low_poly",
+ "params": {
+  "triangles_mode": "fixed",
+  "triangles": 400,
+  "sharpness": 40,
+  "crystallise": 0.7,
+  "keep_borders": true
+ },
+ "report": {
+  "triangles_before": 30000,
+  "triangles_after": 400,
+  "volume_change_percent": -1,
+  "mode": "fixed",
+  "max_error": 7.899132385768123,
+  "engine": "wasm",
+  "creases": 119,
+  "moved": 202,
+  "max_move": 1.5887128488124995,
+  "unchanged": false
+ }
+}

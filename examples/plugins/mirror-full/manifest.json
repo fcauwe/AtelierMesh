@@ -1,0 +1,27 @@
+{
+  "manifest_version": 1,
+  "id": "com.example.mirror",
+  "name": "Mirror",
+  "version": "1.0.0",
+  "author": "Example Ltd",
+  "license": "MIT",
+  "description": "Mirrors a model along an axis, in place or as a copy beside it. The full example with source, tests and texts.",
+  "contact": {"name": "Example Ltd", "url": "https://example.org/plugins"},
+  "operations": [
+    {
+      "id": "mirror",
+      "title": "Mirror",
+      "kind": "modifier",
+      "category": "shape",
+      "personalisable": "never",
+      "stages": ["mirror"],
+      "outputs": { "mesh": true, "report": true, "closed": true },
+      "sections": [{ "id": "plane", "title": "Plane" }],
+      "params": [
+        { "name": "axis", "type": "enum", "default": "x", "options": [{ "value": "x", "shape": "M12 3v18M7 8l-4 4 4 4M17 8l4 4-4 4" }, { "value": "y", "shape": "M3 12h18M8 7l4-4 4 4M8 17l4 4 4-4" }, { "value": "z", "shape": "M4 12a8 8 0 1 0 16 0a8 8 0 1 0-16 0M12 8v8M8 12h8" }], "section": "plane" },
+        { "name": "mode", "type": "enum", "default": "flip", "options": ["flip", "copy"], "section": "plane" },
+        { "name": "gap", "type": "float", "default": 2, "min": 0, "max": 200, "step": 0.5, "unit": "mm", "visible_if": "mode == 'copy'", "section": "plane" }
+      ]
+    }
+  ]
+}

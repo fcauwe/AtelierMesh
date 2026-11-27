@@ -1,0 +1,84 @@
+/* AtelierMesh — theme layer on top of tokens.css (micro-fabriek design system).
+   Load order: tokens.css, components-bundle.css, this file.
+   Status: PROPOSAL. The dark theme and the four new tokens are not yet in the
+   design system's tokens.json; add them there once approved.
+
+   New tokens (both themes):
+     --on-brand         text on the primary (orange) button
+     --brand-action     primary button fill
+     --border-control   outline of inputs, sliders, segmented controls (>= 3:1)
+     --seg-part / --seg-part-side / --seg-letters / --seg-letters-side
+                        3D preview colours for the part and the letters.
+                        Display only: the file carries a segment and extruder
+                        number, never a filament. Deliberately NOT the laser
+                        op colours (op-cut red etc.), which mean laser operations. */
+
+:root, [data-theme="light"] {
+  --on-brand: #ffffff;
+  --brand-action: #c2410c;        /* white on it 5.18:1 (brand-600 gives only 3.56:1) */
+  --brand-action-hover: #9a3412;
+  --border-control: #a3a3a3;
+  --seg-part: #d9d4cc;
+  --seg-part-side: #b5afa6;
+  --seg-letters: #2f2d2a;
+  --seg-letters-side: #6e6862;
+  /* round 3 */
+  --danger-action: #b91c1c;
+  --scrim: rgba(17,17,17,0.5);
+  --personal-fg: #4f46e5;
+  --personal-bg: rgba(99,102,241,0.1);
+}
+
+/* Dark theme proposal: same token names, new values.
+   Contrast on bg-surface (#1f1e1d): fg-strong 15.3, fg-default 13.3,
+   fg-muted 6.6, fg-faint 4.9, brand-600 (links) 7.4, status-info 5.6.
+   Primary button: #1a1a1a on #f97316 = 6.2:1. */
+[data-theme="dark"] {
+  --bg-page: #151413;
+  --bg-surface: #1f1e1d;
+  --bg-surface-2: #282725;
+  --bg-dark: #0f0f0e;
+  --fg-strong: #f5f5f4;
+  --fg-default: #e7e5e4;
+  --fg-muted: #a8a29e;
+  --fg-faint: #8f8a85;
+  --fg-on-dark: #ffffff;
+  --border-default: #3d3b39;
+  --border-control: #74706b;
+  --border-card: #5c5955;
+  --border-focus: #f97316;
+  --brand-50: #282725;
+  --brand-100: #33291f;
+  --brand-600: #fb923c;
+  --on-brand: #1a1a1a;
+  --brand-action: #f97316;
+  --brand-action-hover: #fb923c;
+  --status-info: #818cf8;
+  --status-warn-bg: #2a2414;
+  --status-warn-border: #6b5a1e;
+  --status-warn-fg: #fde68a;
+  --status-error-bg: #2a1717;
+  --status-error-border: #7f2a2a;
+  --status-error-fg: #fca5a5;
+  --status-ok-bg: #132a1b;
+  --status-ok-border: #1f5130;
+  --status-ok-fg: #86efac;
+  --seg-part: #6f6a63;
+  --seg-part-side: #4f4b46;
+  --seg-letters: #f1ede6;
+  --seg-letters-side: #b9b2a8;
+  --danger-action: #dc2626;
+  --scrim: rgba(0,0,0,0.6);
+  --personal-fg: #a5b4fc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    /* same values as [data-theme="dark"]; duplicate them here in the build */
+  }
+}
+
+/* Focus ring for every control (keyboard only). */
+:focus-visible { outline: 3px solid var(--status-info); outline-offset: 2px; }
+
+/* Touch targets: every control at least 44 x 44 px. */

@@ -1,0 +1,46 @@
+{
+  "ops": {
+    "mirror": {
+      "title": "Miroir",
+      "sections": {
+        "plane": "Plan"
+      },
+      "params": {
+        "axis": {
+          "label": "Axe",
+          "help": "Le plan du miroir est perpendiculaire à cet axe.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z"
+          }
+        },
+        "mode": {
+          "label": "Mode",
+          "help": "Retourner reflète le modèle sur place. Copie ajoute une copie reflétée à côté.",
+          "options": {
+            "flip": "Retourner",
+            "copy": "Copie"
+          }
+        },
+        "gap": {
+          "label": "Espace",
+          "help": "L'espace entre le modèle et sa copie."
+        }
+      },
+      "stage": {
+        "mirror": "Symétrie…"
+      }
+    }
+  },
+  "step": {
+    "op": {
+      "mirror": "Miroir"
+    }
+  },
+  "mesh": {
+    "mirror": {
+      "empty": "Ce modèle n'a aucun triangle à refléter."
+    }
+  }
+}

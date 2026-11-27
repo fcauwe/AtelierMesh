@@ -1,0 +1,10 @@
+node_modules/
+dist/
+build/
+coverage/
+*.log
+*.bak*
+.DS_Store
+packages/loader/src/bootstrap.generated.ts
+packages/loader/bin/
+packages/plugins/wasm/decimate/target/

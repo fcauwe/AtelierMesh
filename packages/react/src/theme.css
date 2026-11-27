@@ -1,0 +1,212 @@
+/* AtelierMesh theme for a host that has no tokens of its own (the standalone app): the micro-fabriek tokens, the dark theme (follows the system, or data-theme on <html>) and the Manrope font stack. The Atelier does not import this file; it already has the tokens. */
+/* micro-fabriek Complete Design System — generated from tokens.json */
+:root, [data-theme="light"] {
+  --brand-50: #fafaf9;
+  --brand-100: #f0efed;
+  --brand-200: #a3a3a3;
+  --brand-300: #737373;
+  --brand-400: #525252;
+  --brand-500: #f97316;
+  --brand-600: #ea580c;
+  --brand-700: #1a1a1a;
+  --op-cut: #ef4444;
+  --op-line-engrave: #3b82f6;
+  --op-fill-engrave: #4b5563;
+  --op-none: #d1d5db;
+  --bg-page: #f3f4f6;
+  --bg-surface: #ffffff;
+  --bg-surface-2: var(--brand-50);
+  --bg-dark: var(--brand-700);
+  --site-ink: #111111;
+  --site-paper: #fafaf9;
+  --site-cream: #f0eee7;
+  --fg-strong: #111827;
+  --fg-default: #1f2937;
+  --fg-muted: #6b7280;
+  --fg-faint: #9ca3af;
+  --fg-on-dark: #ffffff;
+  --fg-tagline: var(--brand-200);
+  --border-default: #e5e7eb;
+  --border-card: var(--brand-200);
+  --border-focus: var(--brand-500);
+  --status-warn-bg: #fefce8;
+  --status-warn-border: #fde68a;
+  --status-warn-fg: #92400e;
+  --status-error-bg: #fef2f2;
+  --status-error-border: #fecaca;
+  --status-error-fg: #dc2626;
+  --status-ok-bg: #dcfce7;
+  --status-ok-border: #bbf7d0;
+  --status-ok-fg: #15803d;
+  --status-info: #6366f1;
+  --status-info-soft: rgba(99,102,241,0.07);
+  --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
+  --shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0,0,0,0.25);
+}
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --container-max: 80rem;
+  --r-sm: 0.25rem;
+  --r-md: 0.5rem;
+  --r-lg: 0.75rem;
+  --r-xl: 1rem;
+  --r-2xl: 1.25rem;
+  --r-full: 9999px;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.25rem;
+  --fs-2xl: 1.5rem;
+  --fs-3xl: 1.875rem;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --lh-tight: 1.1;
+  --lh-snug: 1.25;
+  --lh-normal: 1.5;
+  --tracking-tight: -0.01em;
+  --tracking-wide: 0.05em;
+  --font-sans: Manrope, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+.h1 { font-family: var(--font-sans); font-size: 1.875rem; line-height: 1.1; font-weight: 700; letter-spacing: -0.01em; }
+.h2 { font-family: var(--font-sans); font-size: 1.25rem; line-height: 1.25; font-weight: 600; }
+.h3 { font-family: var(--font-sans); font-size: 1.125rem; font-weight: 600; }
+.p { font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.5; font-weight: 400; }
+.body-strong { font-family: var(--font-sans); font-size: 0.875rem; font-weight: 500; }
+.eyebrow { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; }
+.small { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 400; }
+.mono { font-family: var(--font-mono); font-size: 0.85em; }
+
+/* AtelierMesh — theme layer on top of tokens.css (micro-fabriek design system).
+   Load order: tokens.css, components-bundle.css, this file.
+   Status: PROPOSAL. The dark theme and the four new tokens are not yet in the
+   design system's tokens.json; add them there once approved.
+
+   New tokens (both themes):
+     --on-brand         text on the primary (orange) button
+     --brand-action     primary button fill
+     --border-control   outline of inputs, sliders, segmented controls (>= 3:1)
+     --seg-part / --seg-part-side / --seg-letters / --seg-letters-side
+                        3D preview colours for the part and the letters.
+                        Display only: the file carries a segment and extruder
+                        number, never a filament. Deliberately NOT the laser
+                        op colours (op-cut red etc.), which mean laser operations. */
+
+:root, [data-theme="light"] {
+  --on-brand: #ffffff;
+  --brand-action: #c2410c;        /* white on it 5.18:1 (brand-600 gives only 3.56:1) */
+  --brand-action-hover: #9a3412;
+  --border-control: #a3a3a3;
+  --seg-part: #d9d4cc;
+  --seg-part-side: #b5afa6;
+  --seg-letters: #2f2d2a;
+  --seg-letters-side: #6e6862;
+  /* round 3 */
+  --danger-action: #b91c1c;
+  --scrim: rgba(17,17,17,0.5);
+  --personal-fg: #4f46e5;
+  --personal-bg: rgba(99,102,241,0.1);
+}
+
+/* Dark theme proposal: same token names, new values.
+   Contrast on bg-surface (#1f1e1d): fg-strong 15.3, fg-default 13.3,
+   fg-muted 6.6, fg-faint 4.9, brand-600 (links) 7.4, status-info 5.6.
+   Primary button: #1a1a1a on #f97316 = 6.2:1. */
+[data-theme="dark"] {
+  --bg-page: #151413;
+  --bg-surface: #1f1e1d;
+  --bg-surface-2: #282725;
+  --bg-dark: #0f0f0e;
+  --fg-strong: #f5f5f4;
+  --fg-default: #e7e5e4;
+  --fg-muted: #a8a29e;
+  --fg-faint: #8f8a85;
+  --fg-on-dark: #ffffff;
+  --border-default: #3d3b39;
+  --border-control: #74706b;
+  --border-card: #5c5955;
+  --border-focus: #f97316;
+  --brand-50: #282725;
+  --brand-100: #33291f;
+  --brand-600: #fb923c;
+  --on-brand: #1a1a1a;
+  --brand-action: #f97316;
+  --brand-action-hover: #fb923c;
+  --status-info: #818cf8;
+  --status-warn-bg: #2a2414;
+  --status-warn-border: #6b5a1e;
+  --status-warn-fg: #fde68a;
+  --status-error-bg: #2a1717;
+  --status-error-border: #7f2a2a;
+  --status-error-fg: #fca5a5;
+  --status-ok-bg: #132a1b;
+  --status-ok-border: #1f5130;
+  --status-ok-fg: #86efac;
+  --seg-part: #6f6a63;
+  --seg-part-side: #4f4b46;
+  --seg-letters: #f1ede6;
+  --seg-letters-side: #b9b2a8;
+  --danger-action: #dc2626;
+  --scrim: rgba(0,0,0,0.6);
+  --personal-fg: #a5b4fc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --bg-page: #151413;
+  --bg-surface: #1f1e1d;
+  --bg-surface-2: #282725;
+  --bg-dark: #0f0f0e;
+  --fg-strong: #f5f5f4;
+  --fg-default: #e7e5e4;
+  --fg-muted: #a8a29e;
+  --fg-faint: #8f8a85;
+  --fg-on-dark: #ffffff;
+  --border-default: #3d3b39;
+  --border-control: #74706b;
+  --border-card: #5c5955;
+  --border-focus: #f97316;
+  --brand-50: #282725;
+  --brand-100: #33291f;
+  --brand-600: #fb923c;
+  --on-brand: #1a1a1a;
+  --brand-action: #f97316;
+  --brand-action-hover: #fb923c;
+  --status-info: #818cf8;
+  --status-warn-bg: #2a2414;
+  --status-warn-border: #6b5a1e;
+  --status-warn-fg: #fde68a;
+  --status-error-bg: #2a1717;
+  --status-error-border: #7f2a2a;
+  --status-error-fg: #fca5a5;
+  --status-ok-bg: #132a1b;
+  --status-ok-border: #1f5130;
+  --status-ok-fg: #86efac;
+  --seg-part: #6f6a63;
+  --seg-part-side: #4f4b46;
+  --seg-letters: #f1ede6;
+  --seg-letters-side: #b9b2a8;
+  --danger-action: #dc2626;
+  --scrim: rgba(0,0,0,0.6);
+  --personal-fg: #a5b4fc;
+  }
+}
+
+/* Focus ring for every control (keyboard only). */
+:focus-visible { outline: 3px solid var(--status-info); outline-offset: 2px; }
+
+/* Touch targets: every control at least 44 x 44 px. */
+

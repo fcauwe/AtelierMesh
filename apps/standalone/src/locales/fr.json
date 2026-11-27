@@ -1,0 +1,2667 @@
+{
+  "addStep": {
+    "title": "Ajouter une étape",
+    "cat": {
+      "prepare": "Préparer",
+      "shape": "Forme",
+      "style": "Style artistique",
+      "surface": "Sur la surface",
+      "check": "Contrôles",
+      "recipes": "Recettes",
+      "add": "Ajouter une pièce"
+    },
+    "search": "Rechercher une étape",
+    "noResults": "Aucune étape ne correspond à « {{query}} »",
+    "noResultsHint": "Vérifiez l’orthographe, ou trouvez d’autres étapes dans",
+    "results_one": "1 étape",
+    "results_other": "{{count}} étapes",
+    "clear": "Effacer la recherche",
+    "more": "Plus",
+    "recent": "Récentes",
+    "back": "Retour",
+    "close": "Fermer",
+    "added": "Ajoutée : {{step}}",
+    "needs": {
+      "drawing": "Nécessite un dessin",
+      "mesh": "Nécessite un modèle",
+      "stored": "Rien de stocké pour l’instant"
+    },
+    "plugins": "Extensions…",
+    "applyRecipeShort": "Appliquer une recette",
+    "saveRecipeShort": "Enregistrer la recette",
+    "pluginsShort": "Extensions"
+  },
+  "app": {
+    "by": "par micro-fabriek.be",
+    "github": "AtelierMesh sur GitHub (s’ouvre dans un nouvel onglet)",
+    "name": "AtelierMesh",
+    "home": "Retour à la page de départ"
+  },
+  "apply": {
+    "body": "L'étape est intégrée au modèle. Elle disparaît de la liste et ne peut plus être modifiée, désactivée ni annulée.",
+    "cancel": "Garder modifiable",
+    "confirm": "Appliquer définitivement",
+    "customerNote": "Cette étape est personnalisable. Une fois appliquée, les clients ne pourront plus la modifier.",
+    "disabledAfterRollback": "Indisponible après un retour en arrière dans l'historique",
+    "done": "« {{step}} » fait désormais partie du modèle.",
+    "title": "Appliquer « {{step}} » définitivement ?",
+    "working": "Application…"
+  },
+  "atelier": {
+    "column": "Matériau, précision, remplissage et prix",
+    "note": "Affiché par l'Atelier"
+  },
+  "autosave": {
+    "saved": "Enregistré dans ce navigateur à {{time}}",
+    "unsaved": "Pas encore enregistré"
+  },
+  "cannot": {
+    "copied": "Lien copié",
+    "memory": {
+      "body": "Cet appareil a manqué de mémoire pour ce modèle. Rechargez la page et utilisez un modèle plus simple, ou ouvrez-le sur un ordinateur.",
+      "title": "Pas assez de mémoire pour ce modèle"
+    },
+    "recovered": "Votre version enregistrée a été rouverte.",
+    "recoveredNone": "Rien n'était enregistré dans ce navigateur : vous recommencez à l'importation.",
+    "reload": "Recharger la page",
+    "webgl": {
+      "action": "Copier le lien de cette page",
+      "body": "AtelierMesh a besoin de WebGL, désactivé ou indisponible ici. Ouvrez cette page dans une version récente de Chrome, Firefox, Edge ou Safari.",
+      "title": "Ce navigateur ne peut pas afficher la 3D"
+    },
+    "worker": {
+      "body": "Le moteur s'est arrêté en arrière-plan. Ce qui est enregistré dans ce navigateur est conservé. Rechargez la page pour recommencer.",
+      "title": "Le moteur 3D s'est arrêté"
+    }
+  },
+  "check": {
+    "help": "Demandez-nous de l'aide",
+    "manifold": {
+      "anywayHint": "Vous pouvez le modifier, mais il risque de ne pas s'imprimer comme prévu. Réparez le fichier avant de l'imprimer ou de le commander.",
+      "body": "Sa surface présente des ouvertures : il ne peut pas être imprimé tel quel. Réparez-le dans votre logiciel 3D ou choisissez un autre fichier.",
+      "touching": "Certaines parties se touchent le long d’une arête, il ne peut donc pas être imprimé tel quel. Réparez-le dans votre logiciel 3D ou choisissez un autre fichier.",
+      "touchingRepair": "Certaines parties se touchent le long d’une arête, il ne peut donc pas être imprimé tel quel. Nous pouvons essayer de corriger cela ici, ou vous pouvez le réparer dans votre logiciel 3D ou choisir un autre fichier.",
+      "openAnyway": "L'ouvrir quand même",
+      "title": "Ce fichier n'est pas un volume fermé",
+      "bodyRepair": "Il a des ouvertures dans sa surface, il ne peut donc pas être imprimé tel quel. Nous pouvons essayer de les fermer ici, ou vous le réparez dans votre logiciel 3D ou choisissez un autre fichier."
+    },
+    "other": "Choisir un autre fichier",
+    "reading": "Lecture du fichier…",
+    "simplified": {
+      "body": "De {{from}} à {{to}} triangles. Vérifiez les détails dans la vue 3D avant de continuer.",
+      "continue": "Ouvrir dans l'éditeur",
+      "title": "Le modèle est simplifié"
+    },
+    "simplifying": {
+      "body": "Cela prend quelques secondes. Vous pouvez arrêter et choisir un autre fichier.",
+      "title": "Simplification du modèle"
+    },
+    "triangles": {
+      "body": "Il compte {{count}} triangles ; le navigateur en gère jusqu'à {{max}}. Nous pouvons le simplifier à {{target}} triangles. Les très petits détails peuvent s'adoucir légèrement.",
+      "simplify": "Simplifier à {{target}} triangles",
+      "title": "Ce modèle est trop détaillé pour le navigateur"
+    },
+    "unreadable": {
+      "body": "Il est peut-être endommagé, ou ce n'est pas un fichier STL, 3MF ou .amproj.",
+      "title": "Impossible de lire ce fichier"
+    },
+    "repair": "Le réparer"
+  },
+  "colours": {
+    "title": "Couleurs",
+    "offBody": "Ce modèle est imprimé en une seule couleur : le client choisit un filament pour toute la pièce.",
+    "useSeveral": "Utiliser plusieurs couleurs",
+    "useOne": "Utiliser une seule couleur",
+    "keep": "Garder les couleurs",
+    "offTitle": "Utiliser une seule couleur ?",
+    "offConfirm": "Les couleurs que vous avez réglées sont supprimées. Toute la pièce sera d’une seule couleur.",
+    "add": "Ajouter une couleur",
+    "newName": "Couleur {{n}}",
+    "uses": "Utilise {{count}} couleurs sur {{max}}",
+    "usesAny_one": "Utilise 1 couleur",
+    "usesAny_other": "Utilise {{count}} couleurs",
+    "maxReached": "Le maximum est de {{max}} couleurs.",
+    "showMapped": "Afficher les couleurs attribuées",
+    "showMappedHint": "Désactivé : chaque partie dans sa propre couleur, pour les distinguer. Activé : chaque couleur de cette liste.",
+    "slotColour": "Couleur de {{name}}",
+    "slotName": "Nom de la couleur {{n}}",
+    "first": "Première",
+    "remove": "Supprimer {{name}}",
+    "takeOut": "Retirer {{part}} de {{name}}",
+    "whole": "Toute la pièce",
+    "notInModel": "absente du modèle",
+    "noParts": "Pas encore de parties.",
+    "addPart": "Ajouter une partie à {{name}}",
+    "addPartPlaceholder": "Ajouter une partie…",
+    "unassigned": "Dans aucune couleur",
+    "unassignedHint": "L’éditeur les montre dans leurs propres couleurs. Partout ailleurs — aperçus, écran du client, images et fichiers — elles prennent la première couleur.",
+    "tooMany": "Ce modèle compte {{count}} couleurs ; le maximum ici est {{max}}. Supprimez une couleur.",
+    "partTwice": "« {{part}} » est dans plus d’une couleur.",
+    "invalid": "Les couleurs de ce modèle ne sont pas valides.",
+    "tab": "Couleurs",
+    "about": "Quelle partie du modèle est imprimée dans quel filament.",
+    "alert": {
+      "tooMany": "Utilise {{count}} couleurs ; cette imprimante en accepte {{max}}."
+    },
+    "tabLabel_one": "Couleurs, une couleur",
+    "tabLabel_other": "Couleurs, {{count}} couleurs"
+  },
+  "common": {
+    "dismiss": "Fermer",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "done": "Terminé"
+  },
+  "configs": {
+    "close": "Fermer",
+    "date": "Enregistrée",
+    "delete": "Supprimer",
+    "deleteConfirm": "Supprimer « {{name}} » de ce navigateur ?",
+    "deleted": "« {{name}} » supprimée",
+    "empty": "Rien d'enregistré dans ce navigateur pour l'instant.",
+    "name": "Nom",
+    "note": "Elles restent uniquement dans ce navigateur. Téléchargez un fichier .amproj pour en conserver une ailleurs.",
+    "open": "Ouvrir",
+    "size": "Taille",
+    "title": "Configurations enregistrées"
+  },
+  "designer": {
+    "addStep": "Ajouter une étape",
+    "applyPermanent": "Appliquer définitivement",
+    "applyWarning": "Cette action est irréversible.",
+    "delete": "Supprimer",
+    "directionRange": "Plage de direction",
+    "fields": "Champs modifiables par le client",
+    "limits": "Limites",
+    "moveMax": "Déplacement maximal",
+    "openProject": "Ouvrir un projet",
+    "plugins": "Extensions",
+    "saveProject": "Enregistrer le projet",
+    "sizeRange": "Plage de taille",
+    "steps": "Étapes",
+    "switchOff": "Désactiver"
+  },
+  "editor": {
+    "addStep": "Ajouter une étape",
+    "applyPermanent": "Appliquer définitivement…",
+    "blocked": "Résolvez d'abord le problème",
+    "closed": "Volume fermé",
+    "delete": "Supprimer",
+    "export": "Exporter",
+    "moveHint": "Cliquez sur le modèle pour y déplacer le texte sélectionné",
+    "next": "Suite : aperçu",
+    "notClosed": "Pas un volume fermé",
+    "notClosedAtelier": "L'Atelier ne peut chiffrer et imprimer qu'un volume fermé. Réparez le fichier et importez-le à nouveau pour continuer.",
+    "notClosedHint": "Il risque de ne pas s'imprimer comme prévu. Réparez le fichier dans votre logiciel 3D.",
+    "openOther": "Ouvrir un autre fichier",
+    "placeHint": "Cliquez sur le modèle à l'endroit du texte",
+    "previewCustomer": "Aperçu client",
+    "save": "Enregistrer",
+    "size": "{{x}} × {{y}} × {{z}} mm",
+    "stepMenu": "Options de l'étape",
+    "steps": "Étapes",
+    "switchOff": "Désactiver",
+    "switchOn": "Activer",
+    "triangles": "{{count}} triangles",
+    "panels": "Panneaux de l’éditeur",
+    "stepsAbout": "Les étapes s’exécutent de haut en bas. Chaque étape travaille sur le résultat de celle du dessus.",
+    "stepsAlert": "Une étape a un problème.",
+    "tabAlertNew": "{{panel}} : {{alert}}",
+    "tab": {
+      "steps": "Étapes",
+      "stepsProblem": "1 étape avec un problème"
+    }
+  },
+  "export": {
+    "3mf": "3MF (recommandé)",
+    "3mfHint": "Garde les lettres comme pièce séparée : le trancheur peut leur attribuer leur propre couleur ou extrudeuse.",
+    "prusa": "3MF pour PrusaSlicer et EasyPrint",
+    "prusaHint": "Chaque couleur arrive dans le trancheur : les lettres gardent leur extrudeuse et leur couleur.",
+    "bambu": "3MF pour Bambu Studio",
+    "bambuHint": "Les couleurs telles que Bambu Studio les lit. Pas encore testé avec une vraie imprimante.",
+    "download": "Télécharger {{format}}",
+    "preparing": "Préparation du fichier…",
+    "stl": "STL",
+    "stlHint": "Un seul volume ; les lettres et la pièce sont imprimées dans le même filament.",
+    "title": "Télécharger le modèle"
+  },
+  "field": {
+    "depth": "Hauteur ou profondeur",
+    "direction": "Direction",
+    "font": "Police",
+    "mode": "Lettres",
+    "position": "Position",
+    "size": "Hauteur des lettres",
+    "text": "Texte",
+    "width": "Largeur"
+  },
+  "fix": {
+    "boldFont": "Choisir une police plus grasse",
+    "contact": "Demandez-nous de l'aide",
+    "engraveDepth": "Graver à {{fit_height}} mm",
+    "lessDeep": "Graver moins profond",
+    "makeBigger": "Passer à {{fit_size}} mm",
+    "makeFit": "Passer à {{fit_size}} mm",
+    "makeRaised": "Passer en relief",
+    "makeSmaller": "Réduire",
+    "moveFlatter": "Déplacer",
+    "moveToCentre": "Vers le centre",
+    "otherFile": "Choisir un autre fichier",
+    "otherFont": "Choisir une autre police",
+    "placeAgain": "Replacer le texte",
+    "reload": "Recharger la page",
+    "resetPosition": "Revenir à la position d'origine",
+    "shorten": "Modifier le texte",
+    "switchOff": "Désactiver",
+    "tryAgain": "Réessayer",
+    "turn": "Tourner le texte",
+    "thickerLines": "Lignes de {{line_width}} mm",
+    "fewerCells": "Utiliser {{max}} cellules",
+    "switchOnAgain": "Réactiver",
+    "managePlugins": "Gérer les plugins…",
+    "coarserDetail": "Utiliser un détail plus grossier",
+    "thickerRibs": "Rendre les montants larges de {{width}} mm",
+    "thickerWall": "Rendre la paroi épaisse de {{thickness}} mm",
+    "thinnerWall": "Rendre la paroi épaisse de {{thickness}} mm",
+    "fewerHoles": "Faire {{count}} trous",
+    "smallerHoles": "Faire le plus grand trou de {{max}} mm",
+    "widerWalls": "Garder {{width}} mm de paroi",
+    "shallowerHole": "Rendre profond de {{depth}} mm",
+    "openPluginManager": "Ouvrir la gestion des plugins"
+  },
+  "fonts": {
+    "allChars": "Tous les caractères disponibles",
+    "choose": "Utiliser cette police",
+    "close": "Fermer",
+    "missing": "Manquant : {{chars}}",
+    "missingHint": "Les caractères manquants s'affichent dans le cadre. Choisissez une police sans caractère manquant ou modifiez ces caractères.",
+    "more": "Tester toutes les polices avec votre texte",
+    "preview": "Aperçu avec votre texte",
+    "status": {
+      "missing": "Manquant : {{chars}}",
+      "ok": "Tous les caractères disponibles"
+    },
+    "title": "Choisir une police",
+    "yourText": "Votre texte"
+  },
+  "host": {
+    "badge": "Personnalisable",
+    "personalise": "Personnaliser",
+    "personalised": "Personnalisé"
+  },
+  "leave": {
+    "body": "Vos modifications depuis {{time}} ne sont pas enregistrées. Si vous quittez maintenant, elles seront perdues.",
+    "bodyNever": "Cette configuration n'est pas encore enregistrée. Si vous quittez maintenant, vos modifications seront perdues.",
+    "discard": "Quitter sans enregistrer",
+    "save": "Enregistrer et quitter",
+    "stay": "Rester",
+    "title": "Quitter sans enregistrer ?"
+  },
+  "limits": {
+    "chars": "Caractères par ligne au maximum",
+    "direction": "Plage de direction",
+    "from": "de",
+    "hint": "Les commandes du client s'arrêtent à ces limites.",
+    "lines": "Lignes au maximum",
+    "move": "Déplacement maximal",
+    "size": "Plage de taille",
+    "textHint": "Pour le client, la saisie s'arrête à ces limites.",
+    "title": "Limites pour le client",
+    "to": "à"
+  },
+  "mesh": {
+    "apply": {
+      "after_rollback": "Vous êtes revenu en arrière dans l'historique. Les étapes suivantes ne peuvent pas être appliquées définitivement ; refaites-les ou continuez à partir d'ici.",
+      "blocked": "« {{step}} » ne peut pas être appliquée définitivement tant qu'elle a un problème. Résolvez-le d'abord.",
+      "failed": "Impossible d'appliquer « {{step}} » définitivement. Rien n'a changé ; l'étape reste modifiable.",
+      "nothing_to_apply": "Rien à appliquer : cette étape ne modifie pas le modèle.",
+      "step_failed": "Impossible d'appliquer « {{step}} » définitivement. Rien n'a changé ; l'étape reste modifiable.",
+      "unknown_step": "Cette étape n'existe plus. Rechargez le projet."
+    },
+    "budget": {
+      "triangles": "Ce modèle compte {{count}} triangles ; le navigateur en gère jusqu'à {{max}}. Choisissez un fichier plus simple ou demandez-nous de l'aide.",
+      "vertices": "Ce modèle compte {{count}} points ; le navigateur en gère jusqu'à {{max}}. Choisissez un fichier plus simple ou demandez-nous de l'aide.",
+      "store_bytes": "Ce projet contient trop : {{size}} sur les {{max}} autorisés. Supprimez les éléments stockés que vous n’utilisez plus.",
+      "store_entries": "Ce projet contient {{entries}} éléments stockés ; le maximum est {{max}}. Supprimez les éléments stockés que vous n’utilisez plus."
+    },
+    "decimate": {
+      "bad_input": "Ce modèle ne peut pas être simplifié tel quel. Choisissez un autre fichier ou demandez-nous de l'aide.",
+      "groups_unsupported": "Ce fichier décrit ses pièces de façon incohérente : il ne peut pas être simplifié. Exportez-le à nouveau depuis votre logiciel 3D ou demandez-nous de l'aide."
+    },
+    "emboss": {
+      "bad_height": "La hauteur ou la profondeur des lettres doit être supérieure à 0 mm.",
+      "bad_size": "La hauteur des lettres doit être supérieure à 0 mm.",
+      "curvature_collapse": "La surface est si courbée ici que les lettres se chevaucheraient. Déplacez le texte vers un endroit plus plat ou réduisez-le.",
+      "cut_failed": "Impossible de découper les lettres dans le modèle à cet endroit. Réessayez, déplacez un peu le texte ou demandez-nous de l'aide.",
+      "empty_shape": "Aucune forme à placer. Choisissez une forme ou désactivez cette étape.",
+      "empty_text": "Saisissez d'abord un texte.",
+      "fold_over": "Le texte se replierait sur lui-même à cet endroit. Déplacez-le ou réduisez-le.",
+      "font_unreadable": "Impossible de lire la police {{font}}. Choisissez une autre police ; nous avons été prévenus.",
+      "groups_unsupported": "Ce fichier décrit ses pièces de façon incohérente : impossible de savoir à quelle surface appartient le texte. Exportez-le à nouveau depuis votre logiciel 3D ou demandez-nous de l'aide.",
+      "inside_out": "Ce modèle est retourné : ses faces pointent vers l'intérieur. Exportez-le à nouveau depuis votre logiciel 3D ou choisissez un autre fichier.",
+      "invalid_result": "Ces réglages n'ont pas donné de résultat valide. Annulez la dernière modification ou essayez une taille ou un endroit légèrement différent.",
+      "mesh_not_manifold": "Ce fichier n'est pas un volume fermé : il ne peut pas être imprimé tel quel. Réparez-le ou choisissez un autre fichier.",
+      "missing_glyphs": "Cette police n'a pas de caractère pour : {{characters}}. Choisissez une autre police ou modifiez le texte.",
+      "no_font": "Choisissez une police pour ce texte.",
+      "no_placement": "Le texte n'a pas encore de place sur le modèle. Cliquez sur le modèle à l'endroit voulu.",
+      "no_placement_svg": "Le dessin n’a pas encore de place sur le modèle. Cliquez sur le modèle à l’endroit voulu.",
+      "no_shape": "Choisissez d’abord un dessin.",
+      "no_surface": "Il n'y a pas de surface à cet endroit pour poser le texte. Cliquez directement sur la pièce.",
+      "on_negative_body": "Cet endroit se trouve dans une découpe du modèle, pas sur la pièce. Cliquez sur l'extérieur de la pièce.",
+      "patch_not_disk": "Le texte traverse un trou ou fait le tour de la pièce ici : il ne peut pas reposer sur une seule surface. Déplacez-le vers une zone continue.",
+      "stretch": "La surface est courbe ici : les lettres s'étirent de {{pct}} %. L'impression fonctionne, mais un endroit plus plat donne un meilleur résultat.",
+      "svg_empty_mode": "Ce dessin n'a rien à utiliser dans ce mode. Passez de Remplissage à Ligne, ou donnez au dessin un remplissage ou un contour.",
+      "svg_too_complex": "Cette forme a trop de points pour être placée. Simplifiez le SVG ou choisissez-en un autre.",
+      "svg_too_large": "Ce fichier SVG est trop volumineux. Utilisez un fichier plus petit.",
+      "svg_unsafe": "Ce SVG contient des scripts ou des liens que nous n'acceptons pas. Enregistrez-le à nouveau comme simple dessin.",
+      "text_scaled_to_fit": "Nous avons réduit le texte à {{mm}} mm pour qu'il tienne sur la pièce.",
+      "text_small": "Les lettres sont petites et risquent de ne pas s'imprimer nettement.",
+      "text_too_long": "Le texte est trop long pour cette pièce. Utilisez au plus {{max}} caractères ou réduisez les lettres.",
+      "thin_strokes": "Certains traits de cette police sont trop fins pour être imprimés à cette taille. Agrandissez le texte ou choisissez une police plus grasse.",
+      "too_much_stretch": "La surface est trop courbe ici : les lettres s'étireraient de {{pct}} % (au maximum {{max}} %). Déplacez le texte vers un endroit plus plat ou réduisez-le.",
+      "touches_patch_edge": "Le texte touche le bord de la surface où il est placé : il ne peut pas être créé.",
+      "touches_patch_edge_crease": "Le texte passe sur une arête vive de la pièce : il ne peut pas être créé.",
+      "wall_too_thin": "Une gravure aussi profonde traverserait la paroi. Gravez moins profond ou passez les lettres en relief."
+    },
+    "export": {
+      "_any": "Impossible de créer le fichier. Réessayez ou choisissez l'autre format."
+    },
+    "expr": {
+      "invalid": "Cette formule ne peut pas être calculée. Vérifiez qu'elle ne contient pas de faute de frappe."
+    },
+    "import": {
+      "_any": "Impossible d'ouvrir ce fichier. Utilisez un fichier STL, 3MF ou .amproj."
+    },
+    "input": {
+      "missing_mesh": "Il n'y a pas encore de modèle. Importez d'abord un fichier.",
+      "missing_payload": "L’élément stocké « {{name}} » n’existe plus. Choisissez-en un autre, ou importez-le à nouveau.",
+      "wrong_kind": "« {{name}} » est un {{got}} ; cette étape a besoin d’un {{expected}}."
+    },
+    "loader": {
+      "_any": "Une partie d'AtelierMesh ne s'est pas chargée. Rechargez la page."
+    },
+    "lowpoly": {
+      "already_smaller": "Ce modèle compte {{count}} triangles, moins que les {{target}} demandés, il reste donc tel quel.",
+      "bad_input": "Ce modèle ne peut pas être converti en low poly tel quel. Choisissez un autre fichier ou demandez-nous de l'aide.",
+      "groups_unsupported": "Ce fichier décrit ses parties de façon incohérente, il ne peut donc pas être converti en low poly. Exportez-le à nouveau depuis votre logiciel 3D, ou demandez-nous de l'aide.",
+      "target_not_reached": "Le modèle garde {{count}} triangles au lieu de {{target}} : ses arêtes vives et ses parties séparées en ont besoin.",
+      "volume_changed_larger": "Le modèle low poly est environ {{pct}} % plus grand que l'original. Vérifiez la taille avant d'imprimer.",
+      "volume_changed_smaller": "Le modèle low poly est environ {{pct}} % plus petit que l'original. Vérifiez la taille avant d'imprimer.",
+      "not_closed": "Ce modèle n’est pas un volume fermé ({{open_edges}} arêtes ouvertes, {{bad_edges}} arêtes doublées). Ajoutez d’abord Réparer le maillage.",
+      "empty_input": "Ce modèle n’a pas de triangles.",
+      "too_many_triangles": "Les facettes demanderaient {{triangles}} triangles ; la limite est {{limit}}. Utilisez des facettes plus grandes.",
+      "_any": "Facettes n’a pas pu modifier ce modèle."
+    },
+    "manifest": {
+      "invalid": "La description de cette extension est incomplète : elle ne peut pas être ajoutée.",
+      "missing_license": "Le plugin ne dit pas sous quelle licence il est publié. Son auteur doit ajouter une « license », par exemple MIT.",
+      "missing_description": "Le plugin n’a pas de description. Son auteur doit ajouter une ou deux phrases qui disent ce qu’il fait.",
+      "bad_license": "La licence du plugin n’est pas utilisable : utilisez un nom SPDX comme MIT ou Apache-2.0, ou Proprietary.",
+      "bad_description": "La description du plugin n’est pas utilisable : du texte simple de 10 à 300 caractères.",
+      "bad_contact": "Les coordonnées du plugin ne sont pas utilisables : le site doit être une adresse https et l’e-mail une adresse.",
+      "bad_package_url": "L’adresse du paquet du plugin n’est pas utilisable : une adresse https sans nom d’utilisateur ni mot de passe.",
+      "bad_image": "L’image d’exemple du plugin n’est pas utilisable : indiquez un fichier du paquet et une courte description (5 à 160 caractères).",
+      "bad_uses": "La liste « uses » du plugin n’est pas utilisable : elle ne peut nommer que les services de l’hôte que cette version connaît (fonts)."
+    },
+    "param": {
+      "_any": "Un réglage a une valeur inutilisable. Vérifiez le champ mis en évidence."
+    },
+    "placement": {
+      "direction_out_of_range": "L'angle doit être compris entre {{min}}° et {{max}}°. Nous l'avons laissé à la limite.",
+      "limits_changed": "La boutique a modifié ce que vous pouvez ajuster : nous avons ramené votre texte dans les nouvelles limites.",
+      "size_out_of_range": "La taille doit être comprise entre {{min}} et {{max}} mm. Nous l'avons laissée à la limite.",
+      "too_far": "Le texte peut se déplacer d'au plus {{max}} mm par rapport à la position d'origine. Nous l'avons laissé à la limite."
+    },
+    "plugin": {
+      "bad_mesh": "L'extension « {{plugin}} » a renvoyé un modèle qui n'est pas un volume fermé. Son résultat n'a pas été utilisé.",
+      "failed": "L'extension « {{plugin}} » s'est arrêtée sur une erreur. Désactivez-la ou réessayez ; les étapes précédentes fonctionnent toujours.",
+      "needs_sandbox": "Cette extension doit s'exécuter dans un espace protégé que ce navigateur ne fournit pas. Utilisez un navigateur récent.",
+      "crashed": "Le plugin « {{plugin}} » a cessé de fonctionner et a été désactivé. {{message}}",
+      "disabled": "Le plugin « {{plugin}} » est désactivé parce qu’il a cessé de fonctionner. {{message}}",
+      "off": "Le plugin « {{plugin}} » est désactivé.",
+      "customer": "Cette étape ne peut pas être affichée pour le moment. Réessayez plus tard ou contactez la boutique.",
+      "needs_fonts": "Le plugin « {{plugin}} » a besoin des contours de lettres de l’hôte, et cette application n’en propose pas. Utilisez un hôte qui en propose, ou supprimez l’étape."
+    },
+    "resize": {
+      "zero_size": "Une taille ne peut pas être 0. Indiquez une taille supérieure à 0 mm."
+    },
+    "run": {
+      "cancelled": "Arrêté. Le dernier résultat reste affiché.",
+      "timeout": "Cela a pris plus de {{seconds}} secondes, nous avons donc arrêté. Le dernier résultat reste affiché. Réessayez ou réduisez le texte."
+    },
+    "segment": {
+      "_any": "Les pièces du modèle n'ont pas pu rester séparées. Exportez en STL ou demandez-nous de l'aide."
+    },
+    "step": {
+      "invalid": "Cette étape a des réglages inutilisables. Vérifiez-les ou supprimez l'étape.",
+      "migration_failed": "Cette étape a été enregistrée avec une version plus ancienne de « {{name}} » ({{from}}) et n’a pas pu être mise à jour vers {{installed}}. {{message}}",
+      "not_personalisable": "Ceci ne peut pas être modifié ici.",
+      "unknown_op": "Ce projet utilise un type d'étape inconnu. Rechargez la page pour mettre AtelierMesh à jour.",
+      "unknown_plugin": "Ce projet nécessite l'extension « {{plugin}} », qui n'est pas installée.",
+      "version_newer": "Ce projet a été créé avec une version plus récente d'AtelierMesh. Rechargez la page pour mettre à jour, puis rouvrez-le."
+    },
+    "unknown": "Une erreur est survenue ({{code}}). Le dernier résultat reste affiché.",
+    "voronoi": {
+      "cells_too_small": "Les cellules sont trop petites pour les lignes entre elles : {{cells}} cellules ne tiennent pas dans cette zone. Utilisez moins de cellules, des lignes plus fines ou une zone plus grande.",
+      "does_not_fit": "Le motif ne tient pas sur la surface ici : il touche un bord ou une partie trop courbe. Réduisez la zone ou déplacez-la vers un endroit plus plat.",
+      "empty_pattern": "Il ne reste rien du motif. Agrandissez la zone, réduisez la marge ou affinez les lignes.",
+      "no_placement": "Le motif n'a pas encore de place sur le modèle. Cliquez sur le modèle à l'endroit voulu.",
+      "too_heavy": "Ce motif a trop de détails pour être réalisé ({{cells}} cellules). Utilisez moins de cellules, moins d'arrondi ou une zone plus petite.",
+      "too_many_cells": "C'est plus de cellules que nous ne pouvons en réaliser. Utilisez {{max}} cellules ou moins.",
+      "bad_cells": "Le nombre de cellules doit être d'au moins 2.",
+      "thin_lines": "Les lignes ne font que {{width}} mm de large, ce qui est plus fin que ce que l'imprimante peut déposer ({{min}} mm). Élargissez les lignes."
+    },
+    "repair": {
+      "bad_input": "Ce modèle ne peut pas être réparé tel quel. Choisissez un autre fichier ou demandez-nous de l'aide.",
+      "groups_unsupported": "Ce fichier décrit ses parties de façon incohérente, il ne peut donc pas être réparé. Exportez-le à nouveau depuis votre logiciel 3D, ou demandez-nous de l'aide.",
+      "hole_too_big": "Certains trous restent ouverts : ils dépassent {{max}} arêtes (le plus grand en a {{largest}}).",
+      "hole_skipped": "Certains trous n'ont pas pu être bouchés, car leur bord se croise ou est trop tordu. Ils restent ouverts.",
+      "still_open": "Le modèle n'est toujours pas un solide fermé. Réparez-le dans votre logiciel 3D ou choisissez un autre fichier."
+    },
+    "deform": {
+      "may_fold": "Cette forme est fortement déformée vers {{at}} % de la longueur : la surface est étirée {{stretch}} fois ou comprimée à {{pct}} %. Les parties fines peuvent mal s’imprimer. Utilisez une torsion, un effilement ou une courbure plus petits.",
+      "too_heavy": "La forme lisse demanderait {{count}} triangles, plus que les {{max}} autorisés. Utilisez un détail plus grossier ou un changement plus petit.",
+      "folds": "La forme se replie sur elle-même vers {{at}} % de la longueur. Utilisez un effilement, une courbure ou une vague plus petits.",
+      "bad_range": "Le début doit être plus bas que la fin.",
+      "bad_input": "Ce modèle ne peut pas être tordu, effilé, courbé ou ondulé tel quel.",
+      "bad_axes": "Le modèle ne peut pas être courbé le long de et vers le même axe. Choisissez deux axes différents.",
+      "bad_wavelength": "La longueur d’onde doit être supérieure à 0 mm.",
+      "wave_too_big": "La vague fait {{amplitude}} mm de haut, ce qui est grand pour un modèle dont le plus petit côté fait {{side}} mm. La surface peut se croiser. Utilisez une hauteur plus petite."
+    },
+    "parts": {
+      "nothing_chosen": "Choisissez la partie à traiter.",
+      "would_remove_everything": "Il ne resterait rien du modèle. Choisissez une autre partie.",
+      "groups_unsupported": "Ce fichier décrit ses parties de façon incohérente, donc on ne peut pas en retirer. Exportez-le de nouveau depuis votre logiciel 3D, ou demandez-nous de l’aide.",
+      "bad_input": "Il n’y a pas de modèle dont retirer une partie.",
+      "result_open": "Le modèle n’est plus un solide fermé après le retrait de « {{part}} ». Fermez l’ouverture dans les réglages de l’étape, ou réparez-le.",
+      "cap_skipped": "Certaines ouvertures n’ont pas pu être fermées, car leur bord se croise ou est trop tordu. Elles restent ouvertes."
+    },
+    "part": {
+      "unknown": "Ce modèle n’a pas de partie nommée « {{name}} ». Choisissez-en une qui existe à cette étape.",
+      "ambiguous": "« {{name}} » est à la fois un corps et une zone colorée. Choisissez celui que vous voulez dire."
+    },
+    "voronoi_shell": {
+      "bad_input": "La coque demande un solide fermé. Ajoutez d’abord une étape Réparer le maillage, ou réparez le fichier.",
+      "groups_unsupported": "Ce modèle a plusieurs corps séparés, et la coque ne peut en évider qu’un seul. Supprimez d’abord les autres parties, ou évidez-les une par une.",
+      "cells_too_small": "Il n’y a pas de place pour {{cells}} ouvertures avec des montants si larges. Utilisez {{max}} ouvertures ou moins, ou des montants plus fins.",
+      "too_heavy": "Cette coque a trop de détails pour être faite ici. Utilisez un détail plus grossier, moins d’ouvertures ou des montants plus épais.",
+      "empty_result": "Il ne reste rien du modèle. Utilisez une paroi plus fine, une ouverture plus petite ou des montants plus larges.",
+      "thin_ribs": "Les montants ne font que {{width}} mm de large, plus fin que ce que l’imprimante peut déposer ({{min}} mm). Rendez-les plus larges.",
+      "thin_wall": "La paroi ne fait que {{width}} mm d’épaisseur, plus fin que ce que l’imprimante peut déposer ({{min}} mm). Rendez-la plus épaisse.",
+      "thickness_too_big": "La paroi de {{thickness}} mm est plus épaisse que ce modèle n’est profond ({{depth}} mm), il n’y a donc pas de creux. Utilisez une paroi plus fine."
+    },
+    "texture": {
+      "may_self_intersect": "La texture est profonde pour la courbure de la surface ici ({{turned}} triangles retournés, {{tight}} endroits serrés). Elle peut se croiser et mal s’imprimer. Utilisez une profondeur plus petite ou un motif plus grand.",
+      "too_heavy": "Cette texture demanderait {{count}} triangles (arêtes de {{edge}} mm), plus que les {{max}} permis. Utilisez un détail plus grossier, un motif plus grand ou texturez seulement une partie.",
+      "bad_input": "Ce modèle ne peut pas être texturé tel quel.",
+      "no_image": "Choisissez une image pour la texture.",
+      "image_unsupported": "Cette image ne peut pas être lue. Utilisez un PNG, ou un JPEG dans un navigateur qui peut le décoder.",
+      "image_too_large": "Cette image est trop grande. Utilisez-en une d’au plus 8192 pixels de côté."
+    },
+    "smooth": {
+      "thin_features": "Le lissage a déplacé la surface jusqu’à {{move}} mm et changé le volume de {{change}} %. Les parties fines ont pu s’user. Utilisez une force plus faible, moins de passes ou une limite de déplacement.",
+      "bad_input": "Il n’y a rien à lisser : le modèle est vide."
+    },
+    "recipe": {
+      "not_json": "Ce fichier n’est pas une recette (ce n’est pas du texte lisible).",
+      "not_a_recipe": "Ce fichier n’est pas une recette AtelierMesh.",
+      "version_newer": "Cette recette a été créée avec une version plus récente d’AtelierMesh. Mettez l’application à jour pour l’utiliser.",
+      "too_large": "Ce fichier de recette est trop volumineux.",
+      "field": "Cette recette a un champ manquant ou erroné ({{field}}).",
+      "too_many_steps": "Cette recette a trop d’étapes (au plus {{max}}).",
+      "steps_invalid": "Les étapes de cette recette ne sont pas valides.",
+      "unsafe_key": "Cette recette contient un nom non autorisé.",
+      "bad_asset": "Une image ou un dessin de cette recette n’est pas valide.",
+      "assets_too_large": "Les images de cette recette sont trop volumineuses."
+    },
+    "hollow": {
+      "bad_input": "Évider demande un solide fermé. Ajoutez d'abord une étape Réparer le maillage, ou réparez le fichier.",
+      "groups_unsupported": "Ce modèle a des corps qui ne peuvent pas être évidés : ils doivent couvrir tout le modèle, aucun ne doit découper, et avec une ouverture il ne peut y avoir qu'un seul corps. Séparez ou supprimez d'abord des parties.",
+      "too_heavy": "Ce modèle est trop grand pour être évidé avec cette paroi et ce niveau de détail. Utilisez moins de détail ou une paroi plus épaisse.",
+      "thin_walls": "La paroi ne fait que {{width}} mm, moins que ce que l'imprimante peut déposer ({{min}} mm). Épaississez-la.",
+      "thickness_too_big": "La paroi de {{thickness}} mm est plus épaisse que ce modèle n'est profond ({{depth}} mm), il n'y a donc pas de place pour un creux. Le modèle reste tel quel. Utilisez une paroi plus fine.",
+      "outer_remeshed": "Avec une ouverture, l'extérieur est refait à partir du modèle : ses triangles sont nouveaux (la forme est la même). Sans ouverture, l'extérieur reste exactement tel quel."
+    },
+    "printcheck": {
+      "not_closed": "La surface n'est pas un solide fermé : {{open_edges}} arêtes ouvertes, {{shared_edges}} arêtes partagées par trois triangles ou plus, {{bad_edges}} arêtes orientées à l'envers. Un trancheur peut le refuser ou l'imprimer de travers. Ajoutez d'abord une étape Réparer le maillage.",
+      "islands": "Le modèle compte {{shells}} pièces séparées ; la plus petite mesure {{smallest}} mm. Une pièce qui n'est pas attachée flotte et ne s'imprime pas.",
+      "thin_walls": "Des parois plus fines que {{min}} mm sur {{percent}} % de la surface (la plus fine : {{thinnest}} mm). Elles risquent de ne pas s'imprimer ou de casser. Épaississez-les.",
+      "thin_features": "Des plots, tiges ou pointes plus fins que {{min}} mm dans toutes les directions (le plus fin : {{thinnest}} mm). Ils peuvent casser ou ne pas s'imprimer.",
+      "narrow_gaps": "Des espaces plus étroits que {{min}} mm (le plus étroit : {{narrowest}} mm) sur {{percent}} % de la surface. Ils vont se refermer. Élargissez-les.",
+      "needs_support": "{{percent}} % de la surface ({{area}} mm²) penche de plus de {{angle}}° et a besoin de supports. Tournez le modèle ou acceptez les supports.",
+      "long_bridges": "Des toits plats jusqu'à {{widest}} mm de large, plus de {{max}} mm. Ils s'affaissent sans support.",
+      "tiny_base": "Seuls {{area}} mm² du modèle reposent à plat sur le plateau. Il peut ne pas adhérer ou basculer. Ajoutez une base plate ou une bordure.",
+      "too_tall": "Le modèle est {{ratio}} fois plus haut ({{height}} mm) que large ({{width}} mm). Il peut vaciller ou basculer pendant l'impression.",
+      "too_big_for_bed": "Le modèle ({{x}} × {{y}} × {{z}} mm) ne tient pas dans le volume d'impression ({{bed_x}} × {{bed_y}} × {{bed_z}} mm) tel qu'il est posé. Essayez de le tourner autour de l'axe vertical ou de le réduire.",
+      "floating_body": "Une partie du modèle flotte au-dessus du plateau sans rien en dessous ({{bodies}} pièce(s) séparée(s) ; la plus basse est à {{gap}} mm). L'imprimante commencerait dans le vide : cela ne s'imprimera pas tel quel. Reliez-la au modèle ou imprimez-la séparément.",
+      "island": "Une partie du modèle commence dans le vide, à {{height}} mm au-dessus du plateau, sans rien en dessous ({{area}} mm² dans sa première couche). Elle est reliée au reste plus haut, mais l'imprimante n'a rien sur quoi imprimer à cet endroit : cela ne s'imprimera pas tel quel. Ajoutez des supports dans votre trancheur, ou tournez le modèle pour que cette partie ne commence pas dans le vide.",
+      "island_turn": "Une partie du modèle commence dans le vide, à {{height}} mm au-dessus du plateau, sans rien en dessous ({{area}} mm² dans sa première couche). Elle est reliée au reste plus haut, mais l'imprimante n'a rien sur quoi imprimer à cet endroit : cela ne s'imprimera pas tel quel. Ajoutez des supports dans votre trancheur, ou tournez le modèle pour que la face plate soit en bas (l'étape « Orienter pour l'impression » le fait) : ainsi, le surplomb passe de {{from_area}} mm² à {{to_area}} mm².",
+      "overhang": "{{regions}} zone(s) de {{area}} mm² au total ({{percent}} % de la surface) penchent de plus de {{angle}}° ; la plus grande fait {{largest}} mm², à {{height}} mm au-dessus du plateau. Il faudra des supports ou une autre orientation. Ajoutez des supports dans votre trancheur, ou tournez le modèle.",
+      "overhang_turn": "{{regions}} zone(s) de {{area}} mm² au total ({{percent}} % de la surface) penchent de plus de {{angle}}° ; la plus grande fait {{largest}} mm², à {{height}} mm au-dessus du plateau. Il faudra des supports ou une autre orientation. Tournez le modèle pour que la face plate soit en bas (l'étape « Orienter pour l'impression » le fait) : ainsi, le surplomb passe de {{from_area}} mm² à {{to_area}} mm². Ou ajoutez des supports dans votre trancheur.",
+      "bridge": "Un toit plat de {{widest}} mm de large, à {{height}} mm au-dessus du plateau, franchit plus de {{max}} mm et s'affaissera sans support. Ajoutez des supports dans votre trancheur, ou tournez le modèle.",
+      "bridge_turn": "Un toit plat de {{widest}} mm de large, à {{height}} mm au-dessus du plateau, franchit plus de {{max}} mm et s'affaissera sans support. Tournez le modèle pour que la face plate soit en bas (l'étape « Orienter pour l'impression » le fait) : ainsi, le surplomb passe de {{from_area}} mm² à {{to_area}} mm². Ou ajoutez des supports dans votre trancheur."
+    },
+    "holes": {
+      "no_placement": "Le trou n’a pas encore de position sur le modèle. Cliquez sur le modèle à l’endroit voulu.",
+      "bad_input": "On ne peut percer qu’un solide fermé. Ajoutez d’abord une étape Réparer le maillage.",
+      "groups_unsupported": "Ce modèle a plusieurs corps séparés et on ne peut percer que dans un seul. Supprimez d’abord les autres parties ou percez un corps à la fois.",
+      "misses_model": "Le trou ne touche pas le modèle. Déplacez-le sur le modèle.",
+      "breaches": "Ce trou traverserait une partie qui n’est pas « {{part}} ». Donnez-lui une profondeur pour qu’il reste à l’intérieur, ou choisissez une autre partie.",
+      "too_big": "Le trou est plus grand que la partie : il enlèverait tout le modèle. Rendez-le plus petit.",
+      "too_heavy": "Le trou touche trop de triangles pour être percé ici ({{triangles}}). Rendez-le plus petit ou réduisez d’abord le modèle.",
+      "not_robust": "Le trou n’a pas pu être percé proprement à cet endroit exact. Déplacez-le un peu (un dixième de millimètre suffit) ou changez sa taille.",
+      "thin_wall": "Il ne reste que {{width}} mm de paroi sous le fond du trou ; il en faut au moins {{min}} mm pour bien imprimer. Rendez le trou moins profond."
+    },
+    "fonts": {
+      "unavailable": "Cette application ne peut pas produire de contours de lettres pour un plugin.",
+      "bad_options": "Le plugin a demandé des contours de lettres avec des réglages inutilisables."
+    },
+    "store": {
+      "_any": "Un élément enregistré est inutilisable. Vérifiez son nom et son contenu.",
+      "bad_entry": "« {{name}} » ne peut plus être lu. Remplacez-le par un nouveau fichier.",
+      "name_taken": "« {{name}} » est déjà le nom d’un élément importé. Choisissez un autre nom."
+    }
+  },
+  "ops": {
+    "emboss": {
+      "params": {
+        "svg_mode": {
+          "label": "Utiliser",
+          "help": "Remplissage utilise les zones remplies du dessin. Ligne utilise seulement les contours, à la largeur du fichier.",
+          "options": {
+            "fill": "Remplissage",
+            "line": "Ligne"
+          }
+        },
+        "mode": {
+          "options": {
+            "flat": "À plat (couleur seulement)"
+          }
+        },
+        "walls_segment": {
+          "label": "Partie des parois",
+          "help": "Les parois latérales des lettres ont leur propre partie, pour une autre couleur. Vide : les parois partagent la partie de la surface."
+        },
+        "segment": {
+          "label": "Partie de la surface",
+          "help": "Le dessus des lettres en relief, le fond des lettres gravées, ou la zone colorée à plat."
+        }
+      },
+      "sections": {
+        "main": "Texte, taille et position",
+        "text": "Police et mise en page",
+        "shape": "Forme",
+        "advanced": "Avancé"
+      }
+    },
+    "emboss_svg": {
+      "params": {
+        "shape": {
+          "label": "Dessin",
+          "help": "Un dessin conservé dans le projet. Importez un fichier SVG pour en créer un."
+        },
+        "mode": {
+          "options": {
+            "flat": "À plat (couleur seulement)"
+          },
+          "label": "Relief"
+        },
+        "walls_segment": {
+          "label": "Partie des parois",
+          "help": "Les parois latérales du dessin ont leur propre partie, pour une autre couleur. Vide : les parois partagent la partie de la surface."
+        },
+        "segment": {
+          "label": "Partie de la surface",
+          "help": "Le dessus d’un dessin en relief, le fond d’un dessin gravé, ou la zone colorée à plat."
+        },
+        "size": {
+          "label": "Taille",
+          "help": "La hauteur du dessin sur le modèle."
+        }
+      },
+      "sections": {
+        "main": "Dessin, taille et position",
+        "text": "Options du dessin",
+        "shape": "Forme",
+        "advanced": "Avancé"
+      }
+    },
+    "low_poly": {
+      "title": "Low poly",
+      "sections": {
+        "detail": "Détail",
+        "look": "Aspect",
+        "facets": "Facettes",
+        "shape": "Forme",
+        "colours": "Couleurs"
+      },
+      "params": {
+        "triangles": {
+          "label": "Triangles",
+          "help": "Nombre de triangles du modèle low poly. Moins de triangles donne de plus grandes facettes."
+        },
+        "sharpness": {
+          "label": "Netteté",
+          "help": "Les arêtes plus vives que cet angle restent des plis nets. Un angle plus faible garde plus d'arêtes, donc le modèle paraît plus facetté."
+        },
+        "crystallise": {
+          "label": "Cristalliser",
+          "help": "Tire les coins vers les plans de la surface d'origine : les facettes deviennent plus plates et les coins plus nets. 0 désactive."
+        },
+        "keep_borders": {
+          "label": "Garder les bords ouverts",
+          "help": "Conserve le contour là où le modèle a des bords ouverts. Sans effet sur un modèle fermé."
+        },
+        "triangles_mode": {
+          "label": "Quantité",
+          "help": "Automatique cherche le moins de triangles dont la forme a besoin. Un nombre fixe vous laisse choisir.",
+          "options": {
+            "auto": "Automatique",
+            "fixed": "Nombre fixe"
+          }
+        },
+        "detail": {
+          "label": "Détail",
+          "help": "Fidélité du résultat à l'original. Bas est audacieux et artistique, haut reste proche de l'original."
+        },
+        "facet_size": {
+          "label": "Taille des facettes",
+          "help": "La longueur approximative des arêtes des facettes : la surface est redécoupée en triangles plats d’environ cette taille, comme une tasse low-poly faite main."
+        },
+        "jitter": {
+          "label": "Décalage",
+          "help": "Jusqu’où chaque coin d’une facette peut avancer ou reculer, au hasard. 0 donne une surface low-poly régulière."
+        },
+        "shift": {
+          "label": "Latéral",
+          "help": "Jusqu’où chaque coin peut aussi bouger de côté, en part de la taille des facettes."
+        },
+        "seed": {
+          "label": "Graine",
+          "help": "Un autre nombre donne d’autres facettes ; le même nombre donne les mêmes."
+        },
+        "inside": {
+          "label": "Intérieur",
+          "help": "Pour un vase ou une tasse. Suivre : l’intérieur de la paroi bouge avec l’extérieur, la paroi garde son épaisseur. Lisse : l’intérieur reste tel quel. Un modèle plein n’a pas d’intérieur et reste plein.",
+          "options": {
+            "follow": "Suivre",
+            "smooth": "Lisse"
+          }
+        },
+        "wall": {
+          "label": "Paroi minimale",
+          "help": "Un coin qui recule ne laisse jamais moins que ceci jusqu’à l’autre côté d’une paroi."
+        },
+        "plain_bottom": {
+          "label": "Bas lisse",
+          "help": "Garde la partie la plus basse du modèle lisse, sur cette hauteur en mm (0 : aucune) : elle est redécoupée comme le reste, mais ses coins ne bougent pas, et elle se termine par une arête horizontale droite."
+        },
+        "plain_top": {
+          "label": "Haut lisse",
+          "help": "Garde la partie la plus haute du modèle lisse, sur cette hauteur en mm (0 : aucune) : elle est redécoupée comme le reste, mais ses coins ne bougent pas, et elle se termine par une arête horizontale droite."
+        },
+        "facet_colours": {
+          "label": "Couleurs",
+          "help": "Une couleur ; deux couleurs alternées (les facettes voisines diffèrent quand c’est possible) ; ou des couleurs au hasard dans une palette. Chaque couleur est un segment à part, prêt pour une impression multicolore. Une couleur garde les couleurs que le modèle avait déjà.",
+          "options": {
+            "one": "Une",
+            "alternating": "Alternées",
+            "random": "Au hasard"
+          }
+        },
+        "palette_size": {
+          "label": "Palette",
+          "help": "Le nombre de couleurs parmi lesquelles les facettes au hasard choisissent."
+        },
+        "colour_1": {
+          "label": "Couleur 1",
+          "help": "La première couleur des facettes (aussi la couleur d’un modèle sans couleurs)."
+        },
+        "colour_2": {
+          "label": "Couleur 2",
+          "help": "La deuxième couleur des facettes."
+        },
+        "colour_3": {
+          "label": "Couleur 3",
+          "help": "La troisième couleur des facettes."
+        },
+        "colour_4": {
+          "label": "Couleur 4",
+          "help": "La quatrième couleur des facettes."
+        },
+        "style": {
+          "label": "Style",
+          "help": "Réduire : peu de grandes facettes qui suivent la forme. Facettes régulières : une mosaïque de triangles de même taille avec un décalage aléatoire vers l’intérieur et l’extérieur, comme une tasse low poly faite à la main.",
+          "options": {
+            "reduce": "Réduire",
+            "facets": "Facettes régulières"
+          }
+        }
+      }
+    },
+    "voronoi": {
+      "title": "Motif de Voronoï",
+      "sections": {
+        "region": "Zone",
+        "pattern": "Motif",
+        "shape": "Forme",
+        "advanced": "Avancé"
+      },
+      "params": {
+        "region": {
+          "label": "Forme de la zone",
+          "help": "Le motif remplit un rectangle ou un cercle autour de l'endroit où vous le placez.",
+          "options": {
+            "rectangle": "Rectangle",
+            "circle": "Cercle"
+          }
+        },
+        "width": {
+          "label": "Largeur",
+          "help": "Largeur de la zone."
+        },
+        "height_area": {
+          "label": "Hauteur",
+          "help": "Hauteur de la zone."
+        },
+        "radius": {
+          "label": "Rayon",
+          "help": "Rayon du cercle."
+        },
+        "margin": {
+          "label": "Marge",
+          "help": "Espace entre le motif et le bord de la zone."
+        },
+        "cells": {
+          "label": "Cellules",
+          "help": "Environ combien de cellules compte le motif. Plus de cellules donnent des cellules plus petites et plus fines."
+        },
+        "seed": {
+          "label": "Numéro du motif",
+          "help": "Chaque numéro donne un autre motif. Le même numéro donne toujours le même motif."
+        },
+        "irregularity": {
+          "label": "Irrégularité",
+          "help": "0 donne des cellules régulières, en nid d'abeille. 1 donne des cellules sauvages et inégales."
+        },
+        "line_width": {
+          "label": "Épaisseur des lignes",
+          "help": "Largeur des lignes entre les cellules."
+        },
+        "fill": {
+          "label": "Cellules au lieu de lignes",
+          "help": "Les cellules elles-mêmes forment la figure, avec un espace d'une épaisseur de ligne entre elles."
+        },
+        "rounding": {
+          "label": "Coins arrondis",
+          "help": "Arrondit les coins des cellules. 0 les garde vifs."
+        },
+        "mode": {
+          "options": {
+            "flat": "À plat (couleur seulement)"
+          }
+        },
+        "segment": {
+          "label": "Partie de surface",
+          "help": "Le dessus des lignes en relief, le fond des lignes gravées, ou la zone colorée à plat."
+        },
+        "walls_segment": {
+          "label": "Partie des parois",
+          "help": "Les parois latérales ont leur propre partie, pour pouvoir avoir une autre couleur. Vide : les parois partagent la partie de surface."
+        }
+      }
+    },
+    "repair_mesh": {
+      "title": "Réparer le maillage",
+      "sections": {
+        "fix": "Réparations"
+      },
+      "params": {
+        "weld": {
+          "label": "Fusionner les points à moins de",
+          "help": "Les points plus proches que cette distance deviennent un seul point. 0 désactive."
+        },
+        "non_manifold": {
+          "label": "Arêtes avec trop de faces",
+          "options": {
+            "split": "Les séparer",
+            "remove": "Les supprimer",
+            "off": "Les laisser"
+          },
+          "help": "Une arête appartient à exactement deux triangles. S'il y en a plus, les triangles en trop sont séparés ou supprimés."
+        },
+        "fix_normals": {
+          "label": "Orienter la surface vers l'extérieur",
+          "help": "Retourne les triangles qui sont à l'envers, pour que le modèle soit un solide."
+        },
+        "min_island": {
+          "label": "Supprimer les petits morceaux isolés",
+          "help": "Les morceaux plus petits que cette part du plus grand disparaissent. Les morceaux de moins de quatre triangles disparaissent toujours. 0 garde tout."
+        },
+        "max_hole": {
+          "label": "Boucher les trous jusqu'à",
+          "help": "Le nombre d'arêtes autour du trou. Les trous plus grands restent ouverts. 0 ne bouche rien."
+        }
+      }
+    },
+    "twist": {
+      "title": "Torsion",
+      "sections": {
+        "shape": "Forme",
+        "axis": "Axe",
+        "range": "Plage",
+        "detail": "Détail"
+      },
+      "params": {
+        "angle": {
+          "label": "Torsion",
+          "help": "De combien le haut tourne par rapport au bas. Un angle négatif tourne dans l'autre sens."
+        },
+        "easing": {
+          "label": "Progression",
+          "help": "Régulière tourne partout à la même vitesse. Douce commence et finit en douceur.",
+          "options": {
+            "linear": "Régulière",
+            "smooth": "Douce"
+          }
+        },
+        "axis": {
+          "label": "Axe",
+          "help": "La direction le long de laquelle le modèle est tordu. Z est vers le haut.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (haut)"
+          }
+        },
+        "center": {
+          "label": "Centre",
+          "options": {
+            "bbox_center": "Milieu du modèle",
+            "origin": "Origine",
+            "point": "Un point"
+          }
+        },
+        "center_point": {
+          "label": "Point central"
+        },
+        "from": {
+          "label": "Début",
+          "help": "Où la torsion commence, en part de la hauteur. En dessous, le modèle reste tel quel."
+        },
+        "to": {
+          "label": "Fin",
+          "help": "Où la torsion se termine. Au-dessus, le modèle est tourné en bloc."
+        },
+        "detail": {
+          "label": "Lissage",
+          "help": "À quel point la surface est découpée pour suivre la torsion. Plus fin est plus lisse mais plus lourd.",
+          "options": {
+            "auto": "Automatique",
+            "fine": "Fin",
+            "coarse": "Grossier"
+          }
+        },
+        "max_triangles": {
+          "label": "Résultat maximal",
+          "help": "L'étape s'arrête si le résultat avait plus de triangles que cela."
+        }
+      }
+    },
+    "taper": {
+      "title": "Effilage",
+      "sections": {
+        "shape": "Forme",
+        "axis": "Axe",
+        "range": "Plage",
+        "detail": "Détail"
+      },
+      "params": {
+        "scale_end": {
+          "label": "Taille à la fin",
+          "help": "La taille du haut par rapport au bas. 0,5 le rend deux fois moins large."
+        },
+        "uniform": {
+          "label": "Direction",
+          "help": "Quels côtés rétrécissent. Le premier et le deuxième des deux axes qui ne sont pas l'axe.",
+          "options": {
+            "both": "Les deux",
+            "x": "Le premier seulement",
+            "y": "Le deuxième seulement"
+          }
+        },
+        "easing": {
+          "label": "Progression",
+          "help": "Régulière change la taille partout au même rythme. Douce commence et finit en douceur.",
+          "options": {
+            "linear": "Régulière",
+            "smooth": "Douce"
+          }
+        },
+        "axis": {
+          "label": "Axe",
+          "help": "La direction le long de laquelle le modèle est effilé. Z est vers le haut.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (haut)"
+          }
+        },
+        "center": {
+          "label": "Centre",
+          "options": {
+            "bbox_center": "Milieu du modèle",
+            "origin": "Origine",
+            "point": "Un point"
+          }
+        },
+        "center_point": {
+          "label": "Point central"
+        },
+        "from": {
+          "label": "Début",
+          "help": "Où l'effilage commence, en part de la hauteur."
+        },
+        "to": {
+          "label": "Fin",
+          "help": "Où l'effilage se termine. Au-dessus, le modèle garde sa taille finale."
+        },
+        "detail": {
+          "label": "Lissage",
+          "help": "À quel point la surface est découpée pour suivre l'effilage. Plus fin est plus lisse mais plus lourd.",
+          "options": {
+            "auto": "Automatique",
+            "fine": "Fin",
+            "coarse": "Grossier"
+          }
+        },
+        "max_triangles": {
+          "label": "Résultat maximal",
+          "help": "L'étape s'arrête si le résultat avait plus de triangles que cela."
+        }
+      }
+    },
+    "delete_part": {
+      "title": "Supprimer une partie",
+      "sections": {
+        "part": "Partie",
+        "advanced": "Avancé"
+      },
+      "params": {
+        "part": {
+          "label": "Partie",
+          "help": "Choisissez un corps ou une zone colorée de la surface."
+        },
+        "close_hole": {
+          "label": "L’ouverture",
+          "options": {
+            "fill": "La fermer",
+            "none": "La laisser ouverte"
+          },
+          "help": "Supprimer une zone de la surface laisse une ouverture. Fermez-la avec un couvercle, ou laissez-la pour une étape suivante."
+        },
+        "remove_unused": {
+          "label": "Retirer les points inutilisés",
+          "help": "Les points qu’aucun triangle n’utilise plus sont supprimés."
+        }
+      }
+    },
+    "keep_part": {
+      "title": "Garder une seule partie",
+      "sections": {
+        "part": "Partie",
+        "advanced": "Avancé"
+      },
+      "params": {
+        "part": {
+          "label": "Partie",
+          "help": "Choisissez un corps ou une zone colorée de la surface."
+        },
+        "close_hole": {
+          "label": "L’ouverture",
+          "options": {
+            "fill": "La fermer",
+            "none": "La laisser ouverte"
+          },
+          "help": "Supprimer une zone de la surface laisse une ouverture. Fermez-la avec un couvercle, ou laissez-la pour une étape suivante."
+        },
+        "remove_unused": {
+          "label": "Retirer les points inutilisés",
+          "help": "Les points qu’aucun triangle n’utilise plus sont supprimés."
+        }
+      }
+    },
+    "voronoi_shell": {
+      "title": "Coque de Voronoï",
+      "sections": {
+        "shell": "Coque",
+        "pattern": "Motif",
+        "opening": "Ouverture",
+        "detail": "Détail"
+      },
+      "params": {
+        "beam_rounding": {
+          "label": "Arrondi des barres",
+          "help": "À quel point les barres sont rondes : 0 garde des arêtes vives, 1 les arrondit."
+        },
+        "thickness": {
+          "label": "Épaisseur de la paroi",
+          "help": "La profondeur de la paroi, mesurée de l’extérieur du modèle vers l’intérieur."
+        },
+        "rib_width": {
+          "label": "Largeur des montants",
+          "help": "La largeur des montants entre les ouvertures."
+        },
+        "smooth": {
+          "label": "Jonctions arrondies",
+          "help": "Arrondit les jonctions entre les montants. 0 les garde vives."
+        },
+        "cells": {
+          "label": "Ouvertures",
+          "help": "Environ combien d’ouvertures a la coque. Plus d’ouvertures, ce sont de plus petites."
+        },
+        "seed": {
+          "label": "Numéro du motif",
+          "help": "Chaque numéro donne un autre motif. Le même numéro donne toujours le même motif."
+        },
+        "irregularity": {
+          "label": "Irrégularité",
+          "help": "0 donne des ouvertures régulières, en nid d’abeille. 1 en donne de sauvages et inégales."
+        },
+        "opening": {
+          "label": "Ouverture",
+          "help": "Une ouverture ronde le long de l’axe vertical (Z), par le haut et/ou par le bas.",
+          "options": {
+            "none": "Aucune",
+            "bottom": "Bas",
+            "top": "Haut",
+            "both": "Les deux"
+          }
+        },
+        "opening_diameter": {
+          "label": "Diamètre de l’ouverture"
+        },
+        "detail": {
+          "label": "Détail",
+          "help": "Automatique utilise une grille d’un tiers du montant ou de la paroi le plus fin. Grossier est plus rapide, fin est plus lisse.",
+          "options": {
+            "auto": "Automatique",
+            "fine": "Fin",
+            "extra_fine": "Extra fin",
+            "coarse": "Grossier"
+          }
+        },
+        "max_triangles": {
+          "label": "Limite de triangles",
+          "help": "Si la coque a plus de triangles, ils sont réduits."
+        }
+      }
+    },
+    "texture": {
+      "title": "Texture de surface",
+      "sections": {
+        "texture": "Texture",
+        "pattern": "Motif",
+        "mapping": "Application",
+        "region": "Zone",
+        "detail": "Détail"
+      },
+      "params": {
+        "pattern": {
+          "label": "Motif",
+          "help": "La forme de la texture.",
+          "options": {
+            "knurl": "Losanges (moleté)",
+            "ridges": "Stries",
+            "waves": "Vagues",
+            "dots": "Points",
+            "hex_dots": "Points, hexagonaux",
+            "hexagons": "Hexagones",
+            "bricks": "Briques",
+            "weave": "Tissage",
+            "grid": "Lignes de grille",
+            "noise": "Bruit",
+            "leather": "Cuir",
+            "wood": "Fil du bois",
+            "stipple": "Pointillé",
+            "image": "Image"
+          }
+        },
+        "amplitude": {
+          "label": "Profondeur",
+          "help": "De combien la surface bouge. Un nombre négatif creuse."
+        },
+        "scale": {
+          "label": "Taille du motif",
+          "help": "La taille d’une répétition du motif."
+        },
+        "image": {
+          "label": "Image",
+          "help": "Un PNG ou un JPEG. Clair est haut, sombre est bas."
+        },
+        "tiling": {
+          "label": "Placement",
+          "options": {
+            "tile": "Répéter",
+            "fit": "Une fois"
+          }
+        },
+        "invert": {
+          "label": "Inverser",
+          "help": "Échanger haut et bas."
+        },
+        "seed": {
+          "label": "Graine",
+          "help": "Un autre nombre donne un autre motif aléatoire."
+        },
+        "roughness": {
+          "label": "Rugosité",
+          "help": "Combien le détail fin se voit."
+        },
+        "octaves": {
+          "label": "Couches",
+          "help": "Le nombre de couches de détail du bruit."
+        },
+        "fill": {
+          "label": "Couverture",
+          "help": "La part de chaque cellule que prend la partie en relief."
+        },
+        "offset": {
+          "label": "Niveau zéro",
+          "help": "0 monte depuis la surface, 1 creuse, 0,5 fait les deux."
+        },
+        "mapping": {
+          "label": "Enroulement",
+          "help": "La façon dont le motif est posé sur le modèle.",
+          "options": {
+            "triplanar": "Triplanaire",
+            "planar": "Plat",
+            "cylindrical": "Cylindre",
+            "spherical": "Sphère",
+            "box": "Boîte"
+          }
+        },
+        "axis": {
+          "label": "Axe",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (vertical)"
+          }
+        },
+        "blend": {
+          "label": "Netteté des raccords",
+          "help": "La netteté avec laquelle les côtés de l’enroulement se rejoignent. Plus haut est plus net."
+        },
+        "rotation": {
+          "label": "Rotation"
+        },
+        "offset_u": {
+          "label": "Décaler sur le côté"
+        },
+        "offset_v": {
+          "label": "Décaler vers le haut"
+        },
+        "region": {
+          "label": "Seulement sur",
+          "help": "Texturer seulement cette partie. Vide : tout le modèle."
+        },
+        "skip_bottom": {
+          "label": "Laisser le dessous lisse",
+          "help": "Les faces tournées vers le bas (à moins de 20 degrés de l’horizontale) ne reçoivent pas de texture, pour que la pièce repose à plat sur le plateau."
+        },
+        "edge_falloff": {
+          "label": "Atténuation près des bords",
+          "help": "La texture s’efface en pente droite à cette distance d’un bord vif et du bord de la partie, pour que les bords restent nets. 0 mène le motif jusqu’au bord."
+        },
+        "segment": {
+          "label": "Partie colorée",
+          "help": "Donner cette partie colorée aux triangles texturés, pour l’impression multicolore."
+        },
+        "detail": {
+          "label": "Détail",
+          "help": "La finesse du découpage de la surface pour suivre le motif. Plus fin est plus net mais plus lourd.",
+          "options": {
+            "auto": "Automatique",
+            "fine": "Fin",
+            "coarse": "Grossier"
+          }
+        },
+        "smooth_normals": {
+          "label": "Directions lissées",
+          "help": "Déplacer la surface selon des directions lissées, pour que les bords vifs ne se déchirent pas."
+        },
+        "max_triangles": {
+          "label": "Plus grand résultat",
+          "help": "L’étape s’arrête si le résultat avait plus de triangles."
+        }
+      }
+    },
+    "smooth": {
+      "title": "Lisser la surface",
+      "sections": {
+        "shape": "Lissage",
+        "part": "Une partie seulement",
+        "advanced": "Avancé"
+      },
+      "params": {
+        "strength": {
+          "label": "Force",
+          "help": "Combien chaque passe lisse. 0 ne change rien."
+        },
+        "iterations": {
+          "label": "Passes",
+          "help": "Combien de passes. Plus de passes lissent de plus larges bosses."
+        },
+        "keep_edges": {
+          "label": "Garder les arêtes plus vives que",
+          "help": "Les arêtes où la surface tourne de plus que cet angle restent nettes (elles ne sont lissées que sur leur longueur). 180 lisse tout."
+        },
+        "part": {
+          "label": "Partie",
+          "help": "Ne lisser que cette partie. Laissez vide pour lisser tout le modèle."
+        },
+        "falloff": {
+          "label": "Fondu",
+          "help": "Sur quelle distance depuis le bord de la partie le lissage s’installe progressivement."
+        },
+        "keep_volume": {
+          "label": "Garder la taille",
+          "help": "Activé : le modèle ne rétrécit pas (lissage de Taubin). Désactivé : lissage simple, qui rétrécit un peu le modèle à chaque passe."
+        },
+        "keep_borders": {
+          "label": "Garder les bords ouverts",
+          "help": "Garde le bord d’un maillage ouvert en place."
+        },
+        "max_move": {
+          "label": "Déplacement maximal",
+          "help": "De combien un point peut au plus se déplacer. 0 veut dire sans limite."
+        }
+      }
+    },
+    "hollow": {
+      "title": "Évider",
+      "sections": {
+        "wall": "Paroi",
+        "opening": "Ouverture",
+        "detail": "Détail"
+      },
+      "params": {
+        "thickness": {
+          "label": "Épaisseur de la paroi",
+          "help": "Profondeur de la paroi, mesurée vers l'intérieur depuis l'extérieur du modèle."
+        },
+        "smooth": {
+          "label": "Lisser l'intérieur",
+          "help": "Dans quelle mesure l'intérieur est lissé. 0 garde ce que donne la grille."
+        },
+        "opening": {
+          "label": "Ouverture",
+          "help": "Une ouverture ronde le long de l'axe vertical (Z) à travers le dessus et/ou le dessous, pour vider, aérer ou y placer quelque chose. Avec une ouverture, l'extérieur est refait.",
+          "options": {
+            "none": "Aucune",
+            "bottom": "Dessous",
+            "top": "Dessus",
+            "both": "Les deux"
+          }
+        },
+        "opening_diameter": {
+          "label": "Diamètre de l'ouverture"
+        },
+        "detail": {
+          "label": "Détail",
+          "help": "Automatique utilise une grille d'un tiers de la paroi. Grossier est plus rapide, fin est plus lisse.",
+          "options": {
+            "auto": "Automatique",
+            "fine": "Fin",
+            "coarse": "Grossier"
+          }
+        },
+        "max_triangles": {
+          "label": "Limite de triangles",
+          "help": "Si le résultat a plus de triangles, il est réduit (seulement avec une ouverture ; sinon l'extérieur n'est jamais réduit)."
+        },
+        "cavity_segment": {
+          "label": "Partie de l'intérieur",
+          "help": "Le nom de la partie donnée à la surface intérieure. Vide : pas de partie propre."
+        }
+      }
+    },
+    "bend": {
+      "title": "Courber",
+      "sections": {
+        "shape": "Courbure",
+        "axis": "Direction",
+        "range": "Plage",
+        "detail": "Détail"
+      },
+      "params": {
+        "angle": {
+          "label": "Courbure",
+          "help": "De combien le modèle est courbé sur la plage. Un angle négatif le courbe dans l’autre sens."
+        },
+        "axis": {
+          "label": "Le long de",
+          "help": "La direction dans laquelle le modèle est long : la courbure suit cette direction. Z est le haut.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (haut)"
+          }
+        },
+        "bend_axis": {
+          "label": "Se plie vers",
+          "help": "La direction vers laquelle le modèle se plie. Ce doit être un autre axe que le précédent.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (haut)"
+          }
+        },
+        "center": {
+          "label": "Centre",
+          "options": {
+            "bbox_center": "Milieu du modèle",
+            "origin": "Origine",
+            "point": "Un point"
+          }
+        },
+        "center_point": {
+          "label": "Point central"
+        },
+        "from": {
+          "label": "Début",
+          "help": "Où commence la courbure, en part de la longueur. En dessous, le modèle reste tel quel."
+        },
+        "to": {
+          "label": "Fin",
+          "help": "Où se termine la courbure. Au-delà, le modèle continue tout droit."
+        },
+        "detail": {
+          "label": "Finesse",
+          "help": "À quel point la surface est découpée finement pour suivre la courbure. Plus fin est plus lisse mais plus lourd.",
+          "options": {
+            "auto": "Automatique",
+            "fine": "Fin",
+            "extra_fine": "Extra fin",
+            "coarse": "Grossier"
+          }
+        },
+        "max_triangles": {
+          "label": "Résultat maximal",
+          "help": "L’étape s’arrête si le résultat avait plus de triangles que cela."
+        }
+      }
+    },
+    "wave": {
+      "title": "Vague",
+      "sections": {
+        "shape": "Vague",
+        "axis": "Direction",
+        "range": "Plage",
+        "detail": "Détail"
+      },
+      "params": {
+        "amplitude": {
+          "label": "Hauteur",
+          "help": "De combien la surface monte et descend."
+        },
+        "wavelength": {
+          "label": "Longueur d’onde",
+          "help": "La distance d’une crête à la suivante."
+        },
+        "phase": {
+          "label": "Début de la vague",
+          "help": "Où dans la vague la plage commence."
+        },
+        "axis": {
+          "label": "Se propage le long de",
+          "help": "La direction dans laquelle la vague se propage.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (haut)"
+          }
+        },
+        "direction": {
+          "label": "Bouge",
+          "help": "La direction dans laquelle la surface bouge. « Le long de la surface » suit la forme.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (haut)",
+            "normal": "Le long de la surface"
+          }
+        },
+        "falloff": {
+          "label": "Atténuation aux extrémités",
+          "help": "La longueur sur laquelle la vague apparaît et disparaît aux extrémités de la plage. 0 commence à pleine hauteur."
+        },
+        "from": {
+          "label": "Début",
+          "help": "Où la vague commence sur la longueur, en part de la longueur."
+        },
+        "to": {
+          "label": "Fin",
+          "help": "Où la vague se termine."
+        },
+        "detail": {
+          "label": "Finesse",
+          "help": "À quel point la surface est découpée finement pour suivre la vague. Plus fin est plus lisse mais plus lourd.",
+          "options": {
+            "auto": "Automatique",
+            "fine": "Fin",
+            "extra_fine": "Extra fin",
+            "coarse": "Grossier"
+          }
+        },
+        "max_triangles": {
+          "label": "Résultat maximal",
+          "help": "L’étape s’arrête si le résultat avait plus de triangles que cela."
+        }
+      }
+    },
+    "ripple": {
+      "title": "Ondulation",
+      "sections": {
+        "shape": "Ondulation",
+        "axis": "Centre",
+        "detail": "Détail"
+      },
+      "params": {
+        "amplitude": {
+          "label": "Hauteur",
+          "help": "De combien la surface monte et descend."
+        },
+        "wavelength": {
+          "label": "Distance entre anneaux",
+          "help": "La distance d’un anneau au suivant."
+        },
+        "decay": {
+          "label": "Atténuation",
+          "help": "La vitesse à laquelle les anneaux s’estompent depuis le centre. 0 les garde identiques partout."
+        },
+        "radius": {
+          "label": "Portée",
+          "help": "Les anneaux s’arrêtent à cette distance du centre. 0 signifie sans limite."
+        },
+        "phase": {
+          "label": "Début de la vague",
+          "help": "Où dans la vague le centre commence. 90 commence par une crête lisse au milieu ; 0 commence par une pointe."
+        },
+        "axis": {
+          "label": "Bouge le long de",
+          "help": "La direction dans laquelle la surface bouge. Les anneaux sont dans les deux autres directions.",
+          "options": {
+            "x": "X",
+            "y": "Y",
+            "z": "Z (haut)"
+          }
+        },
+        "center": {
+          "label": "Centre",
+          "options": {
+            "bbox_center": "Milieu du modèle",
+            "origin": "Origine",
+            "point": "Un point"
+          }
+        },
+        "center_point": {
+          "label": "Point central"
+        },
+        "detail": {
+          "label": "Finesse",
+          "help": "À quel point la surface est découpée finement pour suivre les anneaux. Plus fin est plus lisse mais plus lourd.",
+          "options": {
+            "auto": "Automatique",
+            "fine": "Fin",
+            "extra_fine": "Extra fin",
+            "coarse": "Grossier"
+          }
+        },
+        "max_triangles": {
+          "label": "Résultat maximal",
+          "help": "L’étape s’arrête si le résultat avait plus de triangles que cela."
+        }
+      }
+    },
+    "printability": {
+      "title": "Contrôle d'imprimabilité",
+      "sections": {
+        "printer": "Imprimante",
+        "limits": "Limites"
+      },
+      "params": {
+        "process": {
+          "label": "Type d'imprimante",
+          "help": "Fixe la paroi, le détail et l'espace les plus fins qui s'impriment bien.",
+          "options": {
+            "fdm": "FDM (filament)",
+            "resin": "Résine"
+          }
+        },
+        "nozzle": {
+          "label": "Buse",
+          "help": "La largeur du trait que dépose la buse."
+        },
+        "layer_height": {
+          "label": "Hauteur de couche",
+          "help": "Les détails plus fins que quatre couches ne ressortent pas."
+        },
+        "bed": {
+          "label": "Volume d'impression",
+          "help": "Le volume d'impression. Mettez 0 sur un axe pour l'ignorer."
+        },
+        "min_wall": {
+          "label": "Paroi la plus fine",
+          "help": "La paroi la plus fine qui s'imprime. 0 la choisit selon l'imprimante (deux fois la buse ; 0,6 mm pour la résine)."
+        },
+        "min_feature": {
+          "label": "Plot ou pointe le plus fin",
+          "help": "Le plot, la tige ou la pointe le plus fin. 0 le choisit selon l'imprimante."
+        },
+        "min_gap": {
+          "label": "Espace le plus étroit",
+          "help": "L'espace le plus étroit qui reste ouvert. 0 le choisit selon l'imprimante."
+        },
+        "overhang_angle": {
+          "label": "Angle de surplomb",
+          "help": "Les faces qui penchent plus que cela ont besoin de supports."
+        },
+        "bridge_length": {
+          "label": "Pont le plus long",
+          "help": "Le toit plat le plus long qui s'imprime sans support."
+        },
+        "min_overhang_area": {
+          "label": "Plus petit surplomb à soutenir",
+          "help": "Un surplomb incliné plus petit que cela n'entre pas dans le conseil d'ajouter des supports."
+        }
+      }
+    },
+    "cut_hole": {
+      "params": {
+        "placement": {
+          "label": "Position",
+          "help": "Cliquez sur le modèle à l’endroit du trou."
+        },
+        "shape": {
+          "label": "Forme",
+          "help": "La forme du trou.",
+          "options": {
+            "round": "Rond",
+            "slot": "Rainure",
+            "square": "Carré"
+          }
+        },
+        "diameter": {
+          "label": "Taille",
+          "help": "Rond : le diamètre. Rainure et carré : la largeur."
+        },
+        "length": {
+          "label": "Longueur",
+          "help": "La longueur de la rainure ou du carré."
+        },
+        "depth": {
+          "label": "Profondeur",
+          "help": "La profondeur du trou à partir de l’endroit choisi. 0 perce de part en part."
+        },
+        "countersink": {
+          "label": "Tête de vis",
+          "help": "Une ouverture plus large en haut, pour une tête de vis : un cône (fraisé) ou un cylindre (lamage).",
+          "options": {
+            "none": "Aucune",
+            "countersink": "Fraisé",
+            "counterbore": "Lamage"
+          }
+        },
+        "countersink_diameter": {
+          "label": "Largeur de l’ouverture",
+          "help": "La largeur de l’ouverture plus large à la surface."
+        },
+        "countersink_depth": {
+          "label": "Profondeur de la partie large",
+          "help": "La profondeur de la partie plus large. Un fraisage fait 90 degrés et prend la profondeur nécessaire."
+        },
+        "corner_radius": {
+          "label": "Coins arrondis",
+          "help": "L’arrondi des coins du carré."
+        },
+        "rotation": {
+          "label": "Tourner",
+          "help": "Fait tourner la rainure ou le carré autour de son axe, en plus de la direction de la position."
+        },
+        "axis": {
+          "label": "Direction du trou",
+          "help": "Le sens du trou. Surface : droit dans la surface à l’endroit choisi. X, Y ou Z : le long de cet axe, vers l’intérieur du modèle.",
+          "options": {
+            "normal": "Surface",
+            "x": "X",
+            "y": "Y",
+            "z": "Z"
+          }
+        },
+        "min_wall": {
+          "label": "Paroi minimale",
+          "help": "La paroi la plus fine qui peut rester sous le fond d’un trou borgne. Une paroi plus fine donne un avertissement."
+        },
+        "part": {
+          "label": "Partie à percer",
+          "help": "Percez seulement cette partie de la surface. Vide : tout le modèle."
+        }
+      },
+      "sections": {
+        "hole": "Trou",
+        "edge": "Tête de vis",
+        "more": "Plus"
+      }
+    },
+    "resize": {
+      "params": {
+        "mode": {
+          "options": {
+            "percent": "Pourcentage",
+            "target_size": "Taille cible",
+            "per_axis": "Par direction"
+          }
+        },
+        "keep_proportions": {
+          "label": "Garder les proportions",
+          "help": "Activé : les autres directions suivent. Désactivé : seule la direction choisie change (un étirement)."
+        },
+        "percent_x": {
+          "label": "Taille selon X",
+          "help": "La taille du modèle selon X, en pourcentage."
+        },
+        "percent_y": {
+          "label": "Taille selon Y",
+          "help": "La taille du modèle selon Y, en pourcentage."
+        },
+        "percent_z": {
+          "label": "Taille selon Z",
+          "help": "La taille du modèle selon Z, en pourcentage."
+        }
+      }
+    },
+    "decimate": {
+      "title": "Réduire les triangles",
+      "params": {
+        "mode": {
+          "label": "Méthode",
+          "help": "Supprimer tous les triangles qui ne changent pas la forme au-delà de la qualité demandée, ou réduire jusqu’à un nombre de triangles choisi.",
+          "options": {
+            "quality": "Aussi petit que possible",
+            "target": "Nombre cible"
+          }
+        },
+        "tolerance": {
+          "label": "Qualité",
+          "help": "De combien la surface peut bouger. Un nombre plus petit garde plus de triangles et plus de détail."
+        },
+        "target_triangles": {
+          "label": "Triangles visés",
+          "help": "Le nombre de triangles à atteindre."
+        },
+        "max_error": {
+          "label": "Plus grand déplacement",
+          "help": "0 signifie aucune limite au déplacement de la surface."
+        }
+      }
+    },
+    "store": {
+      "params": {
+        "name": {
+          "label": "Stocker sous",
+          "help": "Garde le résultat des étapes ci-dessus sous ce nom. Les étapes suivantes peuvent le reprendre."
+        }
+      }
+    },
+    "load": {
+      "params": {
+        "name": {
+          "label": "Élément stocké",
+          "help": "Reprend un modèle ou un dessin stocké comme celui sur lequel travaillent les étapes suivantes."
+        }
+      }
+    }
+  },
+  "order": {
+    "again": "Relancée après l'étape {{n}}",
+    "analyseLast": "{{step}} ne fait que vérifier le modèle ; elle ne change rien. Elle regarde le modèle tel qu'il est à ce point : elle fonctionne mieux en dernier.",
+    "blockedNote": "Les étapes en dessous attendent que ce soit résolu. Elles gardent leur résultat précédent.",
+    "decimateAfterText": "Cette étape vient après le texte : elle lisse les lettres. Les bords sont conservés, mais les détails fins sont perdus. Elle fonctionne mieux au-dessus des étapes de texte.",
+    "drag": "Faites glisser pour changer l'ordre",
+    "file": "Votre fichier",
+    "fileMeta": "{{name}} · {{w}} mm de large",
+    "hint": "Les étapes s'exécutent de haut en bas. Chaque étape travaille sur le résultat de l'étape au-dessus.",
+    "hintBadge": "Conseil sur l'ordre",
+    "keepExact": "Garder la hauteur exacte des lettres",
+    "keepExactHint": "Place Taille en premier. Le texte reste au même endroit de la pièce.",
+    "moveAboveText": "Placer au-dessus du texte",
+    "moveDown": "Descendre",
+    "moveToEnd": "Placer à la fin",
+    "moveUp": "Monter",
+    "moved": "« {{step}} » est maintenant l'étape {{n}}. Les étapes en dessous sont relancées.",
+    "orientLast": "L'orientation automatique ne fait que tourner le modèle. Gardez-la en dernier, pour que les étapes précédentes travaillent sur le modèle tel que vous le voyez.",
+    "partDropped": "La partie « {{part}} » a été créée par une étape précédente, mais une étape intermédiaire la supprime.",
+    "partMissing": "Aucun fichier ni étape précédente ne crée la partie « {{part}} ».",
+    "progress": "Étape {{n}} sur {{total}}",
+    "result": "Résultat",
+    "rotateAfterText": "Cette étape vient après le texte : elle fait pivoter les lettres avec le modèle. Elle fonctionne mieux au-dessus des étapes de texte.",
+    "scaledBelow": "L'étape {{n}} (Taille) vient après et redimensionne ces lettres : elles mesureront {{size}} mm.",
+    "scalesAbove": "Cette étape vient après {{count}} étapes de texte : elle redimensionne aussi leurs lettres. « {{text}} » mesure {{size}} mm au lieu de {{orig}} mm.",
+    "step": "Étape {{n}}",
+    "waitsFor": "Attend l'étape {{n}}",
+    "repairFirst": "La réparation fonctionne mieux en première étape, pour que chaque autre étape parte d'un modèle sain.",
+    "moveToStart": "Placer au début",
+    "deformAfterText": "Cette étape déforme la surface sur laquelle se trouve le texte, donc les lettres changent de forme avec elle. Elle fonctionne mieux au-dessus des étapes de texte.",
+    "reduceBeforeDeform": "Réduire les triangles avant une torsion ou un effilage donne à l'étape de forme une surface plus rugueuse à suivre. Mieux vaut la mettre en dessous.",
+    "moveBelowDeform": "Placer sous l'étape de forme",
+    "partsFirst": "Supprimer ou garder une partie fonctionne mieux au début, pour que les autres étapes ne traitent que ce qui reste.",
+    "textureBeforeText": "Une texture couvre la surface où se trouve le texte, les lettres seraient donc rendues rugueuses. Cela marche mieux au-dessus des étapes de texte.",
+    "reduceAfterTexture": "Réduire les triangles après une texture la lisse. Cela marche mieux au-dessus de l’étape de texture.",
+    "moveAboveTexture": "Placer au-dessus de la texture",
+    "smoothAfterText": "Lisser après le texte ou un motif arrondit leurs arêtes. C’est mieux au-dessus d’eux.",
+    "smoothBeforeSurface": "Le lissage uniformise ce que font les étapes en dessous (une coque, une texture, une torsion). C’est mieux en dessous d’elles.",
+    "moveBelowShaping": "Placer en dessous",
+    "hollowLast": "Évider travaille sur l'extérieur fait par les étapes au-dessus. Du texte, une texture ou un motif ajouté après toucherait la paroi. Mieux vaut le placer sous eux.",
+    "moveBelowThese": "Placer en dessous",
+    "hollowBeforeShell": "Une coque Voronoï au-dessus de cette étape est faite à partir du solide entier, pas de la pièce évidée. Placez cette étape au-dessus.",
+    "moveAboveShell": "Placer au-dessus de la coque",
+    "cheeseLast": "Les trous sont percés dans la surface faite par les étapes au-dessus. Du texte, une texture, un motif ou une torsion ajoutés après cette étape seraient coupés par les trous ou les déformeraient. Placez-la sous ces étapes.",
+    "cheeseBeforeSmooth": "Une étape Lisser la surface au-dessus de celle-ci ne peut pas arrondir les bords des trous. Placez cette étape au-dessus.",
+    "moveAboveSmooth": "Placer au-dessus du lissage",
+    "holesLast": "Le trou traverse la surface créée par les étapes au-dessus. Du texte, une texture, un motif, des trous ou une torsion ajoutés après cette étape rencontreraient le trou ou le déformeraient. Placez cette étape en dessous.",
+    "holesBeforeSmooth": "Une étape Lisser la surface au-dessus de celle-ci n’arrondirait pas le bord du trou. Placez cette étape au-dessus.",
+    "customerTyped": "Les clients voient et règlent la hauteur avant cette mise à l'échelle : ils verraient {{orig}} mm pour des lettres imprimées à {{size}} mm."
+  },
+  "overlay": {
+    "backToEditor": "Retour à l'éditeur",
+    "close": "Fermer sans modifications",
+    "done": "Terminé",
+    "dragHint": "Faites glisser le texte sur le modèle ou utilisez les flèches.",
+    "calculating": "Calcul en cours…",
+    "finishing": "Finalisation…",
+    "nothingOpen": "Rien n'est encore personnalisable. Cochez au moins un champ comme « Personnalisable ».",
+    "previewBanner": "Aperçu client : voici exactement ce que le client peut modifier, dans vos limites.",
+    "reset": "Réinitialiser",
+    "resetDone": "Retour au modèle de la boutique",
+    "steps": "Ce que vous pouvez modifier",
+    "title": "Personnaliser"
+  },
+  "page": {
+    "loading": "Ouverture du modèle…"
+  },
+  "personalise": {
+    "badge": "Personnalisable",
+    "hint": "Cochez les champs personnalisables. Une étape avec au moins un champ coché est une étape personnalisable.",
+    "offBody": "Cela retire la personnalisation de {{count}} étapes. Leurs valeurs actuelles restent inchangées.",
+    "offCancel": "Laisser activé",
+    "offConfirm": "Désactiver",
+    "offTitle": "Désactiver le modèle personnalisé ?",
+    "switch": "Modèle personnalisé",
+    "switchHint": "Permet de rendre des champs personnalisables, dans les limites que vous fixez.",
+    "tick": "Personnalisable",
+    "tickField": "{{field}} : personnalisable"
+  },
+  "place": {
+    "hint": "Cliquez sur le modèle à l'endroit du texte",
+    "hintTouch": "Touchez le modèle à l'endroit du texte",
+    "move": "Cliquez sur le modèle pour y déplacer le texte"
+  },
+  "plugins": {
+    "add": "Ajouter une extension",
+    "addButton": "Ajouter une extension",
+    "builtIn": "Intégrée",
+    "builtInHint": "Les étapes intégrées peuvent être désactivées, pas supprimées.",
+    "close": "Fermer",
+    "empty": "Pas encore d'extensions. Les extensions ajoutent des étapes comme texte, redimensionnement ou orientation automatique.",
+    "failedNote": "Arrêtée sur une erreur lors de la dernière exécution",
+    "inUse": "Utilisée par {{count}} étapes",
+    "off": "Désactivée",
+    "on": "Activée",
+    "remove": "Retirer",
+    "removeBlocked": "Supprimez d'abord les étapes qui l'utilisent.",
+    "title": "Extensions",
+    "version": "Version {{version}}",
+    "crashed": "Désactivé parce qu’il a cessé de fonctionner : {{message}}",
+    "switchedOff": "Désactivé",
+    "switchOn": "Activer",
+    "switchOff": "Désactiver",
+    "loadFailed": "Le plugin « {{name}} » n’a pas pu démarrer et n’a pas été ajouté : {{message}}",
+    "build": {
+      "entryTitle": "Envie de créer votre propre extension ?",
+      "entryHint": "Un guide court, un exemple et un prompt pour votre agent IA.",
+      "open": "Créer votre propre extension",
+      "title": "Créer votre propre extension",
+      "back": "‹ Retour aux extensions",
+      "backToList": "Retour aux extensions",
+      "intro": "Une extension est un petit programme qui modifie un modèle : elle peut mettre un motif sur la surface, plier ou tordre une forme, la creuser ou la contrôler avant impression. Chacun peut en écrire une, et elle fonctionne dans AtelierMesh comme les étapes intégrées.",
+      "needTitle": "Ce qu’il vous faut",
+      "need1": "Un éditeur de texte, ou un agent de code qui écrit le code pour vous.",
+      "need2": "Node.js (npm n’est pas nécessaire ; Python 3 sait aussi empaqueter), pour tester et empaqueter l’extension.",
+      "need3": "Une idée de ce que l’extension doit faire, en mots simples.",
+      "stepsTitle": "Cinq étapes",
+      "step1": "Décrivez ce qu’elle fait en une ou deux phrases.",
+      "step2": "Partez de l’exemple du kit : copiez son dossier.",
+      "step3": "Écrivez le manifeste (nom, réglages et limites) et la fonction d’exécution (le code qui modifie le modèle).",
+      "step4": "Testez-la : l’exemple montre comment vérifier un résultat et qu’un modèle n’est jamais abîmé.",
+      "step5": "Empaquetez-la dans un seul fichier et chargez-la ici avec « Choisir un fichier d’extension ».",
+      "safeTitle": "Est-ce sûr ?",
+      "safe": "Une extension issue d’un fichier s’exécute dans un bac à sable : elle ne reçoit que le modèle sur lequel elle travaille et n’a pas de réseau. Une extension non signée demande d’abord votre accord. Vous pouvez faire confiance à la clé d’un signataire que vous connaissez sous « Signataires de confiance ».",
+      "guide": "Ouvrir le guide complet",
+      "newTab": "(s’ouvre dans un nouvel onglet)",
+      "copy": "Copier un prompt pour votre agent IA",
+      "example": "Télécharger l’exemple empaqueté (.amplugin)",
+      "copied": "Copié. Collez-le dans votre agent de code et complétez les parties entre {{doubles accolades}}.",
+      "manual": "Votre navigateur n’a pas voulu le copier. Sélectionnez le texte ci-dessous et copiez-le vous-même.",
+      "promptLabel": "Le prompt",
+      "kit": "Télécharger le kit d’extension (zip)",
+      "kitHint": "Le kit contient tout pour construire une extension sur votre ordinateur : le guide, le code source de l’exemple, les paquets et l’outil d’empaquetage. Rien ne s’installe depuis npm, hormis les outils habituels.",
+      "exampleHint": "L’exemple empaqueté sert seulement à essayer le chargeur : choisissez-le avec « Choisir un fichier d’extension ».",
+      "variant": "Quel prompt",
+      "withNpm": "Avec npm",
+      "withoutNpm": "Sans npm",
+      "noNpmHint": "Pas de npm ? Choisissez « Sans npm » : le prompt demande alors du JavaScript simple et utilise des outils qui ne demandent que Node, que Python 3, ou seulement un éditeur de texte."
+    },
+    "file": "Choisir un fichier d’extension",
+    "keys": "Signataires de confiance",
+    "signed": "Signé par {{signer}}",
+    "unsigned": "Non signé",
+    "unsignedShort": "non signé",
+    "licenseTitle": "Licence",
+    "contactWeb": "Site web",
+    "opensNewTab": "(s’ouvre dans un nouvel onglet)",
+    "stored": "Conservé dans ce navigateur ({{size}}, ajouté le {{date}})",
+    "updatesFrom": "Mises à jour depuis {{host}}",
+    "notStarted": "Conservé dans ce navigateur mais désactivé, car une vérification a échoué : {{reason}}",
+    "notStoredHere": "Ce navigateur ne conserve pas les plugins (une fenêtre privée ?). Ils fonctionnent jusqu’à la fermeture de la page, puis il faut les rajouter.",
+    "removeTitle": "Supprimer ce plugin ?",
+    "removeBody": "« {{name}} » sera supprimé de ce navigateur et son fichier conservé effacé. Vous pourrez rajouter le fichier plus tard.",
+    "removeCancel": "Le garder",
+    "removeConfirm": "Supprimer",
+    "checkUpdate": "Rechercher une mise à jour",
+    "checking": "Vérification…",
+    "copyLink": "Copier le lien",
+    "copied": "Lien copié",
+    "download": "Télécharger",
+    "approve": {
+      "title": "Ajouter ce plugin ?",
+      "replaceTitle": "Remplacer ce plugin ?",
+      "updateTitle": "Mettre à jour ce plugin ?",
+      "versions": "{{from}} → {{to}}",
+      "sameVersion": "Même numéro de version, mais le fichier diffère de celui installé.",
+      "unsigned": "Non signé : personne ne se porte garant de ce fichier.",
+      "sameSigner": "Signé par la même clé que la version installée.",
+      "lostSignature": "Attention : la version installée est signée, cette nouvelle version ne l’est pas.",
+      "otherSigner": "Attention : cette nouvelle version est signée par une autre clé que celle installée.",
+      "needs": "Nécessite : {{list}}",
+      "needsNothing": "Ne nécessite rien d’autre que modifier le modèle.",
+      "from": "Depuis : {{origin}}",
+      "cancel": "Annuler",
+      "add": "Ajouter",
+      "replace": "Remplacer",
+      "update": "Mettre à jour"
+    },
+    "loaded": "{{name}} {{version}} ajouté ({{how}}).",
+    "clashBuiltIn": "« {{name}} » a le même identifiant qu’un plugin intégré, qui ne peut pas être remplacé.",
+    "alreadyInstalled": "{{name}} {{version}} est déjà installé : c’est le même fichier.",
+    "cannotLoad": "Le plugin n’a pas pu être ajouté : {{message}}",
+    "cannotFetch": "Le plugin n’a pas pu être téléchargé : {{message}}",
+    "differentPlugin": "Ce paquet est un autre plugin (« {{name}} ») et n’a donc pas été installé.",
+    "upToDate": "{{name}} {{version}} est à jour.",
+    "updated": "{{name}} mis à jour de {{from}} à {{to}}.",
+    "updateFailed": "La mise à jour n’a pas été installée et la version actuelle reste : {{message}}",
+    "corsError": "Le serveur du plugin n’autorise pas cette page à le télécharger, ou il n’y a pas de connexion. Téléchargez le fichier vous-même puis choisissez-le : {{url}}",
+    "timeoutError": "Le serveur n’a pas répondu à temps : {{url}}",
+    "tooBigToStore": "Il fonctionne pour cette session mais n’est pas conservé : un plugin conservé fait au plus {{max}} Mo.",
+    "tooManyToStore": "Il fonctionne pour cette session mais n’est pas conservé : ce navigateur conserve au plus {{max}} plugins. Supprimez-en un d’abord.",
+    "viewLabel": "Afficher les plugins en",
+    "viewList": "Liste",
+    "viewGallery": "Galerie",
+    "details": "Détails",
+    "detailsHide": "Masquer les détails",
+    "imageType": "L’image d’exemple du plugin n’est pas un fichier PNG, JPEG ou WebP.",
+    "imageTooBig": "L’image d’exemple du plugin est trop lourde : 300 Ko au maximum.",
+    "imageDimensions": "L’image d’exemple du plugin a une taille non autorisée : au moins 200 px de large, au plus 1600 × 1200 px.",
+    "imageMissing": "Le plugin indique une image d’exemple (« {{path}} ») qui n’est pas dans le paquet.",
+    "catalog": {
+      "title": "Catalogue d’extensions",
+      "search": "Rechercher dans le catalogue",
+      "placeholder": "Nom, description ou licence",
+      "checking": "Vérification du catalogue…",
+      "unavailable": "Le catalogue n’est pas disponible ici.",
+      "retry": "Réessayer",
+      "from": "{{count}} extensions de {{host}}",
+      "count": "{{count}} extensions",
+      "matches": "{{count}} correspondant(s)",
+      "none": "Aucune extension ne correspond à votre recherche.",
+      "more": "Les {{count}} premiers sont affichés. Saisissez du texte pour affiner la liste.",
+      "install": "Installer",
+      "installed": "Installé {{version}}",
+      "updateTo": "Mettre à jour vers {{version}}",
+      "updateAvailable": "Mise à jour disponible : {{version}}",
+      "fetching": "Téléchargement…",
+      "mismatch": "Le fichier du catalogue n’est pas {{id}} {{version}} : il n’a donc pas été installé.",
+      "hashMismatch": "Le fichier téléchargé n’est pas celui que décrit le catalogue (la somme de contrôle diffère) : il n’a donc pas été installé.",
+      "installFailed": "Impossible d’obtenir l’extension depuis le catalogue : {{message}}",
+      "downloads_one": "1 téléchargement",
+      "downloads_other": "{{count}} téléchargements",
+      "replaces": "Remplace {{ids}}"
+    },
+    "back": "Retour aux extensions",
+    "replacedBy": "« {{name}} » dans le catalogue le remplace.",
+    "reload": {
+      "wrongFile": "Le fichier de cette adresse n’est pas l’extension {{id}} : il n’a donc pas été installé.",
+      "title": "Extensions manquantes",
+      "body": "Ce projet utilise des extensions qui ne sont pas installées ici. Le catalogue est essayé en premier. Une extension intégrée, ou chargée depuis un fichier, ne peut pas être récupérée.",
+      "saved": "Adresse enregistrée : {{host}}",
+      "noAddress": "Pas d’adresse enregistrée : seul le catalogue peut la fournir",
+      "skip": "Pas maintenant",
+      "load": "Les charger",
+      "outsideTitle": "Charger depuis une adresse externe ?",
+      "outsideBody": "{{id}} n’est pas dans le catalogue. Le projet indique qu’elle vient de {{host}}, un site extérieur à cette application. La charger de là ? Rien n’est installé sans votre accord.",
+      "outsideLoad": "Charger depuis {{host}}",
+      "done": "Chargé : {{list}}.",
+      "notLoaded": "Non chargé : {{list}}."
+    },
+    "missingTitleOne": "Cet exemple a besoin d’une extension",
+    "missingTitle": "Cet exemple a besoin de {{count}} extensions",
+    "missingText": "« {{name}} » utilise des extensions que vous n’avez pas encore.",
+    "fromCatalogue": "Du catalogue {{catalog}}",
+    "fromOutside": "D’une autre adresse : {{host}}",
+    "askedSeparately": "Nous vous demanderons séparément pour celle-ci.",
+    "installOpen": "Installer et ouvrir",
+    "openWithout": "Ouvrir quand même",
+    "openWithoutHint": "Les étapes qui ont besoin d’une extension manquante s’arrêtent avec un message tant qu’elle n’est pas installée.",
+    "outsideTitle": "Installer une extension depuis une adresse externe ?",
+    "outsideText": "{{plugin}} n’est pas dans le catalogue {{catalog}} : personne chez {{catalog}} ne l’a vérifiée. Les extensions exécutent du code dans votre navigateur.",
+    "outsideTrust": "Ne l’installez que si vous connaissez cette adresse et lui faites confiance.",
+    "outsideNo": "Ne pas installer",
+    "outsideYes": "Installer depuis cette adresse",
+    "outsideAfterNo": "Sinon, les étapes qui ont besoin de {{plugin}} s’arrêtent avec un message. {{other}} est installée depuis le catalogue dans tous les cas.",
+    "notInCatalogue": "Pas dans le catalogue",
+    "share": "Partager avec le catalogue",
+    "shareAsk": "Envoyer « {{name}} » au catalogue ? Un administrateur le vérifie avant sa publication. Tout le monde pourra ensuite l’installer.",
+    "shareSent": "Envoyé : « {{name}} » sera publié après vérification par un administrateur.",
+    "shareExists": "Cette version de « {{name}} » est déjà dans le catalogue.",
+    "shareRefused": "Le catalogue a refusé le paquet : {{reason}}"
+  },
+  "pos": {
+    "angle": "Angle en degrés",
+    "angleRange": "Entre {{min}}° et {{max}}°",
+    "direction": "Direction",
+    "down": "Vers le bas",
+    "gesture": "Glissez d'un doigt pour déplacer. Deux doigts : tourner et zoomer.",
+    "left": "Vers la gauche",
+    "move": "Déplacer le texte",
+    "moved": "Déplacé de {{mm}} mm par rapport à l'origine",
+    "reset": "Revenir à la position d'origine",
+    "right": "Vers la droite",
+    "up": "Vers le haut"
+  },
+  "project": {
+    "leave": "Quitter",
+    "leaveBody": "Vos modifications depuis le dernier enregistrement seront perdues.",
+    "leaveTitle": "Quitter sans enregistrer ?",
+    "notAProject": "Ce fichier n'est pas un projet AtelierMesh.",
+    "open": "Ouvrir un projet",
+    "save": "Enregistrer le projet",
+    "saveAs": "Enregistrer une copie",
+    "saved": "Projet enregistré",
+    "stay": "Rester",
+    "unsaved": "Modifications non enregistrées"
+  },
+  "redo": "Rétablir",
+  "result": {
+    "closed": "Volume fermé",
+    "save": "Enregistrer dans le devis",
+    "saved": "Enregistré dans votre devis",
+    "size": "{{x}} × {{y}} × {{z}} mm"
+  },
+  "sample": {
+    "keyring": "Porte-clés",
+    "nameTag": "Plaque nominative",
+    "plantLabel": "Étiquette de plante",
+    "nametag": "Plaque de nom",
+    "voronoi": "Carreau Voronoï",
+    "twist": "Pilier tordu",
+    "vase": "Vase effilé",
+    "plate": "Plaque 60 x 30 x 4",
+    "cylinder": "Cylindre r15 h40",
+    "twistname": "Nom tordu",
+    "voronoishell": "Coque de Voronoï",
+    "texblock": "Bloc texturé",
+    "hollowjar": "Pot évidé",
+    "bend": "Barre courbée",
+    "keyringtag": "Plaque de nom avec trou de porte-clés",
+    "standingbar": "Barre debout"
+  },
+  "save": {
+    "browser": "Enregistrer dans ce navigateur",
+    "browserHint": "Enregistrement automatique après chaque modification à partir de maintenant.",
+    "file": "Télécharger le fichier .amproj",
+    "fileHint": "Un fichier avec le modèle et toutes les étapes, à conserver ou partager.",
+    "name": "Nom",
+    "title": "Enregistrer la configuration"
+  },
+  "settings": {
+    "about": "À propos",
+    "addedPlugin": "ajouté",
+    "catalogAddress": "Adresse du catalogue d’extensions",
+    "catalogAddressHint": "Où le gestionnaire d’extensions cherche des extensions et des mises à jour. Laissez vide pour utiliser le catalogue de ce site. Utilisez une adresse https ou un chemin sur ce site.",
+    "close": "Fermer",
+    "installedPlugins": "Plugins installés",
+    "off": "Désactivé",
+    "on": "Activé",
+    "open": "Paramètres",
+    "plugins": "Extensions",
+    "showPersonalised": "Afficher l'option Modèle personnalisé",
+    "showPersonalisedHint": "Ajoute un interrupteur « Modèle personnalisé » à l'éditeur, pour les modèles qu'un client peut personnaliser. Désactivé par défaut.",
+    "title": "Paramètres",
+    "version": "version",
+    "licence": "Licence",
+    "maxColours": "Nombre maximal de couleurs",
+    "maxColoursHint": "Combien de filaments un modèle peut utiliser. Une imprimante avec moins d’emplacements demande un nombre plus bas.",
+    "general": "Général"
+  },
+  "sheet": {
+    "handle": "Abaisser le panneau"
+  },
+  "size": {
+    "depth": "Profondeur",
+    "height": "Hauteur des lettres",
+    "range": "Entre {{min}} et {{max}} mm"
+  },
+  "start": {
+    "body": "Importez un fichier 3D (STL ou 3MF) ou partez d'un de nos exemples.",
+    "drop": "Glissez votre fichier ici, ou cliquez pour parcourir",
+    "sample": "Choisir un exemple",
+    "title": "Ouvrez un modèle pour commencer",
+    "upload": "Importer un fichier"
+  },
+  "step": {
+    "op": {
+      "auto_orient": "Orientation automatique",
+      "decimate": "Réduire les triangles",
+      "low_poly": "Low poly",
+      "overhang": "Vérifier les surplombs",
+      "resize": "Taille",
+      "rotate": "Pivoter",
+      "svg": "SVG",
+      "text": "Texte",
+      "voronoi": "Motif de Voronoï",
+      "repair_mesh": "Réparer le maillage",
+      "twist": "Torsion",
+      "taper": "Effilage",
+      "delete_part": "Supprimer une partie",
+      "keep_part": "Garder une seule partie",
+      "voronoi_shell": "Coque de Voronoï",
+      "texture": "Texture de surface",
+      "smooth": "Lisser la surface",
+      "orient": "Orienter pour l'impression",
+      "hollow": "Évider",
+      "bend": "Courber",
+      "wave": "Vague",
+      "ripple": "Ondulation",
+      "printability": "Contrôle d'imprimabilité",
+      "cut_hole": "Percer un trou",
+      "store": "Stocker",
+      "load": "Charger"
+    },
+    "status": {
+      "blocked": "Attend une étape précédente",
+      "error": "Problème",
+      "off": "Désactivée",
+      "ok": "À jour",
+      "stale": "En attente",
+      "warning": "Avertissement",
+      "working": "En cours",
+      "cancelled": "Arrêté"
+    },
+    "summary": {
+      "decimate": "À {{pct}} % des triangles",
+      "orient": "Face plane en bas",
+      "resize": "{{w}} mm de large"
+    },
+    "name": "Nom",
+    "rename": "Renommer cette étape",
+    "unsupported": "Cette étape a un réglage que cette application ne sait pas encore afficher : {{types}}."
+  },
+  "store": {
+    "tab": "Stocké",
+    "tabMissing": "{{count}} manquant",
+    "title": "Stocké dans ce projet",
+    "import": "Importer…",
+    "kind": {
+      "drawing": "Dessin",
+      "model": "Modèle"
+    },
+    "size": {
+      "drawing_one": "1 tracé, {{points}} points",
+      "model": "{{triangles}} triangles",
+      "drawing_other": "{{paths}} tracés, {{points}} points"
+    },
+    "origin": {
+      "imported": "Importé",
+      "step": "Créé par l’étape {{n}}",
+      "original": "Le modèle avec lequel ce projet a commencé"
+    },
+    "usedBy": "Utilisé par {{steps}}",
+    "notUsed": "Non utilisé",
+    "stepN": "l’étape {{n}}",
+    "missing": "Manquant",
+    "neededBy": "Nécessaire à {{steps}}",
+    "edit": "Modifier",
+    "replace": "Remplacer…",
+    "delete": "Supprimer",
+    "goToStep": "Aller à l’étape {{n}}",
+    "producedNote": "Recréé à chaque exécution des étapes : on peut le voir, pas le modifier.",
+    "budget": "{{count}} sur {{max}} éléments · {{size}} sur {{maxSize}}",
+    "empty": "Rien de stocké pour l’instant. Importez un SVG pour l’utiliser dans une étape.",
+    "deleteTitle": "Supprimer « {{name}} » ?",
+    "deleteUsed_one": "{{steps}} utilise ce dessin. Ensuite, cette étape s’arrête avec « L’élément stocké n’existe plus » jusqu’à ce que vous choisissiez un autre dessin.",
+    "deleteUnused": "Aucune étape ne l’utilise.",
+    "deleteAnyway": "Supprimer quand même",
+    "cancel": "Annuler",
+    "limits": "Limites pour le dessin du client",
+    "limitShapes": "Formes au maximum",
+    "limitPoints": "Points au maximum",
+    "limitsHint": "Le dessin apporté par le client doit rester dans ces limites.",
+    "personalisable": "Personnalisable",
+    "personalisableHint": "Le client peut remplacer ce dessin par le sien.",
+    "field": {
+      "drawing": "Dessin"
+    },
+    "pick": {
+      "drawing": "Choisir un dessin",
+      "empty": "Choisissez d’abord un dessin",
+      "none": "Aucun dessin stocké pour l’instant.",
+      "label": "Dessins stockés",
+      "emptyAny": "Choisissez d’abord un élément stocké"
+    },
+    "chooseDrawing": "Choisir un dessin",
+    "importTitle": "Importer un SVG",
+    "keepAs": "Garder sous le nom",
+    "nameHint": "Minuscules, chiffres et _, jusqu’à 40 caractères. Les étapes utilisent ce nom.",
+    "use": "Utiliser",
+    "mode": {
+      "fill": "Remplissage",
+      "line": "Traits",
+      "fillHint": "Les zones remplies du dessin.",
+      "lineHint": "Les traits, à leur propre épaisseur."
+    },
+    "openPaths": "{{count}} tracés ouverts ne peuvent pas être remplis et sont ignorés.",
+    "keep": "Garder le dessin",
+    "chooseOther": "Choisir un autre fichier",
+    "err": {
+      "tooBig": "Ce fichier fait {{size}}. Le SVG le plus lourd accepté fait 2 Mo.",
+      "tooBigFix": "Ce sont souvent les images intégrées. Enregistrez-le sans, puis réessayez.",
+      "unsafe": "Ce SVG contient des scripts ou des liens vers d’autres fichiers, que nous n’acceptons pas.",
+      "unsafeFix": "Enregistrez-le en SVG simple (dans Inkscape : Enregistrer sous › SVG simple).",
+      "tooComplex": "Ce dessin compte {{count}} formes ; le maximum est {{max}}.",
+      "tooComplexFix": "Fusionnez ou simplifiez des formes dans votre logiciel de dessin, puis réessayez.",
+      "onlyStrokes": "Ce SVG ne contient que des traits : choisissez Traits.",
+      "onlyFills": "Ce SVG ne contient que des zones remplies : choisissez Remplissage.",
+      "nameTaken": "« {{name}} » existe déjà dans ce projet.",
+      "nameInvalid": "Utilisez seulement des minuscules, des chiffres et _, jusqu’à 40 caractères.",
+      "empty": "Ce fichier ne contient aucun dessin utilisable.",
+      "generic": "Ce fichier ne peut pas être importé."
+    },
+    "useLine": "Utiliser Traits",
+    "useFill": "Utiliser Remplissage",
+    "useName": "Utiliser « {{name}} »",
+    "replaceIt": "Remplacer l’ancien",
+    "cust": {
+      "change": "Changer le dessin",
+      "shop": "Le dessin de la boutique",
+      "yours": "Votre dessin",
+      "limits": "Un fichier SVG, au maximum {{shapes}} formes et {{points}} points.",
+      "back": "Reprendre le dessin de la boutique",
+      "err": {
+        "complex": "Votre dessin compte {{count}} formes ; ce modèle en accepte {{max}} au maximum. Essayez un dessin plus simple. Le dessin de la boutique reste en place.",
+        "wrongFile": "« {{file}} » n’est pas un dessin SVG. Choisissez un fichier qui se termine par .svg."
+      },
+      "size": "Taille",
+      "turn": "Pivoter",
+      "shapes_one": "1 forme",
+      "shapes_other": "{{count}} formes"
+    },
+    "storeAs": "Stocker sous",
+    "storeHint": "Garde le résultat des étapes {{from}} à {{to}} sous ce nom. Les étapes suivantes peuvent le charger.",
+    "storeSummary": "sous {{name}}",
+    "loadWhat": "Élément stocké",
+    "loadHint": "Reprend un modèle ou un dessin stocké, sur lequel les étapes suivantes travaillent.",
+    "problem": {
+      "noItem": "Choisissez d’abord un dessin.",
+      "missing": "L’élément stocké « {{name}} » n’existe plus. Choisissez-en un autre, ou importez-le à nouveau.",
+      "wrongKind": "« {{name}} » est un modèle ; cette étape a besoin d’un dessin.",
+      "budget": "Ce projet contient trop de données : {{size}} sur les {{max}} permis. Supprimez les éléments stockés inutilisés.",
+      "damaged": "« {{name}} » ne peut plus être lu. Remplacez-le par un nouveau fichier.",
+      "nameImported": "« {{name}} » est déjà le nom d’un élément importé. Choisissez un autre nom."
+    },
+    "editTitle": "Modifier le dessin",
+    "editSave": "Enregistrer le dessin",
+    "unsavedTitle": "Quitter sans enregistrer le dessin ?",
+    "unsavedBody": "Vos modifications de « {{name}} » seront perdues si vous quittez maintenant.",
+    "unsavedKeep": "Continuer",
+    "unsavedDiscard": "Abandonner les modifications",
+    "editSaved": "Dessin enregistré. Les étapes {{from}} à {{to}} sont relancées.",
+    "stepTitle": "Étape {{n}}",
+    "deleteUsed_other": "{{steps}} utilisent ce dessin. Ensuite, ces étapes s’arrêtent avec « L’élément stocké n’existe plus » jusqu’à ce que vous choisissiez un autre dessin.",
+    "sizeMm": "{{w}} × {{h}} mm",
+    "ignored": "{{count}} éléments ont été ignorés : {{elements}}",
+    "replaceTitle": "Remplacer « {{name}} »",
+    "replaceNote": "Les étapes qui l’utilisent suivent le nouveau dessin.",
+    "openStored": "Ouvrir l’onglet Stocké",
+    "about": "Dessins et modèles conservés dans ce projet. Les étapes les utilisent par leur nom.",
+    "alert_one": "Une étape a besoin d’un élément manquant.",
+    "alert_other": "Des étapes ont besoin de {{count}} éléments manquants.",
+    "tabLabel_zero": "Stocké, rien pour l’instant",
+    "tabLabel_one": "Stocké, 1 élément",
+    "tabLabel_other": "Stocké, {{count}} éléments",
+    "tabMissing_one": "1 manquant",
+    "tabMissing_other": "{{count}} manquants",
+    "originalNote": "Le modèle d’origine. Il ne peut être ni modifié ni supprimé. Une étape Charger portant ce nom le ramène à cet endroit des étapes."
+  },
+  "tab": {
+    "position": "Position",
+    "size": "Taille",
+    "text": "Texte"
+  },
+  "text": {
+    "align": "Alignement",
+    "alignCenter": "Centrer",
+    "alignLeft": "Aligner à gauche",
+    "alignRight": "Aligner à droite",
+    "engraved": "Gravé",
+    "font": "Police",
+    "letters": "Lettres",
+    "limit": "Jusqu'à {{lines}} lignes · {{chars}} caractères par ligne",
+    "raised": "En relief",
+    "wording": "Texte"
+  },
+  "undo": "Annuler",
+  "units": {
+    "back": "Choisir un autre fichier",
+    "confirmed": "Lu en pouces. Le modèle mesure maintenant :",
+    "continue": "Continuer",
+    "flag": "Cela ressemble à des pouces : lire en pouces ?",
+    "inch": "Pouces",
+    "label": "Unité du fichier",
+    "lead": "Les fichiers STL n'indiquent pas leur unité. Nous lisons celui-ci comme :",
+    "mm": "Millimètres",
+    "readAsInch": "Lire en pouces",
+    "size": "{{x}} × {{y}} × {{z}} mm",
+    "title": "Vérifiez la taille",
+    "undoInch": "Relire en millimètres"
+  },
+  "upload": {
+    "browse": "Choisir un fichier",
+    "drop": "Glissez votre fichier ici, ou cliquez pour parcourir",
+    "formatsA": "STL, 3MF ou .amproj · jusqu'à 50 Mo",
+    "formatsB": "STL ou 3MF · jusqu'à 50 Mo",
+    "leadA": "Partez d'un fichier STL ou 3MF, d'une configuration enregistrée ou d'un de nos exemples.",
+    "leadB": "Importez le fichier STL ou 3MF que vous voulez proposer comme modèle personnalisé.",
+    "open": "Ouvrir",
+    "recent": "Importés récemment",
+    "samples": "Exemples",
+    "saved": "Enregistré dans ce navigateur",
+    "savedAll": "Toutes les configurations enregistrées",
+    "savedEmpty": "Rien d'enregistré pour l'instant. Les configurations enregistrées restent dans ce navigateur.",
+    "title": "Importez votre modèle 3D",
+    "privacy": "Tout se passe dans votre navigateur. Vos fichiers ne sont jamais envoyés à un serveur, sauf si vous partagez explicitement un exemple."
+  },
+  "view": {
+    "3d": "3D",
+    "final": "Résultat final",
+    "front": "Face",
+    "label": "Vue",
+    "side": "Côté",
+    "top": "Dessus",
+    "upTo": "Jusqu'à cette étape",
+    "upToNote": "Modèle après l'étape {{n}} sur {{total}}",
+    "zoomIn": "Zoom avant",
+    "zoomOut": "Zoom arrière",
+    "rulerGroup": "Mesurer",
+    "ruler": "Règle",
+    "rulerHint": "Une règle en mm sur le plateau, le long de X et de Y, depuis le coin avant gauche du modèle"
+  },
+  "work": {
+    "auto_orient": "Recherche de la meilleure orientation…",
+    "collapse": "Simplification du modèle…",
+    "crystallise": "Affinage des facettes…",
+    "cut": "Découpe des lettres…",
+    "lastGood": "Le résultat précédent reste affiché.",
+    "other": "En cours…",
+    "overhang": "Vérification des surplombs…",
+    "resize": "Redimensionnement du modèle…",
+    "rotate": "Rotation du modèle…",
+    "sr": {
+      "busy": "En cours",
+      "done": "Terminé"
+    },
+    "stop": "Arrêter",
+    "text": "Formation des lettres…",
+    "unfold": "Placement du texte sur la surface…",
+    "upToDate": "À jour",
+    "pattern": "Dessin du motif…",
+    "step": "Étape {{n}} sur {{total}}",
+    "weld": "Fusion des points…",
+    "manifold": "Démêlage de la surface…",
+    "islands": "Suppression des morceaux isolés…",
+    "holes": "Fermeture des trous…",
+    "deform": "Mise en forme du modèle…",
+    "parts": "Retrait de la partie…",
+    "field": "Mesure de la paroi…",
+    "surface": "Construction de la surface…",
+    "subdivide": "Découpage de la surface…",
+    "displace": "Application de la texture…",
+    "smooth": "Lissage de la surface…",
+    "cavity": "Création de l'intérieur…",
+    "place": "Placement des trous…",
+    "printcheck": "Contrôle de l'imprimabilité…",
+    "hole_cut": "Perçage du trou…",
+    "hole_wall": "Fermeture de la paroi…"
+  },
+  "theme": {
+    "toggle": "Basculer entre clair et sombre"
+  },
+  "form": {
+    "main": "Principal",
+    "more": "Plus",
+    "settings": "Réglages"
+  },
+  "panel": {
+    "decrease": "Diminuer",
+    "increase": "Augmenter",
+    "notPicture": "Ce fichier n’est pas une image PNG, JPEG ou WebP.",
+    "notSvg": "Ce fichier n’est pas un dessin SVG.",
+    "choose": "Choisir…",
+    "place": "Placer sur le modèle",
+    "place_again": "Déplacer sur le modèle",
+    "placed": "Placé",
+    "not_placed": "Non placé",
+    "clear": "Effacer"
+  },
+  "loading": {
+    "read": "Lecture du fichier…",
+    "unpack": "Décompression du fichier…",
+    "parse": "Lecture du modèle…",
+    "check": "Vérification du modèle…",
+    "prepare": "Préparation de la vue…",
+    "simplify": "Simplification du modèle…",
+    "bytes": "{{done}} sur {{total}} Mo"
+  },
+  "welcome": {
+    "title": "Bienvenue dans AtelierMesh",
+    "lead": "Ajoutez un nom, un motif ou une texture à un modèle 3D, directement dans votre navigateur.",
+    "open": "Partez de votre propre fichier STL ou 3MF, ou ouvrez un des exemples.",
+    "steps": "Ajoutez des étapes : texte, textures, motifs, torsions et plus encore. Chaque étape travaille sur le résultat de la précédente, et vous le voyez en direct.",
+    "private": "Tout se passe dans votre navigateur. Vos fichiers ne quittent jamais votre appareil.",
+    "save": "Enregistrez votre travail dans ce navigateur ou dans un fichier, et exportez un 3MF ou un STL pour imprimer.",
+    "start": "Commencer",
+    "newsOnlyTitle": "Nouveautés d’AtelierMesh",
+    "newTitle": "Nouveau dans cette version",
+    "gotIt": "Compris",
+    "news": {
+      "v0_3_0": {
+        "svg": "SVG sur la surface : placez votre propre logo ou dessin SVG sur un modèle. Il est enregistré avec votre projet et garde sa taille réelle.",
+        "menu": "Un meilleur menu Ajouter une étape : recherche, étapes groupées par extension, vos étapes récentes et, sur téléphone, un volet en bas.",
+        "store": "Les étapes Stocker et Charger (sous Plus) gardent le résultat de certaines étapes sous un nom et le rechargent plus tard."
+      }
+    },
+    "newIn": "Nouveau dans {{version}}"
+  },
+  "recipe": {
+    "saveTitle": "Enregistrer les étapes comme recette",
+    "saveLead": "Une recette garde les {{count}} étapes que vous avez maintenant, dans cet ordre, sans le modèle. Ajoutez-la plus tard à un autre modèle.",
+    "name": "Nom",
+    "untitled": "Ma recette",
+    "download": "Télécharger le fichier",
+    "saveBrowser": "Enregistrer dans ce navigateur",
+    "applyTitle": "Appliquer une recette",
+    "applyLead": "Les étapes d’une recette sont ajoutées après vos étapes, dans leur propre ordre.",
+    "noneSaved": "Rien d’enregistré pour l’instant. Utilisez « Enregistrer comme recette… » dans le menu Ajouter une étape.",
+    "openFile": "Ouvrir un fichier de recette…",
+    "use": "Utiliser",
+    "stepCount": "{{count}} étapes",
+    "missingPlugins": "Cette recette utilise des plug-ins qui ne sont pas installés ici : {{plugins}}. Ces étapes sont laissées de côté.",
+    "back": "Retour",
+    "addTheRest": "Ajouter les autres étapes",
+    "cancel": "Annuler",
+    "badFile": "Ce fichier n’est pas une recette utilisable.",
+    "gone": "Cette recette est introuvable.",
+    "nothing": "Aucune étape de cette recette ne peut s’exécuter ici.",
+    "saved": "Recette enregistrée dans ce navigateur.",
+    "downloaded": "Recette téléchargée.",
+    "deleteAsk": "Supprimer la recette « {{name}} » de ce navigateur ?",
+    "applyMenu": "Appliquer une recette…",
+    "saveMenu": "Enregistrer comme recette…"
+  },
+  "printcheck": {
+    "title": "Contrôle d'imprimabilité",
+    "verdict": {
+      "good": "Bon à imprimer",
+      "fix_recommended": "Correction conseillée",
+      "not_printable": "Non imprimable tel quel"
+    },
+    "score": "Score {{score}} sur 100",
+    "show": "Montrer en 3D",
+    "hide": "Masquer en 3D",
+    "showLast": "Mettez cette étape en dernier pour voir les endroits en 3D.",
+    "passed": "{{count}} contrôles réussis",
+    "note": "Vérifié sur {{samples}} points de la surface, pour {{process}} avec une limite de paroi de {{wall}} mm.",
+    "severity": {
+      "ok": "Correct",
+      "info": "Remarque",
+      "warning": "Avertissement",
+      "error": "Problème"
+    },
+    "ok": {
+      "not_closed": "Un solide fermé.",
+      "islands": "Une seule pièce.",
+      "thin_walls": "Les parois sont assez épaisses.",
+      "thin_features": "Aucun plot ou tige trop fin.",
+      "narrow_gaps": "Les espaces sont assez larges.",
+      "needs_support": "Aucun surplomb au-delà de {{angle}}°.",
+      "long_bridges": "Aucun pont long.",
+      "tiny_base": "Une base plate de {{area}} mm² sur le plateau.",
+      "too_tall": "Hauteur {{height}} mm pour une largeur de {{width}} mm.",
+      "too_big_for_bed": "Il tient dans le volume d'impression.",
+      "floating_body": "Aucune partie ne flotte au-dessus du plateau.",
+      "island": "Rien ne commence dans le vide.",
+      "overhang": "Aucun surplomb qui demande des supports.",
+      "bridge": "Aucun pont trop long.",
+      "needles": "Aucun triangle en aiguille.",
+      "detail": "{{count}} triangles."
+    },
+    "info": {
+      "islands": "{{shells}} pièces séparées (la plus petite : {{smallest}} mm). Cela convient si toutes reposent sur le plateau.",
+      "thin_walls": "Quelques endroits plus fins que {{min}} mm (le plus fin : {{thinnest}} mm).",
+      "thin_features": "Quelques plots ou tiges fins (le plus fin : {{thinnest}} mm).",
+      "narrow_gaps": "Quelques espaces étroits (le plus étroit : {{narrowest}} mm).",
+      "needs_support": "Un peu de surplomb ({{area}} mm², {{percent}} % de la surface).",
+      "needles": "{{count}} triangles en aiguille (angles sous 5°). Généralement sans danger.",
+      "detail": "{{count}} triangles."
+    },
+    "reportLabel": "Rapport du contrôle d'imprimabilité"
+  },
+  "pictures": {
+    "none": "Aucune",
+    "upload": "Téléverser…",
+    "search": "Rechercher",
+    "all": "Toutes",
+    "category": "Groupe",
+    "noMatch": "Aucune image trouvée.",
+    "mine": "Mes images"
+  },
+  "texture": {
+    "noise": "Bruit",
+    "stripes": "Rayures",
+    "diagonal": "Lignes diagonales",
+    "waves": "Vagues",
+    "dots": "Points",
+    "bricks": "Briques",
+    "grid": "Grille",
+    "weave": "Tissage",
+    "wood": "Veines du bois",
+    "hexagons": "Hexagones",
+    "group": {
+      "Organic": "Organique",
+      "Lines": "Lignes",
+      "Shapes": "Formes"
+    }
+  },
+  "catalogues": {
+    "title": "Catalogues",
+    "intro": "Où AtelierMesh trouve les exemples et les extensions. Une adresse peut proposer les deux.",
+    "default": "Par défaut",
+    "designs": "Exemples",
+    "pluginsOffer": "Extensions",
+    "notOffered": "Non proposé ici",
+    "add": "Ajouter un catalogue",
+    "name": "Nom",
+    "namePh": "Pour le reconnaître",
+    "address": "Adresse",
+    "addressHint": "Commence par https://. Nous regardons ce qu’elle propose avant de l’ajouter.",
+    "check": "Vérifier l’adresse",
+    "unknownTitle": "Qu’est-ce que ce catalogue ?",
+    "unknownOffers": "Cette adresse propose :",
+    "countDesigns": "exemples",
+    "countPlugins": "extensions",
+    "unknownText": "{{catalog}} ne vérifie pas ce que propose ce catalogue. Ses exemples peuvent apporter des extensions, et les extensions exécutent du code dans votre navigateur.",
+    "unknownAsk": "On vous demandera toujours avant d’installer une extension qui en provient.",
+    "useFor": "L’utiliser pour",
+    "addYes": "Ajouter le catalogue",
+    "removeC": "Retirer {{name}}",
+    "lastCheck": "Joint à l’instant",
+    "remove": "Retirer",
+    "problem": {
+      "address": "Cette adresse n’est pas utilisable. Commencez par https://.",
+      "network": "Cette adresse est injoignable.",
+      "format": "Cette adresse n’est pas un catalogue.",
+      "duplicate": "Ce catalogue est déjà dans la liste."
+    }
+  },
+  "gallery": {
+    "title": "Exemples",
+    "intro": "Créés par des personnes qui utilisent AtelierMesh. Ouvrez-en un et modifiez-le.",
+    "sortBy": "Trier",
+    "sortPopular": "Populaires",
+    "sortNew": "Nouveaux",
+    "search": "Rechercher des exemples",
+    "searchClear": "Effacer la recherche",
+    "plugin": "Extension",
+    "pluginAll": "Toutes les extensions",
+    "pluginYours": "Installées",
+    "pluginOthers": "Dans le catalogue",
+    "filter": "Filtrer",
+    "sortFilter": "Trier et filtrer",
+    "showResults": "Afficher {{count}} exemples",
+    "by": "par {{name}}",
+    "opened": "ouvert {{count}} fois",
+    "needs": "requiert {{plugin}}",
+    "sample": "AtelierMesh",
+    "openChange": "Ouvrir et modifier",
+    "share": "Partager",
+    "moreActions": "Plus pour {{name}}",
+    "copyLink": "Copier le lien",
+    "report": "Signaler…",
+    "moreWith": "Plus créés avec {{plugin}}",
+    "shown": "{{shown}} exemples sur {{count}}",
+    "showMore": "Afficher {{count}} de plus",
+    "loading": "Chargement des exemples…",
+    "loaded": "{{count}} exemples de plus",
+    "endTitle": "C’est tout : {{count}} exemples",
+    "endText": "Vous avez créé quelque chose qui vous plaît ? Partagez-le depuis Enregistrer dans l’éditeur : il inspirera la personne suivante.",
+    "endTop": "Revenir en haut",
+    "loadError": "Impossible de charger d’autres exemples.",
+    "tryAgain": "Réessayer",
+    "noMatch": "Aucun exemple ne correspond à « {{query}} »",
+    "noMatchPlugin": "avec {{plugin}}",
+    "noMatchHint": "La recherche porte sur les noms et les descriptions. Essayez un autre mot, ou cherchez partout.",
+    "searchAll": "Chercher dans toutes les extensions",
+    "offline": "Le catalogue d’exemples est injoignable pour le moment. Voici les exemples intégrés à AtelierMesh.",
+    "removed": "Cet exemple a été retiré, par son auteur ou après une vérification. En voici d’autres à ouvrir.",
+    "removedTitle": "Exemple retiré",
+    "linkCopied": "Lien copié",
+    "openFailed": "Cet exemple n’a pas pu être ouvert. Il a peut-être été retiré."
+  },
+  "report": {
+    "title": "Signaler cet exemple",
+    "why": "Quel est le problème ?",
+    "broken": "Il ne s’ouvre pas, ou le modèle est cassé",
+    "notModel": "Ce n’est pas un modèle (spam, publicité, test)",
+    "copied": "C’est le travail de quelqu’un d’autre",
+    "offensive": "Il est choquant ou inapproprié",
+    "danger": "Il peut être dangereux à imprimer ou à utiliser",
+    "private": "Nous ne demandons pas qui vous êtes. Un administrateur examine chaque signalement.",
+    "send": "Envoyer le signalement",
+    "thanks": "Merci de nous l’avoir signalé",
+    "thanksText": "Un administrateur va l’examiner. S’il enfreint les règles, il sera retiré des exemples."
+  },
+  "open": {
+    "title": "Ouverture de {{name}}",
+    "download": "Téléchargement",
+    "steps": "Exécution des étapes",
+    "copy": "Vous obtenez votre propre copie. Vos modifications restent chez vous.",
+    "cancel": "Annuler",
+    "shared": "Exemple partagé",
+    "opening": "Ouverture…"
+  },
+  "share": {
+    "copied": "Lien copié",
+    "sheetTitle": "Partager {{name}}",
+    "asExample": "Partager comme exemple",
+    "asExampleHint": "Tout le monde peut l’ouvrir depuis la page d’accueil et modifier sa propre copie.",
+    "title": "Partager comme exemple",
+    "picture": "Image",
+    "pictureHint": "Chaque exemple est photographié avec la même caméra et le même fond, pour une galerie calme. Choisissez l’angle qui le montre le mieux.",
+    "angle": {
+      "3d": "3D",
+      "front": "Face",
+      "top": "Dessus"
+    },
+    "name": "Nom",
+    "line": "Une phrase pour le décrire",
+    "optional": "facultatif",
+    "linePh": "Qu’est-ce que c’est, que peut-on modifier ?",
+    "author": "Votre nom",
+    "authorHint": "Affiché comme « par … ». Laissez vide pour partager sans nom.",
+    "inside": "Ce que les gens reçoivent",
+    "insideModel": "Votre modèle : {{file}} ({{size}})",
+    "insideSteps": "Vos {{count}} étapes, avec leurs réglages",
+    "insideStored": "Le dessin stocké {{names}}",
+    "insideAfter": "Ils ouvrent leur propre copie. Votre création reste telle quelle. Rien d’autre de ce navigateur n’est envoyé.",
+    "consent": "Je l’ai créé, ou j’ai le droit de le partager. Tout le monde peut l’ouvrir, le modifier et le partager, en citant l’auteur.",
+    "licence": "CC BY 4.0",
+    "check": "Un administrateur vérifie chaque exemple avant sa publication.",
+    "send": "Partager l’exemple",
+    "thanks": "Merci : il apparaîtra après une courte vérification",
+    "waiting": "En attente de vérification",
+    "live": "Partagé",
+    "keyNote": "Ce navigateur garde une clé privée pour que vous puissiez retirer l’exemple plus tard, depuis ce navigateur uniquement. Effacer les données du navigateur supprime la clé.",
+    "whereLater": "Vous le retrouverez sur la page d’accueil, sous « Partagé par vous ».",
+    "remove": "Retirer mon exemple",
+    "removeTitle": "Retirer « {{name}} » des exemples ?",
+    "removeText": "Il disparaît de la galerie et les liens indiqueront « retiré ». Ceux qui l’ont déjà ouvert gardent leur copie. Votre création enregistrée reste ici.",
+    "removeKeep": "Le garder",
+    "removeYes": "Retirer l’exemple",
+    "mine": "Partagé par vous",
+    "notAccepted": "Non accepté",
+    "gone": "Retiré",
+    "error": {
+      "rate": "Vous avez envoyé plusieurs exemples à l’instant. Réessayez plus tard.",
+      "too_large": "Cette création est trop volumineuse pour être partagée.",
+      "picture": "L’image n’a pas pu être créée ou n’a pas été acceptée.",
+      "project": "Le fichier de la création n’a pas été accepté.",
+      "name": "Donnez un nom à l’exemple.",
+      "network": "Le catalogue est injoignable.",
+      "other": "L’envoi n’a pas fonctionné. Réessayez plus tard."
+    }
+  },
+  "warning": {
+    "show": "Montrer sur le modèle",
+    "hide": "Masquer sur le modèle"
+  }
+}

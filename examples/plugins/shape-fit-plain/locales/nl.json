@@ -1,0 +1,49 @@
+{
+  "ops": {
+    "block_from_drawing": {
+      "title": "Blok uit tekening",
+      "params": {
+        "height": {
+          "label": "Hoogte",
+          "help": "Hoe hoog het blok is."
+        }
+      },
+      "stage": {
+        "block": "Blok maken…"
+      }
+    },
+    "fit_to_shape": {
+      "title": "Passen in een opgeslagen vorm",
+      "params": {
+        "shape": {
+          "label": "Vorm",
+          "help": "De opgeslagen tekening waarin het model past."
+        },
+        "margin": {
+          "label": "Marge",
+          "help": "Vrije ruimte tussen het model en de rand van de vorm."
+        }
+      },
+      "stage": {
+        "fit": "Passen…"
+      }
+    }
+  },
+  "step": {
+    "op": {
+      "block_from_drawing": "Blok uit tekening",
+      "fit_to_shape": "Passen in een opgeslagen vorm"
+    }
+  },
+  "mesh": {
+    "block_from_drawing": {
+      "empty": "De tekening heeft geen oppervlak voor een blok."
+    },
+    "fit_to_shape": {
+      "no_shape": "Kies eerst een opgeslagen vorm.",
+      "empty_shape": "De opgeslagen vorm heeft geen oppervlak.",
+      "flat_model": "Het model heeft geen breedte of diepte om te passen.",
+      "too_small": "De marge van {{margin}} mm laat geen ruimte in de vorm."
+    }
+  }
+}

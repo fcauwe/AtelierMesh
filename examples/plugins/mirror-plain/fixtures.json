@@ -1,0 +1,83 @@
+[
+  {
+    "name": "flip a 10 x 20 x 30 box in place",
+    "operation": "mirror",
+    "params": {
+      "axis": "x",
+      "mode": "flip"
+    },
+    "input": {
+      "generator": "box",
+      "params": {
+        "width": 10,
+        "depth": 20,
+        "height": 30
+      }
+    },
+    "expect": {
+      "triangles": 12,
+      "volume": {
+        "value": 6000,
+        "tol": 1e-06
+      },
+      "size": {
+        "value": [
+          10,
+          20,
+          30
+        ],
+        "tol": 1e-09
+      },
+      "watertight": true
+    }
+  },
+  {
+    "name": "a copy beside it doubles the triangles and the width",
+    "operation": "mirror",
+    "params": {
+      "axis": "x",
+      "mode": "copy",
+      "gap": 2
+    },
+    "input": {
+      "generator": "box",
+      "params": {
+        "width": 10,
+        "depth": 20,
+        "height": 30
+      }
+    },
+    "expect": {
+      "triangles": 24,
+      "volume": {
+        "value": 12000,
+        "tol": 1e-06
+      },
+      "size": {
+        "value": [
+          22,
+          20,
+          30
+        ],
+        "tol": 1e-09
+      },
+      "watertight": true
+    }
+  },
+  {
+    "name": "a gap above the limit is refused",
+    "operation": "mirror",
+    "params": {
+      "axis": "x",
+      "mode": "copy",
+      "gap": 500
+    },
+    "input": {
+      "generator": "box"
+    },
+    "expect": {
+      "ok": false,
+      "error_code": "param.out_of_range"
+    }
+  }
+]

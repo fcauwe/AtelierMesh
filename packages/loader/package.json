@@ -1,0 +1,24 @@
+{
+  "name": "@ateliermesh/loader",
+  "version": "0.4.8",
+  "private": true,
+  "type": "module",
+  "description": "Loads external plugins (.amplugin) into the standalone app: package checks, signatures, URL loading, and a sandbox with no network. The Atelier does not take this package.",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@ateliermesh/core": "*"
+  },
+  "scripts": {
+    "gen": "node ../../scripts/gen-bootstrap.mjs && node ../../scripts/build-cli.mjs",
+    "pretest": "npm run gen",
+    "typecheck": "npm run gen && tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.63.0",
+    "esbuild": "*"
+  }
+}

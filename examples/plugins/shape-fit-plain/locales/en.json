@@ -1,0 +1,49 @@
+{
+  "ops": {
+    "block_from_drawing": {
+      "title": "Block from drawing",
+      "params": {
+        "height": {
+          "label": "Height",
+          "help": "How tall the block is."
+        }
+      },
+      "stage": {
+        "block": "Making the block…"
+      }
+    },
+    "fit_to_shape": {
+      "title": "Fit to a stored shape",
+      "params": {
+        "shape": {
+          "label": "Shape",
+          "help": "The stored drawing the model is scaled to fit."
+        },
+        "margin": {
+          "label": "Margin",
+          "help": "Free space left between the model and the edge of the shape."
+        }
+      },
+      "stage": {
+        "fit": "Fitting…"
+      }
+    }
+  },
+  "step": {
+    "op": {
+      "block_from_drawing": "Block from drawing",
+      "fit_to_shape": "Fit to a stored shape"
+    }
+  },
+  "mesh": {
+    "block_from_drawing": {
+      "empty": "The drawing has no area to make a block from."
+    },
+    "fit_to_shape": {
+      "no_shape": "Choose a stored shape first.",
+      "empty_shape": "The stored shape has no area.",
+      "flat_model": "The model has no width or depth to fit.",
+      "too_small": "The margin of {{margin}} mm leaves no room in the shape."
+    }
+  }
+}

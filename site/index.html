@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AtelierMesh: plugins for 3D-printable files, in the browser</title>
+<meta name="description" content="AtelierMesh is an open-source engine, plugin framework and app for editing 3D-printable files in the browser: raised or engraved text that follows the curves, deformations, holes, textures and more. Your files stay on your computer.">
+<meta property="og:title" content="AtelierMesh">
+<meta property="og:description" content="Plugins for 3D-printable files, in the browser. Open source.">
+<link rel="icon" href="ateliermesh-favicon.svg" type="image/svg+xml">
+<style>
+:root { --bg:#f3f4f6; --card:#fff; --ink:#111827; --muted:#4b5563; --line:#e5e7eb; --accent:#c2410c; --accent-ink:#fff; --nav:#111111; --code:#0f172a; --code-ink:#e2e8f0; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0b0f14; --card:#141b22; --ink:#f3f4f6; --muted:#9ca3af; --line:#273341; --accent:#fb923c; --accent-ink:#111; --nav:#000; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+a { color: var(--accent); }
+header.nav { background:var(--nav); color:#fff; }
+header.nav div { max-width:1040px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+header.nav img { height:30px; width:auto; }
+header.nav strong { font-size:18px; letter-spacing:.01em; }
+header.nav nav { margin-left:auto; display:flex; gap:18px; flex-wrap:wrap; }
+header.nav a { color:#e5e7eb; text-decoration:none; font-size:15px; } header.nav a:hover { color:#fff; text-decoration:underline; }
+main { max-width:1040px; margin:0 auto; padding:0 20px 48px; }
+.hero { padding:56px 0 36px; max-width:760px; }
+.hero h1 { font-size:clamp(2rem,5.5vw,3.2rem); line-height:1.1; margin:0 0 16px; letter-spacing:-.02em; }
+.hero p { font-size:1.15rem; color:var(--muted); margin:0 0 24px; }
+.btns { display:flex; gap:12px; flex-wrap:wrap; }
+.btn { display:inline-block; padding:12px 20px; border-radius:10px; border:1px solid var(--line); background:var(--card); color:var(--ink); text-decoration:none; font-weight:700; min-height:44px; }
+.btn.primary { background:var(--accent); border-color:var(--accent); color:var(--accent-ink); }
+.btn:focus-visible, a:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
+.note { font-size:.9rem; color:var(--muted); margin-top:14px; }
+h2 { font-size:1.6rem; margin:48px 0 8px; letter-spacing:-.01em; }
+.lead { color:var(--muted); max-width:70ch; margin:0 0 20px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(230px,1fr)); gap:16px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px; }
+.card h3 { margin:0 0 6px; font-size:1.05rem; } .card p { margin:0; color:var(--muted); font-size:.96rem; }
+.steps { counter-reset:s; list-style:none; padding:0; margin:0; display:grid; gap:12px; }
+.steps li { counter-increment:s; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 16px 14px 56px; position:relative; }
+.steps li::before { content:counter(s); position:absolute; left:16px; top:14px; width:28px; height:28px; border-radius:50%; background:var(--accent); color:var(--accent-ink); font-weight:700; display:flex; align-items:center; justify-content:center; }
+.steps b { display:block; }
+pre { background:var(--code); color:var(--code-ink); border-radius:12px; padding:16px; overflow-x:auto; font:14px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; margin:0; }
+.two { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:20px; align-items:start; }
+.tag { display:inline-block; font-size:.78rem; font-weight:700; padding:2px 10px; border-radius:9999px; background:var(--card); border:1px solid var(--line); color:var(--muted); margin:0 6px 6px 0; }
+footer { border-top:1px solid var(--line); padding:24px 20px; color:var(--muted); font-size:.92rem; }
+footer div { max-width:1040px; margin:0 auto; display:flex; gap:16px; flex-wrap:wrap; justify-content:space-between; }
+</style>
+</head>
+<body>
+<header class="nav"><div>
+  <img src="ateliermesh-mark-white.svg" alt="" width="30" height="30"><strong>AtelierMesh</strong>
+  <nav aria-label="Main"><a href="#what">What it does</a><a href="#plugins">Plugins</a><a href="plugin-framework.html">How plugins work</a><a href="#licence">Licence</a><a href="https://github.com/fcauwe/AtelierMesh">Source</a></nav>
+</div></header>
+
+<main>
+  <section class="hero" aria-labelledby="h">
+    <h1 id="h">Plugins for 3D-printable files, in the browser.</h1>
+    <p>Open a model, add steps, and see the result at once: text raised or engraved into the mesh itself, twists and bends, holes, textures, patterns. Everything runs on your computer. Your files are never sent anywhere.</p>
+    <div class="btns">
+      <a class="btn primary" href="https://ateliermesh.app/">Open the app</a>
+      <a class="btn" href="plugin-framework.html">How plugins work</a>
+      <a class="btn" href="https://github.com/fcauwe/AtelierMesh">View the source</a>
+    </div>
+    <p class="note">Open source (AGPL-3.0-or-later). Version 0.4.8. Made by <a href="https://micro-fabriek.be">micro-fabriek.be</a>.</p>
+  </section>
+
+  <section id="what" aria-labelledby="w">
+    <h2 id="w">What it does</h2>
+    <p class="lead">AtelierMesh is a workflow engine for meshes. A design is a list of steps; change step 3 of 5 and only steps 3 to 5 run again.</p>
+    <div class="grid">
+      <div class="card"><h3>One mesh, one closed surface</h3><p>Text and drawings follow the curves of the model. There is no boolean operation and no image: the result is a clean mesh your slicer reads as it is.</p></div>
+      <div class="card"><h3>For designers and customers</h3><p>A designer builds the steps and chooses what a customer may change. The customer personalises one model and sees the real result.</p></div>
+      <div class="card"><h3>Straight to the slicer</h3><p>Export STL or 3MF, with colours and parts named so PrusaSlicer and Bambu Studio show them as you made them.</p></div>
+      <div class="card"><h3>Private by default</h3><p>The app runs in your browser. Files stay on your device. Nothing is uploaded unless you choose to share an example.</p></div>
+    </div>
+  </section>
+
+  <section id="plugins" aria-labelledby="p">
+    <h2 id="p">Plugins</h2>
+    <p class="lead">Every step is an operation of a plugin. The built-in plugins do most things; anyone can write another, in plain JavaScript, with any licence they like.</p>
+    <p>
+      <span class="tag">Raised and engraved text</span><span class="tag">SVG on the surface</span><span class="tag">Resize and rotate</span><span class="tag">Twist, bend, taper, wave, ripple</span><span class="tag">Holes and pockets</span><span class="tag">Hollow</span><span class="tag">Voronoi pattern</span><span class="tag">Textures</span><span class="tag">Low poly</span><span class="tag">Reduce triangles</span><span class="tag">Repair</span><span class="tag">Delete or keep a part</span><span class="tag">Printability check</span>
+    </p>
+    <div class="two">
+      <div>
+        <ol class="steps">
+          <li><b>Write it</b>A manifest says what the plugin does and which settings it has. A small function does the work on the mesh.</li>
+          <li><b>Check and pack it</b>The kit tests it, then packs it into one <code>.amplugin</code> file, with hashes and an optional signature.</li>
+          <li><b>Load it</b>People add it from a file, an address or a catalogue. The app shows who made it and what it needs, and asks first.</li>
+          <li><b>It runs in a sandbox</b>A plugin has no network and only sees the model it works on.</li>
+        </ol>
+      </div>
+      <div>
+<pre><code>npm install
+npm run build:standalone
+npx --yes serve apps/standalone/dist
+
+# a plugin of your own (needs only Node 20)
+node tools/amplugin.mjs new my-plugin
+node tools/amplugin.mjs check my-plugin
+node tools/amplugin.mjs pack my-plugin</code></pre>
+        <p class="note">The <b>plugin developer kit</b> (MIT licence) has the guide, the Mirror example, the type declarations and the packing tool. A prompt for your coding agent is in <code>docs/prompt-make-a-plugin.md</code>.</p>
+        <div class="btns" style="margin-top:12px"><a class="btn" href="plugin-framework.html">See how it fits together</a><a class="btn" href="https://github.com/fcauwe/AtelierMesh/blob/HEAD/docs/plugin-guide.md">Plugin guide</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="c">
+    <h2 id="c">Examples and a catalogue</h2>
+    <p class="lead">The app can read a catalogue of plugins and a gallery of example designs from the live site. People send designs and plugins in; an admin accepts them. You can add more than one catalogue.</p>
+    <div class="grid">
+      <div class="card"><h3>Open an example</h3><p>Click one, change your own copy, and see how it was made. If it needs a plugin you lack, the app asks first.</p></div>
+      <div class="card"><h3>Share yours</h3><p>Save, then Share as an example. It appears after a quick check. Anyone may open, change and share it, naming the maker (CC BY 4.0).</p></div>
+    </div>
+  </section>
+
+  <section id="licence" aria-labelledby="l">
+    <h2 id="l">Licence</h2>
+    <p class="lead">AtelierMesh is dual licensed: the <b>GNU AGPL-3.0-or-later</b> by default, and other licences on request. A plugin made with the plugin kit can have any licence (the kit is MIT, and the Plugin Interface may be copied into a plugin). Details are in <a href="https://github.com/fcauwe/AtelierMesh/blob/HEAD/LICENSING.md">LICENSING.md</a>.</p>
+  </section>
+</main>
+
+<footer><div>
+  <span>AtelierMesh 0.4.8 · <a href="https://micro-fabriek.be">micro-fabriek.be</a></span>
+  <span><a href="https://github.com/fcauwe/AtelierMesh">Source</a> · <a href="https://github.com/fcauwe/AtelierMesh/blob/HEAD/CHANGELOG.md">Changelog</a> · <a href="https://github.com/fcauwe/AtelierMesh/blob/HEAD/SECURITY.md">Security</a> · <a href="https://github.com/fcauwe/AtelierMesh/blob/HEAD/CONTRIBUTING.md">Contributing</a></span>
+</div></footer>
+</body>
+</html>

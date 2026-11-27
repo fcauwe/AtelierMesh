@@ -1,0 +1,38 @@
+{
+  "manifest_version": 1,
+  "id": "com.example.shape_fit_plain",
+  "name": "Shape fit (plain JavaScript)",
+  "version": "1.0.0",
+  "author": "Example Ltd",
+  "license": "MIT",
+  "description": "Works with flat drawings: a block as big as a drawing, and a model scaled to fit a stored drawing. The example for drawings and stored items.",
+  "contact": {"name": "Example Ltd", "url": "https://example.org/plugins"},
+  "operations": [
+    {
+      "id": "block_from_drawing",
+      "title": "Block from drawing",
+      "kind": "modifier",
+      "category": "shape",
+      "personalisable": "never",
+      "payload": { "in": "drawing", "out": "mesh" },
+      "stages": ["block"],
+      "outputs": { "mesh": true, "report": true },
+      "params": [
+        { "name": "height", "type": "float", "default": 5, "min": 0.1, "max": 500, "unit": "mm" }
+      ]
+    },
+    {
+      "id": "fit_to_shape",
+      "title": "Fit to a stored shape",
+      "kind": "modifier",
+      "category": "shape",
+      "personalisable": "never",
+      "stages": ["fit"],
+      "outputs": { "mesh": true, "report": true, "closed": true },
+      "params": [
+        { "name": "shape", "type": "payload", "accept": ["drawing"], "default": null },
+        { "name": "margin", "type": "float", "default": 0, "min": 0, "max": 100, "unit": "mm" }
+      ]
+    }
+  ]
+}
